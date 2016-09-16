@@ -1,0 +1,10 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.43.6 clang-800.0.38)"
+options: "a906efe58251e7ec2f921000ec667b90"
+build_time: [527375313, 392012000]
+inputs:
+  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/ViewControllers/FriendsViewController.swift": [527375313, 0]
+  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/AppDelegate.swift": [527361931, 0]
+  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Models/Friend.swift": [527374832, 0]
+  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Models/Message.swift": [527374832, 0]
+  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Cells/MessageCell.swift": [527374747, 0]
+  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Extensions/Extensions.swift": [527374954, 0]
