@@ -9,36 +9,40 @@ provides-member:
 - ["C17FacebookMessenger8BaseCell", ""]
 - ["C17FacebookMessenger11MessageCell", ""]
 provides-dynamic-lookup:
-- "setupViews"
-- "setupViews"
 - "messageLabel"
-- "message"
-- "nameLabel"
+- "isHighlighted"
+- "setupViews"
+- "setupViews"
 - "profileImageView"
-- "timeLabel"
+- "message"
 - "dividerLine"
+- "timeLabel"
+- "nameLabel"
 - "hasReadImageView"
 depends-top-level:
-- "UIColor"
-- !private "NSLayoutConstraint"
-- "CGRect"
-- "BooleanLiteralType"
-- "MessageCell"
-- "UIImageView"
-- "UICollectionViewCell"
-- "UILabel"
-- !private "DateFormatter"
-- "UIView"
-- "StringLiteralType"
-- "Message"
-- "UIFont"
-- "NSCoder"
 - !private "Date"
+- "StringLiteralType"
+- "MessageCell"
+- "UIView"
+- "UICollectionViewCell"
+- "BooleanLiteralType"
+- "CGRect"
 - !private "fatalError"
+- "UIFont"
+- !private "DateFormatter"
+- "TernaryPrecedence"
+- "NSCoder"
+- "Message"
+- "UILabel"
 - "AssignmentPrecedence"
+- "UIColor"
 - "CastingPrecedence"
 - !private "UIImage"
 - "BaseCell"
+- "UIImageView"
+- "Bool"
+- !private "/"
+- !private "NSLayoutConstraint"
 depends-member:
 - !private ["Ps9AnyObject", "DateFormatter"]
 - !private ["Ps9AnyObject", "NSLayoutConstraint"]
@@ -52,6 +56,7 @@ depends-member:
 - !private ["Ps9AnyObject", "addConstraintWith"]
 - !private ["Ps9AnyObject", "addSubview"]
 - ["Ps9AnyObject", "backgroundColor"]
+- !private ["Ps9AnyObject", "black"]
 - ["Ps9AnyObject", "contentMode"]
 - ["Ps9AnyObject", "cornerRadius"]
 - ["Ps9AnyObject", "darkGray"]
@@ -64,6 +69,7 @@ depends-member:
 - ["Ps9AnyObject", "hasReadImageView"]
 - !private ["Ps9AnyObject", "image"]
 - ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isHighlighted"]
 - ["Ps9AnyObject", "layer"]
 - ["Ps9AnyObject", "masksToBounds"]
 - ["Ps9AnyObject", "message"]
@@ -80,7 +86,9 @@ depends-member:
 - ["Ps9AnyObject", "textAlignment"]
 - ["Ps9AnyObject", "textColor"]
 - ["Ps9AnyObject", "timeLabel"]
+- !private ["Ps9AnyObject", "white"]
 - ["Ps9AnyObject", ""]
+- ["C17FacebookMessenger8BaseCell", "Bool"]
 - ["C17FacebookMessenger8BaseCell", "CGRect"]
 - !private ["C17FacebookMessenger8BaseCell", "Date"]
 - !private ["C17FacebookMessenger8BaseCell", "DateFormatter"]
@@ -96,11 +104,13 @@ depends-member:
 - !private ["C17FacebookMessenger8BaseCell", "addConstraint"]
 - !private ["C17FacebookMessenger8BaseCell", "addConstraintWith"]
 - !private ["C17FacebookMessenger8BaseCell", "addSubview"]
+- !private ["C17FacebookMessenger8BaseCell", "backgroundColor"]
 - ["C17FacebookMessenger8BaseCell", "deinit"]
 - ["C17FacebookMessenger8BaseCell", "dividerLine"]
 - !private ["C17FacebookMessenger8BaseCell", "fatalError"]
 - ["C17FacebookMessenger8BaseCell", "hasReadImageView"]
 - ["C17FacebookMessenger8BaseCell", "init"]
+- ["C17FacebookMessenger8BaseCell", "isHighlighted"]
 - ["C17FacebookMessenger8BaseCell", "message"]
 - ["C17FacebookMessenger8BaseCell", "messageLabel"]
 - ["C17FacebookMessenger8BaseCell", "nameLabel"]
@@ -109,6 +119,7 @@ depends-member:
 - ["C17FacebookMessenger8BaseCell", "setupViews"]
 - ["C17FacebookMessenger8BaseCell", "timeLabel"]
 - ["C17FacebookMessenger8BaseCell", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
 - ["CSo7CALayer", "cornerRadius"]
 - ["CSo7CALayer", "deinit"]
@@ -132,6 +143,7 @@ depends-member:
 - ["PSo15CALayerDelegate", "hasReadImageView"]
 - !private ["PSo15CALayerDelegate", "image"]
 - ["PSo15CALayerDelegate", "init"]
+- ["PSo15CALayerDelegate", "isHighlighted"]
 - ["PSo15CALayerDelegate", "layer"]
 - ["PSo15CALayerDelegate", "message"]
 - ["PSo15CALayerDelegate", "messageLabel"]
@@ -160,6 +172,7 @@ depends-member:
 - !private ["Ps7CVarArg", "addConstraintWith"]
 - !private ["Ps7CVarArg", "addSubview"]
 - ["Ps7CVarArg", "backgroundColor"]
+- !private ["Ps7CVarArg", "black"]
 - ["Ps7CVarArg", "contentMode"]
 - ["Ps7CVarArg", "cornerRadius"]
 - ["Ps7CVarArg", "darkGray"]
@@ -172,6 +185,7 @@ depends-member:
 - ["Ps7CVarArg", "hasReadImageView"]
 - !private ["Ps7CVarArg", "image"]
 - ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "isHighlighted"]
 - ["Ps7CVarArg", "layer"]
 - ["Ps7CVarArg", "masksToBounds"]
 - ["Ps7CVarArg", "message"]
@@ -188,6 +202,7 @@ depends-member:
 - ["Ps7CVarArg", "textAlignment"]
 - ["Ps7CVarArg", "textColor"]
 - ["Ps7CVarArg", "timeLabel"]
+- !private ["Ps7CVarArg", "white"]
 - ["Ps7CVarArg", ""]
 - ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "DateFormatter"]
@@ -202,6 +217,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "addConstraintWith"]
 - !private ["Ps28CustomDebugStringConvertible", "addSubview"]
 - ["Ps28CustomDebugStringConvertible", "backgroundColor"]
+- !private ["Ps28CustomDebugStringConvertible", "black"]
 - ["Ps28CustomDebugStringConvertible", "contentMode"]
 - ["Ps28CustomDebugStringConvertible", "cornerRadius"]
 - ["Ps28CustomDebugStringConvertible", "darkGray"]
@@ -214,6 +230,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "hasReadImageView"]
 - !private ["Ps28CustomDebugStringConvertible", "image"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isHighlighted"]
 - ["Ps28CustomDebugStringConvertible", "layer"]
 - ["Ps28CustomDebugStringConvertible", "masksToBounds"]
 - ["Ps28CustomDebugStringConvertible", "message"]
@@ -231,8 +248,11 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "textAlignment"]
 - ["Ps28CustomDebugStringConvertible", "textColor"]
 - ["Ps28CustomDebugStringConvertible", "timeLabel"]
+- !private ["Ps28CustomDebugStringConvertible", "white"]
 - ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - ["Ps17CustomReflectable", "init"]
 - ["Ps17CustomReflectable", "some"]
 - !private ["Ps23CustomStringConvertible", "DateFormatter"]
@@ -243,10 +263,12 @@ depends-member:
 - ["Ps23CustomStringConvertible", "UIImageView"]
 - ["Ps23CustomStringConvertible", "UILabel"]
 - ["Ps23CustomStringConvertible", "UIView"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "addConstraint"]
 - !private ["Ps23CustomStringConvertible", "addConstraintWith"]
 - !private ["Ps23CustomStringConvertible", "addSubview"]
 - ["Ps23CustomStringConvertible", "backgroundColor"]
+- !private ["Ps23CustomStringConvertible", "black"]
 - ["Ps23CustomStringConvertible", "contentMode"]
 - ["Ps23CustomStringConvertible", "cornerRadius"]
 - ["Ps23CustomStringConvertible", "darkGray"]
@@ -259,6 +281,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "hasReadImageView"]
 - !private ["Ps23CustomStringConvertible", "image"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isHighlighted"]
 - ["Ps23CustomStringConvertible", "layer"]
 - ["Ps23CustomStringConvertible", "masksToBounds"]
 - ["Ps23CustomStringConvertible", "message"]
@@ -275,6 +298,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "textAlignment"]
 - ["Ps23CustomStringConvertible", "textColor"]
 - ["Ps23CustomStringConvertible", "timeLabel"]
+- !private ["Ps23CustomStringConvertible", "white"]
 - ["Ps23CustomStringConvertible", ""]
 - ["V10Foundation4Date", "deinit"]
 - !private ["CSo13DateFormatter", "dateFormat"]
@@ -289,10 +313,12 @@ depends-member:
 - ["Ps9Equatable", "UIImageView"]
 - ["Ps9Equatable", "UILabel"]
 - ["Ps9Equatable", "UIView"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "addConstraint"]
 - !private ["Ps9Equatable", "addConstraintWith"]
 - !private ["Ps9Equatable", "addSubview"]
 - ["Ps9Equatable", "backgroundColor"]
+- !private ["Ps9Equatable", "black"]
 - !private ["Ps9Equatable", "centerY"]
 - ["Ps9Equatable", "contentMode"]
 - ["Ps9Equatable", "cornerRadius"]
@@ -307,6 +333,7 @@ depends-member:
 - ["Ps9Equatable", "hasReadImageView"]
 - !private ["Ps9Equatable", "image"]
 - ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isHighlighted"]
 - ["Ps9Equatable", "layer"]
 - ["Ps9Equatable", "masksToBounds"]
 - ["Ps9Equatable", "message"]
@@ -325,7 +352,9 @@ depends-member:
 - ["Ps9Equatable", "textAlignment"]
 - ["Ps9Equatable", "textColor"]
 - ["Ps9Equatable", "timeLabel"]
+- !private ["Ps9Equatable", "white"]
 - ["Ps9Equatable", ""]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - ["Ps23ExpressibleByNilLiteral", "some"]
 - ["Ps32ExpressibleByStringInterpolation", "init"]
@@ -344,10 +373,12 @@ depends-member:
 - ["Ps8Hashable", "UIImageView"]
 - ["Ps8Hashable", "UILabel"]
 - ["Ps8Hashable", "UIView"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "addConstraint"]
 - !private ["Ps8Hashable", "addConstraintWith"]
 - !private ["Ps8Hashable", "addSubview"]
 - ["Ps8Hashable", "backgroundColor"]
+- !private ["Ps8Hashable", "black"]
 - !private ["Ps8Hashable", "centerY"]
 - ["Ps8Hashable", "contentMode"]
 - ["Ps8Hashable", "cornerRadius"]
@@ -362,6 +393,7 @@ depends-member:
 - ["Ps8Hashable", "hasReadImageView"]
 - !private ["Ps8Hashable", "image"]
 - ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isHighlighted"]
 - ["Ps8Hashable", "layer"]
 - ["Ps8Hashable", "masksToBounds"]
 - ["Ps8Hashable", "message"]
@@ -380,12 +412,15 @@ depends-member:
 - ["Ps8Hashable", "textAlignment"]
 - ["Ps8Hashable", "textColor"]
 - ["Ps8Hashable", "timeLabel"]
+- !private ["Ps8Hashable", "white"]
 - ["Ps8Hashable", ""]
 - !private ["SQ", "deinit"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps25LosslessStringConvertible", "init"]
 - !private ["C17FacebookMessenger7Message", "date"]
 - !private ["C17FacebookMessenger7Message", "friend"]
 - !private ["C17FacebookMessenger7Message", "text"]
+- ["C17FacebookMessenger11MessageCell", "Bool"]
 - !private ["C17FacebookMessenger11MessageCell", "Date"]
 - !private ["C17FacebookMessenger11MessageCell", "DateFormatter"]
 - ["C17FacebookMessenger11MessageCell", "Message"]
@@ -399,10 +434,12 @@ depends-member:
 - !private ["C17FacebookMessenger11MessageCell", "addConstraint"]
 - !private ["C17FacebookMessenger11MessageCell", "addConstraintWith"]
 - !private ["C17FacebookMessenger11MessageCell", "addSubview"]
+- !private ["C17FacebookMessenger11MessageCell", "backgroundColor"]
 - ["C17FacebookMessenger11MessageCell", "deinit"]
 - ["C17FacebookMessenger11MessageCell", "dividerLine"]
 - ["C17FacebookMessenger11MessageCell", "hasReadImageView"]
 - ["C17FacebookMessenger11MessageCell", "init"]
+- ["C17FacebookMessenger11MessageCell", "isHighlighted"]
 - ["C17FacebookMessenger11MessageCell", "message"]
 - ["C17FacebookMessenger11MessageCell", "messageLabel"]
 - ["C17FacebookMessenger11MessageCell", "nameLabel"]
@@ -424,6 +461,7 @@ depends-member:
 - !private ["PSo8NSCoding", "addConstraintWith"]
 - !private ["PSo8NSCoding", "addSubview"]
 - ["PSo8NSCoding", "backgroundColor"]
+- !private ["PSo8NSCoding", "black"]
 - ["PSo8NSCoding", "contentMode"]
 - ["PSo8NSCoding", "cornerRadius"]
 - ["PSo8NSCoding", "darkGray"]
@@ -434,6 +472,7 @@ depends-member:
 - ["PSo8NSCoding", "hasReadImageView"]
 - !private ["PSo8NSCoding", "image"]
 - ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "isHighlighted"]
 - ["PSo8NSCoding", "layer"]
 - ["PSo8NSCoding", "masksToBounds"]
 - ["PSo8NSCoding", "message"]
@@ -447,12 +486,15 @@ depends-member:
 - ["PSo8NSCoding", "textAlignment"]
 - ["PSo8NSCoding", "textColor"]
 - ["PSo8NSCoding", "timeLabel"]
+- !private ["PSo8NSCoding", "white"]
 - ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "black"]
 - ["PSo9NSCopying", "darkGray"]
 - !private ["PSo9NSCopying", "dateFormat"]
 - ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "string"]
 - ["PSo9NSCopying", "systemFont"]
+- !private ["PSo9NSCopying", "white"]
 - !private ["PSo20NSFetchRequestResult", "date"]
 - !private ["PSo20NSFetchRequestResult", "friend"]
 - !private ["PSo20NSFetchRequestResult", "name"]
@@ -470,6 +512,7 @@ depends-member:
 - !private ["CSo15NSManagedObject", "profileImageName"]
 - !private ["CSo15NSManagedObject", "text"]
 - ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "CGRect"]
 - !private ["CSo8NSObject", "Date"]
 - !private ["CSo8NSObject", "DateFormatter"]
@@ -486,6 +529,7 @@ depends-member:
 - !private ["CSo8NSObject", "addConstraintWith"]
 - !private ["CSo8NSObject", "addSubview"]
 - ["CSo8NSObject", "backgroundColor"]
+- !private ["CSo8NSObject", "black"]
 - ["CSo8NSObject", "contentMode"]
 - ["CSo8NSObject", "cornerRadius"]
 - ["CSo8NSObject", "darkGray"]
@@ -498,6 +542,7 @@ depends-member:
 - ["CSo8NSObject", "hasReadImageView"]
 - !private ["CSo8NSObject", "image"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isHighlighted"]
 - ["CSo8NSObject", "layer"]
 - ["CSo8NSObject", "masksToBounds"]
 - ["CSo8NSObject", "message"]
@@ -514,6 +559,7 @@ depends-member:
 - ["CSo8NSObject", "textAlignment"]
 - ["CSo8NSObject", "textColor"]
 - ["CSo8NSObject", "timeLabel"]
+- !private ["CSo8NSObject", "white"]
 - !private ["PSo16NSObjectProtocol", "DateFormatter"]
 - !private ["PSo16NSObjectProtocol", "NSLayoutConstraint"]
 - ["PSo16NSObjectProtocol", "UIColor"]
@@ -526,6 +572,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "addConstraintWith"]
 - !private ["PSo16NSObjectProtocol", "addSubview"]
 - ["PSo16NSObjectProtocol", "backgroundColor"]
+- !private ["PSo16NSObjectProtocol", "black"]
 - ["PSo16NSObjectProtocol", "contentMode"]
 - ["PSo16NSObjectProtocol", "cornerRadius"]
 - ["PSo16NSObjectProtocol", "darkGray"]
@@ -538,6 +585,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "hasReadImageView"]
 - !private ["PSo16NSObjectProtocol", "image"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isHighlighted"]
 - ["PSo16NSObjectProtocol", "layer"]
 - ["PSo16NSObjectProtocol", "masksToBounds"]
 - ["PSo16NSObjectProtocol", "message"]
@@ -554,9 +602,12 @@ depends-member:
 - ["PSo16NSObjectProtocol", "textAlignment"]
 - ["PSo16NSObjectProtocol", "textColor"]
 - ["PSo16NSObjectProtocol", "timeLabel"]
+- !private ["PSo16NSObjectProtocol", "white"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "black"]
 - ["PSo14NSSecureCoding", "darkGray"]
 - ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "white"]
 - ["CSo8NSString", "init"]
 - ["OSC15NSTextAlignment", "deinit"]
 - ["OSC15NSTextAlignment", "right"]
@@ -592,6 +643,7 @@ depends-member:
 - ["PSo29UIAccessibilityIdentification", "hasReadImageView"]
 - !private ["PSo29UIAccessibilityIdentification", "image"]
 - ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "isHighlighted"]
 - ["PSo29UIAccessibilityIdentification", "layer"]
 - ["PSo29UIAccessibilityIdentification", "message"]
 - ["PSo29UIAccessibilityIdentification", "messageLabel"]
@@ -623,6 +675,7 @@ depends-member:
 - ["PSo12UIAppearance", "hasReadImageView"]
 - !private ["PSo12UIAppearance", "image"]
 - ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "isHighlighted"]
 - ["PSo12UIAppearance", "layer"]
 - ["PSo12UIAppearance", "message"]
 - ["PSo12UIAppearance", "messageLabel"]
@@ -654,6 +707,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "hasReadImageView"]
 - !private ["PSo21UIAppearanceContainer", "image"]
 - ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "isHighlighted"]
 - ["PSo21UIAppearanceContainer", "layer"]
 - ["PSo21UIAppearanceContainer", "message"]
 - ["PSo21UIAppearanceContainer", "messageLabel"]
@@ -666,6 +720,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "textColor"]
 - ["PSo21UIAppearanceContainer", "timeLabel"]
 - ["PSo21UIAppearanceContainer", ""]
+- ["CSo24UICollectionReusableView", "Bool"]
 - ["CSo24UICollectionReusableView", "CGRect"]
 - !private ["CSo24UICollectionReusableView", "Date"]
 - !private ["CSo24UICollectionReusableView", "DateFormatter"]
@@ -681,10 +736,12 @@ depends-member:
 - !private ["CSo24UICollectionReusableView", "addConstraint"]
 - !private ["CSo24UICollectionReusableView", "addConstraintWith"]
 - !private ["CSo24UICollectionReusableView", "addSubview"]
+- !private ["CSo24UICollectionReusableView", "backgroundColor"]
 - ["CSo24UICollectionReusableView", "dividerLine"]
 - !private ["CSo24UICollectionReusableView", "fatalError"]
 - ["CSo24UICollectionReusableView", "hasReadImageView"]
 - ["CSo24UICollectionReusableView", "init"]
+- ["CSo24UICollectionReusableView", "isHighlighted"]
 - ["CSo24UICollectionReusableView", "message"]
 - ["CSo24UICollectionReusableView", "messageLabel"]
 - ["CSo24UICollectionReusableView", "nameLabel"]
@@ -692,6 +749,7 @@ depends-member:
 - ["CSo24UICollectionReusableView", "setupContainerView"]
 - ["CSo24UICollectionReusableView", "setupViews"]
 - ["CSo24UICollectionReusableView", "timeLabel"]
+- ["CSo20UICollectionViewCell", "Bool"]
 - ["CSo20UICollectionViewCell", "CGRect"]
 - !private ["CSo20UICollectionViewCell", "Date"]
 - !private ["CSo20UICollectionViewCell", "DateFormatter"]
@@ -707,11 +765,13 @@ depends-member:
 - !private ["CSo20UICollectionViewCell", "addConstraint"]
 - !private ["CSo20UICollectionViewCell", "addConstraintWith"]
 - !private ["CSo20UICollectionViewCell", "addSubview"]
+- !private ["CSo20UICollectionViewCell", "backgroundColor"]
 - ["CSo20UICollectionViewCell", "deinit"]
 - ["CSo20UICollectionViewCell", "dividerLine"]
 - !private ["CSo20UICollectionViewCell", "fatalError"]
 - ["CSo20UICollectionViewCell", "hasReadImageView"]
 - ["CSo20UICollectionViewCell", "init"]
+- ["CSo20UICollectionViewCell", "isHighlighted"]
 - ["CSo20UICollectionViewCell", "message"]
 - ["CSo20UICollectionViewCell", "messageLabel"]
 - ["CSo20UICollectionViewCell", "nameLabel"]
@@ -720,9 +780,11 @@ depends-member:
 - ["CSo20UICollectionViewCell", "setupViews"]
 - ["CSo20UICollectionViewCell", "timeLabel"]
 - ["CSo20UICollectionViewCell", ""]
+- !private ["CSo7UIColor", "black"]
 - ["CSo7UIColor", "darkGray"]
 - ["CSo7UIColor", "deinit"]
 - ["CSo7UIColor", "init"]
+- !private ["CSo7UIColor", "white"]
 - ["PSo30UIContentSizeCategoryAdjusting", "font"]
 - ["PSo30UIContentSizeCategoryAdjusting", "init"]
 - ["PSo30UIContentSizeCategoryAdjusting", "text"]
@@ -747,6 +809,7 @@ depends-member:
 - ["PSo17UICoordinateSpace", "hasReadImageView"]
 - !private ["PSo17UICoordinateSpace", "image"]
 - ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "isHighlighted"]
 - ["PSo17UICoordinateSpace", "layer"]
 - ["PSo17UICoordinateSpace", "message"]
 - ["PSo17UICoordinateSpace", "messageLabel"]
@@ -778,6 +841,7 @@ depends-member:
 - ["PSo13UIDynamicItem", "hasReadImageView"]
 - !private ["PSo13UIDynamicItem", "image"]
 - ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "isHighlighted"]
 - ["PSo13UIDynamicItem", "layer"]
 - ["PSo13UIDynamicItem", "message"]
 - ["PSo13UIDynamicItem", "messageLabel"]
@@ -809,6 +873,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "hasReadImageView"]
 - !private ["PSo18UIFocusEnvironment", "image"]
 - ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "isHighlighted"]
 - ["PSo18UIFocusEnvironment", "layer"]
 - ["PSo18UIFocusEnvironment", "message"]
 - ["PSo18UIFocusEnvironment", "messageLabel"]
@@ -840,6 +905,7 @@ depends-member:
 - ["PSo11UIFocusItem", "hasReadImageView"]
 - !private ["PSo11UIFocusItem", "image"]
 - ["PSo11UIFocusItem", "init"]
+- ["PSo11UIFocusItem", "isHighlighted"]
 - ["PSo11UIFocusItem", "layer"]
 - ["PSo11UIFocusItem", "message"]
 - ["PSo11UIFocusItem", "messageLabel"]
@@ -866,6 +932,7 @@ depends-member:
 - ["CSo7UILabel", "text"]
 - ["CSo7UILabel", "textAlignment"]
 - ["CSo7UILabel", "textColor"]
+- ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "CGRect"]
 - !private ["CSo11UIResponder", "Date"]
 - !private ["CSo11UIResponder", "DateFormatter"]
@@ -889,6 +956,7 @@ depends-member:
 - ["CSo11UIResponder", "hasReadImageView"]
 - !private ["CSo11UIResponder", "image"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "isHighlighted"]
 - ["CSo11UIResponder", "layer"]
 - ["CSo11UIResponder", "message"]
 - ["CSo11UIResponder", "messageLabel"]
@@ -919,6 +987,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "hasReadImageView"]
 - !private ["PSo30UIResponderStandardEditActions", "image"]
 - ["PSo30UIResponderStandardEditActions", "init"]
+- ["PSo30UIResponderStandardEditActions", "isHighlighted"]
 - ["PSo30UIResponderStandardEditActions", "layer"]
 - ["PSo30UIResponderStandardEditActions", "message"]
 - ["PSo30UIResponderStandardEditActions", "messageLabel"]
@@ -950,6 +1019,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "hasReadImageView"]
 - !private ["PSo18UITraitEnvironment", "image"]
 - ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "isHighlighted"]
 - ["PSo18UITraitEnvironment", "layer"]
 - ["PSo18UITraitEnvironment", "message"]
 - ["PSo18UITraitEnvironment", "messageLabel"]
@@ -962,6 +1032,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "textColor"]
 - ["PSo18UITraitEnvironment", "timeLabel"]
 - ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "Bool"]
 - ["CSo6UIView", "CGRect"]
 - !private ["CSo6UIView", "Date"]
 - !private ["CSo6UIView", "DateFormatter"]
@@ -986,6 +1057,7 @@ depends-member:
 - ["CSo6UIView", "hasReadImageView"]
 - !private ["CSo6UIView", "image"]
 - ["CSo6UIView", "init"]
+- ["CSo6UIView", "isHighlighted"]
 - ["CSo6UIView", "layer"]
 - ["CSo6UIView", "message"]
 - ["CSo6UIView", "messageLabel"]
@@ -1019,6 +1091,7 @@ depends-member:
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "hasReadImageView"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "image"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
+- ["Ps37_DefaultCustomPlaygroundQuickLookable", "isHighlighted"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "layer"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "message"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "messageLabel"]
@@ -1031,12 +1104,15 @@ depends-member:
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "textColor"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "timeLabel"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", ""]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps26_ExpressibleByColorLiteral", "black"]
 - ["Ps26_ExpressibleByColorLiteral", "darkGray"]
 - ["Ps26_ExpressibleByColorLiteral", "init"]
+- !private ["Ps26_ExpressibleByColorLiteral", "white"]
 - !private ["Ps26_ExpressibleByImageLiteral", "init"]
 - ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "DateFormatter"]
@@ -1047,10 +1123,12 @@ depends-member:
 - ["Ps9_Hashable", "UIImageView"]
 - ["Ps9_Hashable", "UILabel"]
 - ["Ps9_Hashable", "UIView"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "addConstraint"]
 - !private ["Ps9_Hashable", "addConstraintWith"]
 - !private ["Ps9_Hashable", "addSubview"]
 - ["Ps9_Hashable", "backgroundColor"]
+- !private ["Ps9_Hashable", "black"]
 - !private ["Ps9_Hashable", "centerY"]
 - ["Ps9_Hashable", "contentMode"]
 - ["Ps9_Hashable", "cornerRadius"]
@@ -1065,6 +1143,7 @@ depends-member:
 - ["Ps9_Hashable", "hasReadImageView"]
 - !private ["Ps9_Hashable", "image"]
 - ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "isHighlighted"]
 - ["Ps9_Hashable", "layer"]
 - ["Ps9_Hashable", "masksToBounds"]
 - ["Ps9_Hashable", "message"]
@@ -1083,7 +1162,9 @@ depends-member:
 - ["Ps9_Hashable", "textAlignment"]
 - ["Ps9_Hashable", "textColor"]
 - ["Ps9_Hashable", "timeLabel"]
+- !private ["Ps9_Hashable", "white"]
 - ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 depends-nominal:
 - "Ps9AnyObject"
@@ -1103,6 +1184,7 @@ depends-nominal:
 - "V10Foundation4Date"
 - "CSo13DateFormatter"
 - "Ps9Equatable"
+- !private "Ps27ExpressibleByBooleanLiteral"
 - "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - "Ps23ExpressibleByNilLiteral"
 - "Ps32ExpressibleByStringInterpolation"
@@ -1159,6 +1241,7 @@ depends-nominal:
 - "OSC17UIViewContentMode"
 - "Su"
 - "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - "Ps34_ExpressibleByBuiltinStringLiteral"
 - "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
@@ -1180,4 +1263,4 @@ depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "6c7c12ade80373c2ebbcbfa3d27f964f"
+interface-hash: "ae9c8461efb76d1a360224d9f66a6345"

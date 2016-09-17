@@ -178,6 +178,16 @@ SWIFT_CLASS("_TtC17FacebookMessenger17ChatLogController")
 - (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
+@class UINavigationController;
+
+SWIFT_CLASS("_TtC17FacebookMessenger28FacebookTabBarViewController")
+@interface FacebookTabBarViewController : UITabBarController
+- (void)viewDidLoad;
+- (UINavigationController * _Nonnull)createTabbarNavigationControllerWithTabItemTitle:(NSString * _Nonnull)tabItemTitle tabItemImageName:(NSString * _Nonnull)tabItemImageName;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSEntityDescription;
 @class NSManagedObjectContext;
 
@@ -213,6 +223,10 @@ SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 @end
 
 
+@interface FriendsViewController (SWIFT_EXTENSION(FacebookMessenger))
+@end
+
+
 @interface FriendsViewController (SWIFT_EXTENSION(FacebookMessenger)) <UICollectionViewDelegateFlowLayout>
 - (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
@@ -225,10 +239,6 @@ SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
-@end
-
-
-@interface FriendsViewController (SWIFT_EXTENSION(FacebookMessenger))
 @end
 
 
@@ -250,6 +260,7 @@ SWIFT_CLASS("_TtC17FacebookMessenger7Message")
 
 SWIFT_CLASS("_TtC17FacebookMessenger11MessageCell")
 @interface MessageCell : BaseCell
+@property (nonatomic, setter=setHighlighted:) BOOL isHighlighted;
 @property (nonatomic, strong) Message * _Nullable message;
 @property (nonatomic, strong) UIImageView * _Nonnull profileImageView;
 @property (nonatomic, strong) UIView * _Nonnull dividerLine;

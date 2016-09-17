@@ -1,0 +1,448 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "FacebookTabBarViewController"
+provides-nominal:
+- "C17FacebookMessenger28FacebookTabBarViewController"
+provides-member:
+- ["C17FacebookMessenger28FacebookTabBarViewController", ""]
+provides-dynamic-lookup:
+- "createTabbarNavigationController"
+- "viewDidLoad"
+depends-top-level:
+- "UITabBarController"
+- "AssignmentPrecedence"
+- !private "FriendsViewController"
+- !private "UIViewController"
+- "UINavigationController"
+- "FacebookTabBarViewController"
+- !private "Array"
+- !private "UICollectionViewFlowLayout"
+- !private "UIImage"
+- "String"
+- !private "StringLiteralType"
+depends-member:
+- !private ["Ps9AnyObject", "FriendsViewController"]
+- !private ["Ps9AnyObject", "UICollectionViewFlowLayout"]
+- !private ["Ps9AnyObject", "UIImage"]
+- !private ["Ps9AnyObject", "UINavigationController"]
+- !private ["Ps9AnyObject", "UIViewController"]
+- ["Ps9AnyObject", "createTabbarNavigationController"]
+- !private ["Ps9AnyObject", "image"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "tabBarItem"]
+- !private ["Ps9AnyObject", "title"]
+- !private ["Ps9AnyObject", "viewControllers"]
+- ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Element"]
+- ["Sa", "deinit"]
+- !private ["Ps23BidirectionalCollection", "Element"]
+- !private ["Ps22BidirectionalIndexable", "Element"]
+- !private ["Ps7CVarArg", "Element"]
+- !private ["Ps7CVarArg", "FriendsViewController"]
+- !private ["Ps7CVarArg", "UICollectionViewFlowLayout"]
+- !private ["Ps7CVarArg", "UIImage"]
+- !private ["Ps7CVarArg", "UINavigationController"]
+- !private ["Ps7CVarArg", "UIViewController"]
+- ["Ps7CVarArg", "createTabbarNavigationController"]
+- !private ["Ps7CVarArg", "image"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "tabBarItem"]
+- !private ["Ps7CVarArg", "title"]
+- !private ["Ps7CVarArg", "viewControllers"]
+- ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Collection", "Element"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
+- !private ["Ps28CustomDebugStringConvertible", "FriendsViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "UICollectionViewFlowLayout"]
+- !private ["Ps28CustomDebugStringConvertible", "UIImage"]
+- !private ["Ps28CustomDebugStringConvertible", "UINavigationController"]
+- !private ["Ps28CustomDebugStringConvertible", "UIViewController"]
+- ["Ps28CustomDebugStringConvertible", "createTabbarNavigationController"]
+- !private ["Ps28CustomDebugStringConvertible", "image"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "tabBarItem"]
+- !private ["Ps28CustomDebugStringConvertible", "title"]
+- !private ["Ps28CustomDebugStringConvertible", "viewControllers"]
+- ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "Element"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "Element"]
+- !private ["Ps23CustomStringConvertible", "FriendsViewController"]
+- !private ["Ps23CustomStringConvertible", "UICollectionViewFlowLayout"]
+- !private ["Ps23CustomStringConvertible", "UIImage"]
+- !private ["Ps23CustomStringConvertible", "UINavigationController"]
+- !private ["Ps23CustomStringConvertible", "UIViewController"]
+- ["Ps23CustomStringConvertible", "createTabbarNavigationController"]
+- !private ["Ps23CustomStringConvertible", "image"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "tabBarItem"]
+- !private ["Ps23CustomStringConvertible", "title"]
+- !private ["Ps23CustomStringConvertible", "viewControllers"]
+- ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "FriendsViewController"]
+- !private ["Ps9Equatable", "UICollectionViewFlowLayout"]
+- !private ["Ps9Equatable", "UIImage"]
+- !private ["Ps9Equatable", "UINavigationController"]
+- !private ["Ps9Equatable", "UIViewController"]
+- ["Ps9Equatable", "createTabbarNavigationController"]
+- !private ["Ps9Equatable", "image"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "tabBarItem"]
+- !private ["Ps9Equatable", "title"]
+- !private ["Ps9Equatable", "viewControllers"]
+- ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "Element"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["C17FacebookMessenger28FacebookTabBarViewController", "FriendsViewController"]
+- ["C17FacebookMessenger28FacebookTabBarViewController", "String"]
+- !private ["C17FacebookMessenger28FacebookTabBarViewController", "UICollectionViewFlowLayout"]
+- !private ["C17FacebookMessenger28FacebookTabBarViewController", "UIImage"]
+- ["C17FacebookMessenger28FacebookTabBarViewController", "UINavigationController"]
+- !private ["C17FacebookMessenger28FacebookTabBarViewController", "UIViewController"]
+- ["C17FacebookMessenger28FacebookTabBarViewController", "createTabbarNavigationController"]
+- ["C17FacebookMessenger28FacebookTabBarViewController", "deinit"]
+- ["C17FacebookMessenger28FacebookTabBarViewController", "init"]
+- !private ["C17FacebookMessenger28FacebookTabBarViewController", "viewControllers"]
+- ["C17FacebookMessenger28FacebookTabBarViewController", "viewDidLoad"]
+- ["C17FacebookMessenger21FriendsViewController", "deinit"]
+- !private ["C17FacebookMessenger21FriendsViewController", "init"]
+- !private ["Ps8Hashable", "FriendsViewController"]
+- !private ["Ps8Hashable", "UICollectionViewFlowLayout"]
+- !private ["Ps8Hashable", "UIImage"]
+- !private ["Ps8Hashable", "UINavigationController"]
+- !private ["Ps8Hashable", "UIViewController"]
+- ["Ps8Hashable", "createTabbarNavigationController"]
+- !private ["Ps8Hashable", "image"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "tabBarItem"]
+- !private ["Ps8Hashable", "title"]
+- !private ["Ps8Hashable", "viewControllers"]
+- ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Element"]
+- !private ["Ps13IndexableBase", "Element"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "Element"]
+- !private ["Ps16MutableIndexable", "Element"]
+- ["CSo7NSCoder", "deinit"]
+- !private ["PSo8NSCoding", "FriendsViewController"]
+- !private ["PSo8NSCoding", "UICollectionViewFlowLayout"]
+- !private ["PSo8NSCoding", "UIImage"]
+- !private ["PSo8NSCoding", "UINavigationController"]
+- !private ["PSo8NSCoding", "UIViewController"]
+- ["PSo8NSCoding", "createTabbarNavigationController"]
+- !private ["PSo8NSCoding", "image"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "tabBarItem"]
+- !private ["PSo8NSCoding", "title"]
+- !private ["PSo8NSCoding", "viewControllers"]
+- ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "FriendsViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "UICollectionViewFlowLayout"]
+- !private ["PSo26NSExtensionRequestHandling", "UIImage"]
+- !private ["PSo26NSExtensionRequestHandling", "UINavigationController"]
+- !private ["PSo26NSExtensionRequestHandling", "UIViewController"]
+- ["PSo26NSExtensionRequestHandling", "createTabbarNavigationController"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "tabBarItem"]
+- !private ["PSo26NSExtensionRequestHandling", "viewControllers"]
+- ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "FriendsViewController"]
+- ["CSo8NSObject", "String"]
+- !private ["CSo8NSObject", "UICollectionViewFlowLayout"]
+- !private ["CSo8NSObject", "UIImage"]
+- ["CSo8NSObject", "UINavigationController"]
+- !private ["CSo8NSObject", "UIViewController"]
+- ["CSo8NSObject", "createTabbarNavigationController"]
+- !private ["CSo8NSObject", "image"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "tabBarItem"]
+- !private ["CSo8NSObject", "title"]
+- !private ["CSo8NSObject", "viewControllers"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "FriendsViewController"]
+- !private ["PSo16NSObjectProtocol", "UICollectionViewFlowLayout"]
+- !private ["PSo16NSObjectProtocol", "UIImage"]
+- !private ["PSo16NSObjectProtocol", "UINavigationController"]
+- !private ["PSo16NSObjectProtocol", "UIViewController"]
+- ["PSo16NSObjectProtocol", "createTabbarNavigationController"]
+- !private ["PSo16NSObjectProtocol", "image"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "tabBarItem"]
+- !private ["PSo16NSObjectProtocol", "title"]
+- !private ["PSo16NSObjectProtocol", "viewControllers"]
+- ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- ["Sq", "deinit"]
+- !private ["Ps22RandomAccessCollection", "Element"]
+- !private ["Ps21RandomAccessIndexable", "Element"]
+- !private ["Ps26RangeReplaceableCollection", "Element"]
+- !private ["Ps25RangeReplaceableIndexable", "Element"]
+- !private ["Ps8Sequence", "Element"]
+- !private ["Ps10Streamable", "init"]
+- ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "image"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "title"]
+- !private ["PSo12UIAppearance", "image"]
+- !private ["PSo12UIAppearance", "title"]
+- !private ["PSo21UIAppearanceContainer", "FriendsViewController"]
+- !private ["PSo21UIAppearanceContainer", "UICollectionViewFlowLayout"]
+- !private ["PSo21UIAppearanceContainer", "UIImage"]
+- !private ["PSo21UIAppearanceContainer", "UINavigationController"]
+- !private ["PSo21UIAppearanceContainer", "UIViewController"]
+- ["PSo21UIAppearanceContainer", "createTabbarNavigationController"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "tabBarItem"]
+- !private ["PSo21UIAppearanceContainer", "viewControllers"]
+- ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo9UIBarItem", "image"]
+- !private ["CSo9UIBarItem", "title"]
+- !private ["CSo26UICollectionViewController", "init"]
+- !private ["PSo26UICollectionViewDataSource", "init"]
+- !private ["PSo24UICollectionViewDelegate", "init"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "init"]
+- ["CSo26UICollectionViewFlowLayout", "deinit"]
+- !private ["CSo26UICollectionViewFlowLayout", "init"]
+- !private ["CSo22UICollectionViewLayout", "init"]
+- !private ["PSo18UIContentContainer", "FriendsViewController"]
+- !private ["PSo18UIContentContainer", "UICollectionViewFlowLayout"]
+- !private ["PSo18UIContentContainer", "UIImage"]
+- !private ["PSo18UIContentContainer", "UINavigationController"]
+- !private ["PSo18UIContentContainer", "UIViewController"]
+- ["PSo18UIContentContainer", "createTabbarNavigationController"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "tabBarItem"]
+- !private ["PSo18UIContentContainer", "viewControllers"]
+- ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo18UIFocusEnvironment", "FriendsViewController"]
+- !private ["PSo18UIFocusEnvironment", "UICollectionViewFlowLayout"]
+- !private ["PSo18UIFocusEnvironment", "UIImage"]
+- !private ["PSo18UIFocusEnvironment", "UINavigationController"]
+- !private ["PSo18UIFocusEnvironment", "UIViewController"]
+- ["PSo18UIFocusEnvironment", "createTabbarNavigationController"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "tabBarItem"]
+- !private ["PSo18UIFocusEnvironment", "viewControllers"]
+- ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo7UIImage", "init"]
+- ["CSo22UINavigationController", "deinit"]
+- !private ["CSo22UINavigationController", "init"]
+- !private ["CSo22UINavigationController", "tabBarItem"]
+- !private ["CSo11UIResponder", "FriendsViewController"]
+- ["CSo11UIResponder", "String"]
+- !private ["CSo11UIResponder", "UICollectionViewFlowLayout"]
+- !private ["CSo11UIResponder", "UIImage"]
+- ["CSo11UIResponder", "UINavigationController"]
+- !private ["CSo11UIResponder", "UIViewController"]
+- ["CSo11UIResponder", "createTabbarNavigationController"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "tabBarItem"]
+- !private ["CSo11UIResponder", "viewControllers"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "FriendsViewController"]
+- !private ["PSo30UIResponderStandardEditActions", "UICollectionViewFlowLayout"]
+- !private ["PSo30UIResponderStandardEditActions", "UIImage"]
+- !private ["PSo30UIResponderStandardEditActions", "UINavigationController"]
+- !private ["PSo30UIResponderStandardEditActions", "UIViewController"]
+- ["PSo30UIResponderStandardEditActions", "createTabbarNavigationController"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "tabBarItem"]
+- !private ["PSo30UIResponderStandardEditActions", "viewControllers"]
+- ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo20UIScrollViewDelegate", "init"]
+- !private ["PSo16UIStateRestoring", "FriendsViewController"]
+- !private ["PSo16UIStateRestoring", "UICollectionViewFlowLayout"]
+- !private ["PSo16UIStateRestoring", "UIImage"]
+- !private ["PSo16UIStateRestoring", "UINavigationController"]
+- !private ["PSo16UIStateRestoring", "UIViewController"]
+- ["PSo16UIStateRestoring", "createTabbarNavigationController"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "tabBarItem"]
+- !private ["PSo16UIStateRestoring", "viewControllers"]
+- ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["CSo18UITabBarController", "FriendsViewController"]
+- ["CSo18UITabBarController", "String"]
+- !private ["CSo18UITabBarController", "UICollectionViewFlowLayout"]
+- !private ["CSo18UITabBarController", "UIImage"]
+- ["CSo18UITabBarController", "UINavigationController"]
+- !private ["CSo18UITabBarController", "UIViewController"]
+- ["CSo18UITabBarController", "createTabbarNavigationController"]
+- ["CSo18UITabBarController", "deinit"]
+- ["CSo18UITabBarController", "init"]
+- !private ["CSo18UITabBarController", "viewControllers"]
+- ["CSo18UITabBarController", "viewDidLoad"]
+- ["CSo18UITabBarController", ""]
+- !private ["PSo16UITabBarDelegate", "FriendsViewController"]
+- !private ["PSo16UITabBarDelegate", "UICollectionViewFlowLayout"]
+- !private ["PSo16UITabBarDelegate", "UIImage"]
+- !private ["PSo16UITabBarDelegate", "UINavigationController"]
+- !private ["PSo16UITabBarDelegate", "UIViewController"]
+- ["PSo16UITabBarDelegate", "createTabbarNavigationController"]
+- !private ["PSo16UITabBarDelegate", "init"]
+- !private ["PSo16UITabBarDelegate", "viewControllers"]
+- ["PSo16UITabBarDelegate", "viewDidLoad"]
+- ["PSo16UITabBarDelegate", ""]
+- !private ["CSo12UITabBarItem", "image"]
+- !private ["CSo12UITabBarItem", "title"]
+- !private ["PSo18UITraitEnvironment", "FriendsViewController"]
+- !private ["PSo18UITraitEnvironment", "UICollectionViewFlowLayout"]
+- !private ["PSo18UITraitEnvironment", "UIImage"]
+- !private ["PSo18UITraitEnvironment", "UINavigationController"]
+- !private ["PSo18UITraitEnvironment", "UIViewController"]
+- ["PSo18UITraitEnvironment", "createTabbarNavigationController"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "tabBarItem"]
+- !private ["PSo18UITraitEnvironment", "viewControllers"]
+- ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo16UIViewController", "FriendsViewController"]
+- ["CSo16UIViewController", "String"]
+- !private ["CSo16UIViewController", "UICollectionViewFlowLayout"]
+- !private ["CSo16UIViewController", "UIImage"]
+- ["CSo16UIViewController", "UINavigationController"]
+- !private ["CSo16UIViewController", "UIViewController"]
+- ["CSo16UIViewController", "createTabbarNavigationController"]
+- ["CSo16UIViewController", "deinit"]
+- ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "tabBarItem"]
+- !private ["CSo16UIViewController", "viewControllers"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- !private ["Ps14_ArrayProtocol", "Element"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps26_ExpressibleByImageLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "FriendsViewController"]
+- !private ["Ps9_Hashable", "UICollectionViewFlowLayout"]
+- !private ["Ps9_Hashable", "UIImage"]
+- !private ["Ps9_Hashable", "UINavigationController"]
+- !private ["Ps9_Hashable", "UIViewController"]
+- ["Ps9_Hashable", "createTabbarNavigationController"]
+- !private ["Ps9_Hashable", "image"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "tabBarItem"]
+- !private ["Ps9_Hashable", "title"]
+- !private ["Ps9_Hashable", "viewControllers"]
+- ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- "Sa"
+- !private "Ps23BidirectionalCollection"
+- !private "Ps22BidirectionalIndexable"
+- "Ps7CVarArg"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "C17FacebookMessenger28FacebookTabBarViewController"
+- "C17FacebookMessenger21FriendsViewController"
+- "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- !private "Ps16MutableIndexable"
+- "CSo7NSCoder"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "Sq"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps21RandomAccessIndexable"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps25RangeReplaceableIndexable"
+- !private "Ps8Sequence"
+- !private "Ps10Streamable"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo9UIBarItem"
+- !private "CSo26UICollectionViewController"
+- !private "PSo26UICollectionViewDataSource"
+- !private "PSo24UICollectionViewDelegate"
+- !private "PSo34UICollectionViewDelegateFlowLayout"
+- "CSo26UICollectionViewFlowLayout"
+- !private "CSo22UICollectionViewLayout"
+- "PSo18UIContentContainer"
+- "PSo18UIFocusEnvironment"
+- !private "CSo7UIImage"
+- "CSo22UINavigationController"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- !private "PSo20UIScrollViewDelegate"
+- "PSo16UIStateRestoring"
+- "CSo18UITabBarController"
+- "PSo16UITabBarDelegate"
+- !private "CSo12UITabBarItem"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps26_ExpressibleByImageLiteral"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+interface-hash: "93e5ed0e0315ff54b8e91dc152e0bfde"

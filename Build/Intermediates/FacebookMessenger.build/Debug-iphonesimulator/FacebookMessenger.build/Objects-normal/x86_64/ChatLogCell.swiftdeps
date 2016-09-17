@@ -9,12 +9,12 @@ provides-dynamic-lookup:
 - "messageTextView"
 - "setupViews"
 depends-top-level:
+- "AssignmentPrecedence"
 - "BaseCell"
 - "ChatCell"
 - "UIFont"
-- "StringLiteralType"
-- "AssignmentPrecedence"
 - "UITextView"
+- "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "UIFont"]
 - ["Ps9AnyObject", "UITextView"]

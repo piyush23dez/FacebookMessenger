@@ -15,6 +15,8 @@
 		A61A111B1D8C60FD0061F4F9 /* FacebookMessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61A111A1D8C60FD0061F4F9 /* FacebookMessengerUITests.swift */; };
 		A65A2E8C1D8DA82C002B4804 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65A2E8B1D8DA82C002B4804 /* ChatLogController.swift */; };
 		A65A2E8E1D8DC746002B4804 /* ChatLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65A2E8D1D8DC746002B4804 /* ChatLogCell.swift */; };
+		A65A2E901D8DE485002B4804 /* FacebookTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65A2E8F1D8DE485002B4804 /* FacebookTabBarViewController.swift */; };
+		A65A2E931D8DEF58002B4804 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65A2E921D8DEF58002B4804 /* DataManager.swift */; };
 		A6CFA79B1D8C94C000910516 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7971D8C94C000910516 /* MessageCell.swift */; };
 		A6CFA79C1D8C94C000910516 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA79A1D8C94C000910516 /* FriendsViewController.swift */; };
 		A6CFA7A31D8C950C00910516 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7A21D8C950C00910516 /* Extensions.swift */; };
@@ -56,6 +58,8 @@
 		A61A111C1D8C60FD0061F4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A65A2E8B1D8DA82C002B4804 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		A65A2E8D1D8DC746002B4804 /* ChatLogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogCell.swift; sourceTree = "<group>"; };
+		A65A2E8F1D8DE485002B4804 /* FacebookTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookTabBarViewController.swift; sourceTree = "<group>"; };
+		A65A2E921D8DEF58002B4804 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A6CFA7971D8C94C000910516 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		A6CFA79A1D8C94C000910516 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		A6CFA7A21D8C950C00910516 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		A61A10F61D8C60FD0061F4F9 /* FacebookMessenger */ = {
 			isa = PBXGroup;
 			children = (
+				A65A2E911D8DEF50002B4804 /* DataManager */,
 				A6CFA7981D8C94C000910516 /* Models */,
 				A6CFA7961D8C94C000910516 /* Cells */,
 				A6CFA7991D8C94C000910516 /* ViewControllers */,
@@ -152,6 +157,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A65A2E911D8DEF50002B4804 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A65A2E921D8DEF58002B4804 /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		A6CFA7961D8C94C000910516 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +190,7 @@
 			children = (
 				A6CFA79A1D8C94C000910516 /* FriendsViewController.swift */,
 				A65A2E8B1D8DA82C002B4804 /* ChatLogController.swift */,
+				A65A2E8F1D8DE485002B4804 /* FacebookTabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -332,6 +346,8 @@
 				A65A2E8E1D8DC746002B4804 /* ChatLogCell.swift in Sources */,
 				A6CFA7A31D8C950C00910516 /* Extensions.swift in Sources */,
 				A6CFA7BD1D8CB92B00910516 /* Friend+CoreDataProperties.swift in Sources */,
+				A65A2E901D8DE485002B4804 /* FacebookTabBarViewController.swift in Sources */,
+				A65A2E931D8DEF58002B4804 /* DataManager.swift in Sources */,
 				A6CFA7BE1D8CB92B00910516 /* Message+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,37 +8,33 @@ provides-member:
 provides-dynamic-lookup:
 - "application"
 - "applicationDidBecomeActive"
-- "applicationWillResignActive"
-- "window"
 - "persistentContainer"
-- "saveContext"
-- "applicationWillTerminate"
-- "applicationDidEnterBackground"
 - "applicationWillEnterForeground"
+- "saveContext"
+- "applicationWillResignActive"
+- "applicationDidEnterBackground"
+- "window"
+- "applicationWillTerminate"
 depends-top-level:
+- !private "BooleanLiteralType"
+- "UIResponder"
 - "Bool"
+- "UIWindow"
+- !private "FacebookTabBarViewController"
+- !private "UIScreen"
 - "AssignmentPrecedence"
 - "CastingPrecedence"
-- !private "UICollectionViewFlowLayout"
-- !private "NSError"
-- "UIResponder"
-- !private "BooleanLiteralType"
-- "UIApplication"
 - "UIApplicationLaunchOptionsKey"
-- "UIApplicationDelegate"
-- "NSPersistentContainer"
-- !private "UINavigationController"
-- !private "UIScreen"
-- !private "fatalError"
-- "UIWindow"
 - "AppDelegate"
-- !private "FriendsViewController"
+- !private "fatalError"
 - !private "StringLiteralType"
+- "NSPersistentContainer"
+- "UIApplicationDelegate"
+- !private "NSError"
+- "UIApplication"
 depends-member:
-- !private ["Ps9AnyObject", "FriendsViewController"]
+- !private ["Ps9AnyObject", "FacebookTabBarViewController"]
 - !private ["Ps9AnyObject", "NSPersistentContainer"]
-- !private ["Ps9AnyObject", "UICollectionViewFlowLayout"]
-- !private ["Ps9AnyObject", "UINavigationController"]
 - !private ["Ps9AnyObject", "UIScreen"]
 - !private ["Ps9AnyObject", "UIWindow"]
 - ["Ps9AnyObject", "application"]
@@ -70,13 +66,11 @@ depends-member:
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
 - ["C17FacebookMessenger11AppDelegate", "Bool"]
-- !private ["C17FacebookMessenger11AppDelegate", "FriendsViewController"]
+- !private ["C17FacebookMessenger11AppDelegate", "FacebookTabBarViewController"]
 - !private ["C17FacebookMessenger11AppDelegate", "NSError"]
 - ["C17FacebookMessenger11AppDelegate", "NSPersistentContainer"]
 - ["C17FacebookMessenger11AppDelegate", "UIApplication"]
 - ["C17FacebookMessenger11AppDelegate", "UIApplicationLaunchOptionsKey"]
-- !private ["C17FacebookMessenger11AppDelegate", "UICollectionViewFlowLayout"]
-- !private ["C17FacebookMessenger11AppDelegate", "UINavigationController"]
 - !private ["C17FacebookMessenger11AppDelegate", "UIScreen"]
 - ["C17FacebookMessenger11AppDelegate", "UIWindow"]
 - ["C17FacebookMessenger11AppDelegate", "application"]
@@ -104,10 +98,8 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "makeKeyAndVisible"]
 - !private ["PSo15CALayerDelegate", "rootViewController"]
 - ["VSC6CGRect", "deinit"]
-- !private ["Ps7CVarArg", "FriendsViewController"]
+- !private ["Ps7CVarArg", "FacebookTabBarViewController"]
 - !private ["Ps7CVarArg", "NSPersistentContainer"]
-- !private ["Ps7CVarArg", "UICollectionViewFlowLayout"]
-- !private ["Ps7CVarArg", "UINavigationController"]
 - !private ["Ps7CVarArg", "UIScreen"]
 - !private ["Ps7CVarArg", "UIWindow"]
 - ["Ps7CVarArg", "application"]
@@ -140,10 +132,8 @@ depends-member:
 - ["Ps7CVarArg", ""]
 - !private ["Vs9Character", "deinit"]
 - !private ["Ps10Comparable", "init"]
-- !private ["Ps28CustomDebugStringConvertible", "FriendsViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "FacebookTabBarViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "NSPersistentContainer"]
-- !private ["Ps28CustomDebugStringConvertible", "UICollectionViewFlowLayout"]
-- !private ["Ps28CustomDebugStringConvertible", "UINavigationController"]
 - !private ["Ps28CustomDebugStringConvertible", "UIScreen"]
 - !private ["Ps28CustomDebugStringConvertible", "UIWindow"]
 - ["Ps28CustomDebugStringConvertible", "application"]
@@ -180,10 +170,8 @@ depends-member:
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "some"]
-- !private ["Ps23CustomStringConvertible", "FriendsViewController"]
+- !private ["Ps23CustomStringConvertible", "FacebookTabBarViewController"]
 - !private ["Ps23CustomStringConvertible", "NSPersistentContainer"]
-- !private ["Ps23CustomStringConvertible", "UICollectionViewFlowLayout"]
-- !private ["Ps23CustomStringConvertible", "UINavigationController"]
 - !private ["Ps23CustomStringConvertible", "UIScreen"]
 - !private ["Ps23CustomStringConvertible", "UIWindow"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
@@ -217,10 +205,8 @@ depends-member:
 - ["Ps23CustomStringConvertible", ""]
 - ["Vs10Dictionary", "deinit"]
 - !private ["Sd", "deinit"]
-- !private ["Ps9Equatable", "FriendsViewController"]
+- !private ["Ps9Equatable", "FacebookTabBarViewController"]
 - !private ["Ps9Equatable", "NSPersistentContainer"]
-- !private ["Ps9Equatable", "UICollectionViewFlowLayout"]
-- !private ["Ps9Equatable", "UINavigationController"]
 - !private ["Ps9Equatable", "UIScreen"]
 - !private ["Ps9Equatable", "UIWindow"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
@@ -260,13 +246,11 @@ depends-member:
 - !private ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["C17FacebookMessenger28FacebookTabBarViewController", "deinit"]
+- !private ["C17FacebookMessenger28FacebookTabBarViewController", "init"]
 - !private ["Sf", "deinit"]
-- ["C17FacebookMessenger21FriendsViewController", "deinit"]
-- !private ["C17FacebookMessenger21FriendsViewController", "init"]
-- !private ["Ps8Hashable", "FriendsViewController"]
+- !private ["Ps8Hashable", "FacebookTabBarViewController"]
 - !private ["Ps8Hashable", "NSPersistentContainer"]
-- !private ["Ps8Hashable", "UICollectionViewFlowLayout"]
-- !private ["Ps8Hashable", "UINavigationController"]
 - !private ["Ps8Hashable", "UIScreen"]
 - !private ["Ps8Hashable", "UIWindow"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
@@ -324,13 +308,11 @@ depends-member:
 - !private ["CSo22NSManagedObjectContext", "save"]
 - !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Bool"]
-- !private ["CSo8NSObject", "FriendsViewController"]
+- !private ["CSo8NSObject", "FacebookTabBarViewController"]
 - !private ["CSo8NSObject", "NSError"]
 - ["CSo8NSObject", "NSPersistentContainer"]
 - ["CSo8NSObject", "UIApplication"]
 - ["CSo8NSObject", "UIApplicationLaunchOptionsKey"]
-- !private ["CSo8NSObject", "UICollectionViewFlowLayout"]
-- !private ["CSo8NSObject", "UINavigationController"]
 - !private ["CSo8NSObject", "UIScreen"]
 - ["CSo8NSObject", "UIWindow"]
 - ["CSo8NSObject", "application"]
@@ -360,10 +342,8 @@ depends-member:
 - !private ["CSo8NSObject", "userInfo"]
 - !private ["CSo8NSObject", "viewContext"]
 - ["CSo8NSObject", "window"]
-- !private ["PSo16NSObjectProtocol", "FriendsViewController"]
+- !private ["PSo16NSObjectProtocol", "FacebookTabBarViewController"]
 - !private ["PSo16NSObjectProtocol", "NSPersistentContainer"]
-- !private ["PSo16NSObjectProtocol", "UICollectionViewFlowLayout"]
-- !private ["PSo16NSObjectProtocol", "UINavigationController"]
 - !private ["PSo16NSObjectProtocol", "UIScreen"]
 - !private ["PSo16NSObjectProtocol", "UIWindow"]
 - ["PSo16NSObjectProtocol", "application"]
@@ -419,10 +399,8 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "makeKeyAndVisible"]
 - !private ["PSo21UIAppearanceContainer", "rootViewController"]
-- !private ["PSo21UIApplicationDelegate", "FriendsViewController"]
+- !private ["PSo21UIApplicationDelegate", "FacebookTabBarViewController"]
 - !private ["PSo21UIApplicationDelegate", "NSPersistentContainer"]
-- !private ["PSo21UIApplicationDelegate", "UICollectionViewFlowLayout"]
-- !private ["PSo21UIApplicationDelegate", "UINavigationController"]
 - !private ["PSo21UIApplicationDelegate", "UIScreen"]
 - !private ["PSo21UIApplicationDelegate", "UIWindow"]
 - ["PSo21UIApplicationDelegate", "application"]
@@ -442,13 +420,6 @@ depends-member:
 - !private ["PSo21UIApplicationDelegate", "saveContext"]
 - ["PSo21UIApplicationDelegate", "window"]
 - ["PSo21UIApplicationDelegate", ""]
-- !private ["CSo26UICollectionViewController", "init"]
-- !private ["PSo26UICollectionViewDataSource", "init"]
-- !private ["PSo24UICollectionViewDelegate", "init"]
-- !private ["PSo34UICollectionViewDelegateFlowLayout", "init"]
-- ["CSo26UICollectionViewFlowLayout", "deinit"]
-- !private ["CSo26UICollectionViewFlowLayout", "init"]
-- !private ["CSo22UICollectionViewLayout", "init"]
 - !private ["PSo18UIContentContainer", "init"]
 - !private ["PSo17UICoordinateSpace", "init"]
 - !private ["PSo17UICoordinateSpace", "makeKeyAndVisible"]
@@ -462,16 +433,12 @@ depends-member:
 - !private ["PSo11UIFocusItem", "init"]
 - !private ["PSo11UIFocusItem", "makeKeyAndVisible"]
 - !private ["PSo11UIFocusItem", "rootViewController"]
-- ["CSo22UINavigationController", "deinit"]
-- !private ["CSo22UINavigationController", "init"]
 - ["CSo11UIResponder", "Bool"]
-- !private ["CSo11UIResponder", "FriendsViewController"]
+- !private ["CSo11UIResponder", "FacebookTabBarViewController"]
 - !private ["CSo11UIResponder", "NSError"]
 - ["CSo11UIResponder", "NSPersistentContainer"]
 - ["CSo11UIResponder", "UIApplication"]
 - ["CSo11UIResponder", "UIApplicationLaunchOptionsKey"]
-- !private ["CSo11UIResponder", "UICollectionViewFlowLayout"]
-- !private ["CSo11UIResponder", "UINavigationController"]
 - !private ["CSo11UIResponder", "UIScreen"]
 - ["CSo11UIResponder", "UIWindow"]
 - ["CSo11UIResponder", "application"]
@@ -496,10 +463,8 @@ depends-member:
 - ["CSo11UIResponder", "saveContext"]
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
-- !private ["PSo30UIResponderStandardEditActions", "FriendsViewController"]
+- !private ["PSo30UIResponderStandardEditActions", "FacebookTabBarViewController"]
 - !private ["PSo30UIResponderStandardEditActions", "NSPersistentContainer"]
-- !private ["PSo30UIResponderStandardEditActions", "UICollectionViewFlowLayout"]
-- !private ["PSo30UIResponderStandardEditActions", "UINavigationController"]
 - !private ["PSo30UIResponderStandardEditActions", "UIScreen"]
 - !private ["PSo30UIResponderStandardEditActions", "UIWindow"]
 - ["PSo30UIResponderStandardEditActions", "application"]
@@ -526,8 +491,9 @@ depends-member:
 - !private ["CSo8UIScreen", "bounds"]
 - ["CSo8UIScreen", "deinit"]
 - !private ["CSo8UIScreen", "main"]
-- !private ["PSo20UIScrollViewDelegate", "init"]
 - !private ["PSo16UIStateRestoring", "init"]
+- !private ["CSo18UITabBarController", "init"]
+- !private ["PSo16UITabBarDelegate", "init"]
 - !private ["PSo18UITraitEnvironment", "bounds"]
 - !private ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "main"]
@@ -556,10 +522,8 @@ depends-member:
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
-- !private ["Ps9_Hashable", "FriendsViewController"]
+- !private ["Ps9_Hashable", "FacebookTabBarViewController"]
 - !private ["Ps9_Hashable", "NSPersistentContainer"]
-- !private ["Ps9_Hashable", "UICollectionViewFlowLayout"]
-- !private ["Ps9_Hashable", "UINavigationController"]
 - !private ["Ps9_Hashable", "UIScreen"]
 - !private ["Ps9_Hashable", "UIWindow"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
@@ -616,8 +580,8 @@ depends-nominal:
 - !private "Ps32ExpressibleByStringInterpolation"
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "C17FacebookMessenger28FacebookTabBarViewController"
 - !private "Sf"
-- "C17FacebookMessenger21FriendsViewController"
 - "Ps8Hashable"
 - !private "Si"
 - !private "Vs5Int16"
@@ -648,23 +612,17 @@ depends-nominal:
 - !private "PSo12UIAppearance"
 - !private "PSo21UIAppearanceContainer"
 - "PSo21UIApplicationDelegate"
-- !private "CSo26UICollectionViewController"
-- !private "PSo26UICollectionViewDataSource"
-- !private "PSo24UICollectionViewDelegate"
-- !private "PSo34UICollectionViewDelegateFlowLayout"
-- "CSo26UICollectionViewFlowLayout"
-- !private "CSo22UICollectionViewLayout"
 - !private "PSo18UIContentContainer"
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
 - !private "PSo18UIFocusEnvironment"
 - !private "PSo11UIFocusItem"
-- "CSo22UINavigationController"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
 - "CSo8UIScreen"
-- !private "PSo20UIScrollViewDelegate"
 - !private "PSo16UIStateRestoring"
+- !private "CSo18UITabBarController"
+- !private "PSo16UITabBarDelegate"
 - !private "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - !private "CSo16UIViewController"

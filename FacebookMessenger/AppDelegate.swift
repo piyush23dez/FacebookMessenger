@@ -20,9 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
 
-        let friendsViewController = FriendsViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        let navigationController = UINavigationController(rootViewController: friendsViewController)
-        window?.rootViewController = navigationController
+        //let friendsViewController = FriendsViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        //let navigationController = UINavigationController(rootViewController: friendsViewController)
+        //window?.rootViewController = navigationController
+        
+        window?.rootViewController = FacebookTabBarViewController()
         return true
     }
 
