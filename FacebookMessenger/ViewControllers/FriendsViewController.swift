@@ -51,8 +51,11 @@ extension FriendsViewController: UICollectionViewDelegateFlowLayout {
 private extension FriendsViewController {
     
     func setupData() {
-       
         clearData()
+        saveData()
+    }
+    
+    func saveData() {
         
         let delegate = UIApplication.shared.delegate as? AppDelegate
         
@@ -79,7 +82,7 @@ private extension FriendsViewController {
             steveMessage.friend = steve
             steveMessage.text = "Apple creates great iOS devices for the world"
             steveMessage.date = Date()
-
+            
             //messages = [markMessage, steveMessage]
             
             do {

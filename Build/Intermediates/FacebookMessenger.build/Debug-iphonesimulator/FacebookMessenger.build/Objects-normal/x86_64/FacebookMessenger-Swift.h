@@ -188,10 +188,6 @@ SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 - (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
-
-@interface FriendsViewController (SWIFT_EXTENSION(FacebookMessenger))
-@end
-
 @class UITraitCollection;
 @protocol UIViewControllerTransitionCoordinator;
 
@@ -199,6 +195,10 @@ SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+@end
+
+
+@interface FriendsViewController (SWIFT_EXTENSION(FacebookMessenger))
 @end
 
 
