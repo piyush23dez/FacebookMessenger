@@ -112,8 +112,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import CoreGraphics;
-@import CoreData;
 @import Foundation;
+@import CoreData;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -145,6 +145,39 @@ SWIFT_CLASS("_TtC17FacebookMessenger8BaseCell")
 - (void)setupViews;
 @end
 
+@class UITextView;
+
+SWIFT_CLASS("_TtC17FacebookMessenger8ChatCell")
+@interface ChatCell : BaseCell
+- (void)setupViews;
+@property (nonatomic, strong) UITextView * _Nonnull messageTextView;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class Friend;
+@class Message;
+@class UICollectionViewLayout;
+@class NSBundle;
+
+SWIFT_CLASS("_TtC17FacebookMessenger17ChatLogController")
+@interface ChatLogController : UICollectionViewController
+@property (nonatomic, strong, getter=friend, setter=setFriend:) Friend * _Nullable friend_;
+@property (nonatomic, copy) NSArray<Message *> * _Nonnull messages;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UICollectionView;
+
+@interface ChatLogController (SWIFT_EXTENSION(FacebookMessenger)) <UICollectionViewDelegateFlowLayout>
+- (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section;
+- (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
 @class NSEntityDescription;
 @class NSManagedObjectContext;
 
@@ -153,7 +186,6 @@ SWIFT_CLASS("_TtC17FacebookMessenger6Friend")
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class Message;
 @class NSSet;
 
 @interface Friend (SWIFT_EXTENSION(FacebookMessenger))
@@ -170,8 +202,6 @@ SWIFT_CLASS("_TtC17FacebookMessenger6Friend")
 @property (nonatomic, strong) NSSet * _Nullable messages;
 @end
 
-@class UICollectionViewLayout;
-@class NSBundle;
 
 SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 @interface FriendsViewController : UICollectionViewController
@@ -182,10 +212,10 @@ SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UICollectionView;
 
 @interface FriendsViewController (SWIFT_EXTENSION(FacebookMessenger)) <UICollectionViewDelegateFlowLayout>
 - (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
 @class UITraitCollection;

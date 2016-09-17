@@ -15,17 +15,17 @@ provides-dynamic-lookup:
 - "profileImageName"
 - "addToMessages"
 - "addToMessages"
+- "removeFromMessages"
+- "removeFromMessages"
 - "name"
-- "removeFromMessages"
-- "removeFromMessages"
 - "messages"
 depends-top-level:
-- "Message"
-- !private "StringLiteralType"
 - "NSFetchRequest"
-- "NSSet"
+- "Message"
 - "Friend"
+- "NSSet"
 - "String"
+- !private "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "NSFetchRequest"]
 - ["Ps9AnyObject", "addToMessages"]

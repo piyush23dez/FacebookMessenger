@@ -13,6 +13,8 @@
 		A61A11051D8C60FD0061F4F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61A11031D8C60FD0061F4F9 /* LaunchScreen.storyboard */; };
 		A61A11101D8C60FD0061F4F9 /* FacebookMessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61A110F1D8C60FD0061F4F9 /* FacebookMessengerTests.swift */; };
 		A61A111B1D8C60FD0061F4F9 /* FacebookMessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61A111A1D8C60FD0061F4F9 /* FacebookMessengerUITests.swift */; };
+		A65A2E8C1D8DA82C002B4804 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65A2E8B1D8DA82C002B4804 /* ChatLogController.swift */; };
+		A65A2E8E1D8DC746002B4804 /* ChatLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65A2E8D1D8DC746002B4804 /* ChatLogCell.swift */; };
 		A6CFA79B1D8C94C000910516 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7971D8C94C000910516 /* MessageCell.swift */; };
 		A6CFA79C1D8C94C000910516 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA79A1D8C94C000910516 /* FriendsViewController.swift */; };
 		A6CFA7A31D8C950C00910516 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7A21D8C950C00910516 /* Extensions.swift */; };
@@ -52,6 +54,8 @@
 		A61A11161D8C60FD0061F4F9 /* FacebookMessengerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookMessengerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61A111A1D8C60FD0061F4F9 /* FacebookMessengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookMessengerUITests.swift; sourceTree = "<group>"; };
 		A61A111C1D8C60FD0061F4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A65A2E8B1D8DA82C002B4804 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
+		A65A2E8D1D8DC746002B4804 /* ChatLogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogCell.swift; sourceTree = "<group>"; };
 		A6CFA7971D8C94C000910516 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		A6CFA79A1D8C94C000910516 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		A6CFA7A21D8C950C00910516 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				A6CFA7971D8C94C000910516 /* MessageCell.swift */,
+				A65A2E8D1D8DC746002B4804 /* ChatLogCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				A6CFA79A1D8C94C000910516 /* FriendsViewController.swift */,
+				A65A2E8B1D8DA82C002B4804 /* ChatLogController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -316,12 +322,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65A2E8C1D8DA82C002B4804 /* ChatLogController.swift in Sources */,
 				A6CFA79C1D8C94C000910516 /* FriendsViewController.swift in Sources */,
 				A6CFA7BC1D8CB92B00910516 /* Friend+CoreDataClass.swift in Sources */,
 				A61A10F81D8C60FD0061F4F9 /* AppDelegate.swift in Sources */,
 				A61A11001D8C60FD0061F4F9 /* FacebookMessenger.xcdatamodeld in Sources */,
 				A6CFA79B1D8C94C000910516 /* MessageCell.swift in Sources */,
 				A6CFA7BF1D8CB92B00910516 /* Message+CoreDataProperties.swift in Sources */,
+				A65A2E8E1D8DC746002B4804 /* ChatLogCell.swift in Sources */,
 				A6CFA7A31D8C950C00910516 /* Extensions.swift in Sources */,
 				A6CFA7BD1D8CB92B00910516 /* Friend+CoreDataProperties.swift in Sources */,
 				A6CFA7BE1D8CB92B00910516 /* Message+CoreDataClass.swift in Sources */,

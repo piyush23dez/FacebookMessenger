@@ -19,9 +19,7 @@ class BaseCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupViews() {
-        backgroundColor = UIColor.red
-    }
+    func setupViews() { }
 }
 
 class MessageCell: BaseCell {
@@ -49,7 +47,7 @@ class MessageCell: BaseCell {
     var profileImageView: UIImageView = {
         
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 34
         imageView.layer.masksToBounds = true
         return imageView
@@ -86,8 +84,7 @@ class MessageCell: BaseCell {
     
     var hasReadImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "zuckprofile")
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
         return imageView

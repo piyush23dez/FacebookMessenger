@@ -12,12 +12,12 @@ provides-dynamic-lookup:
 - "friend"
 - "date"
 depends-top-level:
-- "Friend"
-- "Message"
-- !private "StringLiteralType"
-- "NSFetchRequest"
 - "Date"
+- "Message"
+- "Friend"
 - "String"
+- "NSFetchRequest"
+- !private "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "NSFetchRequest"]
 - ["Ps9AnyObject", "date"]
