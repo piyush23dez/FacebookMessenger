@@ -6,56 +6,35 @@ provides-nominal:
 provides-member:
 - ["C17FacebookMessenger6Friend", ""]
 provides-dynamic-lookup:
-- "name"
-- "profileImageName"
 depends-top-level:
-- "NSObject"
 - "Friend"
-- "String"
+- "NSManagedObject"
 depends-member:
 - !private ["Ps9AnyObject", "init"]
-- ["Ps9AnyObject", "name"]
-- ["Ps9AnyObject", "profileImageName"]
 - ["Ps9AnyObject", ""]
 - !private ["Ps7CVarArg", "init"]
-- ["Ps7CVarArg", "name"]
-- ["Ps7CVarArg", "profileImageName"]
 - ["Ps7CVarArg", ""]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
-- ["Ps28CustomDebugStringConvertible", "name"]
-- ["Ps28CustomDebugStringConvertible", "profileImageName"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "init"]
-- ["Ps23CustomStringConvertible", "name"]
-- ["Ps23CustomStringConvertible", "profileImageName"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["Ps9Equatable", "init"]
-- ["Ps9Equatable", "name"]
-- ["Ps9Equatable", "profileImageName"]
 - ["Ps9Equatable", ""]
-- ["C17FacebookMessenger6Friend", "String"]
 - ["C17FacebookMessenger6Friend", "deinit"]
 - ["C17FacebookMessenger6Friend", "init"]
-- ["C17FacebookMessenger6Friend", "name"]
-- ["C17FacebookMessenger6Friend", "profileImageName"]
 - !private ["Ps8Hashable", "init"]
-- ["Ps8Hashable", "name"]
-- ["Ps8Hashable", "profileImageName"]
 - ["Ps8Hashable", ""]
-- ["CSo8NSObject", "String"]
-- ["CSo8NSObject", "deinit"]
+- ["CSo19NSEntityDescription", "deinit"]
+- !private ["PSo20NSFetchRequestResult", "init"]
+- ["PSo20NSFetchRequestResult", ""]
+- ["CSo15NSManagedObject", "deinit"]
+- ["CSo15NSManagedObject", "init"]
+- ["CSo15NSManagedObject", ""]
 - ["CSo8NSObject", "init"]
-- ["CSo8NSObject", "name"]
-- ["CSo8NSObject", "profileImageName"]
-- ["CSo8NSObject", ""]
 - !private ["PSo16NSObjectProtocol", "init"]
-- ["PSo16NSObjectProtocol", "name"]
-- ["PSo16NSObjectProtocol", "profileImageName"]
 - ["PSo16NSObjectProtocol", ""]
 - ["Sq", "deinit"]
 - !private ["Ps9_Hashable", "init"]
-- ["Ps9_Hashable", "name"]
-- ["Ps9_Hashable", "profileImageName"]
 - ["Ps9_Hashable", ""]
 depends-nominal:
 - "Ps9AnyObject"
@@ -65,6 +44,9 @@ depends-nominal:
 - "Ps9Equatable"
 - "C17FacebookMessenger6Friend"
 - "Ps8Hashable"
+- "CSo19NSEntityDescription"
+- "PSo20NSFetchRequestResult"
+- "CSo15NSManagedObject"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - "Sq"
@@ -81,4 +63,4 @@ depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "dc0b1eadfaa88d866466cef544b017fb"
+interface-hash: "7fe1e770927ac3a2a0a0af62d2281dd5"

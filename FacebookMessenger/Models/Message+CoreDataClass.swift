@@ -1,5 +1,5 @@
 //
-//  Message.swift
+//  Message+CoreDataClass.swift
 //  FacebookMessenger
 //
 //  Created by Sharma, Piyush on 9/16/16.
@@ -7,10 +7,9 @@
 //
 
 import Foundation
-class Message: NSObject {
-    
-    var text: String?
-    var date: Date?
-    
-    var friend: Friend?
+import CoreData
+
+
+public class Message: NSManagedObject {
+
 }

@@ -40,7 +40,7 @@ class MessageCell: BaseCell {
             if let date = message?.date {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "h:mm:a"
-                timeLabel.text = dateFormatter.string(from: date)
+                timeLabel.text = dateFormatter.string(from: date as Date)
             }
         }
     }

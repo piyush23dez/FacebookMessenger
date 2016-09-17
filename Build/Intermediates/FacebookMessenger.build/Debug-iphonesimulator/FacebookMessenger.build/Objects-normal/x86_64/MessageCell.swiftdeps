@@ -9,33 +9,35 @@ provides-member:
 - ["C17FacebookMessenger8BaseCell", ""]
 - ["C17FacebookMessenger11MessageCell", ""]
 provides-dynamic-lookup:
-- "message"
-- "hasReadImageView"
-- "messageLabel"
-- "profileImageView"
 - "nameLabel"
+- "messageLabel"
+- "setupViews"
+- "setupViews"
 - "dividerLine"
-- "setupViews"
-- "setupViews"
+- "message"
 - "timeLabel"
+- "profileImageView"
+- "hasReadImageView"
 depends-top-level:
-- "BaseCell"
-- "NSCoder"
-- "AssignmentPrecedence"
-- "Message"
-- "UICollectionViewCell"
-- !private "DateFormatter"
-- "UIColor"
-- "UIFont"
-- !private "fatalError"
-- "UILabel"
-- "UIImageView"
 - "CGRect"
-- "UIImage"
+- "UIFont"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- "UIView"
+- !private "Date"
+- !private "fatalError"
+- !private "DateFormatter"
+- "UICollectionViewCell"
+- "Message"
+- "UIColor"
+- "UIImageView"
 - "BooleanLiteralType"
 - !private "NSLayoutConstraint"
-- "UIView"
+- "UIImage"
+- "NSCoder"
+- "UILabel"
 - "StringLiteralType"
+- "BaseCell"
 - "MessageCell"
 depends-member:
 - !private ["Ps9AnyObject", "DateFormatter"]
@@ -81,6 +83,7 @@ depends-member:
 - ["Ps9AnyObject", "timeLabel"]
 - ["Ps9AnyObject", ""]
 - ["C17FacebookMessenger8BaseCell", "CGRect"]
+- !private ["C17FacebookMessenger8BaseCell", "Date"]
 - !private ["C17FacebookMessenger8BaseCell", "DateFormatter"]
 - ["C17FacebookMessenger8BaseCell", "Message"]
 - ["C17FacebookMessenger8BaseCell", "NSCoder"]
@@ -390,6 +393,7 @@ depends-member:
 - !private ["C17FacebookMessenger7Message", "date"]
 - !private ["C17FacebookMessenger7Message", "friend"]
 - !private ["C17FacebookMessenger7Message", "text"]
+- !private ["C17FacebookMessenger11MessageCell", "Date"]
 - !private ["C17FacebookMessenger11MessageCell", "DateFormatter"]
 - ["C17FacebookMessenger11MessageCell", "Message"]
 - !private ["C17FacebookMessenger11MessageCell", "NSLayoutConstraint"]
@@ -458,14 +462,25 @@ depends-member:
 - !private ["PSo9NSCopying", "red"]
 - !private ["PSo9NSCopying", "string"]
 - ["PSo9NSCopying", "systemFont"]
+- !private ["PSo20NSFetchRequestResult", "date"]
+- !private ["PSo20NSFetchRequestResult", "friend"]
+- !private ["PSo20NSFetchRequestResult", "name"]
+- !private ["PSo20NSFetchRequestResult", "profileImageName"]
+- !private ["PSo20NSFetchRequestResult", "text"]
 - !private ["OSC17NSLayoutAttribute", "centerY"]
 - ["OSC17NSLayoutAttribute", "deinit"]
 - ["CSo18NSLayoutConstraint", "deinit"]
 - !private ["CSo18NSLayoutConstraint", "init"]
 - ["OSC16NSLayoutRelation", "deinit"]
 - !private ["OSC16NSLayoutRelation", "equal"]
+- !private ["CSo15NSManagedObject", "date"]
+- !private ["CSo15NSManagedObject", "friend"]
+- !private ["CSo15NSManagedObject", "name"]
+- !private ["CSo15NSManagedObject", "profileImageName"]
+- !private ["CSo15NSManagedObject", "text"]
 - ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "CGRect"]
+- !private ["CSo8NSObject", "Date"]
 - !private ["CSo8NSObject", "DateFormatter"]
 - ["CSo8NSObject", "Message"]
 - ["CSo8NSObject", "NSCoder"]
@@ -664,6 +679,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "timeLabel"]
 - ["PSo21UIAppearanceContainer", ""]
 - ["CSo24UICollectionReusableView", "CGRect"]
+- !private ["CSo24UICollectionReusableView", "Date"]
 - !private ["CSo24UICollectionReusableView", "DateFormatter"]
 - ["CSo24UICollectionReusableView", "Message"]
 - ["CSo24UICollectionReusableView", "NSCoder"]
@@ -690,6 +706,7 @@ depends-member:
 - ["CSo24UICollectionReusableView", "setupViews"]
 - ["CSo24UICollectionReusableView", "timeLabel"]
 - ["CSo20UICollectionViewCell", "CGRect"]
+- !private ["CSo20UICollectionViewCell", "Date"]
 - !private ["CSo20UICollectionViewCell", "DateFormatter"]
 - ["CSo20UICollectionViewCell", "Message"]
 - ["CSo20UICollectionViewCell", "NSCoder"]
@@ -865,6 +882,7 @@ depends-member:
 - ["CSo7UILabel", "textAlignment"]
 - ["CSo7UILabel", "textColor"]
 - ["CSo11UIResponder", "CGRect"]
+- !private ["CSo11UIResponder", "Date"]
 - !private ["CSo11UIResponder", "DateFormatter"]
 - ["CSo11UIResponder", "Message"]
 - ["CSo11UIResponder", "NSCoder"]
@@ -960,6 +978,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "timeLabel"]
 - ["PSo18UITraitEnvironment", ""]
 - ["CSo6UIView", "CGRect"]
+- !private ["CSo6UIView", "Date"]
 - !private ["CSo6UIView", "DateFormatter"]
 - ["CSo6UIView", "Message"]
 - ["CSo6UIView", "NSCoder"]
@@ -1117,9 +1136,11 @@ depends-nominal:
 - "CSo7NSCoder"
 - "PSo8NSCoding"
 - "PSo9NSCopying"
+- !private "PSo20NSFetchRequestResult"
 - "OSC17NSLayoutAttribute"
 - "CSo18NSLayoutConstraint"
 - "OSC16NSLayoutRelation"
+- !private "CSo15NSManagedObject"
 - "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"

@@ -15,9 +15,11 @@
 		A61A111B1D8C60FD0061F4F9 /* FacebookMessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61A111A1D8C60FD0061F4F9 /* FacebookMessengerUITests.swift */; };
 		A6CFA79B1D8C94C000910516 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7971D8C94C000910516 /* MessageCell.swift */; };
 		A6CFA79C1D8C94C000910516 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA79A1D8C94C000910516 /* FriendsViewController.swift */; };
-		A6CFA79E1D8C94CC00910516 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA79D1D8C94CC00910516 /* Friend.swift */; };
-		A6CFA7A01D8C94D500910516 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA79F1D8C94D500910516 /* Message.swift */; };
 		A6CFA7A31D8C950C00910516 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7A21D8C950C00910516 /* Extensions.swift */; };
+		A6CFA7BC1D8CB92B00910516 /* Friend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7B81D8CB92B00910516 /* Friend+CoreDataClass.swift */; };
+		A6CFA7BD1D8CB92B00910516 /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7B91D8CB92B00910516 /* Friend+CoreDataProperties.swift */; };
+		A6CFA7BE1D8CB92B00910516 /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7BA1D8CB92B00910516 /* Message+CoreDataClass.swift */; };
+		A6CFA7BF1D8CB92B00910516 /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7BB1D8CB92B00910516 /* Message+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +54,11 @@
 		A61A111C1D8C60FD0061F4F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6CFA7971D8C94C000910516 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		A6CFA79A1D8C94C000910516 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
-		A6CFA79D1D8C94CC00910516 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
-		A6CFA79F1D8C94D500910516 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A6CFA7A21D8C950C00910516 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A6CFA7B81D8CB92B00910516 /* Friend+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A6CFA7B91D8CB92B00910516 /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A6CFA7BA1D8CB92B00910516 /* Message+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A6CFA7BB1D8CB92B00910516 /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +159,10 @@
 		A6CFA7981D8C94C000910516 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A6CFA79D1D8C94CC00910516 /* Friend.swift */,
-				A6CFA79F1D8C94D500910516 /* Message.swift */,
+				A6CFA7B81D8CB92B00910516 /* Friend+CoreDataClass.swift */,
+				A6CFA7B91D8CB92B00910516 /* Friend+CoreDataProperties.swift */,
+				A6CFA7BA1D8CB92B00910516 /* Message+CoreDataClass.swift */,
+				A6CFA7BB1D8CB92B00910516 /* Message+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,12 +317,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6CFA79C1D8C94C000910516 /* FriendsViewController.swift in Sources */,
+				A6CFA7BC1D8CB92B00910516 /* Friend+CoreDataClass.swift in Sources */,
 				A61A10F81D8C60FD0061F4F9 /* AppDelegate.swift in Sources */,
-				A6CFA79E1D8C94CC00910516 /* Friend.swift in Sources */,
-				A6CFA7A01D8C94D500910516 /* Message.swift in Sources */,
 				A61A11001D8C60FD0061F4F9 /* FacebookMessenger.xcdatamodeld in Sources */,
 				A6CFA79B1D8C94C000910516 /* MessageCell.swift in Sources */,
+				A6CFA7BF1D8CB92B00910516 /* Message+CoreDataProperties.swift in Sources */,
 				A6CFA7A31D8C950C00910516 /* Extensions.swift in Sources */,
+				A6CFA7BD1D8CB92B00910516 /* Friend+CoreDataProperties.swift in Sources */,
+				A6CFA7BE1D8CB92B00910516 /* Message+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

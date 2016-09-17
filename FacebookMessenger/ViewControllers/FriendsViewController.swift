@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 
 class FriendsViewController: UICollectionViewController {
     
@@ -51,29 +51,95 @@ extension FriendsViewController: UICollectionViewDelegateFlowLayout {
 private extension FriendsViewController {
     
     func setupData() {
+       
+        clearData()
         
-        let mark = Friend()
-        mark.name = "Mark"
-        mark.profileImageName = "zuckprofile"
+        let delegate = UIApplication.shared.delegate as? AppDelegate
         
-        let markMessage = Message()
-        markMessage.friend = mark
-        markMessage.text = "Hello, my name is Mark, Nice to meet you"
-        markMessage.date = Date()
-        
-        let steve = Friend()
-        steve.name = "Steve"
-        steve.profileImageName = "steve_profile"
-        
-        let steveMessage = Message()
-        steveMessage.friend = steve
-        steveMessage.text = "Apple creates great iOS devices for the world"
-        steveMessage.date = Date()
-        
-        messages.append(markMessage)
-        messages.append(steveMessage)
+        if let context = delegate?.persistentContainer.viewContext {
+            
+            //Friend
+            let mark = Friend(entity: NSEntityDescription.entity(forEntityName: "Friend", in: context)!, insertInto: context)
+            mark.name = "Mark Zukerberg"
+            mark.profileImageName = "zuckprofile"
+            
+            //Message
+            let markMessage = Message(entity: NSEntityDescription.entity(forEntityName: "Message", in: context)!, insertInto: context)
+            markMessage.friend = mark
+            markMessage.text = "Hello, my name is Mark, Nice to meet you"
+            markMessage.date = Date()
+            
+            //Friend
+            let steve = Friend(entity: NSEntityDescription.entity(forEntityName: "Friend", in: context)!, insertInto: context)
+            steve.name = "Steve Jobs"
+            steve.profileImageName = "steve_profile"
+            
+            //Message
+            let steveMessage = Message(entity: NSEntityDescription.entity(forEntityName: "Message", in: context)!, insertInto: context)
+            steveMessage.friend = steve
+            steveMessage.text = "Apple creates great iOS devices for the world"
+            steveMessage.date = Date()
 
+            //messages = [markMessage, steveMessage]
+            
+            do {
+                try context.save()
+            }
+            catch let error {
+                print(error)
+            }
+        }
+        
+        loadData()
     }
-
+    
+    func loadData() {
+        
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        if let context = delegate?.persistentContainer.viewContext {
+            
+            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Message")
+            
+            do {
+                if let allMessages = try context.fetch(fetchRequest) as? [Message] {
+                    messages = allMessages
+                }
+            }
+            catch let error {
+                print(error)
+            }
+        }
+    }
+    
+    func clearData() {
+        
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+       
+        let allEntities = ["Friend" , "Message"]
+        
+        if let context = delegate?.persistentContainer.viewContext {
+           
+            for entity in allEntities {
+                let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entity)
+                do {
+                    if let objects = try context.fetch(fetchRequest) as? [NSManagedObject] {
+                        for object in objects {
+                            context.delete(object)
+                        }
+                    }
+                }
+                catch let error {
+                    print(error)
+                }
+            }
+            
+            do {
+                try context.save()
+            }
+            catch let error {
+                print(error)
+            }
+        }
+    }
 }
 

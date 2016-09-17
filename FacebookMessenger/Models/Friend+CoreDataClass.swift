@@ -1,5 +1,5 @@
 //
-//  Friend.swift
+//  Friend+CoreDataClass.swift
 //  FacebookMessenger
 //
 //  Created by Sharma, Piyush on 9/16/16.
@@ -7,9 +7,9 @@
 //
 
 import Foundation
+import CoreData
 
-class Friend: NSObject {
-    var name: String?
-    var profileImageName: String?
+
+public class Friend: NSManagedObject {
+
 }
-

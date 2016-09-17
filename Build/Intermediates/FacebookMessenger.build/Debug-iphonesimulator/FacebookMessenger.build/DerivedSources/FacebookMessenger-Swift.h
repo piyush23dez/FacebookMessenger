@@ -112,7 +112,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import CoreGraphics;
-@import ObjectiveC;
+@import CoreData;
 @import Foundation;
 #endif
 
@@ -145,12 +145,29 @@ SWIFT_CLASS("_TtC17FacebookMessenger8BaseCell")
 - (void)setupViews;
 @end
 
+@class NSEntityDescription;
+@class NSManagedObjectContext;
 
 SWIFT_CLASS("_TtC17FacebookMessenger6Friend")
-@interface Friend : NSObject
+@interface Friend : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class Message;
+@class NSSet;
+
+@interface Friend (SWIFT_EXTENSION(FacebookMessenger))
+- (void)addMessagesObject:(Message * _Nonnull)value;
+- (void)removeMessagesObject:(Message * _Nonnull)value;
+- (void)addMessages:(NSSet * _Nonnull)values;
+- (void)removeMessages:(NSSet * _Nonnull)values;
+@end
+
+
+@interface Friend (SWIFT_EXTENSION(FacebookMessenger))
 @property (nonatomic, copy) NSString * _Nullable name;
 @property (nonatomic, copy) NSString * _Nullable profileImageName;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) NSSet * _Nullable messages;
 @end
 
 @class UICollectionViewLayout;
@@ -165,14 +182,14 @@ SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-@interface FriendsViewController (SWIFT_EXTENSION(FacebookMessenger))
-@end
-
 @class UICollectionView;
 
 @interface FriendsViewController (SWIFT_EXTENSION(FacebookMessenger)) <UICollectionViewDelegateFlowLayout>
 - (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+@end
+
+
+@interface FriendsViewController (SWIFT_EXTENSION(FacebookMessenger))
 @end
 
 @class UITraitCollection;
@@ -186,11 +203,15 @@ SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 
 
 SWIFT_CLASS("_TtC17FacebookMessenger7Message")
-@interface Message : NSObject
+@interface Message : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface Message (SWIFT_EXTENSION(FacebookMessenger))
 @property (nonatomic, copy) NSString * _Nullable text;
 @property (nonatomic, copy) NSDate * _Nullable date;
 @property (nonatomic, strong, getter=friend, setter=setFriend:) Friend * _Nullable friend_;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIImageView;
