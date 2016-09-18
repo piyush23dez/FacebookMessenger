@@ -4,32 +4,37 @@ provides-nominal:
 provides-member:
 - ["C17FacebookMessenger7Message", ""]
 - ["C17FacebookMessenger7Message", "fetchRequest"]
-- ["C17FacebookMessenger7Message", "text"]
 - ["C17FacebookMessenger7Message", "date"]
+- ["C17FacebookMessenger7Message", "text"]
+- ["C17FacebookMessenger7Message", "isSender"]
 - ["C17FacebookMessenger7Message", "friend"]
 provides-dynamic-lookup:
-- "text"
-- "friend"
 - "date"
+- "isSender"
+- "friend"
+- "text"
 depends-top-level:
 - "Date"
-- "Message"
 - "Friend"
+- !private "StringLiteralType"
+- "Message"
+- "Bool"
 - "String"
 - "NSFetchRequest"
-- !private "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "NSFetchRequest"]
 - ["Ps9AnyObject", "date"]
 - ["Ps9AnyObject", "fetchRequest"]
 - ["Ps9AnyObject", "friend"]
 - !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "isSender"]
 - ["Ps9AnyObject", "text"]
 - !private ["Ps7CVarArg", "NSFetchRequest"]
 - ["Ps7CVarArg", "date"]
 - ["Ps7CVarArg", "fetchRequest"]
 - ["Ps7CVarArg", "friend"]
 - !private ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "isSender"]
 - ["Ps7CVarArg", "text"]
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "NSFetchRequest"]
@@ -37,6 +42,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "fetchRequest"]
 - ["Ps28CustomDebugStringConvertible", "friend"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "isSender"]
 - ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps17CustomReflectable", "init"]
@@ -45,12 +51,14 @@ depends-member:
 - ["Ps23CustomStringConvertible", "fetchRequest"]
 - ["Ps23CustomStringConvertible", "friend"]
 - !private ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "isSender"]
 - ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps9Equatable", "NSFetchRequest"]
 - ["Ps9Equatable", "date"]
 - ["Ps9Equatable", "fetchRequest"]
 - ["Ps9Equatable", "friend"]
 - !private ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "isSender"]
 - ["Ps9Equatable", "text"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps32ExpressibleByStringInterpolation", "init"]
@@ -61,8 +69,10 @@ depends-member:
 - ["Ps8Hashable", "fetchRequest"]
 - ["Ps8Hashable", "friend"]
 - !private ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "isSender"]
 - ["Ps8Hashable", "text"]
 - !private ["Ps25LosslessStringConvertible", "init"]
+- ["C17FacebookMessenger7Message", "Bool"]
 - ["C17FacebookMessenger7Message", "Date"]
 - ["C17FacebookMessenger7Message", "Friend"]
 - ["C17FacebookMessenger7Message", "Message"]
@@ -72,6 +82,7 @@ depends-member:
 - ["C17FacebookMessenger7Message", "deinit"]
 - ["C17FacebookMessenger7Message", "fetchRequest"]
 - ["C17FacebookMessenger7Message", "friend"]
+- ["C17FacebookMessenger7Message", "isSender"]
 - ["C17FacebookMessenger7Message", "text"]
 - !private ["Ps10MirrorPath", "init"]
 - !private ["PSo8NSCoding", "init"]
@@ -82,7 +93,9 @@ depends-member:
 - ["PSo20NSFetchRequestResult", "date"]
 - ["PSo20NSFetchRequestResult", "fetchRequest"]
 - ["PSo20NSFetchRequestResult", "friend"]
+- ["PSo20NSFetchRequestResult", "isSender"]
 - ["PSo20NSFetchRequestResult", "text"]
+- ["CSo15NSManagedObject", "Bool"]
 - ["CSo15NSManagedObject", "Date"]
 - ["CSo15NSManagedObject", "Friend"]
 - ["CSo15NSManagedObject", "Message"]
@@ -91,8 +104,10 @@ depends-member:
 - ["CSo15NSManagedObject", "date"]
 - ["CSo15NSManagedObject", "fetchRequest"]
 - ["CSo15NSManagedObject", "friend"]
+- ["CSo15NSManagedObject", "isSender"]
 - ["CSo15NSManagedObject", "text"]
 - !private ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "Date"]
 - ["CSo8NSObject", "Friend"]
 - ["CSo8NSObject", "Message"]
@@ -102,12 +117,14 @@ depends-member:
 - ["CSo8NSObject", "fetchRequest"]
 - ["CSo8NSObject", "friend"]
 - !private ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "isSender"]
 - ["CSo8NSObject", "text"]
 - !private ["PSo16NSObjectProtocol", "NSFetchRequest"]
 - ["PSo16NSObjectProtocol", "date"]
 - ["PSo16NSObjectProtocol", "fetchRequest"]
 - ["PSo16NSObjectProtocol", "friend"]
 - !private ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "isSender"]
 - ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "init"]
@@ -125,6 +142,7 @@ depends-member:
 - ["Ps9_Hashable", "fetchRequest"]
 - ["Ps9_Hashable", "friend"]
 - !private ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "isSender"]
 - ["Ps9_Hashable", "text"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
 depends-nominal:
@@ -176,4 +194,4 @@ depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "d0c6bb77a4318afbf917f66b0bb35ea5"
+interface-hash: "42793b5cd12a7ee98ca433d274653c11"

@@ -13,7 +13,7 @@ class DataManager {
     
     static let sharedManager = DataManager()
     fileprivate var messages = [Message]()
-    let delegate = UIApplication.shared.delegate as? AppDelegate
+    fileprivate let delegate = UIApplication.shared.delegate as? AppDelegate
 
     private init() {
         clear()
@@ -69,7 +69,11 @@ class DataManager {
             //Message
             createMessage(text: "Good Morning Apple", minutesAgo: 2, frind: steve, context: context)
             createMessage(text: "How Are you?", minutesAgo: 3 ,frind: steve, context: context)
-            createMessage(text: "Are you ready for iPhone 7?", minutesAgo: 4, frind: steve, context: context)
+            createMessage(text: "Learn which devices appear in your Apple ID device list, how to see your device's details, and how to remove a device, if necessary.", minutesAgo: 4, frind: steve, context: context)
+            
+            //Response message
+            createMessage(text: "iPhone 7 has launched", minutesAgo: 5, frind: steve, context: context, isSender: true)
+
             
             //Friend
             let trump = createFriend(name: "Donald Trump", imageName: "donald_trump_profile", context: context)
@@ -95,12 +99,13 @@ class DataManager {
         return friend
     }
     
-    private func createMessage(text: String, minutesAgo: Double, frind: Friend, context: NSManagedObjectContext) {
+    private func createMessage(text: String, minutesAgo: Double, frind: Friend, context: NSManagedObjectContext, isSender: Bool = false) {
         
         let message = Message(entity: NSEntityDescription.entity(forEntityName: "Message", in: context)!, insertInto: context)
         message.friend = frind
         message.text = text
         message.date = Date().addingTimeInterval(-minutesAgo*60) // convert minutes in seconds
+        message.isSender = isSender
     }
     
     private func save() {
