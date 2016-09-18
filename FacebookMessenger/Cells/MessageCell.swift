@@ -49,6 +49,18 @@ class MessageCell: BaseCell {
             if let date = message?.date {
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "h:mm:a"
+                
+                let secondsInDay: TimeInterval = 60 * 60 * 24
+                let elapsedTimeInSeconds = Date().timeIntervalSince(date)
+                
+                //Check if elapsed time of message is > 1 day
+                if elapsedTimeInSeconds > 7 * secondsInDay {
+                    dateFormatter.dateFormat = "MM/dd/yy"
+                }
+                else if elapsedTimeInSeconds > secondsInDay {
+                    dateFormatter.dateFormat = "EEE"
+                }
+                
                 timeLabel.text = dateFormatter.string(from: date as Date)
             }
         }

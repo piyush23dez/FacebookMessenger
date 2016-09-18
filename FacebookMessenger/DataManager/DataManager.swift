@@ -79,7 +79,12 @@ class DataManager {
             //Friend
             let ghandhi = createFriend(name: "Mahatma Ghandhi", imageName: "gandhi", context: context)
             //Message
-            createMessage(text: "Love, Peace, and Joy", minutesAgo: 60*5, frind: ghandhi, context: context)
+            createMessage(text: "Love, Peace, and Joy", minutesAgo: 60*24, frind: ghandhi, context: context)
+            
+            //Friend
+            let hillary = createFriend(name: "Hillary Clinton", imageName: "hillary_profile", context: context)
+            //Message
+            createMessage(text: "Please vote for me, you did for Billy", minutesAgo: 8*60*24, frind: hillary, context: context)
         }
     }
     
@@ -95,7 +100,7 @@ class DataManager {
         let message = Message(entity: NSEntityDescription.entity(forEntityName: "Message", in: context)!, insertInto: context)
         message.friend = frind
         message.text = text
-        message.date = Date().addingTimeInterval(-minutesAgo*60)
+        message.date = Date().addingTimeInterval(-minutesAgo*60) // convert minutes in seconds
     }
     
     private func save() {

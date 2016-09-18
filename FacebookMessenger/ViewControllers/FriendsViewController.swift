@@ -11,19 +11,19 @@ import CoreData
 
 class FriendsViewController: UICollectionViewController {
     
-    let cellId = "cellId"
+    fileprivate let cellId = "cellId"
     fileprivate var messages = [Message]()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         navigationItem.title = "Recent"
         collectionView?.alwaysBounceVertical = true
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(MessageCell.self, forCellWithReuseIdentifier: cellId)
-        setupData()
         
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        print(documentsPath)
+        setupData()
     }
 }
 

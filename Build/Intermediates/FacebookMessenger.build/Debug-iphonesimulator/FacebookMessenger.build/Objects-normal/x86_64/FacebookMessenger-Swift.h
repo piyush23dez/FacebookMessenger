@@ -215,7 +215,6 @@ SWIFT_CLASS("_TtC17FacebookMessenger6Friend")
 
 SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 @interface FriendsViewController : UICollectionViewController
-@property (nonatomic, readonly, copy) NSString * _Nonnull cellId;
 - (void)viewDidLoad;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
