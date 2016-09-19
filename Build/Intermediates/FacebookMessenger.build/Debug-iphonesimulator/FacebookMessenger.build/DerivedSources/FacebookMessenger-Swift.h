@@ -167,7 +167,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UIImage * _N
 
 @class Friend;
 @class Message;
+@class NSLayoutConstraint;
 @class UITextField;
+@class UIButton;
 @class UICollectionViewLayout;
 @class NSBundle;
 
@@ -175,11 +177,13 @@ SWIFT_CLASS("_TtC17FacebookMessenger17ChatLogController")
 @interface ChatLogController : UICollectionViewController
 @property (nonatomic, strong, getter=friend, setter=setFriend:) Friend * _Nullable friend_;
 @property (nonatomic, copy) NSArray<Message *> * _Nonnull messages;
+@property (nonatomic, strong) NSLayoutConstraint * _Nullable bottomConstraint;
 @property (nonatomic, strong) UIView * _Nonnull inputMessageView;
 @property (nonatomic, strong) UITextField * _Nonnull inputTextField;
+@property (nonatomic, strong) UIButton * _Nonnull sendButton;
 - (void)viewDidLoad;
+- (void)addKeyboardObservers;
 - (void)handleKeyboardNotification:(NSNotification * _Nonnull)notification;
-- (void)setupInputView;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -192,6 +196,7 @@ SWIFT_CLASS("_TtC17FacebookMessenger17ChatLogController")
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (UIEdgeInsets)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout insetForSectionAtIndex:(NSInteger)section;
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
 @class UINavigationController;

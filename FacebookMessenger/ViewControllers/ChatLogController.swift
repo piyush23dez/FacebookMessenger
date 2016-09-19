@@ -21,9 +21,11 @@ class ChatLogController: UICollectionViewController {
     }
     
     var messages = [Message]()
+    var bottomConstraint: NSLayoutConstraint?
+    
     var inputMessageView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.red
+        view.backgroundColor = UIColor.white
         return view
     }()
     
@@ -31,6 +33,14 @@ class ChatLogController: UICollectionViewController {
        let textField = UITextField()
         textField.placeholder = "Type"
         return textField
+    }()
+    
+    var sendButton: UIButton = {
+       let button = UIButton(type: .system)
+        button.setTitle("Send", for: .normal)
+        button.setTitleColor(UIColor.init(red: 0, green: 131/255, blue: 249/255, alpha: 1), for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        return button
     }()
     
     override func viewDidLoad() {
@@ -44,25 +54,57 @@ class ChatLogController: UICollectionViewController {
         
         view.addSubview(inputMessageView)
         view.addConstraintWith(format: "H:|[v0]|", views: inputMessageView)
-        view.addConstraintWith(format: "V:[v0(40)]|", views: inputMessageView)
-        
+        view.addConstraintWith(format: "V:[v0(40)]", views: inputMessageView)
+        bottomConstraint = NSLayoutConstraint(item: inputMessageView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
+        view.addConstraint(bottomConstraint!)
         setupInputView()
-        
+        addKeyboardObservers()
+    }
+    
+    func addKeyboardObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillHide, object: nil)
     }
     
     func handleKeyboardNotification(_ notification: Notification) {
         if let userInfo = notification.userInfo {
-            if let keboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
                 
+                let isKeyboardShowing = notification.name.rawValue == Notification.Name.UIKeyboardWillShow.rawValue
+                self.bottomConstraint?.constant = isKeyboardShowing ? -keyboardFrame.height : 0
+               
+                //Animate input textfield alongwith keyboard
+                UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut, animations: {
+                    self.view.layoutIfNeeded()
+                }, completion: nil)
+
+                DispatchQueue.main.async {
+                    
+                    UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut, animations: {
+                        if isKeyboardShowing {
+                            let indexPath = IndexPath(item: self.messages.count-1, section: 0)
+                            self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
+                        }
+                    }, completion: nil)
+                }
             }
         }
     }
     
-    func setupInputView() {
+    private func setupInputView() {
+        let topBorderView = UIView()
+        topBorderView.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
+        
+        inputMessageView.addSubview(topBorderView)
         inputMessageView.addSubview(inputTextField)
-        inputMessageView.addConstraintWith(format: "H:|-8-[v0]|", views: inputTextField)
+        inputMessageView.addSubview(sendButton)
+
+        inputMessageView.addConstraintWith(format: "H:|-8-[v0][v1(60)]|", views: inputTextField,sendButton)
         inputMessageView.addConstraintWith(format: "V:|[v0]|", views: inputTextField)
+        inputMessageView.addConstraintWith(format: "V:|[v0]|", views: sendButton)
+        inputMessageView.addConstraintWith(format: "H:|[v0]|", views: topBorderView)
+        inputMessageView.addConstraintWith(format: "V:|[v0(0.5)]", views: topBorderView)
     }
 }
 
@@ -105,7 +147,6 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
                 cell.bubbleImageView.tintColor = UIColor(red: 0, green: 134/255, blue: 249/255, alpha: 1.0)
                 cell.messageTextView.textColor = UIColor.white
                 cell.bubbleImageView.image = ChatCell.blueBubbleImage
-
             }
         }
 
@@ -130,5 +171,13 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        dismissKeyboard()
+    }
+    
+    private func dismissKeyboard() {
+        inputTextField.resignFirstResponder()
     }
 }

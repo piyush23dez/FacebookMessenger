@@ -34,6 +34,7 @@ class ChatCell: BaseCell {
     
     var messageTextView: UITextView = {
         let messageTextView = UITextView()
+        messageTextView.isEditable = false
         messageTextView.isScrollEnabled = false
         messageTextView.font = UIFont.systemFont(ofSize: 18)
         messageTextView.backgroundColor = UIColor.clear
@@ -49,18 +50,19 @@ class ChatCell: BaseCell {
     }
     
     override func setupViews() {
+        
         super.setupViews()
+        
         addSubview(bubbleTextView)
         addSubview(messageTextView)
         addSubview(profileImageView)
         bubbleTextView.addSubview(bubbleImageView)
-
+        
         addConstraintWith(format: "H:|-8-[v0(30)]", views: profileImageView)
         addConstraintWith(format: "V:[v0(30)]|", views: profileImageView)
         
         bubbleTextView.addConstraintWith(format: "H:|[v0]|", views: bubbleImageView)
         bubbleTextView.addConstraintWith(format: "V:|[v0]|", views: bubbleImageView)
-
+        
     }
-    
-    }
+}
