@@ -17,21 +17,52 @@ class ChatLogController: UICollectionViewController {
         didSet {
             messages = friend?.messages?.allObjects as! [Message]
             messages.sort { $0.date! < $1.date! } //ascending date order
-            
-            for message in messages {
-                print(message.text)
-            }
         }
     }
     
     var messages = [Message]()
+    var inputMessageView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.red
+        return view
+    }()
+    
+    var inputTextField: UITextField = {
+       let textField = UITextField()
+        textField.placeholder = "Type"
+        return textField
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tabBarController?.tabBar.isHidden = true
         navigationItem.title = friend?.name
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(ChatCell.self, forCellWithReuseIdentifier: cellId)
         collectionView?.alwaysBounceVertical = true
+        
+        view.addSubview(inputMessageView)
+        view.addConstraintWith(format: "H:|[v0]|", views: inputMessageView)
+        view.addConstraintWith(format: "V:[v0(40)]|", views: inputMessageView)
+        
+        setupInputView()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+    }
+    
+    func handleKeyboardNotification(_ notification: Notification) {
+        if let userInfo = notification.userInfo {
+            if let keboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                
+            }
+        }
+    }
+    
+    func setupInputView() {
+        inputMessageView.addSubview(inputTextField)
+        inputMessageView.addConstraintWith(format: "H:|-8-[v0]|", views: inputTextField)
+        inputMessageView.addConstraintWith(format: "V:|[v0]|", views: inputTextField)
     }
 }
 
