@@ -16,7 +16,11 @@ class ChatLogController: UICollectionViewController {
         
         didSet {
             messages = friend?.messages?.allObjects as! [Message]
-            messages.sort { $0.date! > $1.date! } //ascending date order
+            messages.sort { $0.date! < $1.date! } //ascending date order
+            
+            for message in messages {
+                print(message.text)
+            }
         }
     }
     
@@ -52,12 +56,25 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
             let estimatedFrame = NSString(string: messageText).boundingRect(with: size, options: options, attributes: attributes, context: nil)
            
             if !messages[indexPath.item].isSender {
-                cell.messageTextView.frame = CGRect(x: 48+8, y: 0, width: estimatedFrame.width+16, height: estimatedFrame.height + 20)
-                cell.bubbleTextView.frame = CGRect(x: 48, y: 0, width: estimatedFrame.width+16+8, height: estimatedFrame.height + 20)
+                cell.messageTextView.frame = CGRect(x: 48+10, y: 0, width: estimatedFrame.width+16, height: estimatedFrame.height + 20)
+               
+                cell.bubbleTextView.frame = CGRect(x: 48-10, y: -4, width: estimatedFrame.width+16+8+16, height: estimatedFrame.height + 20 + 6)
+
+                cell.profileImageView.isHidden = false
+                cell.messageTextView.textColor = UIColor.black
+                cell.bubbleImageView.tintColor = UIColor(white: 0.95, alpha: 1)
+                cell.bubbleImageView.image = ChatCell.grayBubbleImage
             }
             else {
-                cell.messageTextView.frame = CGRect(x: view.frame.width - estimatedFrame.width - 16 - 16, y: 0, width: estimatedFrame.width+16, height: estimatedFrame.height + 20)
-                cell.bubbleTextView.frame = CGRect(x: view.frame.width - estimatedFrame.width - 16 - 8 - 16, y: 0, width: estimatedFrame.width+16+8, height: estimatedFrame.height + 20)
+                cell.messageTextView.frame = CGRect(x: view.frame.width - estimatedFrame.width - 16 - 16 - 2, y: 0, width: estimatedFrame.width+16, height: estimatedFrame.height + 20)
+                
+                cell.bubbleTextView.frame = CGRect(x: view.frame.width - estimatedFrame.width - 16 - 8 - 16 - 10, y: -4, width: estimatedFrame.width+44, height: estimatedFrame.height+20+6)
+                
+                cell.profileImageView.isHidden = true
+                cell.bubbleImageView.tintColor = UIColor(red: 0, green: 134/255, blue: 249/255, alpha: 1.0)
+                cell.messageTextView.textColor = UIColor.white
+                cell.bubbleImageView.image = ChatCell.blueBubbleImage
+
             }
         }
 
@@ -78,11 +95,6 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
         }
         
         return CGSize(width: view.frame.width, height: 100)
-    }
-    
-    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.willTransition(to: newCollection, with: coordinator)
-        collectionViewLayout.invalidateLayout()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

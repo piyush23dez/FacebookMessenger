@@ -148,13 +148,19 @@ SWIFT_CLASS("_TtC17FacebookMessenger8BaseCell")
 @class UIImageView;
 @class UIView;
 @class UITextView;
+@class UIImage;
 
 SWIFT_CLASS("_TtC17FacebookMessenger8ChatCell")
 @interface ChatCell : BaseCell
-- (void)setupViews;
 @property (nonatomic, strong) UIImageView * _Nonnull profileImageView;
+@property (nonatomic, strong) UIImageView * _Nonnull bubbleImageView;
 @property (nonatomic, strong) UIView * _Nonnull bubbleTextView;
 @property (nonatomic, strong) UITextView * _Nonnull messageTextView;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UIImage * _Nonnull grayBubbleImage;)
++ (UIImage * _Nonnull)grayBubbleImage;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UIImage * _Nonnull blueBubbleImage;)
++ (UIImage * _Nonnull)blueBubbleImage;
+- (void)setupViews;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -175,14 +181,11 @@ SWIFT_CLASS("_TtC17FacebookMessenger17ChatLogController")
 @end
 
 @class UICollectionView;
-@class UITraitCollection;
-@protocol UIViewControllerTransitionCoordinator;
 
 @interface ChatLogController (SWIFT_EXTENSION(FacebookMessenger)) <UICollectionViewDelegateFlowLayout>
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section;
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (UIEdgeInsets)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout insetForSectionAtIndex:(NSInteger)section;
 @end
 
@@ -239,6 +242,8 @@ SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 @end
 
+@class UITraitCollection;
+@protocol UIViewControllerTransitionCoordinator;
 
 @interface FriendsViewController (SWIFT_EXTENSION(FacebookMessenger))
 - (NSInteger)collectionView:(UICollectionView * _Nonnull)collectionView numberOfItemsInSection:(NSInteger)section;

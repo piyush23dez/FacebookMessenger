@@ -10,27 +10,23 @@ import UIKit
 
 class ChatCell: BaseCell {
     
-    override func setupViews() {
-        super.setupViews()
-        addSubview(bubbleTextView)
-        addSubview(messageTextView)
-        addSubview(profileImageView)
-        
-        addConstraintWith(format: "H:|[v0(30)]|", views: profileImageView)
-        addConstraintWith(format: "V:[v0(30)]|", views: profileImageView)
-
-    }
-    
     var profileImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 15
         imageView.layer.masksToBounds = true
         return imageView
     }()
+    
+    var bubbleImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = ChatCell.grayBubbleImage
+        imageView.tintColor = UIColor(white: 0.90, alpha: 1)
+        return imageView
+    }()
+    
     var bubbleTextView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(white: 0.95, alpha: 1)
         view.layer.cornerRadius = 15
         view.layer.masksToBounds = true
         return view
@@ -43,4 +39,28 @@ class ChatCell: BaseCell {
         messageTextView.backgroundColor = UIColor.clear
         return messageTextView
     }()
-}
+    
+    static var grayBubbleImage: UIImage {
+        return UIImage(named: "bubble_gray")!.resizableImage(withCapInsets: UIEdgeInsets(top: 22,left: 26,bottom: 22,right: 26)).withRenderingMode(.alwaysTemplate)
+    }
+    
+    static var blueBubbleImage: UIImage {
+        return UIImage(named: "bubble_blue")!.resizableImage(withCapInsets: UIEdgeInsets(top: 22,left: 26,bottom: 22,right: 26)).withRenderingMode(.alwaysTemplate)
+    }
+    
+    override func setupViews() {
+        super.setupViews()
+        addSubview(bubbleTextView)
+        addSubview(messageTextView)
+        addSubview(profileImageView)
+        bubbleTextView.addSubview(bubbleImageView)
+
+        addConstraintWith(format: "H:|-8-[v0(30)]", views: profileImageView)
+        addConstraintWith(format: "V:[v0(30)]|", views: profileImageView)
+        
+        bubbleTextView.addConstraintWith(format: "H:|[v0]|", views: bubbleImageView)
+        bubbleTextView.addConstraintWith(format: "V:|[v0]|", views: bubbleImageView)
+
+    }
+    
+    }

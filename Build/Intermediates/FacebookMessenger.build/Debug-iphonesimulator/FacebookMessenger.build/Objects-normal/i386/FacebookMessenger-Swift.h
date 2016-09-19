@@ -145,12 +145,14 @@ SWIFT_CLASS("_TtC17FacebookMessenger8BaseCell")
 - (void)setupViews;
 @end
 
+@class UIImageView;
 @class UIView;
 @class UITextView;
 
 SWIFT_CLASS("_TtC17FacebookMessenger8ChatCell")
 @interface ChatCell : BaseCell
 - (void)setupViews;
+@property (nonatomic, strong) UIImageView * _Nonnull profileImageView;
 @property (nonatomic, strong) UIView * _Nonnull bubbleTextView;
 @property (nonatomic, strong) UITextView * _Nonnull messageTextView;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
@@ -181,6 +183,7 @@ SWIFT_CLASS("_TtC17FacebookMessenger17ChatLogController")
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (CGSize)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (UIEdgeInsets)collectionView:(UICollectionView * _Nonnull)collectionView layout:(UICollectionViewLayout * _Nonnull)collectionViewLayout insetForSectionAtIndex:(NSInteger)section;
 @end
 
 @class UINavigationController;
@@ -251,12 +254,12 @@ SWIFT_CLASS("_TtC17FacebookMessenger7Message")
 
 
 @interface Message (SWIFT_EXTENSION(FacebookMessenger))
-@property (nonatomic, copy) NSString * _Nullable text;
 @property (nonatomic, copy) NSDate * _Nullable date;
+@property (nonatomic, copy) NSString * _Nullable text;
+@property (nonatomic) BOOL isSender;
 @property (nonatomic, strong, getter=friend, setter=setFriend:) Friend * _Nullable friend_;
 @end
 
-@class UIImageView;
 @class UILabel;
 
 SWIFT_CLASS("_TtC17FacebookMessenger11MessageCell")

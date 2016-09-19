@@ -6,20 +6,20 @@ provides-nominal:
 provides-member:
 - ["C17FacebookMessenger28FacebookTabBarViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
 - "createTabbarNavigationController"
+- "viewDidLoad"
 depends-top-level:
-- "AssignmentPrecedence"
-- "UITabBarController"
-- !private "UIViewController"
-- "String"
-- !private "Array"
-- !private "UICollectionViewFlowLayout"
-- !private "UIImage"
-- "FacebookTabBarViewController"
 - !private "FriendsViewController"
-- !private "StringLiteralType"
+- "String"
 - "UINavigationController"
+- "AssignmentPrecedence"
+- !private "UIImage"
+- !private "StringLiteralType"
+- "FacebookTabBarViewController"
+- !private "UICollectionViewFlowLayout"
+- "UITabBarController"
+- !private "Array"
+- !private "UIViewController"
 depends-member:
 - !private ["Ps9AnyObject", "FriendsViewController"]
 - !private ["Ps9AnyObject", "UICollectionViewFlowLayout"]

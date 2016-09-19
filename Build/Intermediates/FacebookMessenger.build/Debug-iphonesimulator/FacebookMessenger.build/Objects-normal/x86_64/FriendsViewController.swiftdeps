@@ -9,40 +9,43 @@ provides-member:
 - ["C17FacebookMessenger21FriendsViewController", "collectionView"]
 - ["C17FacebookMessenger21FriendsViewController", "willTransition"]
 provides-dynamic-lookup:
-- "willTransition"
 - "viewDidLoad"
 - "collectionView"
 - "collectionView"
 - "collectionView"
 - "collectionView"
+- "willTransition"
 depends-top-level:
-- "FriendsViewController"
-- !private "MessageCell"
-- "UICollectionViewController"
-- "UICollectionViewDelegateFlowLayout"
-- "CGSize"
-- "UICollectionViewCell"
-- "Message"
-- "UICollectionViewLayout"
-- !private "DataManager"
-- !private "ChatLogController"
-- "CastingPrecedence"
-- "AssignmentPrecedence"
-- "UICollectionView"
 - "UIViewControllerTransitionCoordinator"
-- "StringLiteralType"
+- !private "DataManager"
+- "UICollectionView"
+- !private "NSSearchPathForDirectoriesInDomains"
+- "UICollectionViewCell"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
 - !private "UICollectionViewFlowLayout"
+- !private "print"
+- "StringLiteralType"
+- !private "MessageCell"
+- "FriendsViewController"
+- !private "ChatLogController"
+- "Message"
+- "UICollectionViewDelegateFlowLayout"
+- "UICollectionViewController"
+- "CGSize"
 - "UITraitCollection"
 - "IndexPath"
-- !private "BooleanLiteralType"
-- !private "UIColor"
 - "Int"
+- "UICollectionViewLayout"
+- !private "UIColor"
+- !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "CGSize"]
 - !private ["Ps9AnyObject", "ChatLogController"]
 - !private ["Ps9AnyObject", "DataManager"]
 - ["Ps9AnyObject", "Message"]
 - !private ["Ps9AnyObject", "MessageCell"]
+- !private ["Ps9AnyObject", "NSSearchPathForDirectoriesInDomains"]
 - !private ["Ps9AnyObject", "UICollectionViewFlowLayout"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "alwaysBounceVertical"]
@@ -60,6 +63,7 @@ depends-member:
 - ["Ps9AnyObject", "messages"]
 - !private ["Ps9AnyObject", "navigationController"]
 - !private ["Ps9AnyObject", "navigationItem"]
+- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "pushViewController"]
 - !private ["Ps9AnyObject", "register"]
 - !private ["Ps9AnyObject", "setupData"]
@@ -127,6 +131,7 @@ depends-member:
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
 - ["Ps7CVarArg", "Message"]
 - !private ["Ps7CVarArg", "MessageCell"]
+- !private ["Ps7CVarArg", "NSSearchPathForDirectoriesInDomains"]
 - !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "SubSequence"]
 - !private ["Ps7CVarArg", "UICollectionViewFlowLayout"]
@@ -148,6 +153,7 @@ depends-member:
 - ["Ps7CVarArg", "messages"]
 - !private ["Ps7CVarArg", "navigationController"]
 - !private ["Ps7CVarArg", "navigationItem"]
+- !private ["Ps7CVarArg", "print"]
 - !private ["Ps7CVarArg", "pushViewController"]
 - !private ["Ps7CVarArg", "register"]
 - !private ["Ps7CVarArg", "setupData"]
@@ -183,6 +189,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
 - ["Ps28CustomDebugStringConvertible", "Message"]
 - !private ["Ps28CustomDebugStringConvertible", "MessageCell"]
+- !private ["Ps28CustomDebugStringConvertible", "NSSearchPathForDirectoriesInDomains"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UICollectionViewFlowLayout"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
@@ -203,6 +210,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "messages"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "register"]
 - !private ["Ps28CustomDebugStringConvertible", "setupData"]
@@ -239,6 +247,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - ["Ps23CustomStringConvertible", "Message"]
 - !private ["Ps23CustomStringConvertible", "MessageCell"]
+- !private ["Ps23CustomStringConvertible", "NSSearchPathForDirectoriesInDomains"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "UICollectionViewFlowLayout"]
@@ -261,6 +270,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "messages"]
 - !private ["Ps23CustomStringConvertible", "navigationController"]
 - !private ["Ps23CustomStringConvertible", "navigationItem"]
+- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - !private ["Ps23CustomStringConvertible", "register"]
 - !private ["Ps23CustomStringConvertible", "setupData"]
@@ -290,6 +300,7 @@ depends-member:
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - ["Ps9Equatable", "Message"]
 - !private ["Ps9Equatable", "MessageCell"]
+- !private ["Ps9Equatable", "NSSearchPathForDirectoriesInDomains"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "UICollectionViewFlowLayout"]
 - !private ["Ps9Equatable", "UIColor"]
@@ -300,6 +311,7 @@ depends-member:
 - ["Ps9Equatable", "collectionView"]
 - !private ["Ps9Equatable", "collectionViewLayout"]
 - !private ["Ps9Equatable", "dequeueReusableCell"]
+- !private ["Ps9Equatable", "documentDirectory"]
 - !private ["Ps9Equatable", "frame"]
 - !private ["Ps9Equatable", "friend"]
 - ["Ps9Equatable", "init"]
@@ -309,10 +321,12 @@ depends-member:
 - ["Ps9Equatable", "messages"]
 - !private ["Ps9Equatable", "navigationController"]
 - !private ["Ps9Equatable", "navigationItem"]
+- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "pushViewController"]
 - !private ["Ps9Equatable", "register"]
 - !private ["Ps9Equatable", "setupData"]
 - !private ["Ps9Equatable", "title"]
+- !private ["Ps9Equatable", "userDomainMask"]
 - !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidLoad"]
 - !private ["Ps9Equatable", "white"]
@@ -327,6 +341,7 @@ depends-member:
 - ["Ps25ExpressibleByArrayLiteral", "init"]
 - !private ["Ps25ExpressibleByArrayLiteral", "item"]
 - !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
+- !private ["Ps25ExpressibleByArrayLiteral", "userDomainMask"]
 - ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
@@ -341,6 +356,7 @@ depends-member:
 - ["C17FacebookMessenger21FriendsViewController", "Int"]
 - ["C17FacebookMessenger21FriendsViewController", "Message"]
 - !private ["C17FacebookMessenger21FriendsViewController", "MessageCell"]
+- !private ["C17FacebookMessenger21FriendsViewController", "NSSearchPathForDirectoriesInDomains"]
 - ["C17FacebookMessenger21FriendsViewController", "UICollectionView"]
 - ["C17FacebookMessenger21FriendsViewController", "UICollectionViewCell"]
 - !private ["C17FacebookMessenger21FriendsViewController", "UICollectionViewFlowLayout"]
@@ -356,6 +372,7 @@ depends-member:
 - !private ["C17FacebookMessenger21FriendsViewController", "messages"]
 - !private ["C17FacebookMessenger21FriendsViewController", "navigationController"]
 - !private ["C17FacebookMessenger21FriendsViewController", "navigationItem"]
+- !private ["C17FacebookMessenger21FriendsViewController", "print"]
 - !private ["C17FacebookMessenger21FriendsViewController", "setupData"]
 - !private ["C17FacebookMessenger21FriendsViewController", "view"]
 - ["C17FacebookMessenger21FriendsViewController", "viewDidLoad"]
@@ -366,6 +383,7 @@ depends-member:
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - ["Ps8Hashable", "Message"]
 - !private ["Ps8Hashable", "MessageCell"]
+- !private ["Ps8Hashable", "NSSearchPathForDirectoriesInDomains"]
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "UICollectionViewFlowLayout"]
 - !private ["Ps8Hashable", "UIColor"]
@@ -376,6 +394,7 @@ depends-member:
 - ["Ps8Hashable", "collectionView"]
 - !private ["Ps8Hashable", "collectionViewLayout"]
 - !private ["Ps8Hashable", "dequeueReusableCell"]
+- !private ["Ps8Hashable", "documentDirectory"]
 - !private ["Ps8Hashable", "frame"]
 - !private ["Ps8Hashable", "friend"]
 - ["Ps8Hashable", "init"]
@@ -385,6 +404,7 @@ depends-member:
 - ["Ps8Hashable", "messages"]
 - !private ["Ps8Hashable", "navigationController"]
 - !private ["Ps8Hashable", "navigationItem"]
+- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "pushViewController"]
 - !private ["Ps8Hashable", "register"]
 - !private ["Ps8Hashable", "setupData"]
@@ -458,6 +478,7 @@ depends-member:
 - !private ["PSo8NSCoding", "DataManager"]
 - ["PSo8NSCoding", "Message"]
 - !private ["PSo8NSCoding", "MessageCell"]
+- !private ["PSo8NSCoding", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo8NSCoding", "UICollectionViewFlowLayout"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "alwaysBounceVertical"]
@@ -474,6 +495,7 @@ depends-member:
 - ["PSo8NSCoding", "messages"]
 - !private ["PSo8NSCoding", "navigationController"]
 - !private ["PSo8NSCoding", "navigationItem"]
+- !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "register"]
 - !private ["PSo8NSCoding", "setupData"]
@@ -490,6 +512,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "DataManager"]
 - ["PSo26NSExtensionRequestHandling", "Message"]
 - !private ["PSo26NSExtensionRequestHandling", "MessageCell"]
+- !private ["PSo26NSExtensionRequestHandling", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo26NSExtensionRequestHandling", "UICollectionViewFlowLayout"]
 - !private ["PSo26NSExtensionRequestHandling", "UIColor"]
 - ["PSo26NSExtensionRequestHandling", "cellId"]
@@ -500,6 +523,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "messages"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
 - !private ["PSo26NSExtensionRequestHandling", "pushViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "setupData"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
@@ -516,6 +540,7 @@ depends-member:
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "Message"]
 - !private ["CSo8NSObject", "MessageCell"]
+- !private ["CSo8NSObject", "NSSearchPathForDirectoriesInDomains"]
 - ["CSo8NSObject", "UICollectionView"]
 - ["CSo8NSObject", "UICollectionViewCell"]
 - !private ["CSo8NSObject", "UICollectionViewFlowLayout"]
@@ -537,6 +562,7 @@ depends-member:
 - ["CSo8NSObject", "messages"]
 - !private ["CSo8NSObject", "navigationController"]
 - !private ["CSo8NSObject", "navigationItem"]
+- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "register"]
 - !private ["CSo8NSObject", "setupData"]
@@ -550,6 +576,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "DataManager"]
 - ["PSo16NSObjectProtocol", "Message"]
 - !private ["PSo16NSObjectProtocol", "MessageCell"]
+- !private ["PSo16NSObjectProtocol", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo16NSObjectProtocol", "UICollectionViewFlowLayout"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "alwaysBounceVertical"]
@@ -566,6 +593,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "messages"]
 - !private ["PSo16NSObjectProtocol", "navigationController"]
 - !private ["PSo16NSObjectProtocol", "navigationItem"]
+- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "register"]
 - !private ["PSo16NSObjectProtocol", "setupData"]
@@ -578,6 +606,7 @@ depends-member:
 - ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "white"]
 - ["CSo8NSString", "init"]
+- !private ["Ps9OptionSet", "userDomainMask"]
 - ["Sq", "deinit"]
 - !private ["Ps22RandomAccessCollection", "Index"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
@@ -619,7 +648,13 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "count"]
 - ["Ps25RangeReplaceableIndexable", "init"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
+- !private ["Ps16RawRepresentable", "documentDirectory"]
+- !private ["Ps16RawRepresentable", "userDomainMask"]
 - !private ["P10Foundation20ReferenceConvertible", "item"]
+- ["OCSo11FileManager19SearchPathDirectory", "deinit"]
+- !private ["OCSo11FileManager19SearchPathDirectory", "documentDirectory"]
+- ["VCSo11FileManager20SearchPathDomainMask", "deinit"]
+- !private ["VCSo11FileManager20SearchPathDomainMask", "userDomainMask"]
 - !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "Index"]
 - !private ["Ps8Sequence", "IndexDistance"]
@@ -631,6 +666,7 @@ depends-member:
 - ["Ps8Sequence", "init"]
 - !private ["Ps8Sequence", "item"]
 - !private ["Ps8Sequence", "subscript"]
+- !private ["Ps10SetAlgebra", "userDomainMask"]
 - !private ["Ps13SignedInteger", "IntegerLiteralType"]
 - !private ["Ps13SignedInteger", "Stride"]
 - !private ["Ps13SignedInteger", "_DisabledRangeIndex"]
@@ -665,6 +701,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "DataManager"]
 - ["PSo21UIAppearanceContainer", "Message"]
 - !private ["PSo21UIAppearanceContainer", "MessageCell"]
+- !private ["PSo21UIAppearanceContainer", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo21UIAppearanceContainer", "UICollectionViewFlowLayout"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "alwaysBounceVertical"]
@@ -680,6 +717,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "messages"]
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
 - !private ["PSo21UIAppearanceContainer", "navigationItem"]
+- !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - !private ["PSo21UIAppearanceContainer", "register"]
 - !private ["PSo21UIAppearanceContainer", "setupData"]
@@ -702,6 +740,7 @@ depends-member:
 - ["CSo26UICollectionViewController", "Int"]
 - ["CSo26UICollectionViewController", "Message"]
 - !private ["CSo26UICollectionViewController", "MessageCell"]
+- !private ["CSo26UICollectionViewController", "NSSearchPathForDirectoriesInDomains"]
 - ["CSo26UICollectionViewController", "UICollectionView"]
 - ["CSo26UICollectionViewController", "UICollectionViewCell"]
 - !private ["CSo26UICollectionViewController", "UICollectionViewFlowLayout"]
@@ -718,6 +757,7 @@ depends-member:
 - ["CSo26UICollectionViewController", "messages"]
 - !private ["CSo26UICollectionViewController", "navigationController"]
 - !private ["CSo26UICollectionViewController", "navigationItem"]
+- !private ["CSo26UICollectionViewController", "print"]
 - !private ["CSo26UICollectionViewController", "setupData"]
 - !private ["CSo26UICollectionViewController", "view"]
 - ["CSo26UICollectionViewController", "viewDidLoad"]
@@ -728,6 +768,7 @@ depends-member:
 - !private ["PSo26UICollectionViewDataSource", "DataManager"]
 - ["PSo26UICollectionViewDataSource", "Message"]
 - !private ["PSo26UICollectionViewDataSource", "MessageCell"]
+- !private ["PSo26UICollectionViewDataSource", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo26UICollectionViewDataSource", "UICollectionViewFlowLayout"]
 - !private ["PSo26UICollectionViewDataSource", "UIColor"]
 - ["PSo26UICollectionViewDataSource", "cellId"]
@@ -738,6 +779,7 @@ depends-member:
 - ["PSo26UICollectionViewDataSource", "messages"]
 - !private ["PSo26UICollectionViewDataSource", "navigationController"]
 - !private ["PSo26UICollectionViewDataSource", "navigationItem"]
+- !private ["PSo26UICollectionViewDataSource", "print"]
 - !private ["PSo26UICollectionViewDataSource", "setupData"]
 - !private ["PSo26UICollectionViewDataSource", "view"]
 - ["PSo26UICollectionViewDataSource", "viewDidLoad"]
@@ -748,6 +790,7 @@ depends-member:
 - !private ["PSo24UICollectionViewDelegate", "DataManager"]
 - ["PSo24UICollectionViewDelegate", "Message"]
 - !private ["PSo24UICollectionViewDelegate", "MessageCell"]
+- !private ["PSo24UICollectionViewDelegate", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo24UICollectionViewDelegate", "UICollectionViewFlowLayout"]
 - !private ["PSo24UICollectionViewDelegate", "UIColor"]
 - ["PSo24UICollectionViewDelegate", "cellId"]
@@ -758,6 +801,7 @@ depends-member:
 - ["PSo24UICollectionViewDelegate", "messages"]
 - !private ["PSo24UICollectionViewDelegate", "navigationController"]
 - !private ["PSo24UICollectionViewDelegate", "navigationItem"]
+- !private ["PSo24UICollectionViewDelegate", "print"]
 - !private ["PSo24UICollectionViewDelegate", "setupData"]
 - !private ["PSo24UICollectionViewDelegate", "view"]
 - ["PSo24UICollectionViewDelegate", "viewDidLoad"]
@@ -768,6 +812,7 @@ depends-member:
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "DataManager"]
 - ["PSo34UICollectionViewDelegateFlowLayout", "Message"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "MessageCell"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "UICollectionViewFlowLayout"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "UIColor"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "cellId"]
@@ -778,6 +823,7 @@ depends-member:
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "messages"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "navigationController"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "navigationItem"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "print"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "setupData"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "view"]
 - ["PSo34UICollectionViewDelegateFlowLayout", ""]
@@ -793,6 +839,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "DataManager"]
 - ["PSo18UIContentContainer", "Message"]
 - !private ["PSo18UIContentContainer", "MessageCell"]
+- !private ["PSo18UIContentContainer", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo18UIContentContainer", "UICollectionViewFlowLayout"]
 - !private ["PSo18UIContentContainer", "UIColor"]
 - ["PSo18UIContentContainer", "cellId"]
@@ -803,6 +850,7 @@ depends-member:
 - ["PSo18UIContentContainer", "messages"]
 - !private ["PSo18UIContentContainer", "navigationController"]
 - !private ["PSo18UIContentContainer", "navigationItem"]
+- !private ["PSo18UIContentContainer", "print"]
 - !private ["PSo18UIContentContainer", "pushViewController"]
 - !private ["PSo18UIContentContainer", "setupData"]
 - !private ["PSo18UIContentContainer", "view"]
@@ -826,6 +874,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "DataManager"]
 - ["PSo18UIFocusEnvironment", "Message"]
 - !private ["PSo18UIFocusEnvironment", "MessageCell"]
+- !private ["PSo18UIFocusEnvironment", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo18UIFocusEnvironment", "UICollectionViewFlowLayout"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "alwaysBounceVertical"]
@@ -841,6 +890,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "messages"]
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
 - !private ["PSo18UIFocusEnvironment", "navigationItem"]
+- !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - !private ["PSo18UIFocusEnvironment", "register"]
 - !private ["PSo18UIFocusEnvironment", "setupData"]
@@ -865,6 +915,7 @@ depends-member:
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "Message"]
 - !private ["CSo11UIResponder", "MessageCell"]
+- !private ["CSo11UIResponder", "NSSearchPathForDirectoriesInDomains"]
 - ["CSo11UIResponder", "UICollectionView"]
 - ["CSo11UIResponder", "UICollectionViewCell"]
 - !private ["CSo11UIResponder", "UICollectionViewFlowLayout"]
@@ -885,6 +936,7 @@ depends-member:
 - ["CSo11UIResponder", "messages"]
 - !private ["CSo11UIResponder", "navigationController"]
 - !private ["CSo11UIResponder", "navigationItem"]
+- !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - !private ["CSo11UIResponder", "register"]
 - !private ["CSo11UIResponder", "setupData"]
@@ -896,6 +948,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "DataManager"]
 - ["PSo30UIResponderStandardEditActions", "Message"]
 - !private ["PSo30UIResponderStandardEditActions", "MessageCell"]
+- !private ["PSo30UIResponderStandardEditActions", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo30UIResponderStandardEditActions", "UICollectionViewFlowLayout"]
 - !private ["PSo30UIResponderStandardEditActions", "UIColor"]
 - !private ["PSo30UIResponderStandardEditActions", "alwaysBounceVertical"]
@@ -911,6 +964,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "messages"]
 - !private ["PSo30UIResponderStandardEditActions", "navigationController"]
 - !private ["PSo30UIResponderStandardEditActions", "navigationItem"]
+- !private ["PSo30UIResponderStandardEditActions", "print"]
 - !private ["PSo30UIResponderStandardEditActions", "pushViewController"]
 - !private ["PSo30UIResponderStandardEditActions", "register"]
 - !private ["PSo30UIResponderStandardEditActions", "setupData"]
@@ -927,6 +981,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "DataManager"]
 - ["PSo20UIScrollViewDelegate", "Message"]
 - !private ["PSo20UIScrollViewDelegate", "MessageCell"]
+- !private ["PSo20UIScrollViewDelegate", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo20UIScrollViewDelegate", "UICollectionViewFlowLayout"]
 - !private ["PSo20UIScrollViewDelegate", "UIColor"]
 - ["PSo20UIScrollViewDelegate", "cellId"]
@@ -937,6 +992,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "messages"]
 - !private ["PSo20UIScrollViewDelegate", "navigationController"]
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
+- !private ["PSo20UIScrollViewDelegate", "print"]
 - !private ["PSo20UIScrollViewDelegate", "setupData"]
 - !private ["PSo20UIScrollViewDelegate", "view"]
 - ["PSo20UIScrollViewDelegate", "viewDidLoad"]
@@ -947,6 +1003,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "DataManager"]
 - ["PSo16UIStateRestoring", "Message"]
 - !private ["PSo16UIStateRestoring", "MessageCell"]
+- !private ["PSo16UIStateRestoring", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo16UIStateRestoring", "UICollectionViewFlowLayout"]
 - !private ["PSo16UIStateRestoring", "UIColor"]
 - ["PSo16UIStateRestoring", "cellId"]
@@ -957,6 +1014,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "messages"]
 - !private ["PSo16UIStateRestoring", "navigationController"]
 - !private ["PSo16UIStateRestoring", "navigationItem"]
+- !private ["PSo16UIStateRestoring", "print"]
 - !private ["PSo16UIStateRestoring", "pushViewController"]
 - !private ["PSo16UIStateRestoring", "setupData"]
 - !private ["PSo16UIStateRestoring", "view"]
@@ -969,6 +1027,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "DataManager"]
 - ["PSo18UITraitEnvironment", "Message"]
 - !private ["PSo18UITraitEnvironment", "MessageCell"]
+- !private ["PSo18UITraitEnvironment", "NSSearchPathForDirectoriesInDomains"]
 - !private ["PSo18UITraitEnvironment", "UICollectionViewFlowLayout"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "alwaysBounceVertical"]
@@ -984,6 +1043,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "messages"]
 - !private ["PSo18UITraitEnvironment", "navigationController"]
 - !private ["PSo18UITraitEnvironment", "navigationItem"]
+- !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - !private ["PSo18UITraitEnvironment", "register"]
 - !private ["PSo18UITraitEnvironment", "setupData"]
@@ -1004,6 +1064,7 @@ depends-member:
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "Message"]
 - !private ["CSo16UIViewController", "MessageCell"]
+- !private ["CSo16UIViewController", "NSSearchPathForDirectoriesInDomains"]
 - ["CSo16UIViewController", "UICollectionView"]
 - ["CSo16UIViewController", "UICollectionViewCell"]
 - !private ["CSo16UIViewController", "UICollectionViewFlowLayout"]
@@ -1019,6 +1080,7 @@ depends-member:
 - ["CSo16UIViewController", "messages"]
 - !private ["CSo16UIViewController", "navigationController"]
 - !private ["CSo16UIViewController", "navigationItem"]
+- !private ["CSo16UIViewController", "print"]
 - !private ["CSo16UIViewController", "pushViewController"]
 - !private ["CSo16UIViewController", "setupData"]
 - !private ["CSo16UIViewController", "view"]
@@ -1060,6 +1122,7 @@ depends-member:
 - !private ["Ps9_Hashable", "IntegerLiteralType"]
 - ["Ps9_Hashable", "Message"]
 - !private ["Ps9_Hashable", "MessageCell"]
+- !private ["Ps9_Hashable", "NSSearchPathForDirectoriesInDomains"]
 - !private ["Ps9_Hashable", "Stride"]
 - !private ["Ps9_Hashable", "UICollectionViewFlowLayout"]
 - !private ["Ps9_Hashable", "UIColor"]
@@ -1070,6 +1133,7 @@ depends-member:
 - ["Ps9_Hashable", "collectionView"]
 - !private ["Ps9_Hashable", "collectionViewLayout"]
 - !private ["Ps9_Hashable", "dequeueReusableCell"]
+- !private ["Ps9_Hashable", "documentDirectory"]
 - !private ["Ps9_Hashable", "frame"]
 - !private ["Ps9_Hashable", "friend"]
 - ["Ps9_Hashable", "init"]
@@ -1079,6 +1143,7 @@ depends-member:
 - ["Ps9_Hashable", "messages"]
 - !private ["Ps9_Hashable", "navigationController"]
 - !private ["Ps9_Hashable", "navigationItem"]
+- !private ["Ps9_Hashable", "print"]
 - !private ["Ps9_Hashable", "pushViewController"]
 - !private ["Ps9_Hashable", "register"]
 - !private ["Ps9_Hashable", "setupData"]
@@ -1172,14 +1237,19 @@ depends-nominal:
 - "PSo16NSObjectProtocol"
 - "PSo14NSSecureCoding"
 - "CSo8NSString"
+- !private "Ps9OptionSet"
 - "Sq"
 - "Ps22RandomAccessCollection"
 - "Ps21RandomAccessIndexable"
 - !private "Vs17RandomAccessSlice"
 - "Ps26RangeReplaceableCollection"
 - "Ps25RangeReplaceableIndexable"
+- !private "Ps16RawRepresentable"
 - !private "P10Foundation20ReferenceConvertible"
+- "OCSo11FileManager19SearchPathDirectory"
+- "VCSo11FileManager20SearchPathDomainMask"
 - "Ps8Sequence"
+- !private "Ps10SetAlgebra"
 - !private "Ps13SignedInteger"
 - !private "Ps12SignedNumber"
 - !private "Vs5Slice"

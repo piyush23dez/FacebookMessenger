@@ -24,6 +24,9 @@ class FriendsViewController: UICollectionViewController {
         collectionView?.register(MessageCell.self, forCellWithReuseIdentifier: cellId)
         
         setupData()
+        
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        print(documentsPath)
     }
 }
 
