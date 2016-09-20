@@ -13,19 +13,19 @@ provides-member:
 - ["C17FacebookMessenger6Friend", "removeFromMessages"]
 provides-dynamic-lookup:
 - "name"
+- "profileImageName"
 - "messages"
 - "removeFromMessages"
 - "removeFromMessages"
 - "addToMessages"
 - "addToMessages"
-- "profileImageName"
 depends-top-level:
-- "NSFetchRequest"
-- !private "StringLiteralType"
 - "NSSet"
-- "String"
+- "NSFetchRequest"
 - "Message"
+- "String"
 - "Friend"
+- !private "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "NSFetchRequest"]
 - ["Ps9AnyObject", "addToMessages"]

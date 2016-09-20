@@ -6,11 +6,6 @@ provides-nominal:
 provides-member:
 - ["C17FacebookMessenger17ChatLogController", ""]
 provides-dynamic-lookup:
-- "simulate"
-- "viewWillAppear"
-- "handleKeyboardNotification"
-- "viewDidLoad"
-- "handleSend"
 - "collectionView"
 - "collectionView"
 - "collectionView"
@@ -19,51 +14,56 @@ provides-dynamic-lookup:
 - "friend"
 - "addKeyboardObservers"
 - "setupInputView"
+- "viewDidLoad"
+- "simulate"
+- "handleSend"
+- "handleKeyboardNotification"
+- "viewWillAppear"
 depends-top-level:
-- "UICollectionViewController"
-- !private "!"
-- "UICollectionViewLayout"
-- "Bool"
-- "CGSize"
-- "UICollectionViewDelegateFlowLayout"
-- !private "NSString"
-- "/"
-- !private "ChatCell"
-- "IndexPath"
-- !private "Array"
-- !private "DispatchQueue"
-- "ChatLogController"
-- "UITextField"
-- "Message"
-- !private "Notification"
-- "UICollectionViewCell"
-- "UIFont"
-- "AssignmentPrecedence"
-- !private "UIBarButtonItem"
-- "UIButton"
-- !private "TernaryPrecedence"
-- "CastingPrecedence"
-- !private "=="
-- !private "NSStringDrawingOptions"
 - !private "-"
-- "StringLiteralType"
-- !private "CGRect"
 - !private "Dictionary"
+- "UIColor"
 - "UIEdgeInsets"
-- "UICollectionView"
+- !private "UIImage"
 - !private "+"
 - "Friend"
-- !private "UIImage"
-- "UIColor"
-- !private "DataManager"
-- !private "NSValue"
+- !private "TernaryPrecedence"
+- !private "DispatchQueue"
 - "NSLayoutConstraint"
-- !private "NotificationCenter"
+- !private "=="
 - "UIView"
-- "Int"
-- !private "UIKeyboardFrameEndUserInfoKey"
-- !private "<"
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "UICollectionView"
+- !private "NotificationCenter"
 - !private "NSFontAttributeName"
+- "Int"
+- !private "<"
+- !private "NSValue"
+- "StringLiteralType"
+- !private "NSString"
+- "Bool"
+- !private "!"
+- "UICollectionViewController"
+- "/"
+- "UICollectionViewLayout"
+- "IndexPath"
+- "CGSize"
+- !private "ChatCell"
+- "UITextField"
+- "UICollectionViewCell"
+- !private "DataManager"
+- !private "UIKeyboardFrameEndUserInfoKey"
+- "ChatLogController"
+- "UIButton"
+- "UICollectionViewDelegateFlowLayout"
+- "Message"
+- !private "UIBarButtonItem"
+- "Array"
+- "UIFont"
+- !private "NSStringDrawingOptions"
+- !private "Notification"
+- !private "CGRect"
 - !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "Stride"]
@@ -145,6 +145,7 @@ depends-member:
 - !private ["Ps9AnyObject", "register"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
 - !private ["Ps9AnyObject", "rightBarButtonItem"]
+- ["Ps9AnyObject", "save"]
 - !private ["Ps9AnyObject", "saveContext"]
 - ["Ps9AnyObject", "scrollToBottom"]
 - !private ["Ps9AnyObject", "scrollToItem"]
@@ -357,6 +358,7 @@ depends-member:
 - !private ["Ps7CVarArg", "register"]
 - !private ["Ps7CVarArg", "resignFirstResponder"]
 - !private ["Ps7CVarArg", "rightBarButtonItem"]
+- ["Ps7CVarArg", "save"]
 - !private ["Ps7CVarArg", "saveContext"]
 - ["Ps7CVarArg", "scrollToBottom"]
 - !private ["Ps7CVarArg", "scrollToItem"]
@@ -431,6 +433,7 @@ depends-member:
 - !private ["C17FacebookMessenger17ChatLogController", "inputTextField"]
 - !private ["C17FacebookMessenger17ChatLogController", "messages"]
 - !private ["C17FacebookMessenger17ChatLogController", "navigationItem"]
+- !private ["C17FacebookMessenger17ChatLogController", "save"]
 - !private ["C17FacebookMessenger17ChatLogController", "scrollToBottom"]
 - !private ["C17FacebookMessenger17ChatLogController", "sendButton"]
 - !private ["C17FacebookMessenger17ChatLogController", "setupInputView"]
@@ -556,6 +559,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "register"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
 - !private ["Ps28CustomDebugStringConvertible", "rightBarButtonItem"]
+- ["Ps28CustomDebugStringConvertible", "save"]
 - !private ["Ps28CustomDebugStringConvertible", "saveContext"]
 - ["Ps28CustomDebugStringConvertible", "scrollToBottom"]
 - !private ["Ps28CustomDebugStringConvertible", "scrollToItem"]
@@ -712,6 +716,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "register"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
 - !private ["Ps23CustomStringConvertible", "rightBarButtonItem"]
+- ["Ps23CustomStringConvertible", "save"]
 - !private ["Ps23CustomStringConvertible", "saveContext"]
 - ["Ps23CustomStringConvertible", "scrollToBottom"]
 - !private ["Ps23CustomStringConvertible", "scrollToItem"]
@@ -868,6 +873,7 @@ depends-member:
 - !private ["Ps9Equatable", "register"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
 - !private ["Ps9Equatable", "rightBarButtonItem"]
+- ["Ps9Equatable", "save"]
 - !private ["Ps9Equatable", "saveContext"]
 - ["Ps9Equatable", "scrollToBottom"]
 - !private ["Ps9Equatable", "scrollToItem"]
@@ -1043,6 +1049,7 @@ depends-member:
 - !private ["Ps8Hashable", "register"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
 - !private ["Ps8Hashable", "rightBarButtonItem"]
+- ["Ps8Hashable", "save"]
 - !private ["Ps8Hashable", "saveContext"]
 - ["Ps8Hashable", "scrollToBottom"]
 - !private ["Ps8Hashable", "scrollToItem"]
@@ -1236,6 +1243,7 @@ depends-member:
 - !private ["PSo8NSCoding", "register"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
 - !private ["PSo8NSCoding", "rightBarButtonItem"]
+- ["PSo8NSCoding", "save"]
 - ["PSo8NSCoding", "scrollToBottom"]
 - !private ["PSo8NSCoding", "scrollToItem"]
 - ["PSo8NSCoding", "sendButton"]
@@ -1299,6 +1307,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "inputTextField"]
 - ["PSo26NSExtensionRequestHandling", "messages"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
+- ["PSo26NSExtensionRequestHandling", "save"]
 - ["PSo26NSExtensionRequestHandling", "scrollToBottom"]
 - ["PSo26NSExtensionRequestHandling", "sendButton"]
 - ["PSo26NSExtensionRequestHandling", "setupInputView"]
@@ -1418,6 +1427,7 @@ depends-member:
 - !private ["CSo8NSObject", "register"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
 - !private ["CSo8NSObject", "rightBarButtonItem"]
+- ["CSo8NSObject", "save"]
 - !private ["CSo8NSObject", "saveContext"]
 - ["CSo8NSObject", "scrollToBottom"]
 - !private ["CSo8NSObject", "scrollToItem"]
@@ -1514,6 +1524,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "register"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
 - !private ["PSo16NSObjectProtocol", "rightBarButtonItem"]
+- ["PSo16NSObjectProtocol", "save"]
 - !private ["PSo16NSObjectProtocol", "saveContext"]
 - ["PSo16NSObjectProtocol", "scrollToBottom"]
 - !private ["PSo16NSObjectProtocol", "scrollToItem"]
@@ -1819,6 +1830,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "profileImageView"]
 - !private ["PSo21UIAppearanceContainer", "register"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
+- ["PSo21UIAppearanceContainer", "save"]
 - ["PSo21UIAppearanceContainer", "scrollToBottom"]
 - !private ["PSo21UIAppearanceContainer", "scrollToItem"]
 - ["PSo21UIAppearanceContainer", "sendButton"]
@@ -1914,6 +1926,7 @@ depends-member:
 - ["CSo26UICollectionViewController", "inputTextField"]
 - ["CSo26UICollectionViewController", "messages"]
 - !private ["CSo26UICollectionViewController", "navigationItem"]
+- ["CSo26UICollectionViewController", "save"]
 - ["CSo26UICollectionViewController", "scrollToBottom"]
 - ["CSo26UICollectionViewController", "sendButton"]
 - ["CSo26UICollectionViewController", "setupInputView"]
@@ -1958,6 +1971,7 @@ depends-member:
 - ["PSo26UICollectionViewDataSource", "inputTextField"]
 - ["PSo26UICollectionViewDataSource", "messages"]
 - !private ["PSo26UICollectionViewDataSource", "navigationItem"]
+- ["PSo26UICollectionViewDataSource", "save"]
 - ["PSo26UICollectionViewDataSource", "scrollToBottom"]
 - ["PSo26UICollectionViewDataSource", "sendButton"]
 - ["PSo26UICollectionViewDataSource", "setupInputView"]
@@ -2002,6 +2016,7 @@ depends-member:
 - ["PSo24UICollectionViewDelegate", "inputTextField"]
 - ["PSo24UICollectionViewDelegate", "messages"]
 - !private ["PSo24UICollectionViewDelegate", "navigationItem"]
+- ["PSo24UICollectionViewDelegate", "save"]
 - ["PSo24UICollectionViewDelegate", "scrollToBottom"]
 - ["PSo24UICollectionViewDelegate", "sendButton"]
 - ["PSo24UICollectionViewDelegate", "setupInputView"]
@@ -2045,6 +2060,7 @@ depends-member:
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "inputTextField"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "messages"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "navigationItem"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "save"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "scrollToBottom"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "sendButton"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "setupInputView"]
@@ -2094,6 +2110,7 @@ depends-member:
 - ["PSo18UIContentContainer", "inputTextField"]
 - ["PSo18UIContentContainer", "messages"]
 - !private ["PSo18UIContentContainer", "navigationItem"]
+- ["PSo18UIContentContainer", "save"]
 - ["PSo18UIContentContainer", "scrollToBottom"]
 - ["PSo18UIContentContainer", "sendButton"]
 - ["PSo18UIContentContainer", "setupInputView"]
@@ -2245,6 +2262,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "profileImageView"]
 - !private ["PSo18UIFocusEnvironment", "register"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
+- ["PSo18UIFocusEnvironment", "save"]
 - ["PSo18UIFocusEnvironment", "scrollToBottom"]
 - !private ["PSo18UIFocusEnvironment", "scrollToItem"]
 - ["PSo18UIFocusEnvironment", "sendButton"]
@@ -2378,6 +2396,7 @@ depends-member:
 - !private ["CSo11UIResponder", "profileImageView"]
 - !private ["CSo11UIResponder", "register"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
+- ["CSo11UIResponder", "save"]
 - !private ["CSo11UIResponder", "saveContext"]
 - ["CSo11UIResponder", "scrollToBottom"]
 - !private ["CSo11UIResponder", "scrollToItem"]
@@ -2454,6 +2473,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "profileImageView"]
 - !private ["PSo30UIResponderStandardEditActions", "register"]
 - !private ["PSo30UIResponderStandardEditActions", "resignFirstResponder"]
+- ["PSo30UIResponderStandardEditActions", "save"]
 - !private ["PSo30UIResponderStandardEditActions", "saveContext"]
 - ["PSo30UIResponderStandardEditActions", "scrollToBottom"]
 - !private ["PSo30UIResponderStandardEditActions", "scrollToItem"]
@@ -2516,6 +2536,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "inputTextField"]
 - ["PSo20UIScrollViewDelegate", "messages"]
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
+- ["PSo20UIScrollViewDelegate", "save"]
 - ["PSo20UIScrollViewDelegate", "scrollToBottom"]
 - ["PSo20UIScrollViewDelegate", "sendButton"]
 - ["PSo20UIScrollViewDelegate", "setupInputView"]
@@ -2560,6 +2581,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "inputTextField"]
 - ["PSo16UIStateRestoring", "messages"]
 - !private ["PSo16UIStateRestoring", "navigationItem"]
+- ["PSo16UIStateRestoring", "save"]
 - ["PSo16UIStateRestoring", "scrollToBottom"]
 - ["PSo16UIStateRestoring", "sendButton"]
 - ["PSo16UIStateRestoring", "setupInputView"]
@@ -2653,6 +2675,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "profileImageView"]
 - !private ["PSo18UITraitEnvironment", "register"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
+- ["PSo18UITraitEnvironment", "save"]
 - ["PSo18UITraitEnvironment", "scrollToBottom"]
 - !private ["PSo18UITraitEnvironment", "scrollToItem"]
 - ["PSo18UITraitEnvironment", "sendButton"]
@@ -2746,6 +2769,7 @@ depends-member:
 - ["CSo16UIViewController", "inputTextField"]
 - ["CSo16UIViewController", "messages"]
 - !private ["CSo16UIViewController", "navigationItem"]
+- ["CSo16UIViewController", "save"]
 - ["CSo16UIViewController", "scrollToBottom"]
 - ["CSo16UIViewController", "sendButton"]
 - ["CSo16UIViewController", "setupInputView"]
@@ -2948,6 +2972,7 @@ depends-member:
 - !private ["Ps9_Hashable", "register"]
 - !private ["Ps9_Hashable", "resignFirstResponder"]
 - !private ["Ps9_Hashable", "rightBarButtonItem"]
+- ["Ps9_Hashable", "save"]
 - !private ["Ps9_Hashable", "saveContext"]
 - ["Ps9_Hashable", "scrollToBottom"]
 - !private ["Ps9_Hashable", "scrollToItem"]
@@ -3236,4 +3261,4 @@ depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "ada82f52f6372603fd56028f2e2c1348"
+interface-hash: "6c6d36bf5bb64d0209ac6e74d6105b89"
