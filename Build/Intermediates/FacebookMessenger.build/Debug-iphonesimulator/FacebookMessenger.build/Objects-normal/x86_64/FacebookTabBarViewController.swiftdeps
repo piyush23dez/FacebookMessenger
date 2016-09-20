@@ -9,17 +9,17 @@ provides-dynamic-lookup:
 - "createTabbarNavigationController"
 - "viewDidLoad"
 depends-top-level:
-- !private "UICollectionViewFlowLayout"
-- "UINavigationController"
-- !private "UIImage"
-- !private "FriendsViewController"
-- "String"
-- "AssignmentPrecedence"
-- !private "StringLiteralType"
-- !private "UIViewController"
 - "FacebookTabBarViewController"
 - "UITabBarController"
+- "AssignmentPrecedence"
+- !private "UIImage"
 - !private "Array"
+- !private "FriendsViewController"
+- !private "StringLiteralType"
+- "String"
+- "UINavigationController"
+- !private "UIViewController"
+- !private "UICollectionViewFlowLayout"
 depends-member:
 - !private ["Ps9AnyObject", "FriendsViewController"]
 - !private ["Ps9AnyObject", "UICollectionViewFlowLayout"]
