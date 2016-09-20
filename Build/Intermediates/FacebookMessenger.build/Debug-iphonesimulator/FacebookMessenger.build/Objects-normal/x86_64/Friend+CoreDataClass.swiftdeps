@@ -7,8 +7,8 @@ provides-member:
 - ["C17FacebookMessenger6Friend", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "NSManagedObject"
 - "Friend"
+- "NSManagedObject"
 depends-member:
 - !private ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", ""]

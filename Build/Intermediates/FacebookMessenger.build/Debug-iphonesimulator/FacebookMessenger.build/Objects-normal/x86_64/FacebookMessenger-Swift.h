@@ -166,26 +166,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UIImage * _N
 @end
 
 @class Friend;
-@class Message;
-@class NSLayoutConstraint;
-@class UITextField;
-@class UIButton;
 @class UICollectionViewLayout;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC17FacebookMessenger17ChatLogController")
 @interface ChatLogController : UICollectionViewController
 @property (nonatomic, strong, getter=friend, setter=setFriend:) Friend * _Nullable friend_;
-@property (nonatomic, copy) NSArray<Message *> * _Nonnull messages;
-@property (nonatomic, strong) NSLayoutConstraint * _Nullable bottomConstraint;
-@property (nonatomic, strong) UIView * _Nonnull inputMessageView;
-@property (nonatomic, strong) UITextField * _Nonnull inputTextField;
-@property (nonatomic, strong) UIButton * _Nonnull sendButton;
-- (void)handleSend;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
-- (void)addKeyboardObservers;
-- (void)handleKeyboardNotification:(NSNotification * _Nonnull)notification;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -219,6 +207,7 @@ SWIFT_CLASS("_TtC17FacebookMessenger6Friend")
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class Message;
 @class NSSet;
 
 @interface Friend (SWIFT_EXTENSION(FacebookMessenger))

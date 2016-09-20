@@ -6,66 +6,64 @@ provides-nominal:
 provides-member:
 - ["C17FacebookMessenger17ChatLogController", ""]
 provides-dynamic-lookup:
-- "handleSend"
-- "bottomConstraint"
-- "friend"
-- "messages"
-- "addKeyboardObservers"
-- "sendButton"
-- "inputMessageView"
-- "inputTextField"
-- "viewDidLoad"
-- "collectionView"
-- "collectionView"
-- "collectionView"
-- "collectionView"
-- "collectionView"
+- "simulate"
 - "viewWillAppear"
 - "handleKeyboardNotification"
+- "viewDidLoad"
+- "handleSend"
+- "collectionView"
+- "collectionView"
+- "collectionView"
+- "collectionView"
+- "collectionView"
+- "friend"
+- "addKeyboardObservers"
+- "setupInputView"
 depends-top-level:
-- !private "<"
-- "Friend"
-- !private "NSFontAttributeName"
-- !private "NotificationCenter"
-- !private "Dictionary"
-- "NSLayoutConstraint"
-- "UICollectionView"
-- "TernaryPrecedence"
-- "UITextField"
-- !private "DataManager"
-- !private "Array"
-- "Int"
-- !private "UIImage"
-- "UICollectionViewDelegateFlowLayout"
-- "AssignmentPrecedence"
-- "CastingPrecedence"
-- !private "-"
-- !private "=="
-- "UIColor"
-- "/"
-- "StringLiteralType"
-- !private "NSValue"
-- "UIView"
-- "Notification"
-- "IndexPath"
-- !private "!"
-- "UIButton"
 - "UICollectionViewController"
-- !private "+"
-- !private "NSStringDrawingOptions"
-- "Message"
-- "CGSize"
-- "Bool"
-- "UIFont"
-- "UICollectionViewCell"
-- !private "NSString"
-- !private "UIKeyboardFrameEndUserInfoKey"
-- "ChatLogController"
-- !private "ChatCell"
+- !private "!"
 - "UICollectionViewLayout"
-- !private "CGRect"
-- "UIEdgeInsets"
+- "Bool"
+- "CGSize"
+- "UICollectionViewDelegateFlowLayout"
+- !private "NSString"
+- "/"
+- !private "ChatCell"
+- "IndexPath"
+- !private "Array"
 - !private "DispatchQueue"
+- "ChatLogController"
+- "UITextField"
+- "Message"
+- !private "Notification"
+- "UICollectionViewCell"
+- "UIFont"
+- "AssignmentPrecedence"
+- !private "UIBarButtonItem"
+- "UIButton"
+- !private "TernaryPrecedence"
+- "CastingPrecedence"
+- !private "=="
+- !private "NSStringDrawingOptions"
+- !private "-"
+- "StringLiteralType"
+- !private "CGRect"
+- !private "Dictionary"
+- "UIEdgeInsets"
+- "UICollectionView"
+- !private "+"
+- "Friend"
+- !private "UIImage"
+- "UIColor"
+- !private "DataManager"
+- !private "NSValue"
+- "NSLayoutConstraint"
+- !private "NotificationCenter"
+- "UIView"
+- "Int"
+- !private "UIKeyboardFrameEndUserInfoKey"
+- !private "<"
+- !private "NSFontAttributeName"
 - !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "Stride"]
@@ -83,6 +81,7 @@ depends-member:
 - !private ["Ps9AnyObject", "NSStringDrawingOptions"]
 - !private ["Ps9AnyObject", "Notification"]
 - !private ["Ps9AnyObject", "NotificationCenter"]
+- !private ["Ps9AnyObject", "UIBarButtonItem"]
 - ["Ps9AnyObject", "UIButton"]
 - ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UIEdgeInsets"]
@@ -145,13 +144,16 @@ depends-member:
 - !private ["Ps9AnyObject", "profileImageView"]
 - !private ["Ps9AnyObject", "register"]
 - !private ["Ps9AnyObject", "resignFirstResponder"]
+- !private ["Ps9AnyObject", "rightBarButtonItem"]
 - !private ["Ps9AnyObject", "saveContext"]
+- ["Ps9AnyObject", "scrollToBottom"]
 - !private ["Ps9AnyObject", "scrollToItem"]
 - ["Ps9AnyObject", "sendButton"]
 - ["Ps9AnyObject", "setTitle"]
 - ["Ps9AnyObject", "setTitleColor"]
 - ["Ps9AnyObject", "setupInputView"]
 - !private ["Ps9AnyObject", "sharedManager"]
+- ["Ps9AnyObject", "simulate"]
 - ["Ps9AnyObject", "systemFont"]
 - !private ["Ps9AnyObject", "tabBar"]
 - !private ["Ps9AnyObject", "tabBarController"]
@@ -166,7 +168,7 @@ depends-member:
 - ["Ps9AnyObject", "viewWillAppear"]
 - ["Ps9AnyObject", "white"]
 - ["Ps9AnyObject", ""]
-- ["C17FacebookMessenger11AppDelegate", "deinit"]
+- !private ["C17FacebookMessenger11AppDelegate", "deinit"]
 - !private ["C17FacebookMessenger11AppDelegate", "persistentContainer"]
 - !private ["C17FacebookMessenger11AppDelegate", "saveContext"]
 - !private ["Sa", "Element"]
@@ -287,6 +289,7 @@ depends-member:
 - !private ["Ps7CVarArg", "NotificationCenter"]
 - !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "SubSequence"]
+- !private ["Ps7CVarArg", "UIBarButtonItem"]
 - ["Ps7CVarArg", "UIButton"]
 - ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "UIEdgeInsets"]
@@ -353,12 +356,15 @@ depends-member:
 - !private ["Ps7CVarArg", "profileImageView"]
 - !private ["Ps7CVarArg", "register"]
 - !private ["Ps7CVarArg", "resignFirstResponder"]
+- !private ["Ps7CVarArg", "rightBarButtonItem"]
 - !private ["Ps7CVarArg", "saveContext"]
+- ["Ps7CVarArg", "scrollToBottom"]
 - !private ["Ps7CVarArg", "scrollToItem"]
 - ["Ps7CVarArg", "sendButton"]
 - ["Ps7CVarArg", "setTitle"]
 - ["Ps7CVarArg", "setTitleColor"]
 - ["Ps7CVarArg", "setupInputView"]
+- ["Ps7CVarArg", "simulate"]
 - !private ["Ps7CVarArg", "sort"]
 - !private ["Ps7CVarArg", "subscript"]
 - ["Ps7CVarArg", "systemFont"]
@@ -397,8 +403,9 @@ depends-member:
 - !private ["C17FacebookMessenger17ChatLogController", "NSString"]
 - !private ["C17FacebookMessenger17ChatLogController", "NSStringDrawingOptions"]
 - !private ["C17FacebookMessenger17ChatLogController", "NSValue"]
-- ["C17FacebookMessenger17ChatLogController", "Notification"]
+- !private ["C17FacebookMessenger17ChatLogController", "Notification"]
 - !private ["C17FacebookMessenger17ChatLogController", "NotificationCenter"]
+- !private ["C17FacebookMessenger17ChatLogController", "UIBarButtonItem"]
 - ["C17FacebookMessenger17ChatLogController", "UIButton"]
 - ["C17FacebookMessenger17ChatLogController", "UICollectionView"]
 - ["C17FacebookMessenger17ChatLogController", "UICollectionViewCell"]
@@ -410,22 +417,24 @@ depends-member:
 - !private ["C17FacebookMessenger17ChatLogController", "UIKeyboardFrameEndUserInfoKey"]
 - ["C17FacebookMessenger17ChatLogController", "UITextField"]
 - ["C17FacebookMessenger17ChatLogController", "UIView"]
-- ["C17FacebookMessenger17ChatLogController", "addKeyboardObservers"]
-- ["C17FacebookMessenger17ChatLogController", "bottomConstraint"]
+- !private ["C17FacebookMessenger17ChatLogController", "addKeyboardObservers"]
+- !private ["C17FacebookMessenger17ChatLogController", "bottomConstraint"]
 - !private ["C17FacebookMessenger17ChatLogController", "cellId"]
 - ["C17FacebookMessenger17ChatLogController", "collectionView"]
 - ["C17FacebookMessenger17ChatLogController", "deinit"]
 - !private ["C17FacebookMessenger17ChatLogController", "dismissKeyboard"]
 - ["C17FacebookMessenger17ChatLogController", "friend"]
-- ["C17FacebookMessenger17ChatLogController", "handleKeyboardNotification"]
-- ["C17FacebookMessenger17ChatLogController", "handleSend"]
+- !private ["C17FacebookMessenger17ChatLogController", "handleKeyboardNotification"]
+- !private ["C17FacebookMessenger17ChatLogController", "handleSend"]
 - ["C17FacebookMessenger17ChatLogController", "init"]
-- ["C17FacebookMessenger17ChatLogController", "inputMessageView"]
-- ["C17FacebookMessenger17ChatLogController", "inputTextField"]
-- ["C17FacebookMessenger17ChatLogController", "messages"]
+- !private ["C17FacebookMessenger17ChatLogController", "inputMessageView"]
+- !private ["C17FacebookMessenger17ChatLogController", "inputTextField"]
+- !private ["C17FacebookMessenger17ChatLogController", "messages"]
 - !private ["C17FacebookMessenger17ChatLogController", "navigationItem"]
-- ["C17FacebookMessenger17ChatLogController", "sendButton"]
+- !private ["C17FacebookMessenger17ChatLogController", "scrollToBottom"]
+- !private ["C17FacebookMessenger17ChatLogController", "sendButton"]
 - !private ["C17FacebookMessenger17ChatLogController", "setupInputView"]
+- !private ["C17FacebookMessenger17ChatLogController", "simulate"]
 - !private ["C17FacebookMessenger17ChatLogController", "tabBarController"]
 - !private ["C17FacebookMessenger17ChatLogController", "view"]
 - ["C17FacebookMessenger17ChatLogController", "viewDidLoad"]
@@ -478,6 +487,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "NotificationCenter"]
 - !private ["Ps28CustomDebugStringConvertible", "Stride"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "UIBarButtonItem"]
 - ["Ps28CustomDebugStringConvertible", "UIButton"]
 - ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UIEdgeInsets"]
@@ -545,12 +555,15 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "profileImageView"]
 - !private ["Ps28CustomDebugStringConvertible", "register"]
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
+- !private ["Ps28CustomDebugStringConvertible", "rightBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "saveContext"]
+- ["Ps28CustomDebugStringConvertible", "scrollToBottom"]
 - !private ["Ps28CustomDebugStringConvertible", "scrollToItem"]
 - ["Ps28CustomDebugStringConvertible", "sendButton"]
 - ["Ps28CustomDebugStringConvertible", "setTitle"]
 - ["Ps28CustomDebugStringConvertible", "setTitleColor"]
 - ["Ps28CustomDebugStringConvertible", "setupInputView"]
+- ["Ps28CustomDebugStringConvertible", "simulate"]
 - ["Ps28CustomDebugStringConvertible", "some"]
 - !private ["Ps28CustomDebugStringConvertible", "sort"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
@@ -629,6 +642,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "NotificationCenter"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "UIBarButtonItem"]
 - ["Ps23CustomStringConvertible", "UIButton"]
 - ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UIEdgeInsets"]
@@ -697,12 +711,15 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "profileImageView"]
 - !private ["Ps23CustomStringConvertible", "register"]
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
+- !private ["Ps23CustomStringConvertible", "rightBarButtonItem"]
 - !private ["Ps23CustomStringConvertible", "saveContext"]
+- ["Ps23CustomStringConvertible", "scrollToBottom"]
 - !private ["Ps23CustomStringConvertible", "scrollToItem"]
 - ["Ps23CustomStringConvertible", "sendButton"]
 - ["Ps23CustomStringConvertible", "setTitle"]
 - ["Ps23CustomStringConvertible", "setTitleColor"]
 - ["Ps23CustomStringConvertible", "setupInputView"]
+- ["Ps23CustomStringConvertible", "simulate"]
 - !private ["Ps23CustomStringConvertible", "sort"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "systemFont"]
@@ -721,7 +738,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "white"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["C17FacebookMessenger11DataManager", "createMessage"]
-- ["C17FacebookMessenger11DataManager", "deinit"]
+- !private ["C17FacebookMessenger11DataManager", "deinit"]
 - !private ["C17FacebookMessenger11DataManager", "delegate"]
 - !private ["C17FacebookMessenger11DataManager", "sharedManager"]
 - !private ["V10Foundation4Date", "deinit"]
@@ -757,7 +774,7 @@ depends-member:
 - !private ["V8Dispatch16DispatchWallTime", "deinit"]
 - !private ["Sd", "Stride"]
 - !private ["Sd", "_DisallowMixedSignArithmetic"]
-- ["Sd", "deinit"]
+- !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "CGRect"]
 - !private ["Ps9Equatable", "CGSize"]
 - !private ["Ps9Equatable", "ChatCell"]
@@ -775,6 +792,7 @@ depends-member:
 - !private ["Ps9Equatable", "Notification"]
 - !private ["Ps9Equatable", "NotificationCenter"]
 - !private ["Ps9Equatable", "Stride"]
+- !private ["Ps9Equatable", "UIBarButtonItem"]
 - ["Ps9Equatable", "UIButton"]
 - ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UIEdgeInsets"]
@@ -843,17 +861,21 @@ depends-member:
 - ["Ps9Equatable", "normal"]
 - !private ["Ps9Equatable", "persistentContainer"]
 - ["Ps9Equatable", "placeholder"]
+- !private ["Ps9Equatable", "plain"]
 - !private ["Ps9Equatable", "profileImageName"]
 - !private ["Ps9Equatable", "profileImageView"]
 - !private ["Ps9Equatable", "rawValue"]
 - !private ["Ps9Equatable", "register"]
 - !private ["Ps9Equatable", "resignFirstResponder"]
+- !private ["Ps9Equatable", "rightBarButtonItem"]
 - !private ["Ps9Equatable", "saveContext"]
+- ["Ps9Equatable", "scrollToBottom"]
 - !private ["Ps9Equatable", "scrollToItem"]
 - ["Ps9Equatable", "sendButton"]
 - ["Ps9Equatable", "setTitle"]
 - ["Ps9Equatable", "setTitleColor"]
 - ["Ps9Equatable", "setupInputView"]
+- ["Ps9Equatable", "simulate"]
 - ["Ps9Equatable", "system"]
 - ["Ps9Equatable", "systemFont"]
 - !private ["Ps9Equatable", "tabBar"]
@@ -948,6 +970,7 @@ depends-member:
 - !private ["Ps8Hashable", "Notification"]
 - !private ["Ps8Hashable", "NotificationCenter"]
 - !private ["Ps8Hashable", "Stride"]
+- !private ["Ps8Hashable", "UIBarButtonItem"]
 - ["Ps8Hashable", "UIButton"]
 - ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UIEdgeInsets"]
@@ -1013,17 +1036,21 @@ depends-member:
 - !private ["Ps8Hashable", "navigationItem"]
 - !private ["Ps8Hashable", "persistentContainer"]
 - ["Ps8Hashable", "placeholder"]
+- !private ["Ps8Hashable", "plain"]
 - !private ["Ps8Hashable", "profileImageName"]
 - !private ["Ps8Hashable", "profileImageView"]
 - !private ["Ps8Hashable", "rawValue"]
 - !private ["Ps8Hashable", "register"]
 - !private ["Ps8Hashable", "resignFirstResponder"]
+- !private ["Ps8Hashable", "rightBarButtonItem"]
 - !private ["Ps8Hashable", "saveContext"]
+- ["Ps8Hashable", "scrollToBottom"]
 - !private ["Ps8Hashable", "scrollToItem"]
 - ["Ps8Hashable", "sendButton"]
 - ["Ps8Hashable", "setTitle"]
 - ["Ps8Hashable", "setTitleColor"]
 - ["Ps8Hashable", "setupInputView"]
+- ["Ps8Hashable", "simulate"]
 - ["Ps8Hashable", "system"]
 - ["Ps8Hashable", "systemFont"]
 - !private ["Ps8Hashable", "tabBar"]
@@ -1110,7 +1137,7 @@ depends-member:
 - !private ["V10Foundation11Measurement", "Stride"]
 - !private ["V10Foundation11Measurement", "deinit"]
 - !private ["C17FacebookMessenger7Message", "date"]
-- ["C17FacebookMessenger7Message", "deinit"]
+- !private ["C17FacebookMessenger7Message", "deinit"]
 - !private ["C17FacebookMessenger7Message", "friend"]
 - !private ["C17FacebookMessenger7Message", "isSender"]
 - !private ["C17FacebookMessenger7Message", "text"]
@@ -1158,6 +1185,7 @@ depends-member:
 - !private ["PSo8NSCoding", "NSStringDrawingOptions"]
 - !private ["PSo8NSCoding", "Notification"]
 - !private ["PSo8NSCoding", "NotificationCenter"]
+- !private ["PSo8NSCoding", "UIBarButtonItem"]
 - ["PSo8NSCoding", "UIButton"]
 - ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIEdgeInsets"]
@@ -1207,11 +1235,14 @@ depends-member:
 - !private ["PSo8NSCoding", "profileImageView"]
 - !private ["PSo8NSCoding", "register"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
+- !private ["PSo8NSCoding", "rightBarButtonItem"]
+- ["PSo8NSCoding", "scrollToBottom"]
 - !private ["PSo8NSCoding", "scrollToItem"]
 - ["PSo8NSCoding", "sendButton"]
 - ["PSo8NSCoding", "setTitle"]
 - ["PSo8NSCoding", "setTitleColor"]
 - ["PSo8NSCoding", "setupInputView"]
+- ["PSo8NSCoding", "simulate"]
 - !private ["PSo8NSCoding", "tabBar"]
 - !private ["PSo8NSCoding", "tabBarController"]
 - !private ["PSo8NSCoding", "text"]
@@ -1246,6 +1277,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "NSStringDrawingOptions"]
 - !private ["PSo26NSExtensionRequestHandling", "Notification"]
 - !private ["PSo26NSExtensionRequestHandling", "NotificationCenter"]
+- !private ["PSo26NSExtensionRequestHandling", "UIBarButtonItem"]
 - ["PSo26NSExtensionRequestHandling", "UIButton"]
 - ["PSo26NSExtensionRequestHandling", "UIColor"]
 - !private ["PSo26NSExtensionRequestHandling", "UIEdgeInsets"]
@@ -1267,8 +1299,10 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "inputTextField"]
 - ["PSo26NSExtensionRequestHandling", "messages"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
+- ["PSo26NSExtensionRequestHandling", "scrollToBottom"]
 - ["PSo26NSExtensionRequestHandling", "sendButton"]
 - ["PSo26NSExtensionRequestHandling", "setupInputView"]
+- ["PSo26NSExtensionRequestHandling", "simulate"]
 - !private ["PSo26NSExtensionRequestHandling", "tabBar"]
 - !private ["PSo26NSExtensionRequestHandling", "tabBarController"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
@@ -1297,7 +1331,7 @@ depends-member:
 - !private ["CSo15NSManagedObject", "name"]
 - !private ["CSo15NSManagedObject", "profileImageName"]
 - !private ["CSo15NSManagedObject", "text"]
-- ["CSo22NSManagedObjectContext", "deinit"]
+- !private ["CSo22NSManagedObjectContext", "deinit"]
 - !private ["PSo16NSMutableCopying", "allObjects"]
 - !private ["PSo16NSMutableCopying", "boundingRect"]
 - ["PSo16NSMutableCopying", "init"]
@@ -1317,8 +1351,9 @@ depends-member:
 - !private ["CSo8NSObject", "NSString"]
 - !private ["CSo8NSObject", "NSStringDrawingOptions"]
 - !private ["CSo8NSObject", "NSValue"]
-- ["CSo8NSObject", "Notification"]
+- !private ["CSo8NSObject", "Notification"]
 - !private ["CSo8NSObject", "NotificationCenter"]
+- !private ["CSo8NSObject", "UIBarButtonItem"]
 - ["CSo8NSObject", "UIButton"]
 - ["CSo8NSObject", "UICollectionView"]
 - ["CSo8NSObject", "UICollectionViewCell"]
@@ -1382,12 +1417,15 @@ depends-member:
 - !private ["CSo8NSObject", "profileImageView"]
 - !private ["CSo8NSObject", "register"]
 - !private ["CSo8NSObject", "resignFirstResponder"]
+- !private ["CSo8NSObject", "rightBarButtonItem"]
 - !private ["CSo8NSObject", "saveContext"]
+- ["CSo8NSObject", "scrollToBottom"]
 - !private ["CSo8NSObject", "scrollToItem"]
 - ["CSo8NSObject", "sendButton"]
 - ["CSo8NSObject", "setTitle"]
 - ["CSo8NSObject", "setTitleColor"]
 - ["CSo8NSObject", "setupInputView"]
+- ["CSo8NSObject", "simulate"]
 - ["CSo8NSObject", "systemFont"]
 - !private ["CSo8NSObject", "tabBar"]
 - !private ["CSo8NSObject", "tabBarController"]
@@ -1414,6 +1452,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSStringDrawingOptions"]
 - !private ["PSo16NSObjectProtocol", "Notification"]
 - !private ["PSo16NSObjectProtocol", "NotificationCenter"]
+- !private ["PSo16NSObjectProtocol", "UIBarButtonItem"]
 - ["PSo16NSObjectProtocol", "UIButton"]
 - ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIEdgeInsets"]
@@ -1474,12 +1513,15 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "profileImageView"]
 - !private ["PSo16NSObjectProtocol", "register"]
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
+- !private ["PSo16NSObjectProtocol", "rightBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "saveContext"]
+- ["PSo16NSObjectProtocol", "scrollToBottom"]
 - !private ["PSo16NSObjectProtocol", "scrollToItem"]
 - ["PSo16NSObjectProtocol", "sendButton"]
 - ["PSo16NSObjectProtocol", "setTitle"]
 - ["PSo16NSObjectProtocol", "setTitleColor"]
 - ["PSo16NSObjectProtocol", "setupInputView"]
+- ["PSo16NSObjectProtocol", "simulate"]
 - ["PSo16NSObjectProtocol", "systemFont"]
 - !private ["PSo16NSObjectProtocol", "tabBar"]
 - !private ["PSo16NSObjectProtocol", "tabBarController"]
@@ -1512,18 +1554,18 @@ depends-member:
 - !private ["VSC22NSStringDrawingOptions", "usesFontLeading"]
 - !private ["VSC22NSStringDrawingOptions", "usesLineFragmentOrigin"]
 - !private ["CSo7NSValue", "cgRectValue"]
-- ["CSo7NSValue", "deinit"]
+- !private ["CSo7NSValue", "deinit"]
 - !private ["VCSo14NSNotification4Name", "UIKeyboardWillHide"]
 - !private ["VCSo14NSNotification4Name", "UIKeyboardWillShow"]
-- ["VCSo14NSNotification4Name", "deinit"]
+- !private ["VCSo14NSNotification4Name", "deinit"]
 - !private ["VCSo14NSNotification4Name", "rawValue"]
 - !private ["V10Foundation12Notification", "Name"]
-- ["V10Foundation12Notification", "deinit"]
+- !private ["V10Foundation12Notification", "deinit"]
 - !private ["V10Foundation12Notification", "name"]
 - !private ["V10Foundation12Notification", "userInfo"]
 - !private ["CSo18NotificationCenter", "addObserver"]
 - !private ["CSo18NotificationCenter", "default"]
-- ["CSo18NotificationCenter", "deinit"]
+- !private ["CSo18NotificationCenter", "deinit"]
 - !private ["CSo9OS_object", "async"]
 - !private ["CSo9OS_object", "main"]
 - !private ["Ps9OptionSet", "bottom"]
@@ -1595,6 +1637,7 @@ depends-member:
 - !private ["Ps16RawRepresentable", "curveEaseOut"]
 - !private ["Ps16RawRepresentable", "equal"]
 - ["Ps16RawRepresentable", "normal"]
+- !private ["Ps16RawRepresentable", "plain"]
 - !private ["Ps16RawRepresentable", "rawValue"]
 - ["Ps16RawRepresentable", "system"]
 - !private ["Ps16RawRepresentable", "touchUpInside"]
@@ -1731,6 +1774,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "NSStringDrawingOptions"]
 - !private ["PSo21UIAppearanceContainer", "Notification"]
 - !private ["PSo21UIAppearanceContainer", "NotificationCenter"]
+- !private ["PSo21UIAppearanceContainer", "UIBarButtonItem"]
 - ["PSo21UIAppearanceContainer", "UIButton"]
 - ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UIEdgeInsets"]
@@ -1775,11 +1819,13 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "profileImageView"]
 - !private ["PSo21UIAppearanceContainer", "register"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
+- ["PSo21UIAppearanceContainer", "scrollToBottom"]
 - !private ["PSo21UIAppearanceContainer", "scrollToItem"]
 - ["PSo21UIAppearanceContainer", "sendButton"]
 - ["PSo21UIAppearanceContainer", "setTitle"]
 - ["PSo21UIAppearanceContainer", "setTitleColor"]
 - ["PSo21UIAppearanceContainer", "setupInputView"]
+- ["PSo21UIAppearanceContainer", "simulate"]
 - !private ["PSo21UIAppearanceContainer", "tabBar"]
 - !private ["PSo21UIAppearanceContainer", "tabBarController"]
 - !private ["PSo21UIAppearanceContainer", "text"]
@@ -1792,6 +1838,11 @@ depends-member:
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["PSo21UIApplicationDelegate", "persistentContainer"]
 - !private ["PSo21UIApplicationDelegate", "saveContext"]
+- ["CSo15UIBarButtonItem", "deinit"]
+- !private ["CSo15UIBarButtonItem", "init"]
+- ["OSC20UIBarButtonItemStyle", "deinit"]
+- !private ["OSC20UIBarButtonItemStyle", "plain"]
+- !private ["CSo9UIBarItem", "init"]
 - !private ["CSo8UIButton", "addTarget"]
 - ["CSo8UIButton", "deinit"]
 - ["CSo8UIButton", "init"]
@@ -1835,8 +1886,9 @@ depends-member:
 - !private ["CSo26UICollectionViewController", "NSString"]
 - !private ["CSo26UICollectionViewController", "NSStringDrawingOptions"]
 - !private ["CSo26UICollectionViewController", "NSValue"]
-- ["CSo26UICollectionViewController", "Notification"]
+- !private ["CSo26UICollectionViewController", "Notification"]
 - !private ["CSo26UICollectionViewController", "NotificationCenter"]
+- !private ["CSo26UICollectionViewController", "UIBarButtonItem"]
 - ["CSo26UICollectionViewController", "UIButton"]
 - ["CSo26UICollectionViewController", "UICollectionView"]
 - ["CSo26UICollectionViewController", "UICollectionViewCell"]
@@ -1862,8 +1914,10 @@ depends-member:
 - ["CSo26UICollectionViewController", "inputTextField"]
 - ["CSo26UICollectionViewController", "messages"]
 - !private ["CSo26UICollectionViewController", "navigationItem"]
+- ["CSo26UICollectionViewController", "scrollToBottom"]
 - ["CSo26UICollectionViewController", "sendButton"]
 - ["CSo26UICollectionViewController", "setupInputView"]
+- ["CSo26UICollectionViewController", "simulate"]
 - !private ["CSo26UICollectionViewController", "tabBarController"]
 - !private ["CSo26UICollectionViewController", "view"]
 - ["CSo26UICollectionViewController", "viewDidLoad"]
@@ -1882,6 +1936,7 @@ depends-member:
 - !private ["PSo26UICollectionViewDataSource", "NSStringDrawingOptions"]
 - !private ["PSo26UICollectionViewDataSource", "Notification"]
 - !private ["PSo26UICollectionViewDataSource", "NotificationCenter"]
+- !private ["PSo26UICollectionViewDataSource", "UIBarButtonItem"]
 - ["PSo26UICollectionViewDataSource", "UIButton"]
 - ["PSo26UICollectionViewDataSource", "UIColor"]
 - !private ["PSo26UICollectionViewDataSource", "UIEdgeInsets"]
@@ -1903,8 +1958,10 @@ depends-member:
 - ["PSo26UICollectionViewDataSource", "inputTextField"]
 - ["PSo26UICollectionViewDataSource", "messages"]
 - !private ["PSo26UICollectionViewDataSource", "navigationItem"]
+- ["PSo26UICollectionViewDataSource", "scrollToBottom"]
 - ["PSo26UICollectionViewDataSource", "sendButton"]
 - ["PSo26UICollectionViewDataSource", "setupInputView"]
+- ["PSo26UICollectionViewDataSource", "simulate"]
 - !private ["PSo26UICollectionViewDataSource", "tabBarController"]
 - !private ["PSo26UICollectionViewDataSource", "view"]
 - ["PSo26UICollectionViewDataSource", "viewDidLoad"]
@@ -1923,6 +1980,7 @@ depends-member:
 - !private ["PSo24UICollectionViewDelegate", "NSStringDrawingOptions"]
 - !private ["PSo24UICollectionViewDelegate", "Notification"]
 - !private ["PSo24UICollectionViewDelegate", "NotificationCenter"]
+- !private ["PSo24UICollectionViewDelegate", "UIBarButtonItem"]
 - ["PSo24UICollectionViewDelegate", "UIButton"]
 - ["PSo24UICollectionViewDelegate", "UIColor"]
 - !private ["PSo24UICollectionViewDelegate", "UIEdgeInsets"]
@@ -1944,8 +2002,10 @@ depends-member:
 - ["PSo24UICollectionViewDelegate", "inputTextField"]
 - ["PSo24UICollectionViewDelegate", "messages"]
 - !private ["PSo24UICollectionViewDelegate", "navigationItem"]
+- ["PSo24UICollectionViewDelegate", "scrollToBottom"]
 - ["PSo24UICollectionViewDelegate", "sendButton"]
 - ["PSo24UICollectionViewDelegate", "setupInputView"]
+- ["PSo24UICollectionViewDelegate", "simulate"]
 - !private ["PSo24UICollectionViewDelegate", "tabBarController"]
 - !private ["PSo24UICollectionViewDelegate", "view"]
 - ["PSo24UICollectionViewDelegate", "viewDidLoad"]
@@ -1964,6 +2024,7 @@ depends-member:
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "NSStringDrawingOptions"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "Notification"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "NotificationCenter"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "UIBarButtonItem"]
 - ["PSo34UICollectionViewDelegateFlowLayout", "UIButton"]
 - ["PSo34UICollectionViewDelegateFlowLayout", "UIColor"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "UIEdgeInsets"]
@@ -1984,14 +2045,16 @@ depends-member:
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "inputTextField"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "messages"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "navigationItem"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "scrollToBottom"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "sendButton"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "setupInputView"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "simulate"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "tabBarController"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "view"]
 - ["PSo34UICollectionViewDelegateFlowLayout", ""]
 - ["CSo22UICollectionViewLayout", "deinit"]
 - !private ["VSC30UICollectionViewScrollPosition", "bottom"]
-- ["VSC30UICollectionViewScrollPosition", "deinit"]
+- !private ["VSC30UICollectionViewScrollPosition", "deinit"]
 - !private ["CSo7UIColor", "black"]
 - ["CSo7UIColor", "deinit"]
 - ["CSo7UIColor", "init"]
@@ -2009,6 +2072,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "NSStringDrawingOptions"]
 - !private ["PSo18UIContentContainer", "Notification"]
 - !private ["PSo18UIContentContainer", "NotificationCenter"]
+- !private ["PSo18UIContentContainer", "UIBarButtonItem"]
 - ["PSo18UIContentContainer", "UIButton"]
 - ["PSo18UIContentContainer", "UIColor"]
 - !private ["PSo18UIContentContainer", "UIEdgeInsets"]
@@ -2030,8 +2094,10 @@ depends-member:
 - ["PSo18UIContentContainer", "inputTextField"]
 - ["PSo18UIContentContainer", "messages"]
 - !private ["PSo18UIContentContainer", "navigationItem"]
+- ["PSo18UIContentContainer", "scrollToBottom"]
 - ["PSo18UIContentContainer", "sendButton"]
 - ["PSo18UIContentContainer", "setupInputView"]
+- ["PSo18UIContentContainer", "simulate"]
 - !private ["PSo18UIContentContainer", "tabBar"]
 - !private ["PSo18UIContentContainer", "tabBarController"]
 - !private ["PSo18UIContentContainer", "view"]
@@ -2134,6 +2200,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "NSStringDrawingOptions"]
 - !private ["PSo18UIFocusEnvironment", "Notification"]
 - !private ["PSo18UIFocusEnvironment", "NotificationCenter"]
+- !private ["PSo18UIFocusEnvironment", "UIBarButtonItem"]
 - ["PSo18UIFocusEnvironment", "UIButton"]
 - ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UIEdgeInsets"]
@@ -2178,11 +2245,13 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "profileImageView"]
 - !private ["PSo18UIFocusEnvironment", "register"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
+- ["PSo18UIFocusEnvironment", "scrollToBottom"]
 - !private ["PSo18UIFocusEnvironment", "scrollToItem"]
 - ["PSo18UIFocusEnvironment", "sendButton"]
 - ["PSo18UIFocusEnvironment", "setTitle"]
 - ["PSo18UIFocusEnvironment", "setTitleColor"]
 - ["PSo18UIFocusEnvironment", "setupInputView"]
+- ["PSo18UIFocusEnvironment", "simulate"]
 - !private ["PSo18UIFocusEnvironment", "tabBar"]
 - !private ["PSo18UIFocusEnvironment", "tabBarController"]
 - !private ["PSo18UIFocusEnvironment", "text"]
@@ -2241,6 +2310,7 @@ depends-member:
 - ["CSo7UILabel", "deinit"]
 - ["CSo7UILabel", "font"]
 - ["CSo16UINavigationItem", "deinit"]
+- !private ["CSo16UINavigationItem", "rightBarButtonItem"]
 - !private ["CSo16UINavigationItem", "title"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CGRect"]
@@ -2257,8 +2327,9 @@ depends-member:
 - !private ["CSo11UIResponder", "NSString"]
 - !private ["CSo11UIResponder", "NSStringDrawingOptions"]
 - !private ["CSo11UIResponder", "NSValue"]
-- ["CSo11UIResponder", "Notification"]
+- !private ["CSo11UIResponder", "Notification"]
 - !private ["CSo11UIResponder", "NotificationCenter"]
+- !private ["CSo11UIResponder", "UIBarButtonItem"]
 - ["CSo11UIResponder", "UIButton"]
 - ["CSo11UIResponder", "UICollectionView"]
 - ["CSo11UIResponder", "UICollectionViewCell"]
@@ -2308,11 +2379,13 @@ depends-member:
 - !private ["CSo11UIResponder", "register"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
 - !private ["CSo11UIResponder", "saveContext"]
+- ["CSo11UIResponder", "scrollToBottom"]
 - !private ["CSo11UIResponder", "scrollToItem"]
 - ["CSo11UIResponder", "sendButton"]
 - ["CSo11UIResponder", "setTitle"]
 - ["CSo11UIResponder", "setTitleColor"]
 - ["CSo11UIResponder", "setupInputView"]
+- ["CSo11UIResponder", "simulate"]
 - !private ["CSo11UIResponder", "tabBar"]
 - !private ["CSo11UIResponder", "tabBarController"]
 - !private ["CSo11UIResponder", "text"]
@@ -2335,6 +2408,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "NSStringDrawingOptions"]
 - !private ["PSo30UIResponderStandardEditActions", "Notification"]
 - !private ["PSo30UIResponderStandardEditActions", "NotificationCenter"]
+- !private ["PSo30UIResponderStandardEditActions", "UIBarButtonItem"]
 - ["PSo30UIResponderStandardEditActions", "UIButton"]
 - ["PSo30UIResponderStandardEditActions", "UIColor"]
 - !private ["PSo30UIResponderStandardEditActions", "UIEdgeInsets"]
@@ -2381,11 +2455,13 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "register"]
 - !private ["PSo30UIResponderStandardEditActions", "resignFirstResponder"]
 - !private ["PSo30UIResponderStandardEditActions", "saveContext"]
+- ["PSo30UIResponderStandardEditActions", "scrollToBottom"]
 - !private ["PSo30UIResponderStandardEditActions", "scrollToItem"]
 - ["PSo30UIResponderStandardEditActions", "sendButton"]
 - ["PSo30UIResponderStandardEditActions", "setTitle"]
 - ["PSo30UIResponderStandardEditActions", "setTitleColor"]
 - ["PSo30UIResponderStandardEditActions", "setupInputView"]
+- ["PSo30UIResponderStandardEditActions", "simulate"]
 - !private ["PSo30UIResponderStandardEditActions", "tabBar"]
 - !private ["PSo30UIResponderStandardEditActions", "tabBarController"]
 - !private ["PSo30UIResponderStandardEditActions", "text"]
@@ -2418,6 +2494,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "NSStringDrawingOptions"]
 - !private ["PSo20UIScrollViewDelegate", "Notification"]
 - !private ["PSo20UIScrollViewDelegate", "NotificationCenter"]
+- !private ["PSo20UIScrollViewDelegate", "UIBarButtonItem"]
 - ["PSo20UIScrollViewDelegate", "UIButton"]
 - ["PSo20UIScrollViewDelegate", "UIColor"]
 - !private ["PSo20UIScrollViewDelegate", "UIEdgeInsets"]
@@ -2439,8 +2516,10 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "inputTextField"]
 - ["PSo20UIScrollViewDelegate", "messages"]
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
+- ["PSo20UIScrollViewDelegate", "scrollToBottom"]
 - ["PSo20UIScrollViewDelegate", "sendButton"]
 - ["PSo20UIScrollViewDelegate", "setupInputView"]
+- ["PSo20UIScrollViewDelegate", "simulate"]
 - !private ["PSo20UIScrollViewDelegate", "tabBarController"]
 - !private ["PSo20UIScrollViewDelegate", "view"]
 - ["PSo20UIScrollViewDelegate", "viewDidLoad"]
@@ -2459,6 +2538,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "NSStringDrawingOptions"]
 - !private ["PSo16UIStateRestoring", "Notification"]
 - !private ["PSo16UIStateRestoring", "NotificationCenter"]
+- !private ["PSo16UIStateRestoring", "UIBarButtonItem"]
 - ["PSo16UIStateRestoring", "UIButton"]
 - ["PSo16UIStateRestoring", "UIColor"]
 - !private ["PSo16UIStateRestoring", "UIEdgeInsets"]
@@ -2480,8 +2560,10 @@ depends-member:
 - ["PSo16UIStateRestoring", "inputTextField"]
 - ["PSo16UIStateRestoring", "messages"]
 - !private ["PSo16UIStateRestoring", "navigationItem"]
+- ["PSo16UIStateRestoring", "scrollToBottom"]
 - ["PSo16UIStateRestoring", "sendButton"]
 - ["PSo16UIStateRestoring", "setupInputView"]
+- ["PSo16UIStateRestoring", "simulate"]
 - !private ["PSo16UIStateRestoring", "tabBar"]
 - !private ["PSo16UIStateRestoring", "tabBarController"]
 - !private ["PSo16UIStateRestoring", "view"]
@@ -2526,6 +2608,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "NSStringDrawingOptions"]
 - !private ["PSo18UITraitEnvironment", "Notification"]
 - !private ["PSo18UITraitEnvironment", "NotificationCenter"]
+- !private ["PSo18UITraitEnvironment", "UIBarButtonItem"]
 - ["PSo18UITraitEnvironment", "UIButton"]
 - ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UIEdgeInsets"]
@@ -2570,11 +2653,13 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "profileImageView"]
 - !private ["PSo18UITraitEnvironment", "register"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
+- ["PSo18UITraitEnvironment", "scrollToBottom"]
 - !private ["PSo18UITraitEnvironment", "scrollToItem"]
 - ["PSo18UITraitEnvironment", "sendButton"]
 - ["PSo18UITraitEnvironment", "setTitle"]
 - ["PSo18UITraitEnvironment", "setTitleColor"]
 - ["PSo18UITraitEnvironment", "setupInputView"]
+- ["PSo18UITraitEnvironment", "simulate"]
 - !private ["PSo18UITraitEnvironment", "tabBar"]
 - !private ["PSo18UITraitEnvironment", "tabBarController"]
 - !private ["PSo18UITraitEnvironment", "text"]
@@ -2618,7 +2703,7 @@ depends-member:
 - !private ["CSo6UIView", "tintColor"]
 - ["CSo6UIView", "titleLabel"]
 - !private ["VSC22UIViewAnimationOptions", "curveEaseOut"]
-- ["VSC22UIViewAnimationOptions", "deinit"]
+- !private ["VSC22UIViewAnimationOptions", "deinit"]
 - ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "CGRect"]
 - ["CSo16UIViewController", "CGSize"]
@@ -2634,8 +2719,9 @@ depends-member:
 - !private ["CSo16UIViewController", "NSString"]
 - !private ["CSo16UIViewController", "NSStringDrawingOptions"]
 - !private ["CSo16UIViewController", "NSValue"]
-- ["CSo16UIViewController", "Notification"]
+- !private ["CSo16UIViewController", "Notification"]
 - !private ["CSo16UIViewController", "NotificationCenter"]
+- !private ["CSo16UIViewController", "UIBarButtonItem"]
 - ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "UICollectionView"]
 - ["CSo16UIViewController", "UICollectionViewCell"]
@@ -2660,8 +2746,10 @@ depends-member:
 - ["CSo16UIViewController", "inputTextField"]
 - ["CSo16UIViewController", "messages"]
 - !private ["CSo16UIViewController", "navigationItem"]
+- ["CSo16UIViewController", "scrollToBottom"]
 - ["CSo16UIViewController", "sendButton"]
 - ["CSo16UIViewController", "setupInputView"]
+- ["CSo16UIViewController", "simulate"]
 - !private ["CSo16UIViewController", "tabBar"]
 - !private ["CSo16UIViewController", "tabBarController"]
 - !private ["CSo16UIViewController", "view"]
@@ -2787,6 +2875,7 @@ depends-member:
 - !private ["Ps9_Hashable", "Notification"]
 - !private ["Ps9_Hashable", "NotificationCenter"]
 - !private ["Ps9_Hashable", "Stride"]
+- !private ["Ps9_Hashable", "UIBarButtonItem"]
 - ["Ps9_Hashable", "UIButton"]
 - ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "UIEdgeInsets"]
@@ -2852,17 +2941,21 @@ depends-member:
 - !private ["Ps9_Hashable", "navigationItem"]
 - !private ["Ps9_Hashable", "persistentContainer"]
 - ["Ps9_Hashable", "placeholder"]
+- !private ["Ps9_Hashable", "plain"]
 - !private ["Ps9_Hashable", "profileImageName"]
 - !private ["Ps9_Hashable", "profileImageView"]
 - !private ["Ps9_Hashable", "rawValue"]
 - !private ["Ps9_Hashable", "register"]
 - !private ["Ps9_Hashable", "resignFirstResponder"]
+- !private ["Ps9_Hashable", "rightBarButtonItem"]
 - !private ["Ps9_Hashable", "saveContext"]
+- ["Ps9_Hashable", "scrollToBottom"]
 - !private ["Ps9_Hashable", "scrollToItem"]
 - ["Ps9_Hashable", "sendButton"]
 - ["Ps9_Hashable", "setTitle"]
 - ["Ps9_Hashable", "setTitleColor"]
 - ["Ps9_Hashable", "setupInputView"]
+- ["Ps9_Hashable", "simulate"]
 - ["Ps9_Hashable", "system"]
 - ["Ps9_Hashable", "systemFont"]
 - !private ["Ps9_Hashable", "tabBar"]
@@ -2935,7 +3028,7 @@ depends-member:
 depends-nominal:
 - !private "Ps16AbsoluteValuable"
 - "Ps9AnyObject"
-- "C17FacebookMessenger11AppDelegate"
+- !private "C17FacebookMessenger11AppDelegate"
 - "Sa"
 - !private "C17FacebookMessenger8BaseCell"
 - "Ps23BidirectionalCollection"
@@ -2957,7 +3050,7 @@ depends-nominal:
 - "Ps29CustomPlaygroundQuickLookable"
 - "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
-- "C17FacebookMessenger11DataManager"
+- !private "C17FacebookMessenger11DataManager"
 - !private "V10Foundation4Date"
 - !private "VSC7Decimal"
 - !private "Vs27DefaultBidirectionalIndices"
@@ -2968,7 +3061,7 @@ depends-nominal:
 - !private "V8Dispatch12DispatchTime"
 - !private "O8Dispatch20DispatchTimeInterval"
 - !private "V8Dispatch16DispatchWallTime"
-- "Sd"
+- !private "Sd"
 - "Ps9Equatable"
 - "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
@@ -2999,7 +3092,7 @@ depends-nominal:
 - !private "Ps16IteratorProtocol"
 - "Ps25LosslessStringConvertible"
 - !private "V10Foundation11Measurement"
-- "C17FacebookMessenger7Message"
+- !private "C17FacebookMessenger7Message"
 - "Ps10MirrorPath"
 - "Ps17MutableCollection"
 - "Ps16MutableIndexable"
@@ -3013,7 +3106,7 @@ depends-nominal:
 - "CSo18NSLayoutConstraint"
 - "OSC16NSLayoutRelation"
 - !private "CSo15NSManagedObject"
-- "CSo22NSManagedObjectContext"
+- !private "CSo22NSManagedObjectContext"
 - "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
@@ -3022,10 +3115,10 @@ depends-nominal:
 - !private "CSo5NSSet"
 - "CSo8NSString"
 - "VSC22NSStringDrawingOptions"
-- "CSo7NSValue"
-- "VCSo14NSNotification4Name"
-- "V10Foundation12Notification"
-- "CSo18NotificationCenter"
+- !private "CSo7NSValue"
+- !private "VCSo14NSNotification4Name"
+- !private "V10Foundation12Notification"
+- !private "CSo18NotificationCenter"
 - !private "CSo9OS_object"
 - "Ps9OptionSet"
 - "Sq"
@@ -3050,6 +3143,9 @@ depends-nominal:
 - "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
 - !private "PSo21UIApplicationDelegate"
+- "CSo15UIBarButtonItem"
+- "OSC20UIBarButtonItemStyle"
+- !private "CSo9UIBarItem"
 - "CSo8UIButton"
 - "OSC12UIButtonType"
 - !private "CSo24UICollectionReusableView"
@@ -3060,7 +3156,7 @@ depends-nominal:
 - "PSo24UICollectionViewDelegate"
 - "PSo34UICollectionViewDelegateFlowLayout"
 - "CSo22UICollectionViewLayout"
-- "VSC30UICollectionViewScrollPosition"
+- !private "VSC30UICollectionViewScrollPosition"
 - "CSo7UIColor"
 - "PSo18UIContentContainer"
 - "PSo30UIContentSizeCategoryAdjusting"
@@ -3092,7 +3188,7 @@ depends-nominal:
 - !private "CSo10UITextView"
 - "PSo18UITraitEnvironment"
 - "CSo6UIView"
-- "VSC22UIViewAnimationOptions"
+- !private "VSC22UIViewAnimationOptions"
 - "CSo16UIViewController"
 - !private "Su"
 - !private "Vs6UInt16"
@@ -3140,4 +3236,4 @@ depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "20e8d0863e92e2763b1ca5e92a30adac"
+interface-hash: "ada82f52f6372603fd56028f2e2c1348"

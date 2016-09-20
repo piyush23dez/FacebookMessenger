@@ -6,12 +6,12 @@ provides-member:
 - ["CSo6UIView", "addConstraintWith"]
 provides-dynamic-lookup:
 depends-top-level:
-- "UIView"
+- "String"
 - !private "NSLayoutConstraint"
 - "AssignmentPrecedence"
-- !private "UnicodeScalarType"
-- "String"
 - !private "StringLiteralType"
+- "UIView"
+- !private "UnicodeScalarType"
 - !private "NSLayoutFormatOptions"
 - !private "BooleanLiteralType"
 depends-member:

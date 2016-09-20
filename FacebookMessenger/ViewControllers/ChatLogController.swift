@@ -4,14 +4,19 @@
 //
 //  Created by Sharma, Piyush on 9/17/16.
 //  Copyright © 2016 Sharma, Piyush. All rights reserved.
-//
+
 
 import UIKit
 
 class ChatLogController: UICollectionViewController {
     
+    //fileprivate access restricts the use of an entity to its own defining source file.
     fileprivate let cellId = "cellId"
-    
+    fileprivate var messages = [Message]()
+   
+    //private access restricts the use of an entity to the enclosing declaration.
+    private var bottomConstraint: NSLayoutConstraint?
+
     var friend: Friend? {
         
         didSet {
@@ -20,22 +25,19 @@ class ChatLogController: UICollectionViewController {
         }
     }
     
-    var messages = [Message]()
-    var bottomConstraint: NSLayoutConstraint?
+    fileprivate var inputTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Type"
+        return textField
+    }()
     
-    var inputMessageView: UIView = {
+    private var inputMessageView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.white
         return view
     }()
     
-    var inputTextField: UITextField = {
-       let textField = UITextField()
-        textField.placeholder = "Type"
-        return textField
-    }()
-    
-    var sendButton: UIButton = {
+    private var sendButton: UIButton = {
        let button = UIButton(type: .system)
         button.setTitle("Send", for: .normal)
         button.setTitleColor(UIColor.init(red: 0, green: 131/255, blue: 249/255, alpha: 1), for: .normal)
@@ -44,7 +46,102 @@ class ChatLogController: UICollectionViewController {
     }()
     
     
-    func handleSend() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tabBarController?.tabBar.isHidden = true
+        
+        navigationItem.title = friend?.name
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Simulate", style: .plain, target: self, action: #selector(simulate))
+        
+        collectionView?.backgroundColor = UIColor.white
+        collectionView?.register(ChatCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.alwaysBounceVertical = true
+        
+        view.addSubview(inputMessageView)
+        view.addConstraintWith(format: "H:|[v0]|", views: inputMessageView)
+        view.addConstraintWith(format: "V:[v0(40)]", views: inputMessageView)
+        bottomConstraint = NSLayoutConstraint(item: inputMessageView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
+        view.addConstraint(bottomConstraint!)
+        
+        setupInputView()
+        addKeyboardObservers()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(item: self.messages.count-1, section: 0)
+            self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
+        }
+    }
+    
+    @objc private func simulate() {
+        
+        let context = DataManager.sharedManager.delegate!.persistentContainer.viewContext
+        let newMessage = DataManager.sharedManager.createMessage(text: "Receiving mesage from friend", minutesAgo: 1, frind: friend!, context: context)
+        DataManager.sharedManager.delegate!.saveContext()
+        
+        messages.append(newMessage)
+
+        let indexpath = IndexPath(item: messages.count-1, section: 0)
+        collectionView?.insertItems(at: [indexpath])
+        self.collectionView?.scrollToItem(at: indexpath, at: .bottom, animated: true)
+    }
+    
+    @objc private func setupInputView() {
+        let topBorderView = UIView()
+        topBorderView.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
+        
+        inputMessageView.addSubview(topBorderView)
+        inputMessageView.addSubview(inputTextField)
+        
+        sendButton.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
+        inputMessageView.addSubview(sendButton)
+        
+        inputMessageView.addConstraintWith(format: "H:|-8-[v0][v1(60)]|", views: inputTextField,sendButton)
+        inputMessageView.addConstraintWith(format: "V:|[v0]|", views: inputTextField)
+        inputMessageView.addConstraintWith(format: "V:|[v0]|", views: sendButton)
+        inputMessageView.addConstraintWith(format: "H:|[v0]|", views: topBorderView)
+        inputMessageView.addConstraintWith(format: "V:|[v0(0.5)]", views: topBorderView)
+    }
+
+    @objc private func addKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc private func handleKeyboardNotification(_ notification: Notification) {
+        
+        if let userInfo = notification.userInfo {
+            if let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                
+                let isKeyboardShowing = notification.name.rawValue == Notification.Name.UIKeyboardWillShow.rawValue
+                self.bottomConstraint?.constant = isKeyboardShowing ? -keyboardFrame.height : 0
+               
+                //Animate input textfield alongwith keyboard
+                UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+                    self.view.layoutIfNeeded()
+                }, completion: nil)
+
+                DispatchQueue.main.async {
+                    self.scrollToBottom()
+                }
+            }
+        }
+    }
+    
+    private func scrollToBottom() {
+        
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            let indexPath = IndexPath(item: self.messages.count-1, section: 0)
+            self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
+        }, completion: nil)
+    }
+    
+    @objc private func handleSend() {
         
         if inputTextField.text!.isEmpty {
             return
@@ -60,82 +157,6 @@ class ChatLogController: UICollectionViewController {
         collectionView?.insertItems(at: [indexpath])
         self.collectionView?.scrollToItem(at: indexpath, at: .bottom, animated: true)
         inputTextField.text = nil
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tabBarController?.tabBar.isHidden = true
-        navigationItem.title = friend?.name
-        collectionView?.backgroundColor = UIColor.white
-        collectionView?.register(ChatCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView?.alwaysBounceVertical = true
-        
-        view.addSubview(inputMessageView)
-        view.addConstraintWith(format: "H:|[v0]|", views: inputMessageView)
-        view.addConstraintWith(format: "V:[v0(40)]", views: inputMessageView)
-        bottomConstraint = NSLayoutConstraint(item: inputMessageView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
-        view.addConstraint(bottomConstraint!)
-        setupInputView()
-        addKeyboardObservers()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        DispatchQueue.main.async {
-            let indexPath = IndexPath(item: self.messages.count-1, section: 0)
-            self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
-        }
-    }
-    
-    func addKeyboardObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillShow, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    func handleKeyboardNotification(_ notification: Notification) {
-        
-        if let userInfo = notification.userInfo {
-            if let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                
-                let isKeyboardShowing = notification.name.rawValue == Notification.Name.UIKeyboardWillShow.rawValue
-                self.bottomConstraint?.constant = isKeyboardShowing ? -keyboardFrame.height : 0
-               
-                //Animate input textfield alongwith keyboard
-                UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
-                    self.view.layoutIfNeeded()
-                }, completion: nil)
-
-                DispatchQueue.main.async {
-                    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
-                        if isKeyboardShowing {
-                            let indexPath = IndexPath(item: self.messages.count-1, section: 0)
-                            self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
-                        }
-                    }, completion: nil)
-                }
-            }
-        }
-    }
-    
-    private func setupInputView() {
-        let topBorderView = UIView()
-        topBorderView.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
-        
-        inputMessageView.addSubview(topBorderView)
-        inputMessageView.addSubview(inputTextField)
-
-        sendButton.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
-        inputMessageView.addSubview(sendButton)
-
-        inputMessageView.addConstraintWith(format: "H:|-8-[v0][v1(60)]|", views: inputTextField,sendButton)
-        inputMessageView.addConstraintWith(format: "V:|[v0]|", views: inputTextField)
-        inputMessageView.addConstraintWith(format: "V:|[v0]|", views: sendButton)
-        inputMessageView.addConstraintWith(format: "H:|[v0]|", views: topBorderView)
-        inputMessageView.addConstraintWith(format: "V:|[v0(0.5)]", views: topBorderView)
     }
 }
 
@@ -208,7 +229,7 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
         dismissKeyboard()
     }
     
-    private func dismissKeyboard() {
+    fileprivate func dismissKeyboard() {
         inputTextField.resignFirstResponder()
     }
 }
