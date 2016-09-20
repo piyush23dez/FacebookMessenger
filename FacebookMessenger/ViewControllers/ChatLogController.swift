@@ -43,6 +43,26 @@ class ChatLogController: UICollectionViewController {
         return button
     }()
     
+    
+    func handleSend() {
+        
+        if inputTextField.text!.isEmpty {
+            return
+        }
+        
+        let context = DataManager.sharedManager.delegate!.persistentContainer.viewContext
+        let newMessage = DataManager.sharedManager.createMessage(text: inputTextField.text!, minutesAgo: 1, frind: friend!, context: context, isSender: true)
+        
+        DataManager.sharedManager.delegate!.saveContext()
+        messages.append(newMessage)
+        
+        let indexpath = IndexPath(item: messages.count-1, section: 0)
+        collectionView?.insertItems(at: [indexpath])
+        self.collectionView?.scrollToItem(at: indexpath, at: .bottom, animated: true)
+        inputTextField.text = nil
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +81,15 @@ class ChatLogController: UICollectionViewController {
         addKeyboardObservers()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(item: self.messages.count-1, section: 0)
+            self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
+        }
+    }
+    
     func addKeyboardObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillShow, object: nil)
         
@@ -68,6 +97,7 @@ class ChatLogController: UICollectionViewController {
     }
     
     func handleKeyboardNotification(_ notification: Notification) {
+        
         if let userInfo = notification.userInfo {
             if let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
                 
@@ -75,13 +105,12 @@ class ChatLogController: UICollectionViewController {
                 self.bottomConstraint?.constant = isKeyboardShowing ? -keyboardFrame.height : 0
                
                 //Animate input textfield alongwith keyboard
-                UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut, animations: {
+                UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
                     self.view.layoutIfNeeded()
                 }, completion: nil)
 
                 DispatchQueue.main.async {
-                    
-                    UIView.animate(withDuration: 0.35, delay: 0, options: .curveEaseOut, animations: {
+                    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
                         if isKeyboardShowing {
                             let indexPath = IndexPath(item: self.messages.count-1, section: 0)
                             self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
@@ -98,6 +127,8 @@ class ChatLogController: UICollectionViewController {
         
         inputMessageView.addSubview(topBorderView)
         inputMessageView.addSubview(inputTextField)
+
+        sendButton.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
         inputMessageView.addSubview(sendButton)
 
         inputMessageView.addConstraintWith(format: "H:|-8-[v0][v1(60)]|", views: inputTextField,sendButton)

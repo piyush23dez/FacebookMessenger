@@ -148,9 +148,9 @@
 		A61A11281D8C610B0061F4F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A61A10F71D8C60FD0061F4F9 /* AppDelegate.swift */,
 				A61A11011D8C60FD0061F4F9 /* Assets.xcassets */,
 				A61A11031D8C60FD0061F4F9 /* LaunchScreen.storyboard */,
+				A61A10F71D8C60FD0061F4F9 /* AppDelegate.swift */,
 				A61A11061D8C60FD0061F4F9 /* Info.plist */,
 				A61A10FE1D8C60FD0061F4F9 /* FacebookMessenger.xcdatamodeld */,
 			);

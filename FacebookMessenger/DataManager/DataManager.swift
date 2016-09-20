@@ -13,12 +13,15 @@ class DataManager {
     
     static let sharedManager = DataManager()
     fileprivate var messages = [Message]()
-    fileprivate let delegate = UIApplication.shared.delegate as? AppDelegate
+    let delegate = UIApplication.shared.delegate as? AppDelegate
 
     private init() {
-        clear()
-        setup()
-        save()
+        //clear()
+        
+        if let friends = fetchFreinds(), friends.count == 0 {
+            setup()
+            save()
+        }
         load()
     }
     
@@ -45,13 +48,7 @@ class DataManager {
                     print(error)
                 }
             }
-            
-            do {
-                try context.save()
-            }
-            catch let error {
-                print(error)
-            }
+            delegate?.saveContext()
         }
     }
     
@@ -96,35 +93,28 @@ class DataManager {
         }
     }
     
-    private func createFriend(name: String, imageName: String,context: NSManagedObjectContext) -> Friend {
+    private func createFriend(name: String, imageName: String, context: NSManagedObjectContext) -> Friend {
         let friend = Friend(entity: NSEntityDescription.entity(forEntityName: "Friend", in: context)!, insertInto: context)
         friend.name = name
         friend.profileImageName = imageName
         return friend
     }
     
-    private func createMessage(text: String, minutesAgo: Double, frind: Friend, context: NSManagedObjectContext, isSender: Bool = false) {
+    @discardableResult func createMessage(text: String, minutesAgo: Double, frind: Friend, context: NSManagedObjectContext, isSender: Bool = false) -> Message {
         
         let message = Message(entity: NSEntityDescription.entity(forEntityName: "Message", in: context)!, insertInto: context)
         message.friend = frind
         message.text = text
         message.date = Date().addingTimeInterval(-minutesAgo*60) // convert minutes in seconds
         message.isSender = isSender
+        return message
     }
     
     private func save() {
-        
-        if let context = delegate?.persistentContainer.viewContext {
-            do {
-                try context.save()
-            }
-            catch let error {
-                print(error)
-            }
-        }
+        delegate?.saveContext()
     }
     
-    private func loadFreinds() -> [Friend]? {
+    private func fetchFreinds() -> [Friend]? {
 
         if let context = delegate?.persistentContainer.viewContext {
             
@@ -141,13 +131,13 @@ class DataManager {
         return nil
     }
     
-    private func load() {
+     func load() {
         
         if let context = delegate?.persistentContainer.viewContext {
             
             messages = [Message]()
             
-            if let freinds = loadFreinds() {
+            if let freinds = fetchFreinds() {
                 
                 for friend in freinds {
                     

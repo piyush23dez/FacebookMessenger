@@ -31,6 +31,10 @@ class FriendsViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = false
+        DataManager.sharedManager.load()
+        
+        setupData()
+        collectionView?.reloadData()
     }
 }
 

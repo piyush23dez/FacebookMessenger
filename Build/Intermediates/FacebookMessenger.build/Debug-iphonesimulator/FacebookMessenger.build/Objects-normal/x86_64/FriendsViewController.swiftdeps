@@ -9,37 +9,37 @@ provides-member:
 - ["C17FacebookMessenger21FriendsViewController", "collectionView"]
 - ["C17FacebookMessenger21FriendsViewController", "willTransition"]
 provides-dynamic-lookup:
-- "willTransition"
-- "viewDidLoad"
 - "viewWillAppear"
 - "collectionView"
 - "collectionView"
 - "collectionView"
 - "collectionView"
+- "viewDidLoad"
+- "willTransition"
 depends-top-level:
-- !private "NSSearchPathForDirectoriesInDomains"
 - "UICollectionViewCell"
-- "UICollectionViewDelegateFlowLayout"
-- "CGSize"
-- !private "DataManager"
-- "UIViewControllerTransitionCoordinator"
-- !private "print"
+- !private "UICollectionViewFlowLayout"
+- !private "UIColor"
+- !private "MessageCell"
+- "IndexPath"
+- !private "ChatLogController"
 - "AssignmentPrecedence"
 - "CastingPrecedence"
-- "UICollectionView"
-- "Int"
-- "StringLiteralType"
-- !private "ChatLogController"
-- !private "UIColor"
-- "FriendsViewController"
-- "IndexPath"
-- "Bool"
+- "UICollectionViewDelegateFlowLayout"
 - "Message"
-- !private "MessageCell"
-- "UITraitCollection"
 - "UICollectionViewController"
+- "Bool"
+- "StringLiteralType"
+- "UIViewControllerTransitionCoordinator"
+- !private "print"
+- "Int"
+- "UITraitCollection"
+- !private "DataManager"
 - "UICollectionViewLayout"
-- !private "UICollectionViewFlowLayout"
+- !private "NSSearchPathForDirectoriesInDomains"
+- "UICollectionView"
+- "CGSize"
+- "FriendsViewController"
 - !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "CGSize"]
@@ -62,6 +62,7 @@ depends-member:
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "invalidateLayout"]
 - !private ["Ps9AnyObject", "isHidden"]
+- !private ["Ps9AnyObject", "load"]
 - !private ["Ps9AnyObject", "message"]
 - ["Ps9AnyObject", "messages"]
 - !private ["Ps9AnyObject", "navigationController"]
@@ -69,6 +70,7 @@ depends-member:
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "pushViewController"]
 - !private ["Ps9AnyObject", "register"]
+- !private ["Ps9AnyObject", "reloadData"]
 - !private ["Ps9AnyObject", "setupData"]
 - !private ["Ps9AnyObject", "sharedManager"]
 - !private ["Ps9AnyObject", "tabBar"]
@@ -126,6 +128,7 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "isHidden"]
 - !private ["PSo15CALayerDelegate", "message"]
 - !private ["PSo15CALayerDelegate", "register"]
+- !private ["PSo15CALayerDelegate", "reloadData"]
 - ["V12CoreGraphics7CGFloat", "deinit"]
 - !private ["VSC6CGRect", "width"]
 - ["VSC6CGSize", "deinit"]
@@ -164,6 +167,7 @@ depends-member:
 - !private ["Ps7CVarArg", "print"]
 - !private ["Ps7CVarArg", "pushViewController"]
 - !private ["Ps7CVarArg", "register"]
+- !private ["Ps7CVarArg", "reloadData"]
 - !private ["Ps7CVarArg", "setupData"]
 - !private ["Ps7CVarArg", "subscript"]
 - !private ["Ps7CVarArg", "tabBar"]
@@ -225,6 +229,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "register"]
+- !private ["Ps28CustomDebugStringConvertible", "reloadData"]
 - !private ["Ps28CustomDebugStringConvertible", "setupData"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps28CustomDebugStringConvertible", "tabBar"]
@@ -289,6 +294,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - !private ["Ps23CustomStringConvertible", "register"]
+- !private ["Ps23CustomStringConvertible", "reloadData"]
 - !private ["Ps23CustomStringConvertible", "setupData"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps23CustomStringConvertible", "tabBar"]
@@ -300,8 +306,9 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "white"]
 - ["Ps23CustomStringConvertible", "willTransition"]
 - ["Ps23CustomStringConvertible", ""]
-- !private ["C17FacebookMessenger11DataManager", "deinit"]
+- ["C17FacebookMessenger11DataManager", "deinit"]
 - !private ["C17FacebookMessenger11DataManager", "getMessages"]
+- !private ["C17FacebookMessenger11DataManager", "load"]
 - !private ["C17FacebookMessenger11DataManager", "sharedManager"]
 - !private ["Vs27DefaultBidirectionalIndices", "Index"]
 - !private ["Vs27DefaultBidirectionalIndices", "Iterator"]
@@ -344,6 +351,7 @@ depends-member:
 - !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "pushViewController"]
 - !private ["Ps9Equatable", "register"]
+- !private ["Ps9Equatable", "reloadData"]
 - !private ["Ps9Equatable", "setupData"]
 - !private ["Ps9Equatable", "tabBar"]
 - !private ["Ps9Equatable", "tabBarController"]
@@ -434,6 +442,7 @@ depends-member:
 - !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "pushViewController"]
 - !private ["Ps8Hashable", "register"]
+- !private ["Ps8Hashable", "reloadData"]
 - !private ["Ps8Hashable", "setupData"]
 - !private ["Ps8Hashable", "tabBar"]
 - !private ["Ps8Hashable", "tabBarController"]
@@ -529,6 +538,7 @@ depends-member:
 - !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "pushViewController"]
 - !private ["PSo8NSCoding", "register"]
+- !private ["PSo8NSCoding", "reloadData"]
 - !private ["PSo8NSCoding", "setupData"]
 - !private ["PSo8NSCoding", "tabBar"]
 - !private ["PSo8NSCoding", "tabBarController"]
@@ -604,6 +614,7 @@ depends-member:
 - !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "pushViewController"]
 - !private ["CSo8NSObject", "register"]
+- !private ["CSo8NSObject", "reloadData"]
 - !private ["CSo8NSObject", "setupData"]
 - !private ["CSo8NSObject", "tabBar"]
 - !private ["CSo8NSObject", "tabBarController"]
@@ -639,6 +650,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - !private ["PSo16NSObjectProtocol", "register"]
+- !private ["PSo16NSObjectProtocol", "reloadData"]
 - !private ["PSo16NSObjectProtocol", "setupData"]
 - !private ["PSo16NSObjectProtocol", "tabBar"]
 - !private ["PSo16NSObjectProtocol", "tabBarController"]
@@ -737,6 +749,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "isHidden"]
 - !private ["PSo29UIAccessibilityIdentification", "message"]
 - !private ["PSo29UIAccessibilityIdentification", "register"]
+- !private ["PSo29UIAccessibilityIdentification", "reloadData"]
 - !private ["PSo12UIAppearance", "alwaysBounceVertical"]
 - !private ["PSo12UIAppearance", "backgroundColor"]
 - !private ["PSo12UIAppearance", "dequeueReusableCell"]
@@ -744,6 +757,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "isHidden"]
 - !private ["PSo12UIAppearance", "message"]
 - !private ["PSo12UIAppearance", "register"]
+- !private ["PSo12UIAppearance", "reloadData"]
 - !private ["PSo21UIAppearanceContainer", "CGSize"]
 - !private ["PSo21UIAppearanceContainer", "ChatLogController"]
 - !private ["PSo21UIAppearanceContainer", "DataManager"]
@@ -769,6 +783,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - !private ["PSo21UIAppearanceContainer", "register"]
+- !private ["PSo21UIAppearanceContainer", "reloadData"]
 - !private ["PSo21UIAppearanceContainer", "setupData"]
 - !private ["PSo21UIAppearanceContainer", "tabBar"]
 - !private ["PSo21UIAppearanceContainer", "tabBarController"]
@@ -783,6 +798,7 @@ depends-member:
 - ["CSo16UICollectionView", "deinit"]
 - !private ["CSo16UICollectionView", "dequeueReusableCell"]
 - !private ["CSo16UICollectionView", "register"]
+- !private ["CSo16UICollectionView", "reloadData"]
 - ["CSo20UICollectionViewCell", "deinit"]
 - !private ["CSo20UICollectionViewCell", "message"]
 - ["CSo26UICollectionViewController", "Bool"]
@@ -927,6 +943,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "isHidden"]
 - !private ["PSo17UICoordinateSpace", "message"]
 - !private ["PSo17UICoordinateSpace", "register"]
+- !private ["PSo17UICoordinateSpace", "reloadData"]
 - !private ["PSo13UIDynamicItem", "alwaysBounceVertical"]
 - !private ["PSo13UIDynamicItem", "backgroundColor"]
 - !private ["PSo13UIDynamicItem", "dequeueReusableCell"]
@@ -934,6 +951,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "isHidden"]
 - !private ["PSo13UIDynamicItem", "message"]
 - !private ["PSo13UIDynamicItem", "register"]
+- !private ["PSo13UIDynamicItem", "reloadData"]
 - !private ["PSo18UIFocusEnvironment", "CGSize"]
 - !private ["PSo18UIFocusEnvironment", "ChatLogController"]
 - !private ["PSo18UIFocusEnvironment", "DataManager"]
@@ -959,6 +977,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - !private ["PSo18UIFocusEnvironment", "register"]
+- !private ["PSo18UIFocusEnvironment", "reloadData"]
 - !private ["PSo18UIFocusEnvironment", "setupData"]
 - !private ["PSo18UIFocusEnvironment", "tabBar"]
 - !private ["PSo18UIFocusEnvironment", "tabBarController"]
@@ -974,6 +993,7 @@ depends-member:
 - !private ["PSo11UIFocusItem", "isHidden"]
 - !private ["PSo11UIFocusItem", "message"]
 - !private ["PSo11UIFocusItem", "register"]
+- !private ["PSo11UIFocusItem", "reloadData"]
 - ["CSo22UINavigationController", "deinit"]
 - !private ["CSo22UINavigationController", "pushViewController"]
 - ["CSo16UINavigationItem", "deinit"]
@@ -1011,6 +1031,7 @@ depends-member:
 - !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - !private ["CSo11UIResponder", "register"]
+- !private ["CSo11UIResponder", "reloadData"]
 - !private ["CSo11UIResponder", "setupData"]
 - !private ["CSo11UIResponder", "tabBar"]
 - !private ["CSo11UIResponder", "tabBarController"]
@@ -1043,6 +1064,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "print"]
 - !private ["PSo30UIResponderStandardEditActions", "pushViewController"]
 - !private ["PSo30UIResponderStandardEditActions", "register"]
+- !private ["PSo30UIResponderStandardEditActions", "reloadData"]
 - !private ["PSo30UIResponderStandardEditActions", "setupData"]
 - !private ["PSo30UIResponderStandardEditActions", "tabBar"]
 - !private ["PSo30UIResponderStandardEditActions", "tabBarController"]
@@ -1055,6 +1077,7 @@ depends-member:
 - !private ["CSo12UIScrollView", "backgroundColor"]
 - !private ["CSo12UIScrollView", "dequeueReusableCell"]
 - !private ["CSo12UIScrollView", "register"]
+- !private ["CSo12UIScrollView", "reloadData"]
 - !private ["PSo20UIScrollViewDelegate", "CGSize"]
 - !private ["PSo20UIScrollViewDelegate", "ChatLogController"]
 - !private ["PSo20UIScrollViewDelegate", "DataManager"]
@@ -1136,6 +1159,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - !private ["PSo18UITraitEnvironment", "register"]
+- !private ["PSo18UITraitEnvironment", "reloadData"]
 - !private ["PSo18UITraitEnvironment", "setupData"]
 - !private ["PSo18UITraitEnvironment", "tabBar"]
 - !private ["PSo18UITraitEnvironment", "tabBarController"]
@@ -1151,6 +1175,7 @@ depends-member:
 - !private ["CSo6UIView", "isHidden"]
 - !private ["CSo6UIView", "message"]
 - !private ["CSo6UIView", "register"]
+- !private ["CSo6UIView", "reloadData"]
 - ["CSo16UIViewController", "Bool"]
 - ["CSo16UIViewController", "CGSize"]
 - !private ["CSo16UIViewController", "ChatLogController"]
@@ -1199,6 +1224,7 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isHidden"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "message"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "register"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "reloadData"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
@@ -1246,6 +1272,7 @@ depends-member:
 - !private ["Ps9_Hashable", "print"]
 - !private ["Ps9_Hashable", "pushViewController"]
 - !private ["Ps9_Hashable", "register"]
+- !private ["Ps9_Hashable", "reloadData"]
 - !private ["Ps9_Hashable", "setupData"]
 - !private ["Ps9_Hashable", "tabBar"]
 - !private ["Ps9_Hashable", "tabBarController"]
@@ -1303,7 +1330,7 @@ depends-nominal:
 - "Ps29CustomPlaygroundQuickLookable"
 - "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
-- !private "C17FacebookMessenger11DataManager"
+- "C17FacebookMessenger11DataManager"
 - !private "Vs27DefaultBidirectionalIndices"
 - !private "Vs26DefaultRandomAccessIndices"
 - "Ps9Equatable"

@@ -181,7 +181,9 @@ SWIFT_CLASS("_TtC17FacebookMessenger17ChatLogController")
 @property (nonatomic, strong) UIView * _Nonnull inputMessageView;
 @property (nonatomic, strong) UITextField * _Nonnull inputTextField;
 @property (nonatomic, strong) UIButton * _Nonnull sendButton;
+- (void)handleSend;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)addKeyboardObservers;
 - (void)handleKeyboardNotification:(NSNotification * _Nonnull)notification;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
