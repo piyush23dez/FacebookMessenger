@@ -128,36 +128,60 @@ class ChatLogController: UICollectionViewController {
         
         let context = DataManager.sharedManager.delegate!.persistentContainer.viewContext
         let newMessage = DataManager.sharedManager.createMessage(text: inputTextField.text!, minutesAgo: 1, frind: friend!, context: context, isSender: true)
+        self.messages.append(newMessage)
+        
         save(newMessage: newMessage)
+        scrollToBottom()
         inputTextField.text = nil
     }
     
     @objc private func simulate() {
         
         let context = DataManager.sharedManager.delegate!.persistentContainer.viewContext
-        let newMessage = DataManager.sharedManager.createMessage(text: "Receiving mesage from friend", minutesAgo: 1, frind: friend!, context: context)
-        save(newMessage: newMessage)
+        let newMessage = DataManager.sharedManager.createMessage(text: "Old mesage from friend", minutesAgo: 0, frind: friend!, context: context)
+        
+        messages.append(newMessage)
+        DataManager.sharedManager.delegate!.saveContext()
+        messages.sort { $0.date! < $1.date! }
+        
+        let newIndex = self.messages.index(of: newMessage)
+        if let index = newIndex, index < messages.count-1 {
+           insertMessage(at: index)
+        }
+        else {
+            insertMessage(at: newIndex!)
+            scrollTo(indexPath: IndexPath(item: newIndex!, section: 0))
+        }
+    }
+    
+    private func insertMessage(at index: Int) {
+        let indexPath = IndexPath(item: index , section: 0)
+        self.collectionView!.insertItems(at: [indexPath])
     }
     
     private func save(newMessage: Message) {
         
         DispatchQueue.main.async {
             DataManager.sharedManager.delegate!.saveContext()
-            
-            self.messages.append(newMessage)
-            
-            let indexpath = IndexPath(item: self.messages.count-1, section: 0)
-            self.collectionView?.insertItems(at: [indexpath])
-            self.scrollToBottom()
+            self.insertMessage(at: self.messages.count-1)
+        }
+    }
+    
+    private func scrollTo(indexPath: IndexPath) {
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+                self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
+            }, completion: nil)
         }
     }
     
     private func scrollToBottom() {
-        
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
-            let indexPath = IndexPath(item: self.messages.count-1, section: 0)
-            self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
-        }, completion: nil)
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+                let indexPath = IndexPath(item: self.messages.count-1, section: 0)
+                self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
+            }, completion: nil)
+        }
     }
 }
 

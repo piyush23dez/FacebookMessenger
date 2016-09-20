@@ -1,8 +1,8 @@
 version: "Apple Swift version 3.0 (swiftlang-800.0.43.6 clang-800.0.38)"
 options: "a906efe58251e7ec2f921000ec667b90"
-build_time: [527708724, 17004000]
+build_time: [527710863, 323703000]
 inputs:
-  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/ViewControllers/ChatLogController.swift": [527708723, 0]
+  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/ViewControllers/ChatLogController.swift": [527710863, 0]
   "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Models/Friend+CoreDataClass.swift": [527700411, 0]
   "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Models/Friend+CoreDataProperties.swift": [527700411, 0]
   "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Models/Message+CoreDataClass.swift": [527700411, 0]

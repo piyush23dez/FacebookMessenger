@@ -12,59 +12,59 @@ provides-dynamic-lookup:
 - "collectionView"
 - "collectionView"
 - "friend"
-- "addKeyboardObservers"
-- "setupInputView"
-- "viewDidLoad"
-- "simulate"
-- "handleSend"
-- "handleKeyboardNotification"
 - "viewWillAppear"
+- "simulate"
+- "viewDidLoad"
+- "handleSend"
+- "setupInputView"
+- "handleKeyboardNotification"
+- "addKeyboardObservers"
 depends-top-level:
-- !private "-"
-- !private "Dictionary"
-- "UIColor"
-- "UIEdgeInsets"
+- !private "BooleanLiteralType"
 - !private "UIImage"
-- !private "+"
+- "UICollectionView"
 - "Friend"
-- !private "TernaryPrecedence"
+- "UIColor"
+- !private "CGRect"
+- !private "-"
+- !private "DataManager"
+- "UIEdgeInsets"
 - !private "DispatchQueue"
-- "NSLayoutConstraint"
+- !private "TernaryPrecedence"
 - !private "=="
-- "UIView"
 - "AssignmentPrecedence"
 - "CastingPrecedence"
-- "UICollectionView"
 - !private "NotificationCenter"
-- !private "NSFontAttributeName"
-- "Int"
-- !private "<"
-- !private "NSValue"
-- "StringLiteralType"
-- !private "NSString"
 - "Bool"
-- !private "!"
-- "UICollectionViewController"
-- "/"
-- "UICollectionViewLayout"
-- "IndexPath"
-- "CGSize"
-- !private "ChatCell"
-- "UITextField"
-- "UICollectionViewCell"
-- !private "DataManager"
-- !private "UIKeyboardFrameEndUserInfoKey"
-- "ChatLogController"
-- "UIButton"
-- "UICollectionViewDelegateFlowLayout"
-- "Message"
-- !private "UIBarButtonItem"
-- "Array"
-- "UIFont"
+- "UIView"
 - !private "NSStringDrawingOptions"
+- !private "Array"
+- !private "Dictionary"
+- "NSLayoutConstraint"
+- !private "ChatCell"
+- "StringLiteralType"
+- "CGSize"
+- !private "NSValue"
+- "UICollectionViewController"
+- !private "NSString"
+- "UICollectionViewDelegateFlowLayout"
+- "UICollectionViewCell"
+- "/"
+- "UIFont"
+- "IndexPath"
+- "UICollectionViewLayout"
+- !private "<"
+- !private "UIKeyboardFrameEndUserInfoKey"
+- !private "+"
+- !private "NSFontAttributeName"
+- "ChatLogController"
+- "UITextField"
+- "Message"
+- "UIButton"
 - !private "Notification"
-- !private "CGRect"
-- !private "BooleanLiteralType"
+- !private "!"
+- !private "UIBarButtonItem"
+- "Int"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "Stride"]
 - !private ["Ps16AbsoluteValuable", "_DisallowMixedSignArithmetic"]
@@ -129,6 +129,7 @@ depends-member:
 - ["Ps9AnyObject", "inputMessageView"]
 - ["Ps9AnyObject", "inputTextField"]
 - !private ["Ps9AnyObject", "insertItems"]
+- ["Ps9AnyObject", "insertMessage"]
 - !private ["Ps9AnyObject", "isEmpty"]
 - !private ["Ps9AnyObject", "isHidden"]
 - !private ["Ps9AnyObject", "isSender"]
@@ -147,6 +148,7 @@ depends-member:
 - !private ["Ps9AnyObject", "rightBarButtonItem"]
 - ["Ps9AnyObject", "save"]
 - !private ["Ps9AnyObject", "saveContext"]
+- ["Ps9AnyObject", "scrollTo"]
 - ["Ps9AnyObject", "scrollToBottom"]
 - !private ["Ps9AnyObject", "scrollToItem"]
 - ["Ps9AnyObject", "sendButton"]
@@ -181,6 +183,7 @@ depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - ["Sa", "deinit"]
+- !private ["Sa", "index"]
 - ["Sa", "init"]
 - !private ["Sa", "sort"]
 - !private ["Sa", "subscript"]
@@ -199,6 +202,7 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "_Element"]
 - !private ["Ps23BidirectionalCollection", "append"]
 - !private ["Ps23BidirectionalCollection", "count"]
+- !private ["Ps23BidirectionalCollection", "index"]
 - ["Ps23BidirectionalCollection", "init"]
 - !private ["Ps23BidirectionalCollection", "item"]
 - !private ["Ps23BidirectionalCollection", "sort"]
@@ -212,6 +216,7 @@ depends-member:
 - !private ["Ps22BidirectionalIndexable", "_Element"]
 - !private ["Ps22BidirectionalIndexable", "append"]
 - !private ["Ps22BidirectionalIndexable", "count"]
+- !private ["Ps22BidirectionalIndexable", "index"]
 - ["Ps22BidirectionalIndexable", "init"]
 - !private ["Ps22BidirectionalIndexable", "item"]
 - !private ["Ps22BidirectionalIndexable", "sort"]
@@ -338,10 +343,12 @@ depends-member:
 - ["Ps7CVarArg", "handleKeyboardNotification"]
 - ["Ps7CVarArg", "handleSend"]
 - !private ["Ps7CVarArg", "image"]
+- !private ["Ps7CVarArg", "index"]
 - ["Ps7CVarArg", "init"]
 - ["Ps7CVarArg", "inputMessageView"]
 - ["Ps7CVarArg", "inputTextField"]
 - !private ["Ps7CVarArg", "insertItems"]
+- ["Ps7CVarArg", "insertMessage"]
 - !private ["Ps7CVarArg", "isEmpty"]
 - !private ["Ps7CVarArg", "isHidden"]
 - !private ["Ps7CVarArg", "isSender"]
@@ -360,6 +367,7 @@ depends-member:
 - !private ["Ps7CVarArg", "rightBarButtonItem"]
 - ["Ps7CVarArg", "save"]
 - !private ["Ps7CVarArg", "saveContext"]
+- ["Ps7CVarArg", "scrollTo"]
 - ["Ps7CVarArg", "scrollToBottom"]
 - !private ["Ps7CVarArg", "scrollToItem"]
 - ["Ps7CVarArg", "sendButton"]
@@ -431,9 +439,11 @@ depends-member:
 - ["C17FacebookMessenger17ChatLogController", "init"]
 - !private ["C17FacebookMessenger17ChatLogController", "inputMessageView"]
 - !private ["C17FacebookMessenger17ChatLogController", "inputTextField"]
+- !private ["C17FacebookMessenger17ChatLogController", "insertMessage"]
 - !private ["C17FacebookMessenger17ChatLogController", "messages"]
 - !private ["C17FacebookMessenger17ChatLogController", "navigationItem"]
 - !private ["C17FacebookMessenger17ChatLogController", "save"]
+- !private ["C17FacebookMessenger17ChatLogController", "scrollTo"]
 - !private ["C17FacebookMessenger17ChatLogController", "scrollToBottom"]
 - !private ["C17FacebookMessenger17ChatLogController", "sendButton"]
 - !private ["C17FacebookMessenger17ChatLogController", "setupInputView"]
@@ -453,6 +463,7 @@ depends-member:
 - !private ["Ps10Collection", "_Element"]
 - !private ["Ps10Collection", "append"]
 - !private ["Ps10Collection", "count"]
+- !private ["Ps10Collection", "index"]
 - ["Ps10Collection", "init"]
 - !private ["Ps10Collection", "item"]
 - !private ["Ps10Collection", "sort"]
@@ -538,10 +549,12 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "handleSend"]
 - !private ["Ps28CustomDebugStringConvertible", "height"]
 - !private ["Ps28CustomDebugStringConvertible", "image"]
+- !private ["Ps28CustomDebugStringConvertible", "index"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "inputMessageView"]
 - ["Ps28CustomDebugStringConvertible", "inputTextField"]
 - !private ["Ps28CustomDebugStringConvertible", "insertItems"]
+- ["Ps28CustomDebugStringConvertible", "insertMessage"]
 - !private ["Ps28CustomDebugStringConvertible", "isEmpty"]
 - !private ["Ps28CustomDebugStringConvertible", "isHidden"]
 - !private ["Ps28CustomDebugStringConvertible", "isSender"]
@@ -561,6 +574,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "rightBarButtonItem"]
 - ["Ps28CustomDebugStringConvertible", "save"]
 - !private ["Ps28CustomDebugStringConvertible", "saveContext"]
+- ["Ps28CustomDebugStringConvertible", "scrollTo"]
 - ["Ps28CustomDebugStringConvertible", "scrollToBottom"]
 - !private ["Ps28CustomDebugStringConvertible", "scrollToItem"]
 - ["Ps28CustomDebugStringConvertible", "sendButton"]
@@ -615,6 +629,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "append"]
 - !private ["Ps17CustomReflectable", "count"]
 - !private ["Ps17CustomReflectable", "height"]
+- !private ["Ps17CustomReflectable", "index"]
 - ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "isEmpty"]
 - !private ["Ps17CustomReflectable", "item"]
@@ -695,10 +710,12 @@ depends-member:
 - ["Ps23CustomStringConvertible", "handleKeyboardNotification"]
 - ["Ps23CustomStringConvertible", "handleSend"]
 - !private ["Ps23CustomStringConvertible", "image"]
+- !private ["Ps23CustomStringConvertible", "index"]
 - ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "inputMessageView"]
 - ["Ps23CustomStringConvertible", "inputTextField"]
 - !private ["Ps23CustomStringConvertible", "insertItems"]
+- ["Ps23CustomStringConvertible", "insertMessage"]
 - !private ["Ps23CustomStringConvertible", "isEmpty"]
 - !private ["Ps23CustomStringConvertible", "isHidden"]
 - !private ["Ps23CustomStringConvertible", "isSender"]
@@ -718,6 +735,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "rightBarButtonItem"]
 - ["Ps23CustomStringConvertible", "save"]
 - !private ["Ps23CustomStringConvertible", "saveContext"]
+- ["Ps23CustomStringConvertible", "scrollTo"]
 - ["Ps23CustomStringConvertible", "scrollToBottom"]
 - !private ["Ps23CustomStringConvertible", "scrollToItem"]
 - ["Ps23CustomStringConvertible", "sendButton"]
@@ -853,6 +871,7 @@ depends-member:
 - ["Ps9Equatable", "inputMessageView"]
 - ["Ps9Equatable", "inputTextField"]
 - !private ["Ps9Equatable", "insertItems"]
+- ["Ps9Equatable", "insertMessage"]
 - !private ["Ps9Equatable", "isEmpty"]
 - !private ["Ps9Equatable", "isHidden"]
 - !private ["Ps9Equatable", "isSender"]
@@ -875,6 +894,7 @@ depends-member:
 - !private ["Ps9Equatable", "rightBarButtonItem"]
 - ["Ps9Equatable", "save"]
 - !private ["Ps9Equatable", "saveContext"]
+- ["Ps9Equatable", "scrollTo"]
 - ["Ps9Equatable", "scrollToBottom"]
 - !private ["Ps9Equatable", "scrollToItem"]
 - ["Ps9Equatable", "sendButton"]
@@ -914,6 +934,7 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "bottom"]
 - !private ["Ps25ExpressibleByArrayLiteral", "count"]
 - !private ["Ps25ExpressibleByArrayLiteral", "curveEaseOut"]
+- !private ["Ps25ExpressibleByArrayLiteral", "index"]
 - ["Ps25ExpressibleByArrayLiteral", "init"]
 - !private ["Ps25ExpressibleByArrayLiteral", "item"]
 - ["Ps25ExpressibleByArrayLiteral", "normal"]
@@ -1030,6 +1051,7 @@ depends-member:
 - ["Ps8Hashable", "inputMessageView"]
 - ["Ps8Hashable", "inputTextField"]
 - !private ["Ps8Hashable", "insertItems"]
+- ["Ps8Hashable", "insertMessage"]
 - !private ["Ps8Hashable", "isEmpty"]
 - !private ["Ps8Hashable", "isHidden"]
 - !private ["Ps8Hashable", "isSender"]
@@ -1051,6 +1073,7 @@ depends-member:
 - !private ["Ps8Hashable", "rightBarButtonItem"]
 - ["Ps8Hashable", "save"]
 - !private ["Ps8Hashable", "saveContext"]
+- ["Ps8Hashable", "scrollTo"]
 - ["Ps8Hashable", "scrollToBottom"]
 - !private ["Ps8Hashable", "scrollToItem"]
 - ["Ps8Hashable", "sendButton"]
@@ -1090,6 +1113,7 @@ depends-member:
 - !private ["Ps9Indexable", "_Element"]
 - !private ["Ps9Indexable", "append"]
 - !private ["Ps9Indexable", "count"]
+- !private ["Ps9Indexable", "index"]
 - ["Ps9Indexable", "init"]
 - !private ["Ps9Indexable", "item"]
 - !private ["Ps9Indexable", "sort"]
@@ -1105,6 +1129,7 @@ depends-member:
 - !private ["Ps13IndexableBase", "_Element"]
 - !private ["Ps13IndexableBase", "append"]
 - !private ["Ps13IndexableBase", "count"]
+- !private ["Ps13IndexableBase", "index"]
 - ["Ps13IndexableBase", "init"]
 - !private ["Ps13IndexableBase", "item"]
 - !private ["Ps13IndexableBase", "sort"]
@@ -1162,6 +1187,7 @@ depends-member:
 - !private ["Ps17MutableCollection", "_Element"]
 - !private ["Ps17MutableCollection", "append"]
 - !private ["Ps17MutableCollection", "count"]
+- !private ["Ps17MutableCollection", "index"]
 - ["Ps17MutableCollection", "init"]
 - !private ["Ps17MutableCollection", "item"]
 - !private ["Ps17MutableCollection", "sort"]
@@ -1174,6 +1200,7 @@ depends-member:
 - !private ["Ps16MutableIndexable", "_Element"]
 - !private ["Ps16MutableIndexable", "append"]
 - !private ["Ps16MutableIndexable", "count"]
+- !private ["Ps16MutableIndexable", "index"]
 - ["Ps16MutableIndexable", "init"]
 - !private ["Ps16MutableIndexable", "item"]
 - !private ["Ps16MutableIndexable", "sort"]
@@ -1232,6 +1259,7 @@ depends-member:
 - ["PSo8NSCoding", "inputMessageView"]
 - ["PSo8NSCoding", "inputTextField"]
 - !private ["PSo8NSCoding", "insertItems"]
+- ["PSo8NSCoding", "insertMessage"]
 - !private ["PSo8NSCoding", "isEmpty"]
 - !private ["PSo8NSCoding", "isHidden"]
 - !private ["PSo8NSCoding", "layoutIfNeeded"]
@@ -1244,6 +1272,7 @@ depends-member:
 - !private ["PSo8NSCoding", "resignFirstResponder"]
 - !private ["PSo8NSCoding", "rightBarButtonItem"]
 - ["PSo8NSCoding", "save"]
+- ["PSo8NSCoding", "scrollTo"]
 - ["PSo8NSCoding", "scrollToBottom"]
 - !private ["PSo8NSCoding", "scrollToItem"]
 - ["PSo8NSCoding", "sendButton"]
@@ -1305,9 +1334,11 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "inputMessageView"]
 - ["PSo26NSExtensionRequestHandling", "inputTextField"]
+- ["PSo26NSExtensionRequestHandling", "insertMessage"]
 - ["PSo26NSExtensionRequestHandling", "messages"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
 - ["PSo26NSExtensionRequestHandling", "save"]
+- ["PSo26NSExtensionRequestHandling", "scrollTo"]
 - ["PSo26NSExtensionRequestHandling", "scrollToBottom"]
 - ["PSo26NSExtensionRequestHandling", "sendButton"]
 - ["PSo26NSExtensionRequestHandling", "setupInputView"]
@@ -1411,6 +1442,7 @@ depends-member:
 - ["CSo8NSObject", "inputMessageView"]
 - ["CSo8NSObject", "inputTextField"]
 - !private ["CSo8NSObject", "insertItems"]
+- ["CSo8NSObject", "insertMessage"]
 - !private ["CSo8NSObject", "isEmpty"]
 - !private ["CSo8NSObject", "isHidden"]
 - !private ["CSo8NSObject", "isSender"]
@@ -1429,6 +1461,7 @@ depends-member:
 - !private ["CSo8NSObject", "rightBarButtonItem"]
 - ["CSo8NSObject", "save"]
 - !private ["CSo8NSObject", "saveContext"]
+- ["CSo8NSObject", "scrollTo"]
 - ["CSo8NSObject", "scrollToBottom"]
 - !private ["CSo8NSObject", "scrollToItem"]
 - ["CSo8NSObject", "sendButton"]
@@ -1508,6 +1541,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "inputMessageView"]
 - ["PSo16NSObjectProtocol", "inputTextField"]
 - !private ["PSo16NSObjectProtocol", "insertItems"]
+- ["PSo16NSObjectProtocol", "insertMessage"]
 - !private ["PSo16NSObjectProtocol", "isEmpty"]
 - !private ["PSo16NSObjectProtocol", "isHidden"]
 - !private ["PSo16NSObjectProtocol", "isSender"]
@@ -1526,6 +1560,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "rightBarButtonItem"]
 - ["PSo16NSObjectProtocol", "save"]
 - !private ["PSo16NSObjectProtocol", "saveContext"]
+- ["PSo16NSObjectProtocol", "scrollTo"]
 - ["PSo16NSObjectProtocol", "scrollToBottom"]
 - !private ["PSo16NSObjectProtocol", "scrollToItem"]
 - ["PSo16NSObjectProtocol", "sendButton"]
@@ -1597,6 +1632,7 @@ depends-member:
 - !private ["Ps22RandomAccessCollection", "_Element"]
 - !private ["Ps22RandomAccessCollection", "append"]
 - !private ["Ps22RandomAccessCollection", "count"]
+- !private ["Ps22RandomAccessCollection", "index"]
 - ["Ps22RandomAccessCollection", "init"]
 - !private ["Ps22RandomAccessCollection", "item"]
 - !private ["Ps22RandomAccessCollection", "sort"]
@@ -1610,6 +1646,7 @@ depends-member:
 - !private ["Ps21RandomAccessIndexable", "_Element"]
 - !private ["Ps21RandomAccessIndexable", "append"]
 - !private ["Ps21RandomAccessIndexable", "count"]
+- !private ["Ps21RandomAccessIndexable", "index"]
 - ["Ps21RandomAccessIndexable", "init"]
 - !private ["Ps21RandomAccessIndexable", "item"]
 - !private ["Ps21RandomAccessIndexable", "sort"]
@@ -1628,6 +1665,7 @@ depends-member:
 - !private ["Ps26RangeReplaceableCollection", "_Element"]
 - !private ["Ps26RangeReplaceableCollection", "append"]
 - !private ["Ps26RangeReplaceableCollection", "count"]
+- !private ["Ps26RangeReplaceableCollection", "index"]
 - ["Ps26RangeReplaceableCollection", "init"]
 - !private ["Ps26RangeReplaceableCollection", "sort"]
 - !private ["Ps26RangeReplaceableCollection", "subscript"]
@@ -1639,6 +1677,7 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "_Element"]
 - !private ["Ps25RangeReplaceableIndexable", "append"]
 - !private ["Ps25RangeReplaceableIndexable", "count"]
+- !private ["Ps25RangeReplaceableIndexable", "index"]
 - ["Ps25RangeReplaceableIndexable", "init"]
 - !private ["Ps25RangeReplaceableIndexable", "sort"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
@@ -1676,6 +1715,7 @@ depends-member:
 - !private ["Ps8Sequence", "allObjects"]
 - !private ["Ps8Sequence", "append"]
 - !private ["Ps8Sequence", "count"]
+- !private ["Ps8Sequence", "index"]
 - ["Ps8Sequence", "init"]
 - !private ["Ps8Sequence", "item"]
 - !private ["Ps8Sequence", "sort"]
@@ -1821,6 +1861,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "inputMessageView"]
 - ["PSo21UIAppearanceContainer", "inputTextField"]
 - !private ["PSo21UIAppearanceContainer", "insertItems"]
+- ["PSo21UIAppearanceContainer", "insertMessage"]
 - !private ["PSo21UIAppearanceContainer", "isHidden"]
 - !private ["PSo21UIAppearanceContainer", "layoutIfNeeded"]
 - !private ["PSo21UIAppearanceContainer", "messageTextView"]
@@ -1831,6 +1872,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "register"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
 - ["PSo21UIAppearanceContainer", "save"]
+- ["PSo21UIAppearanceContainer", "scrollTo"]
 - ["PSo21UIAppearanceContainer", "scrollToBottom"]
 - !private ["PSo21UIAppearanceContainer", "scrollToItem"]
 - ["PSo21UIAppearanceContainer", "sendButton"]
@@ -1924,9 +1966,11 @@ depends-member:
 - ["CSo26UICollectionViewController", "init"]
 - ["CSo26UICollectionViewController", "inputMessageView"]
 - ["CSo26UICollectionViewController", "inputTextField"]
+- ["CSo26UICollectionViewController", "insertMessage"]
 - ["CSo26UICollectionViewController", "messages"]
 - !private ["CSo26UICollectionViewController", "navigationItem"]
 - ["CSo26UICollectionViewController", "save"]
+- ["CSo26UICollectionViewController", "scrollTo"]
 - ["CSo26UICollectionViewController", "scrollToBottom"]
 - ["CSo26UICollectionViewController", "sendButton"]
 - ["CSo26UICollectionViewController", "setupInputView"]
@@ -1969,9 +2013,11 @@ depends-member:
 - !private ["PSo26UICollectionViewDataSource", "init"]
 - ["PSo26UICollectionViewDataSource", "inputMessageView"]
 - ["PSo26UICollectionViewDataSource", "inputTextField"]
+- ["PSo26UICollectionViewDataSource", "insertMessage"]
 - ["PSo26UICollectionViewDataSource", "messages"]
 - !private ["PSo26UICollectionViewDataSource", "navigationItem"]
 - ["PSo26UICollectionViewDataSource", "save"]
+- ["PSo26UICollectionViewDataSource", "scrollTo"]
 - ["PSo26UICollectionViewDataSource", "scrollToBottom"]
 - ["PSo26UICollectionViewDataSource", "sendButton"]
 - ["PSo26UICollectionViewDataSource", "setupInputView"]
@@ -2014,9 +2060,11 @@ depends-member:
 - !private ["PSo24UICollectionViewDelegate", "init"]
 - ["PSo24UICollectionViewDelegate", "inputMessageView"]
 - ["PSo24UICollectionViewDelegate", "inputTextField"]
+- ["PSo24UICollectionViewDelegate", "insertMessage"]
 - ["PSo24UICollectionViewDelegate", "messages"]
 - !private ["PSo24UICollectionViewDelegate", "navigationItem"]
 - ["PSo24UICollectionViewDelegate", "save"]
+- ["PSo24UICollectionViewDelegate", "scrollTo"]
 - ["PSo24UICollectionViewDelegate", "scrollToBottom"]
 - ["PSo24UICollectionViewDelegate", "sendButton"]
 - ["PSo24UICollectionViewDelegate", "setupInputView"]
@@ -2058,9 +2106,11 @@ depends-member:
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "handleSend"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "inputMessageView"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "inputTextField"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "insertMessage"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "messages"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "navigationItem"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "save"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "scrollTo"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "scrollToBottom"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "sendButton"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "setupInputView"]
@@ -2108,9 +2158,11 @@ depends-member:
 - !private ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "inputMessageView"]
 - ["PSo18UIContentContainer", "inputTextField"]
+- ["PSo18UIContentContainer", "insertMessage"]
 - ["PSo18UIContentContainer", "messages"]
 - !private ["PSo18UIContentContainer", "navigationItem"]
 - ["PSo18UIContentContainer", "save"]
+- ["PSo18UIContentContainer", "scrollTo"]
 - ["PSo18UIContentContainer", "scrollToBottom"]
 - ["PSo18UIContentContainer", "sendButton"]
 - ["PSo18UIContentContainer", "setupInputView"]
@@ -2253,6 +2305,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "inputMessageView"]
 - ["PSo18UIFocusEnvironment", "inputTextField"]
 - !private ["PSo18UIFocusEnvironment", "insertItems"]
+- ["PSo18UIFocusEnvironment", "insertMessage"]
 - !private ["PSo18UIFocusEnvironment", "isHidden"]
 - !private ["PSo18UIFocusEnvironment", "layoutIfNeeded"]
 - !private ["PSo18UIFocusEnvironment", "messageTextView"]
@@ -2263,6 +2316,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "register"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
 - ["PSo18UIFocusEnvironment", "save"]
+- ["PSo18UIFocusEnvironment", "scrollTo"]
 - ["PSo18UIFocusEnvironment", "scrollToBottom"]
 - !private ["PSo18UIFocusEnvironment", "scrollToItem"]
 - ["PSo18UIFocusEnvironment", "sendButton"]
@@ -2386,6 +2440,7 @@ depends-member:
 - ["CSo11UIResponder", "inputMessageView"]
 - ["CSo11UIResponder", "inputTextField"]
 - !private ["CSo11UIResponder", "insertItems"]
+- ["CSo11UIResponder", "insertMessage"]
 - !private ["CSo11UIResponder", "isHidden"]
 - !private ["CSo11UIResponder", "layoutIfNeeded"]
 - !private ["CSo11UIResponder", "messageTextView"]
@@ -2398,6 +2453,7 @@ depends-member:
 - !private ["CSo11UIResponder", "resignFirstResponder"]
 - ["CSo11UIResponder", "save"]
 - !private ["CSo11UIResponder", "saveContext"]
+- ["CSo11UIResponder", "scrollTo"]
 - ["CSo11UIResponder", "scrollToBottom"]
 - !private ["CSo11UIResponder", "scrollToItem"]
 - ["CSo11UIResponder", "sendButton"]
@@ -2463,6 +2519,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "inputMessageView"]
 - ["PSo30UIResponderStandardEditActions", "inputTextField"]
 - !private ["PSo30UIResponderStandardEditActions", "insertItems"]
+- ["PSo30UIResponderStandardEditActions", "insertMessage"]
 - !private ["PSo30UIResponderStandardEditActions", "isHidden"]
 - !private ["PSo30UIResponderStandardEditActions", "layoutIfNeeded"]
 - !private ["PSo30UIResponderStandardEditActions", "messageTextView"]
@@ -2475,6 +2532,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "resignFirstResponder"]
 - ["PSo30UIResponderStandardEditActions", "save"]
 - !private ["PSo30UIResponderStandardEditActions", "saveContext"]
+- ["PSo30UIResponderStandardEditActions", "scrollTo"]
 - ["PSo30UIResponderStandardEditActions", "scrollToBottom"]
 - !private ["PSo30UIResponderStandardEditActions", "scrollToItem"]
 - ["PSo30UIResponderStandardEditActions", "sendButton"]
@@ -2534,9 +2592,11 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "init"]
 - ["PSo20UIScrollViewDelegate", "inputMessageView"]
 - ["PSo20UIScrollViewDelegate", "inputTextField"]
+- ["PSo20UIScrollViewDelegate", "insertMessage"]
 - ["PSo20UIScrollViewDelegate", "messages"]
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
 - ["PSo20UIScrollViewDelegate", "save"]
+- ["PSo20UIScrollViewDelegate", "scrollTo"]
 - ["PSo20UIScrollViewDelegate", "scrollToBottom"]
 - ["PSo20UIScrollViewDelegate", "sendButton"]
 - ["PSo20UIScrollViewDelegate", "setupInputView"]
@@ -2579,9 +2639,11 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "inputMessageView"]
 - ["PSo16UIStateRestoring", "inputTextField"]
+- ["PSo16UIStateRestoring", "insertMessage"]
 - ["PSo16UIStateRestoring", "messages"]
 - !private ["PSo16UIStateRestoring", "navigationItem"]
 - ["PSo16UIStateRestoring", "save"]
+- ["PSo16UIStateRestoring", "scrollTo"]
 - ["PSo16UIStateRestoring", "scrollToBottom"]
 - ["PSo16UIStateRestoring", "sendButton"]
 - ["PSo16UIStateRestoring", "setupInputView"]
@@ -2666,6 +2728,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "inputMessageView"]
 - ["PSo18UITraitEnvironment", "inputTextField"]
 - !private ["PSo18UITraitEnvironment", "insertItems"]
+- ["PSo18UITraitEnvironment", "insertMessage"]
 - !private ["PSo18UITraitEnvironment", "isHidden"]
 - !private ["PSo18UITraitEnvironment", "layoutIfNeeded"]
 - !private ["PSo18UITraitEnvironment", "messageTextView"]
@@ -2676,6 +2739,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "register"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
 - ["PSo18UITraitEnvironment", "save"]
+- ["PSo18UITraitEnvironment", "scrollTo"]
 - ["PSo18UITraitEnvironment", "scrollToBottom"]
 - !private ["PSo18UITraitEnvironment", "scrollToItem"]
 - ["PSo18UITraitEnvironment", "sendButton"]
@@ -2767,9 +2831,11 @@ depends-member:
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "inputMessageView"]
 - ["CSo16UIViewController", "inputTextField"]
+- ["CSo16UIViewController", "insertMessage"]
 - ["CSo16UIViewController", "messages"]
 - !private ["CSo16UIViewController", "navigationItem"]
 - ["CSo16UIViewController", "save"]
+- ["CSo16UIViewController", "scrollTo"]
 - ["CSo16UIViewController", "scrollToBottom"]
 - ["CSo16UIViewController", "sendButton"]
 - ["CSo16UIViewController", "setupInputView"]
@@ -2809,6 +2875,7 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "_Element"]
 - !private ["Ps14_ArrayProtocol", "append"]
 - !private ["Ps14_ArrayProtocol", "count"]
+- !private ["Ps14_ArrayProtocol", "index"]
 - ["Ps14_ArrayProtocol", "init"]
 - !private ["Ps14_ArrayProtocol", "sort"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
@@ -2855,6 +2922,7 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "_Element"]
 - !private ["Ps24_DestructorSafeContainer", "append"]
 - !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "index"]
 - ["Ps24_DestructorSafeContainer", "init"]
 - !private ["Ps24_DestructorSafeContainer", "sort"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
@@ -2953,6 +3021,7 @@ depends-member:
 - ["Ps9_Hashable", "inputMessageView"]
 - ["Ps9_Hashable", "inputTextField"]
 - !private ["Ps9_Hashable", "insertItems"]
+- ["Ps9_Hashable", "insertMessage"]
 - !private ["Ps9_Hashable", "isEmpty"]
 - !private ["Ps9_Hashable", "isHidden"]
 - !private ["Ps9_Hashable", "isSender"]
@@ -2974,6 +3043,7 @@ depends-member:
 - !private ["Ps9_Hashable", "rightBarButtonItem"]
 - ["Ps9_Hashable", "save"]
 - !private ["Ps9_Hashable", "saveContext"]
+- ["Ps9_Hashable", "scrollTo"]
 - ["Ps9_Hashable", "scrollToBottom"]
 - !private ["Ps9_Hashable", "scrollToItem"]
 - ["Ps9_Hashable", "sendButton"]
@@ -3027,6 +3097,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "append"]
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "index"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "isEmpty"]
 - !private ["Ps21_ObjectiveCBridgeable", "item"]
@@ -3261,4 +3332,4 @@ depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "6c6d36bf5bb64d0209ac6e74d6105b89"
+interface-hash: "6c8076bf654d81ef749953f81fe73923"
