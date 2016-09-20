@@ -6,34 +6,36 @@ provides-nominal:
 provides-member:
 - ["C17FacebookMessenger11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillTerminate"
-- "applicationDidEnterBackground"
-- "window"
-- "applicationWillResignActive"
-- "persistentContainer"
+- "applicationWillEnterForeground"
+- "application"
 - "saveContext"
 - "applicationDidBecomeActive"
-- "application"
-- "applicationWillEnterForeground"
+- "applicationWillResignActive"
+- "applicationWillTerminate"
+- "applicationDidEnterBackground"
+- "persistentContainer"
+- "window"
 depends-top-level:
 - "NSPersistentContainer"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- "UIWindow"
+- !private "UIScreen"
 - "AppDelegate"
 - "UIApplicationLaunchOptionsKey"
-- !private "NSError"
-- !private "UIScreen"
-- "UIApplicationDelegate"
-- "AssignmentPrecedence"
-- "Bool"
-- "CastingPrecedence"
 - "UIResponder"
-- "UIApplication"
-- !private "StringLiteralType"
-- "UIWindow"
 - !private "FacebookTabBarViewController"
 - !private "fatalError"
+- "UIApplication"
+- "UIApplicationDelegate"
+- !private "StringLiteralType"
 - !private "BooleanLiteralType"
+- "Bool"
+- !private "NSError"
+- !private "NSMergeByPropertyObjectTrumpMergePolicy"
 depends-member:
 - !private ["Ps9AnyObject", "FacebookTabBarViewController"]
+- !private ["Ps9AnyObject", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - !private ["Ps9AnyObject", "NSPersistentContainer"]
 - !private ["Ps9AnyObject", "UIScreen"]
 - !private ["Ps9AnyObject", "UIWindow"]
@@ -56,6 +58,7 @@ depends-member:
 - !private ["Ps9AnyObject", "loadPersistentStores"]
 - !private ["Ps9AnyObject", "main"]
 - !private ["Ps9AnyObject", "makeKeyAndVisible"]
+- !private ["Ps9AnyObject", "mergePolicy"]
 - ["Ps9AnyObject", "persistentContainer"]
 - ["Ps9AnyObject", "persistentContainer.storage"]
 - !private ["Ps9AnyObject", "rootViewController"]
@@ -68,6 +71,7 @@ depends-member:
 - ["C17FacebookMessenger11AppDelegate", "Bool"]
 - !private ["C17FacebookMessenger11AppDelegate", "FacebookTabBarViewController"]
 - !private ["C17FacebookMessenger11AppDelegate", "NSError"]
+- !private ["C17FacebookMessenger11AppDelegate", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - ["C17FacebookMessenger11AppDelegate", "NSPersistentContainer"]
 - ["C17FacebookMessenger11AppDelegate", "UIApplication"]
 - ["C17FacebookMessenger11AppDelegate", "UIApplicationLaunchOptionsKey"]
@@ -99,6 +103,7 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "rootViewController"]
 - ["VSC6CGRect", "deinit"]
 - !private ["Ps7CVarArg", "FacebookTabBarViewController"]
+- !private ["Ps7CVarArg", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - !private ["Ps7CVarArg", "NSPersistentContainer"]
 - !private ["Ps7CVarArg", "UIScreen"]
 - !private ["Ps7CVarArg", "UIWindow"]
@@ -121,6 +126,7 @@ depends-member:
 - !private ["Ps7CVarArg", "loadPersistentStores"]
 - !private ["Ps7CVarArg", "main"]
 - !private ["Ps7CVarArg", "makeKeyAndVisible"]
+- !private ["Ps7CVarArg", "mergePolicy"]
 - ["Ps7CVarArg", "persistentContainer"]
 - ["Ps7CVarArg", "persistentContainer.storage"]
 - !private ["Ps7CVarArg", "rootViewController"]
@@ -133,6 +139,7 @@ depends-member:
 - !private ["Vs9Character", "deinit"]
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "FacebookTabBarViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - !private ["Ps28CustomDebugStringConvertible", "NSPersistentContainer"]
 - !private ["Ps28CustomDebugStringConvertible", "UIScreen"]
 - !private ["Ps28CustomDebugStringConvertible", "UIWindow"]
@@ -155,6 +162,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "loadPersistentStores"]
 - !private ["Ps28CustomDebugStringConvertible", "main"]
 - !private ["Ps28CustomDebugStringConvertible", "makeKeyAndVisible"]
+- !private ["Ps28CustomDebugStringConvertible", "mergePolicy"]
 - ["Ps28CustomDebugStringConvertible", "persistentContainer"]
 - ["Ps28CustomDebugStringConvertible", "persistentContainer.storage"]
 - !private ["Ps28CustomDebugStringConvertible", "rootViewController"]
@@ -171,6 +179,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "some"]
 - !private ["Ps23CustomStringConvertible", "FacebookTabBarViewController"]
+- !private ["Ps23CustomStringConvertible", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - !private ["Ps23CustomStringConvertible", "NSPersistentContainer"]
 - !private ["Ps23CustomStringConvertible", "UIScreen"]
 - !private ["Ps23CustomStringConvertible", "UIWindow"]
@@ -194,6 +203,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "loadPersistentStores"]
 - !private ["Ps23CustomStringConvertible", "main"]
 - !private ["Ps23CustomStringConvertible", "makeKeyAndVisible"]
+- !private ["Ps23CustomStringConvertible", "mergePolicy"]
 - ["Ps23CustomStringConvertible", "persistentContainer"]
 - ["Ps23CustomStringConvertible", "persistentContainer.storage"]
 - !private ["Ps23CustomStringConvertible", "rootViewController"]
@@ -206,6 +216,7 @@ depends-member:
 - ["Vs10Dictionary", "deinit"]
 - !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "FacebookTabBarViewController"]
+- !private ["Ps9Equatable", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - !private ["Ps9Equatable", "NSPersistentContainer"]
 - !private ["Ps9Equatable", "UIScreen"]
 - !private ["Ps9Equatable", "UIWindow"]
@@ -229,6 +240,7 @@ depends-member:
 - !private ["Ps9Equatable", "loadPersistentStores"]
 - !private ["Ps9Equatable", "main"]
 - !private ["Ps9Equatable", "makeKeyAndVisible"]
+- !private ["Ps9Equatable", "mergePolicy"]
 - ["Ps9Equatable", "persistentContainer"]
 - ["Ps9Equatable", "persistentContainer.storage"]
 - !private ["Ps9Equatable", "rootViewController"]
@@ -250,6 +262,7 @@ depends-member:
 - !private ["C17FacebookMessenger28FacebookTabBarViewController", "init"]
 - !private ["Sf", "deinit"]
 - !private ["Ps8Hashable", "FacebookTabBarViewController"]
+- !private ["Ps8Hashable", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - !private ["Ps8Hashable", "NSPersistentContainer"]
 - !private ["Ps8Hashable", "UIScreen"]
 - !private ["Ps8Hashable", "UIWindow"]
@@ -273,6 +286,7 @@ depends-member:
 - !private ["Ps8Hashable", "loadPersistentStores"]
 - !private ["Ps8Hashable", "main"]
 - !private ["Ps8Hashable", "makeKeyAndVisible"]
+- !private ["Ps8Hashable", "mergePolicy"]
 - ["Ps8Hashable", "persistentContainer"]
 - ["Ps8Hashable", "persistentContainer.storage"]
 - !private ["Ps8Hashable", "rootViewController"]
@@ -293,6 +307,7 @@ depends-member:
 - !private ["PSo8NSCoding", "hasChanges"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "makeKeyAndVisible"]
+- !private ["PSo8NSCoding", "mergePolicy"]
 - !private ["PSo8NSCoding", "rootViewController"]
 - !private ["PSo8NSCoding", "save"]
 - !private ["PSo8NSCoding", "userInfo"]
@@ -302,14 +317,17 @@ depends-member:
 - !private ["CSo7NSError", "userInfo"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo9NSLocking", "hasChanges"]
+- !private ["PSo9NSLocking", "mergePolicy"]
 - !private ["PSo9NSLocking", "save"]
 - ["CSo22NSManagedObjectContext", "deinit"]
 - !private ["CSo22NSManagedObjectContext", "hasChanges"]
+- !private ["CSo22NSManagedObjectContext", "mergePolicy"]
 - !private ["CSo22NSManagedObjectContext", "save"]
 - !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Bool"]
 - !private ["CSo8NSObject", "FacebookTabBarViewController"]
 - !private ["CSo8NSObject", "NSError"]
+- !private ["CSo8NSObject", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - ["CSo8NSObject", "NSPersistentContainer"]
 - ["CSo8NSObject", "UIApplication"]
 - ["CSo8NSObject", "UIApplicationLaunchOptionsKey"]
@@ -334,6 +352,7 @@ depends-member:
 - !private ["CSo8NSObject", "loadPersistentStores"]
 - !private ["CSo8NSObject", "main"]
 - !private ["CSo8NSObject", "makeKeyAndVisible"]
+- !private ["CSo8NSObject", "mergePolicy"]
 - ["CSo8NSObject", "persistentContainer"]
 - ["CSo8NSObject", "persistentContainer.storage"]
 - !private ["CSo8NSObject", "rootViewController"]
@@ -343,6 +362,7 @@ depends-member:
 - !private ["CSo8NSObject", "viewContext"]
 - ["CSo8NSObject", "window"]
 - !private ["PSo16NSObjectProtocol", "FacebookTabBarViewController"]
+- !private ["PSo16NSObjectProtocol", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - !private ["PSo16NSObjectProtocol", "NSPersistentContainer"]
 - !private ["PSo16NSObjectProtocol", "UIScreen"]
 - !private ["PSo16NSObjectProtocol", "UIWindow"]
@@ -365,6 +385,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "loadPersistentStores"]
 - !private ["PSo16NSObjectProtocol", "main"]
 - !private ["PSo16NSObjectProtocol", "makeKeyAndVisible"]
+- !private ["PSo16NSObjectProtocol", "mergePolicy"]
 - ["PSo16NSObjectProtocol", "persistentContainer"]
 - ["PSo16NSObjectProtocol", "persistentContainer.storage"]
 - !private ["PSo16NSObjectProtocol", "rootViewController"]
@@ -400,6 +421,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "makeKeyAndVisible"]
 - !private ["PSo21UIAppearanceContainer", "rootViewController"]
 - !private ["PSo21UIApplicationDelegate", "FacebookTabBarViewController"]
+- !private ["PSo21UIApplicationDelegate", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - !private ["PSo21UIApplicationDelegate", "NSPersistentContainer"]
 - !private ["PSo21UIApplicationDelegate", "UIScreen"]
 - !private ["PSo21UIApplicationDelegate", "UIWindow"]
@@ -436,6 +458,7 @@ depends-member:
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "FacebookTabBarViewController"]
 - !private ["CSo11UIResponder", "NSError"]
+- !private ["CSo11UIResponder", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - ["CSo11UIResponder", "NSPersistentContainer"]
 - ["CSo11UIResponder", "UIApplication"]
 - ["CSo11UIResponder", "UIApplicationLaunchOptionsKey"]
@@ -464,6 +487,7 @@ depends-member:
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
 - !private ["PSo30UIResponderStandardEditActions", "FacebookTabBarViewController"]
+- !private ["PSo30UIResponderStandardEditActions", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - !private ["PSo30UIResponderStandardEditActions", "NSPersistentContainer"]
 - !private ["PSo30UIResponderStandardEditActions", "UIScreen"]
 - !private ["PSo30UIResponderStandardEditActions", "UIWindow"]
@@ -523,6 +547,7 @@ depends-member:
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "FacebookTabBarViewController"]
+- !private ["Ps9_Hashable", "NSMergeByPropertyObjectTrumpMergePolicy"]
 - !private ["Ps9_Hashable", "NSPersistentContainer"]
 - !private ["Ps9_Hashable", "UIScreen"]
 - !private ["Ps9_Hashable", "UIWindow"]
@@ -546,6 +571,7 @@ depends-member:
 - !private ["Ps9_Hashable", "loadPersistentStores"]
 - !private ["Ps9_Hashable", "main"]
 - !private ["Ps9_Hashable", "makeKeyAndVisible"]
+- !private ["Ps9_Hashable", "mergePolicy"]
 - ["Ps9_Hashable", "persistentContainer"]
 - ["Ps9_Hashable", "persistentContainer.storage"]
 - !private ["Ps9_Hashable", "rootViewController"]

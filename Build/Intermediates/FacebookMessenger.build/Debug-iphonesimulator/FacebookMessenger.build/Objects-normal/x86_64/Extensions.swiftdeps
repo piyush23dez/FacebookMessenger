@@ -7,13 +7,13 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "UIView"
-- !private "NSLayoutFormatOptions"
+- !private "NSLayoutConstraint"
 - "AssignmentPrecedence"
 - !private "UnicodeScalarType"
-- !private "NSLayoutConstraint"
-- !private "StringLiteralType"
-- !private "BooleanLiteralType"
 - "String"
+- !private "StringLiteralType"
+- !private "NSLayoutFormatOptions"
+- !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "NSLayoutConstraint"]
 - !private ["Ps9AnyObject", "NSLayoutFormatOptions"]

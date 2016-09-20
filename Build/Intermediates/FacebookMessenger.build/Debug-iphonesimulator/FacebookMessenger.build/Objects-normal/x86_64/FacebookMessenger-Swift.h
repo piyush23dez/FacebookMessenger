@@ -273,8 +273,8 @@ SWIFT_CLASS("_TtC17FacebookMessenger7Message")
 
 @interface Message (SWIFT_EXTENSION(FacebookMessenger))
 @property (nonatomic, copy) NSDate * _Nullable date;
-@property (nonatomic, copy) NSString * _Nullable text;
 @property (nonatomic) BOOL isSender;
+@property (nonatomic, copy) NSString * _Nullable text;
 @property (nonatomic, strong, getter=friend, setter=setFriend:) Friend * _Nullable friend_;
 @end
 

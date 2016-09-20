@@ -2,7 +2,7 @@
 //  Message+CoreDataProperties.swift
 //  FacebookMessenger
 //
-//  Created by Sharma, Piyush on 9/18/16.
+//  Created by Sharma, Piyush on 9/20/16.
 //  Copyright © 2016 Sharma, Piyush. All rights reserved.
 //
 
@@ -16,8 +16,8 @@ extension Message {
     }
 
     @NSManaged public var date: Date?
-    @NSManaged public var text: String?
     @NSManaged public var isSender: Bool
+    @NSManaged public var text: String?
     @NSManaged public var friend: Friend?
 
 }

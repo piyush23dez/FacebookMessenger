@@ -5,8 +5,8 @@ provides-member:
 - ["C17FacebookMessenger7Message", ""]
 - ["C17FacebookMessenger7Message", "fetchRequest"]
 - ["C17FacebookMessenger7Message", "date"]
-- ["C17FacebookMessenger7Message", "text"]
 - ["C17FacebookMessenger7Message", "isSender"]
+- ["C17FacebookMessenger7Message", "text"]
 - ["C17FacebookMessenger7Message", "friend"]
 provides-dynamic-lookup:
 - "isSender"
@@ -14,12 +14,12 @@ provides-dynamic-lookup:
 - "date"
 - "friend"
 depends-top-level:
-- "Bool"
-- "NSFetchRequest"
-- !private "StringLiteralType"
 - "Message"
 - "String"
 - "Date"
+- "NSFetchRequest"
+- "Bool"
+- !private "StringLiteralType"
 - "Friend"
 depends-member:
 - !private ["Ps9AnyObject", "NSFetchRequest"]
@@ -194,4 +194,4 @@ depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "42793b5cd12a7ee98ca433d274653c11"
+interface-hash: "c5b177d5259ed4eff73501b780a708d0"

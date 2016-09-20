@@ -17,13 +17,13 @@
 		A65A2E8E1D8DC746002B4804 /* ChatLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65A2E8D1D8DC746002B4804 /* ChatLogCell.swift */; };
 		A65A2E901D8DE485002B4804 /* FacebookTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65A2E8F1D8DE485002B4804 /* FacebookTabBarViewController.swift */; };
 		A65A2E931D8DEF58002B4804 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65A2E921D8DEF58002B4804 /* DataManager.swift */; };
-		A6C2288B1D8F17D00021922B /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2288A1D8F17D00021922B /* Message+CoreDataProperties.swift */; };
 		A6CFA79B1D8C94C000910516 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7971D8C94C000910516 /* MessageCell.swift */; };
 		A6CFA79C1D8C94C000910516 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA79A1D8C94C000910516 /* FriendsViewController.swift */; };
 		A6CFA7A31D8C950C00910516 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7A21D8C950C00910516 /* Extensions.swift */; };
-		A6CFA7BC1D8CB92B00910516 /* Friend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7B81D8CB92B00910516 /* Friend+CoreDataClass.swift */; };
-		A6CFA7BD1D8CB92B00910516 /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7B91D8CB92B00910516 /* Friend+CoreDataProperties.swift */; };
-		A6CFA7BE1D8CB92B00910516 /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CFA7BA1D8CB92B00910516 /* Message+CoreDataClass.swift */; };
+		A6F40B9C1D918CD600C344F8 /* Friend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F40B981D918CD600C344F8 /* Friend+CoreDataClass.swift */; };
+		A6F40B9D1D918CD600C344F8 /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F40B991D918CD600C344F8 /* Friend+CoreDataProperties.swift */; };
+		A6F40B9E1D918CD600C344F8 /* Message+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F40B9A1D918CD600C344F8 /* Message+CoreDataClass.swift */; };
+		A6F40B9F1D918CD600C344F8 /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F40B9B1D918CD600C344F8 /* Message+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +60,13 @@
 		A65A2E8D1D8DC746002B4804 /* ChatLogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogCell.swift; sourceTree = "<group>"; };
 		A65A2E8F1D8DE485002B4804 /* FacebookTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookTabBarViewController.swift; sourceTree = "<group>"; };
 		A65A2E921D8DEF58002B4804 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		A6C2288A1D8F17D00021922B /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A6CFA7971D8C94C000910516 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		A6CFA79A1D8C94C000910516 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		A6CFA7A21D8C950C00910516 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		A6CFA7B81D8CB92B00910516 /* Friend+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A6CFA7B91D8CB92B00910516 /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A6CFA7BA1D8CB92B00910516 /* Message+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A6F40B981D918CD600C344F8 /* Friend+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A6F40B991D918CD600C344F8 /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A6F40B9A1D918CD600C344F8 /* Message+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A6F40B9B1D918CD600C344F8 /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,10 +177,10 @@
 		A6CFA7981D8C94C000910516 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A6C2288A1D8F17D00021922B /* Message+CoreDataProperties.swift */,
-				A6CFA7B81D8CB92B00910516 /* Friend+CoreDataClass.swift */,
-				A6CFA7B91D8CB92B00910516 /* Friend+CoreDataProperties.swift */,
-				A6CFA7BA1D8CB92B00910516 /* Message+CoreDataClass.swift */,
+				A6F40B981D918CD600C344F8 /* Friend+CoreDataClass.swift */,
+				A6F40B991D918CD600C344F8 /* Friend+CoreDataProperties.swift */,
+				A6F40B9A1D918CD600C344F8 /* Message+CoreDataClass.swift */,
+				A6F40B9B1D918CD600C344F8 /* Message+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,18 +337,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A65A2E8C1D8DA82C002B4804 /* ChatLogController.swift in Sources */,
+				A6F40B9C1D918CD600C344F8 /* Friend+CoreDataClass.swift in Sources */,
+				A6F40B9D1D918CD600C344F8 /* Friend+CoreDataProperties.swift in Sources */,
+				A6F40B9E1D918CD600C344F8 /* Message+CoreDataClass.swift in Sources */,
 				A6CFA79C1D8C94C000910516 /* FriendsViewController.swift in Sources */,
-				A6CFA7BC1D8CB92B00910516 /* Friend+CoreDataClass.swift in Sources */,
 				A61A10F81D8C60FD0061F4F9 /* AppDelegate.swift in Sources */,
+				A6F40B9F1D918CD600C344F8 /* Message+CoreDataProperties.swift in Sources */,
 				A61A11001D8C60FD0061F4F9 /* FacebookMessenger.xcdatamodeld in Sources */,
 				A6CFA79B1D8C94C000910516 /* MessageCell.swift in Sources */,
-				A6C2288B1D8F17D00021922B /* Message+CoreDataProperties.swift in Sources */,
 				A65A2E8E1D8DC746002B4804 /* ChatLogCell.swift in Sources */,
 				A6CFA7A31D8C950C00910516 /* Extensions.swift in Sources */,
-				A6CFA7BD1D8CB92B00910516 /* Friend+CoreDataProperties.swift in Sources */,
 				A65A2E901D8DE485002B4804 /* FacebookTabBarViewController.swift in Sources */,
 				A65A2E931D8DEF58002B4804 /* DataManager.swift in Sources */,
-				A6CFA7BE1D8CB92B00910516 /* Message+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

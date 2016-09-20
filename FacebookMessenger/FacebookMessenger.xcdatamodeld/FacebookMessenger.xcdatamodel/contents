@@ -4,15 +4,25 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="profileImageName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="friend" inverseEntity="Message" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="Message" representedClassName=".Message" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="isSender" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="friend" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Friend" inverseName="messages" inverseEntity="Friend" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="date"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Friend" positionX="-722" positionY="-297" width="128" height="88"/>
-        <element name="Message" positionX="-398" positionY="-126" width="128" height="103"/>
+        <element name="Friend" positionX="-722" positionY="-297" width="128" height="90"/>
+        <element name="Message" positionX="-398" positionY="-126" width="128" height="105"/>
     </elements>
 </model>
