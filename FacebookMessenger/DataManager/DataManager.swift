@@ -66,16 +66,6 @@ class DataManager {
             //Message
             createMessage(text: "Good Morning Johny, How is it going?", minutesAgo: 3, frind: steve, context: context)
             
-            //Response message
-            createMessage(text: "Everything is going good", minutesAgo: 1, frind: steve, context: context, isSender: true)
-            createMessage(text: "What is progress on iPhone 7?", minutesAgo: 1, frind: steve, context: context)
-            createMessage(text: "We almost done with design", minutesAgo: 1, frind: steve, context: context,isSender: true)
-            createMessage(text: "Thats good, we soon gonna launch new iPhone 7", minutesAgo: 1, frind: steve, context: context)
-            createMessage(text: "Perfect", minutesAgo: 1, frind: steve, context: context,isSender: true)
-            createMessage(text: "What is the status on Apple TV?", minutesAgo: 1, frind: steve, context: context)
-            createMessage(text: "We are making progress on it", minutesAgo: 1, frind: steve, context: context,isSender: true)
-
-            
             //Friend
             let trump = createFriend(name: "Donald Trump", imageName: "donald_trump_profile", context: context)
             //Message

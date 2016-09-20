@@ -136,9 +136,8 @@ class ChatLogController: UICollectionViewController {
     }
     
     @objc private func simulate() {
-        
         let context = DataManager.sharedManager.delegate!.persistentContainer.viewContext
-        let newMessage = DataManager.sharedManager.createMessage(text: "Old mesage from friend", minutesAgo: 0, frind: friend!, context: context)
+        let newMessage = DataManager.sharedManager.createMessage(text: "Receiving new mesage from friend", minutesAgo: 2, frind: friend!, context: context)
         
         messages.append(newMessage)
         DataManager.sharedManager.delegate!.saveContext()
@@ -169,7 +168,7 @@ class ChatLogController: UICollectionViewController {
     
     private func scrollTo(indexPath: IndexPath) {
         DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.3, delay: 0, options: .layoutSubviews, animations: {
                 self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
             }, completion: nil)
         }
@@ -177,7 +176,7 @@ class ChatLogController: UICollectionViewController {
     
     private func scrollToBottom() {
         DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.3, delay: 0, options: .layoutSubviews, animations: {
                 let indexPath = IndexPath(item: self.messages.count-1, section: 0)
                 self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
             }, completion: nil)

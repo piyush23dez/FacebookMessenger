@@ -12,59 +12,60 @@ provides-dynamic-lookup:
 - "collectionView"
 - "collectionView"
 - "friend"
-- "viewWillAppear"
-- "simulate"
-- "viewDidLoad"
-- "handleSend"
-- "setupInputView"
-- "handleKeyboardNotification"
 - "addKeyboardObservers"
+- "setupInputView"
+- "viewDidLoad"
+- "simulate"
+- "handleSend"
+- "handleKeyboardNotification"
+- "viewWillAppear"
 depends-top-level:
-- !private "BooleanLiteralType"
-- !private "UIImage"
-- "UICollectionView"
-- "Friend"
-- "UIColor"
-- !private "CGRect"
+- !private "!"
 - !private "-"
-- !private "DataManager"
-- "UIEdgeInsets"
-- !private "DispatchQueue"
+- !private "UIBarButtonItem"
+- "UIColor"
+- "UICollectionViewCell"
+- !private "NSFontAttributeName"
+- "Friend"
 - !private "TernaryPrecedence"
+- !private "DispatchQueue"
+- "NSLayoutConstraint"
+- "UICollectionViewDelegateFlowLayout"
 - !private "=="
+- "UIView"
 - "AssignmentPrecedence"
 - "CastingPrecedence"
-- !private "NotificationCenter"
-- "Bool"
-- "UIView"
-- !private "NSStringDrawingOptions"
-- !private "Array"
-- !private "Dictionary"
-- "NSLayoutConstraint"
-- !private "ChatCell"
-- "StringLiteralType"
-- "CGSize"
-- !private "NSValue"
-- "UICollectionViewController"
 - !private "NSString"
-- "UICollectionViewDelegateFlowLayout"
-- "UICollectionViewCell"
-- "/"
-- "UIFont"
-- "IndexPath"
-- "UICollectionViewLayout"
+- !private "NotificationCenter"
+- !private "UIImage"
+- !private "Dictionary"
+- !private "Array"
 - !private "<"
-- !private "UIKeyboardFrameEndUserInfoKey"
-- !private "+"
-- !private "NSFontAttributeName"
-- "ChatLogController"
+- !private "NSValue"
+- "StringLiteralType"
+- "Bool"
+- !private "print"
+- "UICollectionViewController"
+- !private "CGRect"
+- !private "NSStringDrawingOptions"
+- "/"
+- "IndexPath"
+- !private "ChatCell"
+- !private "DataManager"
 - "UITextField"
-- "Message"
+- "UICollectionView"
+- "ChatLogController"
 - "UIButton"
-- !private "Notification"
-- !private "!"
-- !private "UIBarButtonItem"
+- "Message"
+- "UIFont"
 - "Int"
+- !private "UIKeyboardFrameEndUserInfoKey"
+- "CGSize"
+- "UICollectionViewLayout"
+- !private "Notification"
+- "UIEdgeInsets"
+- !private "+"
+- !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "Stride"]
 - !private ["Ps16AbsoluteValuable", "_DisallowMixedSignArithmetic"]
@@ -141,6 +142,7 @@ depends-member:
 - !private ["Ps9AnyObject", "navigationItem"]
 - !private ["Ps9AnyObject", "persistentContainer"]
 - ["Ps9AnyObject", "placeholder"]
+- !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "profileImageName"]
 - !private ["Ps9AnyObject", "profileImageView"]
 - !private ["Ps9AnyObject", "register"]
@@ -360,6 +362,7 @@ depends-member:
 - !private ["Ps7CVarArg", "navigationItem"]
 - !private ["Ps7CVarArg", "persistentContainer"]
 - ["Ps7CVarArg", "placeholder"]
+- !private ["Ps7CVarArg", "print"]
 - !private ["Ps7CVarArg", "profileImageName"]
 - !private ["Ps7CVarArg", "profileImageView"]
 - !private ["Ps7CVarArg", "register"]
@@ -442,6 +445,7 @@ depends-member:
 - !private ["C17FacebookMessenger17ChatLogController", "insertMessage"]
 - !private ["C17FacebookMessenger17ChatLogController", "messages"]
 - !private ["C17FacebookMessenger17ChatLogController", "navigationItem"]
+- !private ["C17FacebookMessenger17ChatLogController", "print"]
 - !private ["C17FacebookMessenger17ChatLogController", "save"]
 - !private ["C17FacebookMessenger17ChatLogController", "scrollTo"]
 - !private ["C17FacebookMessenger17ChatLogController", "scrollToBottom"]
@@ -567,6 +571,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
 - !private ["Ps28CustomDebugStringConvertible", "persistentContainer"]
 - ["Ps28CustomDebugStringConvertible", "placeholder"]
+- !private ["Ps28CustomDebugStringConvertible", "print"]
 - !private ["Ps28CustomDebugStringConvertible", "profileImageName"]
 - !private ["Ps28CustomDebugStringConvertible", "profileImageView"]
 - !private ["Ps28CustomDebugStringConvertible", "register"]
@@ -728,6 +733,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "navigationItem"]
 - !private ["Ps23CustomStringConvertible", "persistentContainer"]
 - ["Ps23CustomStringConvertible", "placeholder"]
+- !private ["Ps23CustomStringConvertible", "print"]
 - !private ["Ps23CustomStringConvertible", "profileImageName"]
 - !private ["Ps23CustomStringConvertible", "profileImageView"]
 - !private ["Ps23CustomStringConvertible", "register"]
@@ -877,6 +883,7 @@ depends-member:
 - !private ["Ps9Equatable", "isSender"]
 - !private ["Ps9Equatable", "item"]
 - !private ["Ps9Equatable", "layoutIfNeeded"]
+- !private ["Ps9Equatable", "layoutSubviews"]
 - !private ["Ps9Equatable", "main"]
 - !private ["Ps9Equatable", "messageTextView"]
 - ["Ps9Equatable", "messages"]
@@ -886,6 +893,7 @@ depends-member:
 - !private ["Ps9Equatable", "persistentContainer"]
 - ["Ps9Equatable", "placeholder"]
 - !private ["Ps9Equatable", "plain"]
+- !private ["Ps9Equatable", "print"]
 - !private ["Ps9Equatable", "profileImageName"]
 - !private ["Ps9Equatable", "profileImageView"]
 - !private ["Ps9Equatable", "rawValue"]
@@ -937,6 +945,7 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "index"]
 - ["Ps25ExpressibleByArrayLiteral", "init"]
 - !private ["Ps25ExpressibleByArrayLiteral", "item"]
+- !private ["Ps25ExpressibleByArrayLiteral", "layoutSubviews"]
 - ["Ps25ExpressibleByArrayLiteral", "normal"]
 - !private ["Ps25ExpressibleByArrayLiteral", "sort"]
 - !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
@@ -1065,6 +1074,7 @@ depends-member:
 - !private ["Ps8Hashable", "persistentContainer"]
 - ["Ps8Hashable", "placeholder"]
 - !private ["Ps8Hashable", "plain"]
+- !private ["Ps8Hashable", "print"]
 - !private ["Ps8Hashable", "profileImageName"]
 - !private ["Ps8Hashable", "profileImageView"]
 - !private ["Ps8Hashable", "rawValue"]
@@ -1267,6 +1277,7 @@ depends-member:
 - ["PSo8NSCoding", "messages"]
 - !private ["PSo8NSCoding", "navigationItem"]
 - ["PSo8NSCoding", "placeholder"]
+- !private ["PSo8NSCoding", "print"]
 - !private ["PSo8NSCoding", "profileImageView"]
 - !private ["PSo8NSCoding", "register"]
 - !private ["PSo8NSCoding", "resignFirstResponder"]
@@ -1337,6 +1348,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "insertMessage"]
 - ["PSo26NSExtensionRequestHandling", "messages"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
+- !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "save"]
 - ["PSo26NSExtensionRequestHandling", "scrollTo"]
 - ["PSo26NSExtensionRequestHandling", "scrollToBottom"]
@@ -1454,6 +1466,7 @@ depends-member:
 - !private ["CSo8NSObject", "navigationItem"]
 - !private ["CSo8NSObject", "persistentContainer"]
 - ["CSo8NSObject", "placeholder"]
+- !private ["CSo8NSObject", "print"]
 - !private ["CSo8NSObject", "profileImageName"]
 - !private ["CSo8NSObject", "profileImageView"]
 - !private ["CSo8NSObject", "register"]
@@ -1553,6 +1566,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "navigationItem"]
 - !private ["PSo16NSObjectProtocol", "persistentContainer"]
 - ["PSo16NSObjectProtocol", "placeholder"]
+- !private ["PSo16NSObjectProtocol", "print"]
 - !private ["PSo16NSObjectProtocol", "profileImageName"]
 - !private ["PSo16NSObjectProtocol", "profileImageView"]
 - !private ["PSo16NSObjectProtocol", "register"]
@@ -1616,6 +1630,7 @@ depends-member:
 - !private ["CSo9OS_object", "main"]
 - !private ["Ps9OptionSet", "bottom"]
 - !private ["Ps9OptionSet", "curveEaseOut"]
+- !private ["Ps9OptionSet", "layoutSubviews"]
 - ["Ps9OptionSet", "normal"]
 - !private ["Ps9OptionSet", "touchUpInside"]
 - !private ["Ps9OptionSet", "union"]
@@ -1686,6 +1701,7 @@ depends-member:
 - !private ["Ps16RawRepresentable", "bottom"]
 - !private ["Ps16RawRepresentable", "curveEaseOut"]
 - !private ["Ps16RawRepresentable", "equal"]
+- !private ["Ps16RawRepresentable", "layoutSubviews"]
 - ["Ps16RawRepresentable", "normal"]
 - !private ["Ps16RawRepresentable", "plain"]
 - !private ["Ps16RawRepresentable", "rawValue"]
@@ -1722,6 +1738,7 @@ depends-member:
 - !private ["Ps8Sequence", "subscript"]
 - !private ["Ps10SetAlgebra", "bottom"]
 - !private ["Ps10SetAlgebra", "curveEaseOut"]
+- !private ["Ps10SetAlgebra", "layoutSubviews"]
 - ["Ps10SetAlgebra", "normal"]
 - !private ["Ps10SetAlgebra", "touchUpInside"]
 - !private ["Ps10SetAlgebra", "union"]
@@ -1868,6 +1885,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "messages"]
 - !private ["PSo21UIAppearanceContainer", "navigationItem"]
 - ["PSo21UIAppearanceContainer", "placeholder"]
+- !private ["PSo21UIAppearanceContainer", "print"]
 - !private ["PSo21UIAppearanceContainer", "profileImageView"]
 - !private ["PSo21UIAppearanceContainer", "register"]
 - !private ["PSo21UIAppearanceContainer", "resignFirstResponder"]
@@ -1969,6 +1987,7 @@ depends-member:
 - ["CSo26UICollectionViewController", "insertMessage"]
 - ["CSo26UICollectionViewController", "messages"]
 - !private ["CSo26UICollectionViewController", "navigationItem"]
+- !private ["CSo26UICollectionViewController", "print"]
 - ["CSo26UICollectionViewController", "save"]
 - ["CSo26UICollectionViewController", "scrollTo"]
 - ["CSo26UICollectionViewController", "scrollToBottom"]
@@ -2016,6 +2035,7 @@ depends-member:
 - ["PSo26UICollectionViewDataSource", "insertMessage"]
 - ["PSo26UICollectionViewDataSource", "messages"]
 - !private ["PSo26UICollectionViewDataSource", "navigationItem"]
+- !private ["PSo26UICollectionViewDataSource", "print"]
 - ["PSo26UICollectionViewDataSource", "save"]
 - ["PSo26UICollectionViewDataSource", "scrollTo"]
 - ["PSo26UICollectionViewDataSource", "scrollToBottom"]
@@ -2063,6 +2083,7 @@ depends-member:
 - ["PSo24UICollectionViewDelegate", "insertMessage"]
 - ["PSo24UICollectionViewDelegate", "messages"]
 - !private ["PSo24UICollectionViewDelegate", "navigationItem"]
+- !private ["PSo24UICollectionViewDelegate", "print"]
 - ["PSo24UICollectionViewDelegate", "save"]
 - ["PSo24UICollectionViewDelegate", "scrollTo"]
 - ["PSo24UICollectionViewDelegate", "scrollToBottom"]
@@ -2109,6 +2130,7 @@ depends-member:
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "insertMessage"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "messages"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "navigationItem"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "print"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "save"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "scrollTo"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "scrollToBottom"]
@@ -2161,6 +2183,7 @@ depends-member:
 - ["PSo18UIContentContainer", "insertMessage"]
 - ["PSo18UIContentContainer", "messages"]
 - !private ["PSo18UIContentContainer", "navigationItem"]
+- !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "save"]
 - ["PSo18UIContentContainer", "scrollTo"]
 - ["PSo18UIContentContainer", "scrollToBottom"]
@@ -2312,6 +2335,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "messages"]
 - !private ["PSo18UIFocusEnvironment", "navigationItem"]
 - ["PSo18UIFocusEnvironment", "placeholder"]
+- !private ["PSo18UIFocusEnvironment", "print"]
 - !private ["PSo18UIFocusEnvironment", "profileImageView"]
 - !private ["PSo18UIFocusEnvironment", "register"]
 - !private ["PSo18UIFocusEnvironment", "resignFirstResponder"]
@@ -2448,6 +2472,7 @@ depends-member:
 - !private ["CSo11UIResponder", "navigationItem"]
 - !private ["CSo11UIResponder", "persistentContainer"]
 - ["CSo11UIResponder", "placeholder"]
+- !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "profileImageView"]
 - !private ["CSo11UIResponder", "register"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
@@ -2527,6 +2552,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "navigationItem"]
 - !private ["PSo30UIResponderStandardEditActions", "persistentContainer"]
 - ["PSo30UIResponderStandardEditActions", "placeholder"]
+- !private ["PSo30UIResponderStandardEditActions", "print"]
 - !private ["PSo30UIResponderStandardEditActions", "profileImageView"]
 - !private ["PSo30UIResponderStandardEditActions", "register"]
 - !private ["PSo30UIResponderStandardEditActions", "resignFirstResponder"]
@@ -2595,6 +2621,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "insertMessage"]
 - ["PSo20UIScrollViewDelegate", "messages"]
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
+- !private ["PSo20UIScrollViewDelegate", "print"]
 - ["PSo20UIScrollViewDelegate", "save"]
 - ["PSo20UIScrollViewDelegate", "scrollTo"]
 - ["PSo20UIScrollViewDelegate", "scrollToBottom"]
@@ -2642,6 +2669,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "insertMessage"]
 - ["PSo16UIStateRestoring", "messages"]
 - !private ["PSo16UIStateRestoring", "navigationItem"]
+- !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "save"]
 - ["PSo16UIStateRestoring", "scrollTo"]
 - ["PSo16UIStateRestoring", "scrollToBottom"]
@@ -2735,6 +2763,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "messages"]
 - !private ["PSo18UITraitEnvironment", "navigationItem"]
 - ["PSo18UITraitEnvironment", "placeholder"]
+- !private ["PSo18UITraitEnvironment", "print"]
 - !private ["PSo18UITraitEnvironment", "profileImageView"]
 - !private ["PSo18UITraitEnvironment", "register"]
 - !private ["PSo18UITraitEnvironment", "resignFirstResponder"]
@@ -2791,6 +2820,7 @@ depends-member:
 - ["CSo6UIView", "titleLabel"]
 - !private ["VSC22UIViewAnimationOptions", "curveEaseOut"]
 - !private ["VSC22UIViewAnimationOptions", "deinit"]
+- !private ["VSC22UIViewAnimationOptions", "layoutSubviews"]
 - ["CSo16UIViewController", "Bool"]
 - !private ["CSo16UIViewController", "CGRect"]
 - ["CSo16UIViewController", "CGSize"]
@@ -2834,6 +2864,7 @@ depends-member:
 - ["CSo16UIViewController", "insertMessage"]
 - ["CSo16UIViewController", "messages"]
 - !private ["CSo16UIViewController", "navigationItem"]
+- !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "save"]
 - ["CSo16UIViewController", "scrollTo"]
 - ["CSo16UIViewController", "scrollToBottom"]
@@ -3035,6 +3066,7 @@ depends-member:
 - !private ["Ps9_Hashable", "persistentContainer"]
 - ["Ps9_Hashable", "placeholder"]
 - !private ["Ps9_Hashable", "plain"]
+- !private ["Ps9_Hashable", "print"]
 - !private ["Ps9_Hashable", "profileImageName"]
 - !private ["Ps9_Hashable", "profileImageView"]
 - !private ["Ps9_Hashable", "rawValue"]
