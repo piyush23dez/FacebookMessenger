@@ -62,12 +62,10 @@ class ChatLogController: UICollectionViewController {
         
         do {
             try fetchResultsController.performFetch()
-            print(fetchResultsController.sections?[0].numberOfObjects)
         }
         catch let error {
             print(error)
         }
-        
         
         tabBarController?.tabBar.isHidden = true
         
@@ -97,7 +95,13 @@ class ChatLogController: UICollectionViewController {
         }
     }
     
-    @objc private func setupInputView() {
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        removeObservers()
+        blockOperations.removeAll()
+    }
+    
+    dynamic private func setupInputView() {
         let topBorderView = UIView()
         topBorderView.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
         
@@ -114,13 +118,17 @@ class ChatLogController: UICollectionViewController {
         inputMessageView.addConstraintWith(format: "V:|[v0(0.5)]", views: topBorderView)
     }
 
-    @objc private func addKeyboardObservers() {
+    dynamic private func addKeyboardObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillShow, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    @objc private func handleKeyboardNotification(_ notification: Notification) {
+    private func removeObservers() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    dynamic private func handleKeyboardNotification(_ notification: Notification) {
         
         if let userInfo = notification.userInfo {
             
@@ -141,7 +149,7 @@ class ChatLogController: UICollectionViewController {
         }
     }
     
-    @objc private func handleSend() {
+    dynamic private func handleSend() {
         
         if inputTextField.text!.isEmpty {
             return
@@ -154,7 +162,7 @@ class ChatLogController: UICollectionViewController {
         inputTextField.text = nil
     }
     
-    @objc private func simulate() {
+    dynamic private func simulate() {
         let context = DataManager.sharedManager.delegate!.persistentContainer.viewContext
         DataManager.sharedManager.createMessage(text: "Receiving new mesage from friend", minutesAgo: 2, frind: friend!, context: context)
         DataManager.sharedManager.createMessage(text: "Another message from friend", minutesAgo: 2, frind: friend!, context: context)
@@ -191,6 +199,9 @@ class ChatLogController: UICollectionViewController {
                 self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
             }, completion: nil)
         }
+    }
+    deinit {
+        print("deinit")
     }
 }
 
@@ -301,5 +312,4 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
     fileprivate func dismissKeyboard() {
         inputTextField.resignFirstResponder()
     }
-
 }

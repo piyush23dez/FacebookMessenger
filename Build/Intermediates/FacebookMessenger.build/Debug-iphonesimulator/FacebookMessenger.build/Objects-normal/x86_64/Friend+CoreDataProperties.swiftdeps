@@ -6,6 +6,7 @@ provides-member:
 - ["C17FacebookMessenger6Friend", "fetchRequest"]
 - ["C17FacebookMessenger6Friend", "name"]
 - ["C17FacebookMessenger6Friend", "profileImageName"]
+- ["C17FacebookMessenger6Friend", "lastMessage"]
 - ["C17FacebookMessenger6Friend", "messages"]
 - ["C17FacebookMessenger6Friend", "addToMessages"]
 - ["C17FacebookMessenger6Friend", "removeFromMessages"]
@@ -14,23 +15,25 @@ provides-member:
 provides-dynamic-lookup:
 - "removeFromMessages"
 - "removeFromMessages"
-- "addToMessages"
-- "addToMessages"
-- "name"
 - "profileImageName"
+- "lastMessage"
+- "addToMessages"
+- "addToMessages"
 - "messages"
+- "name"
 depends-top-level:
-- "String"
 - "NSFetchRequest"
-- "Friend"
-- "Message"
-- "NSSet"
 - !private "StringLiteralType"
+- "Friend"
+- "NSSet"
+- "Message"
+- "String"
 depends-member:
 - !private ["Ps9AnyObject", "NSFetchRequest"]
 - ["Ps9AnyObject", "addToMessages"]
 - ["Ps9AnyObject", "fetchRequest"]
 - !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "lastMessage"]
 - ["Ps9AnyObject", "messages"]
 - ["Ps9AnyObject", "name"]
 - ["Ps9AnyObject", "profileImageName"]
@@ -39,6 +42,7 @@ depends-member:
 - ["Ps7CVarArg", "addToMessages"]
 - ["Ps7CVarArg", "fetchRequest"]
 - !private ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "lastMessage"]
 - ["Ps7CVarArg", "messages"]
 - ["Ps7CVarArg", "name"]
 - ["Ps7CVarArg", "profileImageName"]
@@ -48,6 +52,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "addToMessages"]
 - ["Ps28CustomDebugStringConvertible", "fetchRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "lastMessage"]
 - ["Ps28CustomDebugStringConvertible", "messages"]
 - ["Ps28CustomDebugStringConvertible", "name"]
 - ["Ps28CustomDebugStringConvertible", "profileImageName"]
@@ -58,6 +63,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "addToMessages"]
 - ["Ps23CustomStringConvertible", "fetchRequest"]
 - !private ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "lastMessage"]
 - ["Ps23CustomStringConvertible", "messages"]
 - ["Ps23CustomStringConvertible", "name"]
 - ["Ps23CustomStringConvertible", "profileImageName"]
@@ -66,6 +72,7 @@ depends-member:
 - ["Ps9Equatable", "addToMessages"]
 - ["Ps9Equatable", "fetchRequest"]
 - !private ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "lastMessage"]
 - ["Ps9Equatable", "messages"]
 - ["Ps9Equatable", "name"]
 - ["Ps9Equatable", "profileImageName"]
@@ -82,6 +89,7 @@ depends-member:
 - ["C17FacebookMessenger6Friend", "addToMessages"]
 - ["C17FacebookMessenger6Friend", "deinit"]
 - ["C17FacebookMessenger6Friend", "fetchRequest"]
+- ["C17FacebookMessenger6Friend", "lastMessage"]
 - ["C17FacebookMessenger6Friend", "messages"]
 - ["C17FacebookMessenger6Friend", "name"]
 - ["C17FacebookMessenger6Friend", "profileImageName"]
@@ -90,6 +98,7 @@ depends-member:
 - ["Ps8Hashable", "addToMessages"]
 - ["Ps8Hashable", "fetchRequest"]
 - !private ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "lastMessage"]
 - ["Ps8Hashable", "messages"]
 - ["Ps8Hashable", "name"]
 - ["Ps8Hashable", "profileImageName"]
@@ -103,6 +112,7 @@ depends-member:
 - !private ["PSo20NSFetchRequestResult", "NSFetchRequest"]
 - ["PSo20NSFetchRequestResult", "addToMessages"]
 - ["PSo20NSFetchRequestResult", "fetchRequest"]
+- ["PSo20NSFetchRequestResult", "lastMessage"]
 - ["PSo20NSFetchRequestResult", "messages"]
 - ["PSo20NSFetchRequestResult", "name"]
 - ["PSo20NSFetchRequestResult", "profileImageName"]
@@ -114,6 +124,7 @@ depends-member:
 - ["CSo15NSManagedObject", "String"]
 - ["CSo15NSManagedObject", "addToMessages"]
 - ["CSo15NSManagedObject", "fetchRequest"]
+- ["CSo15NSManagedObject", "lastMessage"]
 - ["CSo15NSManagedObject", "messages"]
 - ["CSo15NSManagedObject", "name"]
 - ["CSo15NSManagedObject", "profileImageName"]
@@ -127,6 +138,7 @@ depends-member:
 - ["CSo8NSObject", "addToMessages"]
 - ["CSo8NSObject", "fetchRequest"]
 - !private ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "lastMessage"]
 - ["CSo8NSObject", "messages"]
 - ["CSo8NSObject", "name"]
 - ["CSo8NSObject", "profileImageName"]
@@ -135,6 +147,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "addToMessages"]
 - ["PSo16NSObjectProtocol", "fetchRequest"]
 - !private ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "lastMessage"]
 - ["PSo16NSObjectProtocol", "messages"]
 - ["PSo16NSObjectProtocol", "name"]
 - ["PSo16NSObjectProtocol", "profileImageName"]
@@ -154,6 +167,7 @@ depends-member:
 - ["Ps9_Hashable", "addToMessages"]
 - ["Ps9_Hashable", "fetchRequest"]
 - !private ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "lastMessage"]
 - ["Ps9_Hashable", "messages"]
 - ["Ps9_Hashable", "name"]
 - ["Ps9_Hashable", "profileImageName"]
@@ -208,4 +222,4 @@ depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "ae29a80bbd377999bf79fe096ee68d85"
+interface-hash: "ae9fcb3205acdd8b8a93fe3d964467c9"

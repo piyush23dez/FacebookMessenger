@@ -12,9 +12,22 @@ import UIKit
 class DataManager {
     
     static let sharedManager = DataManager()
-    fileprivate var messages = [Message]()
     let delegate = UIApplication.shared.delegate as? AppDelegate
-
+    
+    var messageCount: Int? {
+        get {
+            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Message")
+            fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "date", ascending: true)]
+            do {
+                return try delegate?.persistentContainer.viewContext.count(for: fetchRequest)
+            }
+            catch let error {
+                print(error)
+            }
+            return 0
+        }
+    }
+    
     private init() {
         //clear()
         
@@ -22,11 +35,6 @@ class DataManager {
             setup()
             save()
         }
-        load()
-    }
-    
-    func getMessages() -> [Message] {
-        return messages
     }
 
     private func clear() {
@@ -97,6 +105,7 @@ class DataManager {
         message.text = text
         message.date = Date().addingTimeInterval(-minutesAgo*60) // convert minutes in seconds
         message.isSender = isSender
+        frind.lastMessage = message
         return message
     }
     
@@ -119,33 +128,5 @@ class DataManager {
             }
         }
         return nil
-    }
-    
-     func load() {
-        
-        if let context = delegate?.persistentContainer.viewContext {
-            
-            messages = [Message]()
-            
-            if let freinds = fetchFreinds() {
-                
-                for friend in freinds {
-                    
-                    let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Message")
-                    fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "date", ascending: false)]
-                    fetchRequest.predicate = NSPredicate(format: "friend.name = %@", friend.name!)
-                    fetchRequest.fetchLimit = 1
-                    do {
-                        if let allMessages = try context.fetch(fetchRequest) as? [Message] {
-                            messages.append(contentsOf: allMessages)
-                        }
-                    }
-                    catch let error {
-                        print(error)
-                    }
-                }
-                messages.sort { $0.date! > $1.date! } // ascending date order
-            }
-        }
     }
 }

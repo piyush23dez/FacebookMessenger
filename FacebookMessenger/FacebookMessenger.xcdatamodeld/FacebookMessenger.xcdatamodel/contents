@@ -3,6 +3,7 @@
     <entity name="Friend" representedClassName=".Friend" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="profileImageName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="lastMessage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Message" syncable="YES"/>
         <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="friend" inverseEntity="Message" syncable="YES"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
@@ -22,7 +23,7 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Friend" positionX="-722" positionY="-297" width="128" height="90"/>
+        <element name="Friend" positionX="-722" positionY="-297" width="128" height="105"/>
         <element name="Message" positionX="-398" positionY="-126" width="128" height="105"/>
     </elements>
 </model>

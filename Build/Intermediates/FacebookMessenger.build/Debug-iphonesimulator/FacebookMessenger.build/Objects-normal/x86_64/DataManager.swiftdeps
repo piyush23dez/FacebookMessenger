@@ -8,41 +8,40 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - !private "NSFetchRequest"
-- "AppDelegate"
-- !private "*"
-- "NSManagedObjectContext"
-- !private ">"
-- "DataManager"
-- "Double"
-- "Bool"
-- !private "NSManagedObject"
-- "UIApplication"
-- !private "=="
-- !private "NSEntityDescription"
-- "CastingPrecedence"
-- "AssignmentPrecedence"
-- "Message"
 - !private "Array"
+- "Int"
+- !private "NSManagedObject"
+- !private "=="
+- "AssignmentPrecedence"
+- "CastingPrecedence"
+- "AppDelegate"
+- "Message"
+- "DataManager"
+- "NSManagedObjectContext"
+- !private "NSEntityDescription"
+- !private "*"
+- "Double"
+- "UIApplication"
 - !private "NSFetchRequestResult"
-- !private "NSPredicate"
-- !private "StringLiteralType"
-- !private "Date"
-- !private "-"
-- "Friend"
+- !private "BooleanLiteralType"
 - !private "print"
+- !private "Date"
 - "String"
-- "BooleanLiteralType"
+- "Friend"
+- "Bool"
+- !private "-"
 - !private "NSSortDescriptor"
+- !private "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "DataManager"]
 - !private ["Ps9AnyObject", "Date"]
 - !private ["Ps9AnyObject", "Friend"]
-- ["Ps9AnyObject", "Message"]
+- !private ["Ps9AnyObject", "Message"]
 - !private ["Ps9AnyObject", "NSEntityDescription"]
 - !private ["Ps9AnyObject", "NSFetchRequest"]
-- !private ["Ps9AnyObject", "NSPredicate"]
 - !private ["Ps9AnyObject", "NSSortDescriptor"]
 - ["Ps9AnyObject", "UIApplication"]
+- !private ["Ps9AnyObject", "count"]
 - !private ["Ps9AnyObject", "createFriend"]
 - !private ["Ps9AnyObject", "createMessage"]
 - !private ["Ps9AnyObject", "date"]
@@ -51,15 +50,12 @@ depends-member:
 - !private ["Ps9AnyObject", "entity"]
 - !private ["Ps9AnyObject", "fetch"]
 - !private ["Ps9AnyObject", "fetchFreinds"]
-- !private ["Ps9AnyObject", "fetchLimit"]
 - !private ["Ps9AnyObject", "friend"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "isSender"]
-- !private ["Ps9AnyObject", "load"]
-- !private ["Ps9AnyObject", "messages"]
+- !private ["Ps9AnyObject", "lastMessage"]
 - !private ["Ps9AnyObject", "name"]
 - !private ["Ps9AnyObject", "persistentContainer"]
-- !private ["Ps9AnyObject", "predicate"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "profileImageName"]
 - !private ["Ps9AnyObject", "save"]
@@ -77,51 +73,39 @@ depends-member:
 - !private ["Sa", "IndexDistance"]
 - !private ["Sa", "Iterator"]
 - !private ["Sa", "_Element"]
-- !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - ["Sa", "deinit"]
-- ["Sa", "init"]
-- !private ["Sa", "sort"]
 - !private ["Ps23BidirectionalCollection", "Element"]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
 - !private ["Ps23BidirectionalCollection", "Iterator"]
 - !private ["Ps23BidirectionalCollection", "_Element"]
-- !private ["Ps23BidirectionalCollection", "append"]
 - !private ["Ps23BidirectionalCollection", "count"]
-- ["Ps23BidirectionalCollection", "init"]
-- !private ["Ps23BidirectionalCollection", "sort"]
 - !private ["Ps22BidirectionalIndexable", "Element"]
 - !private ["Ps22BidirectionalIndexable", "IndexDistance"]
 - !private ["Ps22BidirectionalIndexable", "Iterator"]
 - !private ["Ps22BidirectionalIndexable", "_Element"]
-- !private ["Ps22BidirectionalIndexable", "append"]
 - !private ["Ps22BidirectionalIndexable", "count"]
-- ["Ps22BidirectionalIndexable", "init"]
-- !private ["Ps22BidirectionalIndexable", "sort"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
 - !private ["Ps7CVarArg", "Element"]
 - !private ["Ps7CVarArg", "IndexDistance"]
 - !private ["Ps7CVarArg", "Iterator"]
 - !private ["Ps7CVarArg", "_Element"]
-- !private ["Ps7CVarArg", "append"]
 - !private ["Ps7CVarArg", "count"]
 - !private ["Ps7CVarArg", "date"]
 - ["Ps7CVarArg", "delegate"]
 - !private ["Ps7CVarArg", "delete"]
 - !private ["Ps7CVarArg", "entity"]
 - !private ["Ps7CVarArg", "fetch"]
-- !private ["Ps7CVarArg", "fetchLimit"]
 - !private ["Ps7CVarArg", "friend"]
-- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "isSender"]
+- !private ["Ps7CVarArg", "lastMessage"]
 - !private ["Ps7CVarArg", "name"]
 - !private ["Ps7CVarArg", "persistentContainer"]
-- !private ["Ps7CVarArg", "predicate"]
 - !private ["Ps7CVarArg", "profileImageName"]
 - !private ["Ps7CVarArg", "saveContext"]
 - ["Ps7CVarArg", "shared"]
-- !private ["Ps7CVarArg", "sort"]
 - !private ["Ps7CVarArg", "sortDescriptors"]
 - !private ["Ps7CVarArg", "text"]
 - !private ["Ps7CVarArg", "viewContext"]
@@ -129,10 +113,7 @@ depends-member:
 - !private ["Ps10Collection", "IndexDistance"]
 - !private ["Ps10Collection", "Iterator"]
 - !private ["Ps10Collection", "_Element"]
-- !private ["Ps10Collection", "append"]
 - !private ["Ps10Collection", "count"]
-- ["Ps10Collection", "init"]
-- !private ["Ps10Collection", "sort"]
 - !private ["Ps10Comparable", "addingTimeInterval"]
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
@@ -140,25 +121,22 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "addingTimeInterval"]
-- !private ["Ps28CustomDebugStringConvertible", "append"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - !private ["Ps28CustomDebugStringConvertible", "date"]
 - ["Ps28CustomDebugStringConvertible", "delegate"]
 - !private ["Ps28CustomDebugStringConvertible", "delete"]
 - !private ["Ps28CustomDebugStringConvertible", "entity"]
 - !private ["Ps28CustomDebugStringConvertible", "fetch"]
-- !private ["Ps28CustomDebugStringConvertible", "fetchLimit"]
 - !private ["Ps28CustomDebugStringConvertible", "friend"]
-- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "isSender"]
+- !private ["Ps28CustomDebugStringConvertible", "lastMessage"]
 - !private ["Ps28CustomDebugStringConvertible", "name"]
 - !private ["Ps28CustomDebugStringConvertible", "persistentContainer"]
-- !private ["Ps28CustomDebugStringConvertible", "predicate"]
 - !private ["Ps28CustomDebugStringConvertible", "profileImageName"]
 - !private ["Ps28CustomDebugStringConvertible", "saveContext"]
 - ["Ps28CustomDebugStringConvertible", "shared"]
-- ["Ps28CustomDebugStringConvertible", "some"]
-- !private ["Ps28CustomDebugStringConvertible", "sort"]
+- !private ["Ps28CustomDebugStringConvertible", "some"]
 - !private ["Ps28CustomDebugStringConvertible", "sortDescriptors"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps28CustomDebugStringConvertible", "viewContext"]
@@ -171,35 +149,30 @@ depends-member:
 - !private ["Ps17CustomReflectable", "_Element"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "addingTimeInterval"]
-- !private ["Ps17CustomReflectable", "append"]
 - !private ["Ps17CustomReflectable", "count"]
-- ["Ps17CustomReflectable", "init"]
-- ["Ps17CustomReflectable", "some"]
-- !private ["Ps17CustomReflectable", "sort"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "some"]
 - !private ["Ps23CustomStringConvertible", "Element"]
 - !private ["Ps23CustomStringConvertible", "IndexDistance"]
 - !private ["Ps23CustomStringConvertible", "Iterator"]
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "addingTimeInterval"]
-- !private ["Ps23CustomStringConvertible", "append"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - !private ["Ps23CustomStringConvertible", "date"]
 - ["Ps23CustomStringConvertible", "delegate"]
 - !private ["Ps23CustomStringConvertible", "delete"]
 - !private ["Ps23CustomStringConvertible", "entity"]
 - !private ["Ps23CustomStringConvertible", "fetch"]
-- !private ["Ps23CustomStringConvertible", "fetchLimit"]
 - !private ["Ps23CustomStringConvertible", "friend"]
-- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "isSender"]
+- !private ["Ps23CustomStringConvertible", "lastMessage"]
 - !private ["Ps23CustomStringConvertible", "name"]
 - !private ["Ps23CustomStringConvertible", "persistentContainer"]
-- !private ["Ps23CustomStringConvertible", "predicate"]
 - !private ["Ps23CustomStringConvertible", "profileImageName"]
 - !private ["Ps23CustomStringConvertible", "saveContext"]
 - ["Ps23CustomStringConvertible", "shared"]
-- !private ["Ps23CustomStringConvertible", "sort"]
 - !private ["Ps23CustomStringConvertible", "sortDescriptors"]
 - !private ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps23CustomStringConvertible", "viewContext"]
@@ -209,13 +182,13 @@ depends-member:
 - !private ["C17FacebookMessenger11DataManager", "Date"]
 - ["C17FacebookMessenger11DataManager", "Double"]
 - ["C17FacebookMessenger11DataManager", "Friend"]
+- ["C17FacebookMessenger11DataManager", "Int"]
 - ["C17FacebookMessenger11DataManager", "Message"]
 - !private ["C17FacebookMessenger11DataManager", "NSEntityDescription"]
 - !private ["C17FacebookMessenger11DataManager", "NSFetchRequest"]
 - !private ["C17FacebookMessenger11DataManager", "NSFetchRequestResult"]
 - !private ["C17FacebookMessenger11DataManager", "NSManagedObject"]
 - ["C17FacebookMessenger11DataManager", "NSManagedObjectContext"]
-- !private ["C17FacebookMessenger11DataManager", "NSPredicate"]
 - !private ["C17FacebookMessenger11DataManager", "NSSortDescriptor"]
 - ["C17FacebookMessenger11DataManager", "String"]
 - ["C17FacebookMessenger11DataManager", "UIApplication"]
@@ -225,10 +198,8 @@ depends-member:
 - ["C17FacebookMessenger11DataManager", "deinit"]
 - ["C17FacebookMessenger11DataManager", "delegate"]
 - !private ["C17FacebookMessenger11DataManager", "fetchFreinds"]
-- ["C17FacebookMessenger11DataManager", "getMessages"]
 - ["C17FacebookMessenger11DataManager", "init"]
-- ["C17FacebookMessenger11DataManager", "load"]
-- !private ["C17FacebookMessenger11DataManager", "messages"]
+- ["C17FacebookMessenger11DataManager", "messageCount"]
 - !private ["C17FacebookMessenger11DataManager", "print"]
 - !private ["C17FacebookMessenger11DataManager", "save"]
 - !private ["C17FacebookMessenger11DataManager", "setup"]
@@ -239,18 +210,18 @@ depends-member:
 - ["Sd", "deinit"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "addingTimeInterval"]
+- !private ["Ps9Equatable", "count"]
 - !private ["Ps9Equatable", "date"]
 - ["Ps9Equatable", "delegate"]
 - !private ["Ps9Equatable", "delete"]
 - !private ["Ps9Equatable", "entity"]
 - !private ["Ps9Equatable", "fetch"]
-- !private ["Ps9Equatable", "fetchLimit"]
 - !private ["Ps9Equatable", "friend"]
 - !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "isSender"]
+- !private ["Ps9Equatable", "lastMessage"]
 - !private ["Ps9Equatable", "name"]
 - !private ["Ps9Equatable", "persistentContainer"]
-- !private ["Ps9Equatable", "predicate"]
 - !private ["Ps9Equatable", "profileImageName"]
 - !private ["Ps9Equatable", "saveContext"]
 - ["Ps9Equatable", "shared"]
@@ -262,34 +233,32 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
 - !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
-- !private ["Ps25ExpressibleByArrayLiteral", "append"]
 - !private ["Ps25ExpressibleByArrayLiteral", "count"]
-- ["Ps25ExpressibleByArrayLiteral", "init"]
-- !private ["Ps25ExpressibleByArrayLiteral", "sort"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
-- ["Ps23ExpressibleByNilLiteral", "some"]
+- !private ["Ps23ExpressibleByNilLiteral", "some"]
 - !private ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - ["C17FacebookMessenger6Friend", "deinit"]
 - !private ["C17FacebookMessenger6Friend", "init"]
+- !private ["C17FacebookMessenger6Friend", "lastMessage"]
 - !private ["C17FacebookMessenger6Friend", "name"]
 - !private ["C17FacebookMessenger6Friend", "profileImageName"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "addingTimeInterval"]
+- !private ["Ps8Hashable", "count"]
 - !private ["Ps8Hashable", "date"]
 - ["Ps8Hashable", "delegate"]
 - !private ["Ps8Hashable", "delete"]
 - !private ["Ps8Hashable", "entity"]
 - !private ["Ps8Hashable", "fetch"]
-- !private ["Ps8Hashable", "fetchLimit"]
 - !private ["Ps8Hashable", "friend"]
 - !private ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "isSender"]
+- !private ["Ps8Hashable", "lastMessage"]
 - !private ["Ps8Hashable", "name"]
 - !private ["Ps8Hashable", "persistentContainer"]
-- !private ["Ps8Hashable", "predicate"]
 - !private ["Ps8Hashable", "profileImageName"]
 - !private ["Ps8Hashable", "saveContext"]
 - ["Ps8Hashable", "shared"]
@@ -300,18 +269,12 @@ depends-member:
 - !private ["Ps9Indexable", "IndexDistance"]
 - !private ["Ps9Indexable", "Iterator"]
 - !private ["Ps9Indexable", "_Element"]
-- !private ["Ps9Indexable", "append"]
 - !private ["Ps9Indexable", "count"]
-- ["Ps9Indexable", "init"]
-- !private ["Ps9Indexable", "sort"]
 - !private ["Ps13IndexableBase", "Element"]
 - !private ["Ps13IndexableBase", "IndexDistance"]
 - !private ["Ps13IndexableBase", "Iterator"]
 - !private ["Ps13IndexableBase", "_Element"]
-- !private ["Ps13IndexableBase", "append"]
 - !private ["Ps13IndexableBase", "count"]
-- ["Ps13IndexableBase", "init"]
-- !private ["Ps13IndexableBase", "sort"]
 - !private ["Vs16IndexingIterator", "Element"]
 - ["Si", "deinit"]
 - !private ["Ps16IteratorProtocol", "Element"]
@@ -328,46 +291,37 @@ depends-member:
 - !private ["Ps17MutableCollection", "IndexDistance"]
 - !private ["Ps17MutableCollection", "Iterator"]
 - !private ["Ps17MutableCollection", "_Element"]
-- !private ["Ps17MutableCollection", "append"]
 - !private ["Ps17MutableCollection", "count"]
-- ["Ps17MutableCollection", "init"]
-- !private ["Ps17MutableCollection", "sort"]
 - !private ["Ps16MutableIndexable", "Element"]
 - !private ["Ps16MutableIndexable", "IndexDistance"]
 - !private ["Ps16MutableIndexable", "Iterator"]
 - !private ["Ps16MutableIndexable", "_Element"]
-- !private ["Ps16MutableIndexable", "append"]
 - !private ["Ps16MutableIndexable", "count"]
-- ["Ps16MutableIndexable", "init"]
-- !private ["Ps16MutableIndexable", "sort"]
+- !private ["PSo8NSCoding", "count"]
 - !private ["PSo8NSCoding", "delete"]
 - !private ["PSo8NSCoding", "entity"]
 - !private ["PSo8NSCoding", "fetch"]
-- !private ["PSo8NSCoding", "fetchLimit"]
 - !private ["PSo8NSCoding", "init"]
-- !private ["PSo8NSCoding", "predicate"]
 - !private ["PSo8NSCoding", "sortDescriptors"]
 - !private ["PSo9NSCopying", "entity"]
-- !private ["PSo9NSCopying", "fetchLimit"]
 - !private ["PSo9NSCopying", "init"]
-- !private ["PSo9NSCopying", "predicate"]
 - !private ["PSo9NSCopying", "sortDescriptors"]
 - ["CSo19NSEntityDescription", "deinit"]
 - !private ["CSo19NSEntityDescription", "entity"]
 - !private ["PSo17NSFastEnumeration", "entity"]
 - ["CSo14NSFetchRequest", "deinit"]
-- !private ["CSo14NSFetchRequest", "fetchLimit"]
 - !private ["CSo14NSFetchRequest", "init"]
-- !private ["CSo14NSFetchRequest", "predicate"]
 - !private ["CSo14NSFetchRequest", "sortDescriptors"]
 - !private ["PSo20NSFetchRequestResult", "date"]
 - ["PSo20NSFetchRequestResult", "deinit"]
 - !private ["PSo20NSFetchRequestResult", "friend"]
 - !private ["PSo20NSFetchRequestResult", "init"]
 - !private ["PSo20NSFetchRequestResult", "isSender"]
+- !private ["PSo20NSFetchRequestResult", "lastMessage"]
 - !private ["PSo20NSFetchRequestResult", "name"]
 - !private ["PSo20NSFetchRequestResult", "profileImageName"]
 - !private ["PSo20NSFetchRequestResult", "text"]
+- !private ["PSo9NSLocking", "count"]
 - !private ["PSo9NSLocking", "delete"]
 - !private ["PSo9NSLocking", "fetch"]
 - !private ["CSo15NSManagedObject", "date"]
@@ -375,43 +329,45 @@ depends-member:
 - !private ["CSo15NSManagedObject", "friend"]
 - !private ["CSo15NSManagedObject", "init"]
 - !private ["CSo15NSManagedObject", "isSender"]
+- !private ["CSo15NSManagedObject", "lastMessage"]
 - !private ["CSo15NSManagedObject", "name"]
 - !private ["CSo15NSManagedObject", "profileImageName"]
 - !private ["CSo15NSManagedObject", "text"]
+- !private ["CSo22NSManagedObjectContext", "count"]
 - ["CSo22NSManagedObjectContext", "deinit"]
 - !private ["CSo22NSManagedObjectContext", "delete"]
 - !private ["CSo22NSManagedObjectContext", "fetch"]
 - !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "count"]
 - !private ["CSo8NSObject", "date"]
 - ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "delete"]
 - !private ["CSo8NSObject", "entity"]
 - !private ["CSo8NSObject", "fetch"]
-- !private ["CSo8NSObject", "fetchLimit"]
 - !private ["CSo8NSObject", "friend"]
 - !private ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "isSender"]
+- !private ["CSo8NSObject", "lastMessage"]
 - !private ["CSo8NSObject", "name"]
 - !private ["CSo8NSObject", "persistentContainer"]
-- !private ["CSo8NSObject", "predicate"]
 - !private ["CSo8NSObject", "profileImageName"]
 - !private ["CSo8NSObject", "saveContext"]
 - ["CSo8NSObject", "shared"]
 - !private ["CSo8NSObject", "sortDescriptors"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "viewContext"]
+- !private ["PSo16NSObjectProtocol", "count"]
 - !private ["PSo16NSObjectProtocol", "date"]
 - ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "delete"]
 - !private ["PSo16NSObjectProtocol", "entity"]
 - !private ["PSo16NSObjectProtocol", "fetch"]
-- !private ["PSo16NSObjectProtocol", "fetchLimit"]
 - !private ["PSo16NSObjectProtocol", "friend"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "isSender"]
+- !private ["PSo16NSObjectProtocol", "lastMessage"]
 - !private ["PSo16NSObjectProtocol", "name"]
 - !private ["PSo16NSObjectProtocol", "persistentContainer"]
-- !private ["PSo16NSObjectProtocol", "predicate"]
 - !private ["PSo16NSObjectProtocol", "profileImageName"]
 - !private ["PSo16NSObjectProtocol", "saveContext"]
 - ["PSo16NSObjectProtocol", "shared"]
@@ -419,59 +375,40 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "viewContext"]
 - !private ["CSo21NSPersistentContainer", "viewContext"]
-- !private ["CSo24NSPersistentStoreRequest", "fetchLimit"]
-- !private ["CSo24NSPersistentStoreRequest", "predicate"]
 - !private ["CSo24NSPersistentStoreRequest", "sortDescriptors"]
-- ["CSo11NSPredicate", "deinit"]
-- !private ["CSo11NSPredicate", "init"]
 - !private ["PSo14NSSecureCoding", "init"]
 - ["CSo16NSSortDescriptor", "deinit"]
 - !private ["CSo16NSSortDescriptor", "init"]
 - !private ["CSo8NSString", "init"]
 - ["Sq", "deinit"]
-- ["Sq", "some"]
+- !private ["Sq", "some"]
 - !private ["Ps22RandomAccessCollection", "Element"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
 - !private ["Ps22RandomAccessCollection", "Iterator"]
 - !private ["Ps22RandomAccessCollection", "_Element"]
-- !private ["Ps22RandomAccessCollection", "append"]
 - !private ["Ps22RandomAccessCollection", "count"]
-- ["Ps22RandomAccessCollection", "init"]
-- !private ["Ps22RandomAccessCollection", "sort"]
 - !private ["Ps21RandomAccessIndexable", "Element"]
 - !private ["Ps21RandomAccessIndexable", "IndexDistance"]
 - !private ["Ps21RandomAccessIndexable", "Iterator"]
 - !private ["Ps21RandomAccessIndexable", "_Element"]
-- !private ["Ps21RandomAccessIndexable", "append"]
 - !private ["Ps21RandomAccessIndexable", "count"]
-- ["Ps21RandomAccessIndexable", "init"]
-- !private ["Ps21RandomAccessIndexable", "sort"]
 - !private ["Ps26RangeReplaceableCollection", "Element"]
 - !private ["Ps26RangeReplaceableCollection", "IndexDistance"]
 - !private ["Ps26RangeReplaceableCollection", "Iterator"]
 - !private ["Ps26RangeReplaceableCollection", "_Element"]
-- !private ["Ps26RangeReplaceableCollection", "append"]
 - !private ["Ps26RangeReplaceableCollection", "count"]
-- ["Ps26RangeReplaceableCollection", "init"]
-- !private ["Ps26RangeReplaceableCollection", "sort"]
 - !private ["Ps25RangeReplaceableIndexable", "Element"]
 - !private ["Ps25RangeReplaceableIndexable", "IndexDistance"]
 - !private ["Ps25RangeReplaceableIndexable", "Iterator"]
 - !private ["Ps25RangeReplaceableIndexable", "_Element"]
-- !private ["Ps25RangeReplaceableIndexable", "append"]
 - !private ["Ps25RangeReplaceableIndexable", "count"]
-- ["Ps25RangeReplaceableIndexable", "init"]
-- !private ["Ps25RangeReplaceableIndexable", "sort"]
 - !private ["P10Foundation20ReferenceConvertible", "addingTimeInterval"]
 - !private ["P10Foundation20ReferenceConvertible", "init"]
 - !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "IndexDistance"]
 - !private ["Ps8Sequence", "Iterator"]
 - !private ["Ps8Sequence", "_Element"]
-- !private ["Ps8Sequence", "append"]
 - !private ["Ps8Sequence", "count"]
-- ["Ps8Sequence", "init"]
-- !private ["Ps8Sequence", "sort"]
 - !private ["Ps10Streamable", "init"]
 - ["SS", "deinit"]
 - !private ["SS", "init"]
@@ -493,18 +430,12 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "IndexDistance"]
 - !private ["Ps14_ArrayProtocol", "Iterator"]
 - !private ["Ps14_ArrayProtocol", "_Element"]
-- !private ["Ps14_ArrayProtocol", "append"]
 - !private ["Ps14_ArrayProtocol", "count"]
-- ["Ps14_ArrayProtocol", "init"]
-- !private ["Ps14_ArrayProtocol", "sort"]
 - !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
 - !private ["Ps24_DestructorSafeContainer", "Iterator"]
 - !private ["Ps24_DestructorSafeContainer", "_Element"]
-- !private ["Ps24_DestructorSafeContainer", "append"]
 - !private ["Ps24_DestructorSafeContainer", "count"]
-- ["Ps24_DestructorSafeContainer", "init"]
-- !private ["Ps24_DestructorSafeContainer", "sort"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
@@ -513,18 +444,18 @@ depends-member:
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "addingTimeInterval"]
+- !private ["Ps9_Hashable", "count"]
 - !private ["Ps9_Hashable", "date"]
 - ["Ps9_Hashable", "delegate"]
 - !private ["Ps9_Hashable", "delete"]
 - !private ["Ps9_Hashable", "entity"]
 - !private ["Ps9_Hashable", "fetch"]
-- !private ["Ps9_Hashable", "fetchLimit"]
 - !private ["Ps9_Hashable", "friend"]
 - !private ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "isSender"]
+- !private ["Ps9_Hashable", "lastMessage"]
 - !private ["Ps9_Hashable", "name"]
 - !private ["Ps9_Hashable", "persistentContainer"]
-- !private ["Ps9_Hashable", "predicate"]
 - !private ["Ps9_Hashable", "profileImageName"]
 - !private ["Ps9_Hashable", "saveContext"]
 - ["Ps9_Hashable", "shared"]
@@ -537,48 +468,46 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "addingTimeInterval"]
-- !private ["Ps21_ObjectiveCBridgeable", "append"]
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
-- ["Ps21_ObjectiveCBridgeable", "init"]
-- !private ["Ps21_ObjectiveCBridgeable", "sort"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
 depends-nominal:
 - "Ps9AnyObject"
 - "C17FacebookMessenger11AppDelegate"
 - "Sa"
-- "Ps23BidirectionalCollection"
-- "Ps22BidirectionalIndexable"
+- !private "Ps23BidirectionalCollection"
+- !private "Ps22BidirectionalIndexable"
 - "Sb"
 - "Ps7CVarArg"
-- "Ps10Collection"
+- !private "Ps10Collection"
 - !private "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - !private "Ps29CustomPlaygroundQuickLookable"
-- "Ps17CustomReflectable"
+- !private "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
 - "C17FacebookMessenger11DataManager"
 - "V10Foundation4Date"
 - "Sd"
 - "Ps9Equatable"
 - "Ps5Error"
-- "Ps25ExpressibleByArrayLiteral"
+- !private "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
 - !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
-- "Ps23ExpressibleByNilLiteral"
+- !private "Ps23ExpressibleByNilLiteral"
 - !private "Ps32ExpressibleByStringInterpolation"
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - "C17FacebookMessenger6Friend"
 - "Ps8Hashable"
-- "Ps9Indexable"
-- "Ps13IndexableBase"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
 - "Si"
 - !private "Ps16IteratorProtocol"
 - !private "Ps25LosslessStringConvertible"
 - "C17FacebookMessenger7Message"
 - !private "Ps10MirrorPath"
-- "Ps17MutableCollection"
-- "Ps16MutableIndexable"
+- !private "Ps17MutableCollection"
+- !private "Ps16MutableIndexable"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "CSo19NSEntityDescription"
@@ -593,17 +522,16 @@ depends-nominal:
 - "PSo16NSObjectProtocol"
 - !private "CSo21NSPersistentContainer"
 - !private "CSo24NSPersistentStoreRequest"
-- "CSo11NSPredicate"
 - !private "PSo14NSSecureCoding"
 - "CSo16NSSortDescriptor"
 - !private "CSo8NSString"
 - "Sq"
-- "Ps22RandomAccessCollection"
-- "Ps21RandomAccessIndexable"
-- "Ps26RangeReplaceableCollection"
-- "Ps25RangeReplaceableIndexable"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps21RandomAccessIndexable"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps25RangeReplaceableIndexable"
 - !private "P10Foundation20ReferenceConvertible"
-- "Ps8Sequence"
+- !private "Ps8Sequence"
 - !private "Ps10Streamable"
 - "SS"
 - !private "Ps16TextOutputStream"
@@ -611,8 +539,8 @@ depends-nominal:
 - !private "PSo21UIApplicationDelegate"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
-- "Ps14_ArrayProtocol"
-- "Ps24_DestructorSafeContainer"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps24_DestructorSafeContainer"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
@@ -620,7 +548,7 @@ depends-nominal:
 - !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
 - !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
-- "Ps21_ObjectiveCBridgeable"
+- !private "Ps21_ObjectiveCBridgeable"
 depends-dynamic-lookup:
 depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
@@ -633,4 +561,4 @@ depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "4359e180c9866c4749e41a16f6285843"
+interface-hash: "22217f566f7bad25227b22174e601c3b"

@@ -6,26 +6,26 @@ provides-nominal:
 provides-member:
 - ["C17FacebookMessenger8ChatCell", ""]
 provides-dynamic-lookup:
-- "bubbleTextView"
-- "bubbleImageView"
-- "grayBubbleImage"
-- "blueBubbleImage"
-- "messageTextView"
-- "setupViews"
 - "profileImageView"
+- "bubbleTextView"
+- "grayBubbleImage"
+- "messageTextView"
+- "blueBubbleImage"
+- "setupViews"
+- "bubbleImageView"
 depends-top-level:
-- "BooleanLiteralType"
-- "UIFont"
+- "UITextView"
+- "UIImageView"
+- !private "UIEdgeInsets"
+- "ChatCell"
 - "AssignmentPrecedence"
 - "BaseCell"
-- !private "UIEdgeInsets"
 - !private "StringLiteralType"
-- "UIView"
-- "ChatCell"
-- "UIImageView"
+- "UIFont"
 - "UIColor"
-- "UITextView"
+- "UIView"
 - "UIImage"
+- "BooleanLiteralType"
 depends-member:
 - ["Ps9AnyObject", "ChatCell"]
 - ["Ps9AnyObject", "UIColor"]

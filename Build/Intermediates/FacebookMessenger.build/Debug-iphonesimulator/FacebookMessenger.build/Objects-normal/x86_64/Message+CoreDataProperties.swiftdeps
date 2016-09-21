@@ -10,17 +10,17 @@ provides-member:
 - ["C17FacebookMessenger7Message", "friend"]
 provides-dynamic-lookup:
 - "isSender"
-- "text"
-- "date"
 - "friend"
+- "date"
+- "text"
 depends-top-level:
 - "Message"
-- "NSFetchRequest"
-- "Friend"
-- "Bool"
-- !private "StringLiteralType"
 - "Date"
+- "Bool"
+- "NSFetchRequest"
+- !private "StringLiteralType"
 - "String"
+- "Friend"
 depends-member:
 - !private ["Ps9AnyObject", "NSFetchRequest"]
 - ["Ps9AnyObject", "date"]

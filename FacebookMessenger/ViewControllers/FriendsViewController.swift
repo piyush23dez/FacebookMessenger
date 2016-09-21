@@ -12,47 +12,68 @@ import CoreData
 class FriendsViewController: UICollectionViewController {
     
     fileprivate let cellId = "cellId"
-    fileprivate var messages = [Message]()
+    
+    lazy var fetchResultsController: NSFetchedResultsController<NSFetchRequestResult> = {
+     
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Friend")
+        fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "lastMessage.date", ascending: false)]
+        let context = DataManager.sharedManager.delegate?.persistentContainer.viewContext
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context!, sectionNameKeyPath: nil, cacheName: nil)
+        return frc
+    }()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
+        do {
+            try fetchResultsController.performFetch()
+        }
+        catch let error {
+            print(error)
+        }
+        
         navigationItem.title = "Recent"
         collectionView?.alwaysBounceVertical = true
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(MessageCell.self, forCellWithReuseIdentifier: cellId)
-        setupData()
         
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        print(documentsPath)
+        //let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        //print(documentsPath)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.isHidden = false
         
-        DispatchQueue.main.async {
-           self.reload()
+        if (collectionView?.indexPathsForSelectedItems?.count)! > 0 {
+            reload()
         }
     }
     
     private func reload() {
-        DataManager.sharedManager.load()
-        setupData()
-        collectionView?.reloadData()
+        DispatchQueue.main.async {
+            self.collectionView?.reloadData()
+        }
     }
 }
 
 extension FriendsViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return messages.count
+        
+        if let count = fetchResultsController.sections?[0].numberOfObjects {
+            return count
+        }
+        return 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let friend = fetchResultsController.object(at: indexPath) as? Friend
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? MessageCell
-        cell?.message = messages[indexPath.item]
+        cell?.message = friend?.lastMessage
+        
         return cell!
     }
     
@@ -69,15 +90,9 @@ extension FriendsViewController: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let chatlLogViewController = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
-        chatlLogViewController.friend = messages[indexPath.item].friend
+        let friend = fetchResultsController.object(at: indexPath) as? Friend       
+        chatlLogViewController.friend = friend
         navigationController?.pushViewController(chatlLogViewController, animated: true)
-    }
-}
-
-private extension FriendsViewController {
-    
-    func setupData() {
-        messages = DataManager.sharedManager.getMessages()
     }
 }
 

@@ -177,6 +177,7 @@ SWIFT_CLASS("_TtC17FacebookMessenger17ChatLogController")
 @property (nonatomic, strong) NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull fetchResultsController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidDisappear:(BOOL)animated;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -230,21 +231,19 @@ SWIFT_CLASS("_TtC17FacebookMessenger6Friend")
 @interface Friend (SWIFT_EXTENSION(FacebookMessenger))
 @property (nonatomic, copy) NSString * _Nullable name;
 @property (nonatomic, copy) NSString * _Nullable profileImageName;
+@property (nonatomic, strong) Message * _Nullable lastMessage;
 @property (nonatomic, strong) NSSet * _Nullable messages;
 @end
 
 
 SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 @interface FriendsViewController : UICollectionViewController
+@property (nonatomic, strong) NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull fetchResultsController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface FriendsViewController (SWIFT_EXTENSION(FacebookMessenger))
 @end
 
 
