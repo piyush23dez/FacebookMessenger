@@ -112,8 +112,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import CoreGraphics;
-@import Foundation;
 @import CoreData;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -165,18 +165,27 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UIImage * _N
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSBlockOperation;
 @class Friend;
 @class UICollectionViewLayout;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC17FacebookMessenger17ChatLogController")
 @interface ChatLogController : UICollectionViewController
+@property (nonatomic, copy) NSArray<NSBlockOperation *> * _Nonnull blockOperations;
 @property (nonatomic, strong, getter=friend, setter=setFriend:) Friend * _Nullable friend_;
+@property (nonatomic, strong) NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull fetchResultsController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface ChatLogController (SWIFT_EXTENSION(FacebookMessenger)) <NSFetchedResultsControllerDelegate>
+- (void)controller:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller didChangeObject:(id _Nonnull)anObject atIndexPath:(NSIndexPath * _Nullable)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath * _Nullable)newIndexPath;
+- (void)controllerDidChangeContent:(NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull)controller;
 @end
 
 @class UICollectionView;

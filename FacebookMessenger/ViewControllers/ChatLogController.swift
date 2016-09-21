@@ -7,21 +7,20 @@
 
 
 import UIKit
+import CoreData
 
 class ChatLogController: UICollectionViewController {
     
     //fileprivate access restricts the use of an entity to its own defining source file.
     fileprivate let cellId = "cellId"
-    fileprivate var messages = [Message]()
    
     //private access restricts the use of an entity to the enclosing declaration.
     private var bottomConstraint: NSLayoutConstraint?
-
+    var blockOperations = [BlockOperation]()
+    
     var friend: Friend? {
-        
         didSet {
-            messages = friend?.messages?.allObjects as! [Message]
-            messages.sort { $0.date! < $1.date! } //ascending date order
+            navigationItem.title = friend?.name
         }
     }
     
@@ -45,13 +44,33 @@ class ChatLogController: UICollectionViewController {
         return button
     }()
     
+    lazy var fetchResultsController: NSFetchedResultsController<NSFetchRequestResult> = {
+        
+        var fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Message")
+        fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "date", ascending: true)]
+        fetchRequest.predicate = NSPredicate(format: "friend.name = %@", self.friend!.name!)
+        
+        let context = DataManager.sharedManager.delegate?.persistentContainer.viewContext
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context!, sectionNameKeyPath: nil, cacheName: nil)
+        frc.delegate = self
+        return frc
+        
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        do {
+            try fetchResultsController.performFetch()
+            print(fetchResultsController.sections?[0].numberOfObjects)
+        }
+        catch let error {
+            print(error)
+        }
+        
+        
         tabBarController?.tabBar.isHidden = true
         
-        navigationItem.title = friend?.name
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Simulate", style: .plain, target: self, action: #selector(simulate))
         
         collectionView?.backgroundColor = UIColor.white
@@ -71,8 +90,9 @@ class ChatLogController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        let objectsCount = fetchResultsController.sections?[0].numberOfObjects
         DispatchQueue.main.async {
-            let indexPath = IndexPath(item: self.messages.count-1, section: 0)
+            let indexPath = IndexPath(item: objectsCount!-1, section: 0)
             self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
         }
     }
@@ -103,6 +123,7 @@ class ChatLogController: UICollectionViewController {
     @objc private func handleKeyboardNotification(_ notification: Notification) {
         
         if let userInfo = notification.userInfo {
+            
             if let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
                 
                 let isKeyboardShowing = notification.name.rawValue == Notification.Name.UIKeyboardWillShow.rawValue
@@ -127,46 +148,32 @@ class ChatLogController: UICollectionViewController {
         }
         
         let context = DataManager.sharedManager.delegate!.persistentContainer.viewContext
-        let newMessage = DataManager.sharedManager.createMessage(text: inputTextField.text!, minutesAgo: 1, frind: friend!, context: context, isSender: true)
-        self.messages.append(newMessage)
+        DataManager.sharedManager.createMessage(text: inputTextField.text!, minutesAgo: 1, frind: friend!, context: context, isSender: true)
         
-        save(newMessage: newMessage)
-        scrollToBottom()
+        save()
         inputTextField.text = nil
     }
     
     @objc private func simulate() {
         let context = DataManager.sharedManager.delegate!.persistentContainer.viewContext
-        let newMessage = DataManager.sharedManager.createMessage(text: "Receiving new mesage from friend", minutesAgo: 2, frind: friend!, context: context)
-        
-        messages.append(newMessage)
-        DataManager.sharedManager.delegate!.saveContext()
-        messages.sort { $0.date! < $1.date! }
-        
-        let newIndex = self.messages.index(of: newMessage)
-        if let index = newIndex, index < messages.count-1 {
-           insertMessage(at: index)
-        }
-        else {
-            insertMessage(at: newIndex!)
-            scrollTo(indexPath: IndexPath(item: newIndex!, section: 0))
-        }
+        DataManager.sharedManager.createMessage(text: "Receiving new mesage from friend", minutesAgo: 2, frind: friend!, context: context)
+        DataManager.sharedManager.createMessage(text: "Another message from friend", minutesAgo: 2, frind: friend!, context: context)
+
+        save()
     }
     
-    private func insertMessage(at index: Int) {
-        let indexPath = IndexPath(item: index , section: 0)
-        self.collectionView!.insertItems(at: [indexPath])
+    fileprivate func insertMessage(at indexPaths: [IndexPath]) {
+        self.collectionView!.insertItems(at: indexPaths)
     }
     
-    private func save(newMessage: Message) {
+    fileprivate func save() {
         
         DispatchQueue.main.async {
             DataManager.sharedManager.delegate!.saveContext()
-            self.insertMessage(at: self.messages.count-1)
         }
     }
     
-    private func scrollTo(indexPath: IndexPath) {
+    fileprivate func scrollTo(indexPath: IndexPath) {
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.3, delay: 0, options: .layoutSubviews, animations: {
                 self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
@@ -174,27 +181,63 @@ class ChatLogController: UICollectionViewController {
         }
     }
     
-    private func scrollToBottom() {
+    fileprivate func scrollToBottom() {
+        
+        let objectsCount = fetchResultsController.sections?[0].numberOfObjects
+        
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.3, delay: 0, options: .layoutSubviews, animations: {
-                let indexPath = IndexPath(item: self.messages.count-1, section: 0)
+                let indexPath = IndexPath(item: objectsCount!-1, section: 0)
                 self.collectionView?.scrollToItem(at: indexPath, at: .bottom, animated: false)
             }, completion: nil)
         }
     }
 }
 
+
+extension ChatLogController: NSFetchedResultsControllerDelegate {
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        if type == .insert {
+            
+            let blockOperation = BlockOperation(block: {
+                self.insertMessage(at: [newIndexPath!])
+            })
+            
+            blockOperations.append(blockOperation)
+        }
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        collectionView?.performBatchUpdates({ 
+            for operation in self.blockOperations {
+                operation.start()
+            }
+        }, completion: { (finish) in
+            self.scrollToBottom()
+        })
+    }
+}
+
+
 extension ChatLogController: UICollectionViewDelegateFlowLayout {
+
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return messages.count
+        if let objects = fetchResultsController.sections?[0].numberOfObjects {
+            return objects
+        }
+        return 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ChatCell
-        cell.messageTextView.text = messages[indexPath.item].text
+        let message = fetchResultsController.object(at: indexPath) as? Message
         
-        if let messageText = messages[indexPath.item].text, let profileImageName = messages[indexPath.item].friend?.profileImageName {
+        cell.messageTextView.text = message!.text
+        
+        if let profileImageName = message!.friend?.profileImageName {
             
             cell.profileImageView.image = UIImage(named: profileImageName)
             
@@ -202,9 +245,9 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
             let size = CGSize(width: 250, height: 1000)
             let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
             let attributes = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 18)]
-            let estimatedFrame = NSString(string: messageText).boundingRect(with: size, options: options, attributes: attributes, context: nil)
+            let estimatedFrame = NSString(string: message!.text!).boundingRect(with: size, options: options, attributes: attributes, context: nil)
            
-            if !messages[indexPath.item].isSender {
+            if !message!.isSender {
                 cell.messageTextView.frame = CGRect(x: 48+10, y: 0, width: estimatedFrame.width+16, height: estimatedFrame.height + 20)
                
                 cell.bubbleTextView.frame = CGRect(x: 48-10, y: -4, width: estimatedFrame.width+16+8+16, height: estimatedFrame.height + 20 + 6)
@@ -231,7 +274,9 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if let messageText = messages[indexPath.item].text {
+        let message = fetchResultsController.object(at: indexPath) as? Message
+
+        if let messageText = message!.text {
           
             //Calculate estimated frame based on estimated width and height
             let size = CGSize(width: 250, height: 1000)
@@ -256,4 +301,5 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
     fileprivate func dismissKeyboard() {
         inputTextField.resignFirstResponder()
     }
+
 }
