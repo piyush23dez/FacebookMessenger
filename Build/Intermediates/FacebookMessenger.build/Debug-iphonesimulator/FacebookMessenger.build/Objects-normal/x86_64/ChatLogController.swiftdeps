@@ -6,79 +6,76 @@ provides-nominal:
 provides-member:
 - ["C17FacebookMessenger17ChatLogController", ""]
 provides-dynamic-lookup:
-- "setupInputView"
-- "friend"
-- "addKeyboardObservers"
-- "fetchResultsController"
-- "simulate"
 - "handleSend"
-- "viewWillAppear"
-- "handleKeyboardNotification"
-- "blockOperations"
-- "viewDidDisappear"
+- "friend"
 - "controller"
-- "controllerDidChangeContent"
-- "collectionView"
-- "collectionView"
-- "collectionView"
-- "collectionView"
-- "collectionView"
+- "setupInputView"
+- "simulate"
 - "viewDidLoad"
+- "controllerDidChangeContent"
+- "viewDidDisappear"
+- "viewWillAppear"
+- "collectionView"
+- "collectionView"
+- "collectionView"
+- "collectionView"
+- "collectionView"
+- "addKeyboardObservers"
+- "handleKeyboardNotification"
 depends-top-level:
-- !private "+"
-- !private "CGRect"
-- "UIColor"
-- !private "weak"
-- "NSFetchedResultsChangeType"
-- !private "NSFontAttributeName"
-- "/"
-- !private "DispatchQueue"
-- !private "UIImage"
-- "NSFetchedResultsController"
-- !private "!"
-- "NSFetchRequestResult"
-- "UITextField"
-- !private "NSPredicate"
-- "ChatLogController"
-- "UIButton"
-- !private "Notification"
-- "Array"
-- !private "UIKeyboardFrameEndUserInfoKey"
-- !private "print"
-- "Friend"
-- !private "NotificationCenter"
-- "UICollectionViewController"
-- "UICollectionViewDelegateFlowLayout"
-- !private "NSValue"
-- "UICollectionViewLayout"
-- !private "NSFetchRequest"
-- "UIView"
-- !private "NSStringDrawingOptions"
-- "UICollectionViewCell"
-- !private "ChatCell"
-- !private "TernaryPrecedence"
-- "BlockOperation"
-- !private "DataManager"
 - !private "=="
 - "AssignmentPrecedence"
+- !private "-"
+- !private "ChatCell"
 - "CastingPrecedence"
-- "UIEdgeInsets"
-- "Int"
+- !private "CGRect"
+- "UICollectionViewDelegateFlowLayout"
+- "UIView"
+- "UIFont"
+- !private "NSFontAttributeName"
+- !private "TernaryPrecedence"
+- "NSFetchedResultsControllerDelegate"
+- "Friend"
+- "IndexPath"
+- "Bool"
+- !private "NotificationCenter"
+- !private "UIImage"
+- "DataManager"
+- "UITextField"
+- "NSFetchedResultsChangeType"
+- !private "BooleanLiteralType"
+- !private "!"
+- "UICollectionViewLayout"
 - "StringLiteralType"
 - !private "UIBarButtonItem"
-- "CGSize"
-- !private "Message"
-- "UICollectionView"
-- !private "NSString"
-- "UIFont"
-- "Bool"
-- "IndexPath"
-- !private "-"
-- !private "Dictionary"
-- !private "NSSortDescriptor"
+- "Array"
+- "NSFetchRequestResult"
+- !private "NSFetchRequest"
+- "/"
+- "UICollectionViewCell"
+- !private "NSStringDrawingOptions"
+- !private "Notification"
+- "UIEdgeInsets"
+- "NSFetchedResultsController"
+- !private "NSValue"
 - "NSLayoutConstraint"
-- "NSFetchedResultsControllerDelegate"
-- !private "BooleanLiteralType"
+- !private "NSPredicate"
+- "UIColor"
+- "Message"
+- "ChatLogController"
+- !private "NSString"
+- "CGSize"
+- "UIButton"
+- !private "UIKeyboardFrameEndUserInfoKey"
+- !private "NSSortDescriptor"
+- "UICollectionView"
+- !private "print"
+- "UICollectionViewController"
+- "Int"
+- "BlockOperation"
+- !private "+"
+- !private "Dictionary"
+- !private "DispatchQueue"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "Stride"]
 - !private ["Ps16AbsoluteValuable", "_DisallowMixedSignArithmetic"]
@@ -86,10 +83,10 @@ depends-member:
 - !private ["Ps9AnyObject", "CGRect"]
 - !private ["Ps9AnyObject", "CGSize"]
 - !private ["Ps9AnyObject", "ChatCell"]
-- !private ["Ps9AnyObject", "DataManager"]
+- ["Ps9AnyObject", "DataManager"]
 - !private ["Ps9AnyObject", "DispatchQueue"]
 - !private ["Ps9AnyObject", "IndexPath"]
-- !private ["Ps9AnyObject", "NSFetchRequest"]
+- !private ["Ps9AnyObject", "Message"]
 - !private ["Ps9AnyObject", "NSFetchedResultsController"]
 - !private ["Ps9AnyObject", "NSFontAttributeName"]
 - !private ["Ps9AnyObject", "NSLayoutConstraint"]
@@ -135,9 +132,10 @@ depends-member:
 - ["Ps9AnyObject", "controllerWillChangeContent"]
 - !private ["Ps9AnyObject", "createMessage"]
 - !private ["Ps9AnyObject", "default"]
-- !private ["Ps9AnyObject", "delegate"]
+- ["Ps9AnyObject", "delegate"]
 - !private ["Ps9AnyObject", "dequeueReusableCell"]
 - ["Ps9AnyObject", "dismissKeyboard"]
+- !private ["Ps9AnyObject", "fetchRequest"]
 - ["Ps9AnyObject", "fetchResultsController"]
 - ["Ps9AnyObject", "fetchResultsController.storage"]
 - ["Ps9AnyObject", "font"]
@@ -157,13 +155,15 @@ depends-member:
 - !private ["Ps9AnyObject", "isSender"]
 - !private ["Ps9AnyObject", "layoutIfNeeded"]
 - !private ["Ps9AnyObject", "main"]
+- ["Ps9AnyObject", "managedContext"]
 - !private ["Ps9AnyObject", "messageTextView"]
 - !private ["Ps9AnyObject", "name"]
 - !private ["Ps9AnyObject", "navigationItem"]
 - !private ["Ps9AnyObject", "object"]
+- !private ["Ps9AnyObject", "perform"]
 - !private ["Ps9AnyObject", "performBatchUpdates"]
 - !private ["Ps9AnyObject", "performFetch"]
-- !private ["Ps9AnyObject", "persistentContainer"]
+- ["Ps9AnyObject", "persistentContainer"]
 - ["Ps9AnyObject", "placeholder"]
 - !private ["Ps9AnyObject", "predicate"]
 - !private ["Ps9AnyObject", "print"]
@@ -175,7 +175,6 @@ depends-member:
 - !private ["Ps9AnyObject", "resignFirstResponder"]
 - !private ["Ps9AnyObject", "rightBarButtonItem"]
 - ["Ps9AnyObject", "save"]
-- !private ["Ps9AnyObject", "saveContext"]
 - ["Ps9AnyObject", "scrollTo"]
 - ["Ps9AnyObject", "scrollToBottom"]
 - !private ["Ps9AnyObject", "scrollToItem"]
@@ -184,7 +183,7 @@ depends-member:
 - ["Ps9AnyObject", "setTitle"]
 - ["Ps9AnyObject", "setTitleColor"]
 - ["Ps9AnyObject", "setupInputView"]
-- !private ["Ps9AnyObject", "sharedManager"]
+- ["Ps9AnyObject", "sharedManager"]
 - ["Ps9AnyObject", "simulate"]
 - !private ["Ps9AnyObject", "sortDescriptors"]
 - !private ["Ps9AnyObject", "start"]
@@ -197,16 +196,14 @@ depends-member:
 - !private ["Ps9AnyObject", "title"]
 - ["Ps9AnyObject", "titleLabel"]
 - !private ["Ps9AnyObject", "view"]
-- !private ["Ps9AnyObject", "viewContext"]
+- ["Ps9AnyObject", "viewContext"]
 - ["Ps9AnyObject", "viewDidDisappear"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", "viewWillAppear"]
-- !private ["Ps9AnyObject", "weak"]
 - ["Ps9AnyObject", "white"]
 - ["Ps9AnyObject", ""]
-- !private ["C17FacebookMessenger11AppDelegate", "deinit"]
-- !private ["C17FacebookMessenger11AppDelegate", "persistentContainer"]
-- !private ["C17FacebookMessenger11AppDelegate", "saveContext"]
+- ["C17FacebookMessenger11AppDelegate", "deinit"]
+- ["C17FacebookMessenger11AppDelegate", "persistentContainer"]
 - !private ["Sa", "Element"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "Iterator"]
@@ -306,7 +303,7 @@ depends-member:
 - !private ["Ps7CVarArg", "CGRect"]
 - !private ["Ps7CVarArg", "CGSize"]
 - !private ["Ps7CVarArg", "ChatCell"]
-- !private ["Ps7CVarArg", "DataManager"]
+- ["Ps7CVarArg", "DataManager"]
 - !private ["Ps7CVarArg", "DispatchQueue"]
 - !private ["Ps7CVarArg", "Element"]
 - !private ["Ps7CVarArg", "Index"]
@@ -315,7 +312,7 @@ depends-member:
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
 - !private ["Ps7CVarArg", "Iterator"]
 - !private ["Ps7CVarArg", "Key"]
-- !private ["Ps7CVarArg", "NSFetchRequest"]
+- !private ["Ps7CVarArg", "Message"]
 - !private ["Ps7CVarArg", "NSFetchedResultsController"]
 - !private ["Ps7CVarArg", "NSFontAttributeName"]
 - !private ["Ps7CVarArg", "NSLayoutConstraint"]
@@ -370,6 +367,7 @@ depends-member:
 - !private ["Ps7CVarArg", "delegate"]
 - !private ["Ps7CVarArg", "dequeueReusableCell"]
 - ["Ps7CVarArg", "dismissKeyboard"]
+- !private ["Ps7CVarArg", "fetchRequest"]
 - ["Ps7CVarArg", "fetchResultsController"]
 - ["Ps7CVarArg", "fetchResultsController.storage"]
 - ["Ps7CVarArg", "font"]
@@ -389,13 +387,15 @@ depends-member:
 - !private ["Ps7CVarArg", "isSender"]
 - !private ["Ps7CVarArg", "layoutIfNeeded"]
 - !private ["Ps7CVarArg", "main"]
+- ["Ps7CVarArg", "managedContext"]
 - !private ["Ps7CVarArg", "messageTextView"]
 - !private ["Ps7CVarArg", "name"]
 - !private ["Ps7CVarArg", "navigationItem"]
 - !private ["Ps7CVarArg", "object"]
+- !private ["Ps7CVarArg", "perform"]
 - !private ["Ps7CVarArg", "performBatchUpdates"]
 - !private ["Ps7CVarArg", "performFetch"]
-- !private ["Ps7CVarArg", "persistentContainer"]
+- ["Ps7CVarArg", "persistentContainer"]
 - ["Ps7CVarArg", "placeholder"]
 - !private ["Ps7CVarArg", "predicate"]
 - !private ["Ps7CVarArg", "print"]
@@ -408,7 +408,6 @@ depends-member:
 - !private ["Ps7CVarArg", "resignFirstResponder"]
 - !private ["Ps7CVarArg", "rightBarButtonItem"]
 - ["Ps7CVarArg", "save"]
-- !private ["Ps7CVarArg", "saveContext"]
 - ["Ps7CVarArg", "scrollTo"]
 - ["Ps7CVarArg", "scrollToBottom"]
 - !private ["Ps7CVarArg", "scrollToItem"]
@@ -430,11 +429,10 @@ depends-member:
 - !private ["Ps7CVarArg", "title"]
 - ["Ps7CVarArg", "titleLabel"]
 - !private ["Ps7CVarArg", "view"]
-- !private ["Ps7CVarArg", "viewContext"]
+- ["Ps7CVarArg", "viewContext"]
 - ["Ps7CVarArg", "viewDidDisappear"]
 - ["Ps7CVarArg", "viewDidLoad"]
 - ["Ps7CVarArg", "viewWillAppear"]
-- !private ["Ps7CVarArg", "weak"]
 - ["Ps7CVarArg", "white"]
 - ["Ps7CVarArg", ""]
 - !private ["C17FacebookMessenger8ChatCell", "blueBubbleImage"]
@@ -449,12 +447,12 @@ depends-member:
 - !private ["C17FacebookMessenger17ChatLogController", "CGRect"]
 - ["C17FacebookMessenger17ChatLogController", "CGSize"]
 - !private ["C17FacebookMessenger17ChatLogController", "ChatCell"]
-- !private ["C17FacebookMessenger17ChatLogController", "DataManager"]
+- ["C17FacebookMessenger17ChatLogController", "DataManager"]
 - !private ["C17FacebookMessenger17ChatLogController", "DispatchQueue"]
 - ["C17FacebookMessenger17ChatLogController", "Friend"]
 - ["C17FacebookMessenger17ChatLogController", "IndexPath"]
 - ["C17FacebookMessenger17ChatLogController", "Int"]
-- !private ["C17FacebookMessenger17ChatLogController", "Message"]
+- ["C17FacebookMessenger17ChatLogController", "Message"]
 - !private ["C17FacebookMessenger17ChatLogController", "NSFetchRequest"]
 - ["C17FacebookMessenger17ChatLogController", "NSFetchRequestResult"]
 - ["C17FacebookMessenger17ChatLogController", "NSFetchedResultsChangeType"]
@@ -481,7 +479,7 @@ depends-member:
 - ["C17FacebookMessenger17ChatLogController", "UITextField"]
 - ["C17FacebookMessenger17ChatLogController", "UIView"]
 - !private ["C17FacebookMessenger17ChatLogController", "addKeyboardObservers"]
-- ["C17FacebookMessenger17ChatLogController", "blockOperations"]
+- !private ["C17FacebookMessenger17ChatLogController", "blockOperations"]
 - !private ["C17FacebookMessenger17ChatLogController", "bottomConstraint"]
 - !private ["C17FacebookMessenger17ChatLogController", "cellId"]
 - ["C17FacebookMessenger17ChatLogController", "collectionView"]
@@ -490,7 +488,7 @@ depends-member:
 - ["C17FacebookMessenger17ChatLogController", "controllerWillChangeContent"]
 - ["C17FacebookMessenger17ChatLogController", "deinit"]
 - !private ["C17FacebookMessenger17ChatLogController", "dismissKeyboard"]
-- ["C17FacebookMessenger17ChatLogController", "fetchResultsController"]
+- !private ["C17FacebookMessenger17ChatLogController", "fetchResultsController"]
 - !private ["C17FacebookMessenger17ChatLogController", "fetchResultsController.storage"]
 - ["C17FacebookMessenger17ChatLogController", "friend"]
 - !private ["C17FacebookMessenger17ChatLogController", "handleKeyboardNotification"]
@@ -499,6 +497,7 @@ depends-member:
 - !private ["C17FacebookMessenger17ChatLogController", "inputMessageView"]
 - !private ["C17FacebookMessenger17ChatLogController", "inputTextField"]
 - !private ["C17FacebookMessenger17ChatLogController", "insertMessage"]
+- !private ["C17FacebookMessenger17ChatLogController", "managedContext"]
 - !private ["C17FacebookMessenger17ChatLogController", "navigationItem"]
 - !private ["C17FacebookMessenger17ChatLogController", "print"]
 - !private ["C17FacebookMessenger17ChatLogController", "removeObservers"]
@@ -513,7 +512,6 @@ depends-member:
 - ["C17FacebookMessenger17ChatLogController", "viewDidDisappear"]
 - ["C17FacebookMessenger17ChatLogController", "viewDidLoad"]
 - ["C17FacebookMessenger17ChatLogController", "viewWillAppear"]
-- !private ["C17FacebookMessenger17ChatLogController", "weak"]
 - !private ["Ps10Collection", "Element"]
 - !private ["Ps10Collection", "Index"]
 - !private ["Ps10Collection", "IndexDistance"]
@@ -542,7 +540,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "CGRect"]
 - !private ["Ps28CustomDebugStringConvertible", "CGSize"]
 - !private ["Ps28CustomDebugStringConvertible", "ChatCell"]
-- !private ["Ps28CustomDebugStringConvertible", "DataManager"]
+- ["Ps28CustomDebugStringConvertible", "DataManager"]
 - !private ["Ps28CustomDebugStringConvertible", "DispatchQueue"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
@@ -550,7 +548,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "IndexPath"]
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
 - !private ["Ps28CustomDebugStringConvertible", "Key"]
-- !private ["Ps28CustomDebugStringConvertible", "NSFetchRequest"]
+- !private ["Ps28CustomDebugStringConvertible", "Message"]
 - !private ["Ps28CustomDebugStringConvertible", "NSFetchedResultsController"]
 - !private ["Ps28CustomDebugStringConvertible", "NSFontAttributeName"]
 - !private ["Ps28CustomDebugStringConvertible", "NSLayoutConstraint"]
@@ -605,6 +603,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
 - !private ["Ps28CustomDebugStringConvertible", "dequeueReusableCell"]
 - ["Ps28CustomDebugStringConvertible", "dismissKeyboard"]
+- !private ["Ps28CustomDebugStringConvertible", "fetchRequest"]
 - ["Ps28CustomDebugStringConvertible", "fetchResultsController"]
 - ["Ps28CustomDebugStringConvertible", "fetchResultsController.storage"]
 - ["Ps28CustomDebugStringConvertible", "font"]
@@ -625,13 +624,15 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "isSender"]
 - !private ["Ps28CustomDebugStringConvertible", "layoutIfNeeded"]
 - !private ["Ps28CustomDebugStringConvertible", "main"]
+- ["Ps28CustomDebugStringConvertible", "managedContext"]
 - !private ["Ps28CustomDebugStringConvertible", "messageTextView"]
 - !private ["Ps28CustomDebugStringConvertible", "name"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
 - !private ["Ps28CustomDebugStringConvertible", "object"]
+- !private ["Ps28CustomDebugStringConvertible", "perform"]
 - !private ["Ps28CustomDebugStringConvertible", "performBatchUpdates"]
 - !private ["Ps28CustomDebugStringConvertible", "performFetch"]
-- !private ["Ps28CustomDebugStringConvertible", "persistentContainer"]
+- ["Ps28CustomDebugStringConvertible", "persistentContainer"]
 - ["Ps28CustomDebugStringConvertible", "placeholder"]
 - !private ["Ps28CustomDebugStringConvertible", "predicate"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
@@ -644,7 +645,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "resignFirstResponder"]
 - !private ["Ps28CustomDebugStringConvertible", "rightBarButtonItem"]
 - ["Ps28CustomDebugStringConvertible", "save"]
-- !private ["Ps28CustomDebugStringConvertible", "saveContext"]
 - ["Ps28CustomDebugStringConvertible", "scrollTo"]
 - ["Ps28CustomDebugStringConvertible", "scrollToBottom"]
 - !private ["Ps28CustomDebugStringConvertible", "scrollToItem"]
@@ -668,11 +668,10 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "titleLabel"]
 - !private ["Ps28CustomDebugStringConvertible", "userInfo"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
-- !private ["Ps28CustomDebugStringConvertible", "viewContext"]
+- ["Ps28CustomDebugStringConvertible", "viewContext"]
 - ["Ps28CustomDebugStringConvertible", "viewDidDisappear"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", "viewWillAppear"]
-- !private ["Ps28CustomDebugStringConvertible", "weak"]
 - ["Ps28CustomDebugStringConvertible", "white"]
 - !private ["Ps28CustomDebugStringConvertible", "width"]
 - ["Ps28CustomDebugStringConvertible", ""]
@@ -714,7 +713,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "CGRect"]
 - !private ["Ps23CustomStringConvertible", "CGSize"]
 - !private ["Ps23CustomStringConvertible", "ChatCell"]
-- !private ["Ps23CustomStringConvertible", "DataManager"]
+- ["Ps23CustomStringConvertible", "DataManager"]
 - !private ["Ps23CustomStringConvertible", "DispatchQueue"]
 - !private ["Ps23CustomStringConvertible", "Element"]
 - !private ["Ps23CustomStringConvertible", "Index"]
@@ -723,7 +722,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "Iterator"]
 - !private ["Ps23CustomStringConvertible", "Key"]
-- !private ["Ps23CustomStringConvertible", "NSFetchRequest"]
+- !private ["Ps23CustomStringConvertible", "Message"]
 - !private ["Ps23CustomStringConvertible", "NSFetchedResultsController"]
 - !private ["Ps23CustomStringConvertible", "NSFontAttributeName"]
 - !private ["Ps23CustomStringConvertible", "NSLayoutConstraint"]
@@ -780,6 +779,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "delegate"]
 - !private ["Ps23CustomStringConvertible", "dequeueReusableCell"]
 - ["Ps23CustomStringConvertible", "dismissKeyboard"]
+- !private ["Ps23CustomStringConvertible", "fetchRequest"]
 - ["Ps23CustomStringConvertible", "fetchResultsController"]
 - ["Ps23CustomStringConvertible", "fetchResultsController.storage"]
 - ["Ps23CustomStringConvertible", "font"]
@@ -799,13 +799,15 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "isSender"]
 - !private ["Ps23CustomStringConvertible", "layoutIfNeeded"]
 - !private ["Ps23CustomStringConvertible", "main"]
+- ["Ps23CustomStringConvertible", "managedContext"]
 - !private ["Ps23CustomStringConvertible", "messageTextView"]
 - !private ["Ps23CustomStringConvertible", "name"]
 - !private ["Ps23CustomStringConvertible", "navigationItem"]
 - !private ["Ps23CustomStringConvertible", "object"]
+- !private ["Ps23CustomStringConvertible", "perform"]
 - !private ["Ps23CustomStringConvertible", "performBatchUpdates"]
 - !private ["Ps23CustomStringConvertible", "performFetch"]
-- !private ["Ps23CustomStringConvertible", "persistentContainer"]
+- ["Ps23CustomStringConvertible", "persistentContainer"]
 - ["Ps23CustomStringConvertible", "placeholder"]
 - !private ["Ps23CustomStringConvertible", "predicate"]
 - !private ["Ps23CustomStringConvertible", "print"]
@@ -818,7 +820,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "resignFirstResponder"]
 - !private ["Ps23CustomStringConvertible", "rightBarButtonItem"]
 - ["Ps23CustomStringConvertible", "save"]
-- !private ["Ps23CustomStringConvertible", "saveContext"]
 - ["Ps23CustomStringConvertible", "scrollTo"]
 - ["Ps23CustomStringConvertible", "scrollToBottom"]
 - !private ["Ps23CustomStringConvertible", "scrollToItem"]
@@ -841,17 +842,17 @@ depends-member:
 - ["Ps23CustomStringConvertible", "titleLabel"]
 - !private ["Ps23CustomStringConvertible", "userInfo"]
 - !private ["Ps23CustomStringConvertible", "view"]
-- !private ["Ps23CustomStringConvertible", "viewContext"]
+- ["Ps23CustomStringConvertible", "viewContext"]
 - ["Ps23CustomStringConvertible", "viewDidDisappear"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", "viewWillAppear"]
-- !private ["Ps23CustomStringConvertible", "weak"]
 - ["Ps23CustomStringConvertible", "white"]
 - ["Ps23CustomStringConvertible", ""]
 - !private ["C17FacebookMessenger11DataManager", "createMessage"]
-- !private ["C17FacebookMessenger11DataManager", "deinit"]
-- !private ["C17FacebookMessenger11DataManager", "delegate"]
-- !private ["C17FacebookMessenger11DataManager", "sharedManager"]
+- ["C17FacebookMessenger11DataManager", "deinit"]
+- ["C17FacebookMessenger11DataManager", "delegate"]
+- !private ["C17FacebookMessenger11DataManager", "save"]
+- ["C17FacebookMessenger11DataManager", "sharedManager"]
 - !private ["V10Foundation4Date", "deinit"]
 - !private ["VSC7Decimal", "Stride"]
 - !private ["VSC7Decimal", "deinit"]
@@ -890,12 +891,12 @@ depends-member:
 - !private ["Ps9Equatable", "CGRect"]
 - !private ["Ps9Equatable", "CGSize"]
 - !private ["Ps9Equatable", "ChatCell"]
-- !private ["Ps9Equatable", "DataManager"]
+- ["Ps9Equatable", "DataManager"]
 - !private ["Ps9Equatable", "DispatchQueue"]
 - !private ["Ps9Equatable", "IndexPath"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Iterator"]
-- !private ["Ps9Equatable", "NSFetchRequest"]
+- !private ["Ps9Equatable", "Message"]
 - !private ["Ps9Equatable", "NSFetchedResultsController"]
 - !private ["Ps9Equatable", "NSFontAttributeName"]
 - !private ["Ps9Equatable", "NSLayoutConstraint"]
@@ -955,6 +956,7 @@ depends-member:
 - !private ["Ps9Equatable", "dequeueReusableCell"]
 - ["Ps9Equatable", "dismissKeyboard"]
 - !private ["Ps9Equatable", "equal"]
+- !private ["Ps9Equatable", "fetchRequest"]
 - ["Ps9Equatable", "fetchResultsController"]
 - ["Ps9Equatable", "fetchResultsController.storage"]
 - ["Ps9Equatable", "font"]
@@ -977,14 +979,16 @@ depends-member:
 - !private ["Ps9Equatable", "layoutIfNeeded"]
 - !private ["Ps9Equatable", "layoutSubviews"]
 - !private ["Ps9Equatable", "main"]
+- ["Ps9Equatable", "managedContext"]
 - !private ["Ps9Equatable", "messageTextView"]
 - !private ["Ps9Equatable", "name"]
 - !private ["Ps9Equatable", "navigationItem"]
 - ["Ps9Equatable", "normal"]
 - !private ["Ps9Equatable", "object"]
+- !private ["Ps9Equatable", "perform"]
 - !private ["Ps9Equatable", "performBatchUpdates"]
 - !private ["Ps9Equatable", "performFetch"]
-- !private ["Ps9Equatable", "persistentContainer"]
+- ["Ps9Equatable", "persistentContainer"]
 - ["Ps9Equatable", "placeholder"]
 - !private ["Ps9Equatable", "plain"]
 - !private ["Ps9Equatable", "predicate"]
@@ -998,7 +1002,6 @@ depends-member:
 - !private ["Ps9Equatable", "resignFirstResponder"]
 - !private ["Ps9Equatable", "rightBarButtonItem"]
 - ["Ps9Equatable", "save"]
-- !private ["Ps9Equatable", "saveContext"]
 - ["Ps9Equatable", "scrollTo"]
 - ["Ps9Equatable", "scrollToBottom"]
 - !private ["Ps9Equatable", "scrollToItem"]
@@ -1025,11 +1028,10 @@ depends-member:
 - !private ["Ps9Equatable", "usesFontLeading"]
 - !private ["Ps9Equatable", "usesLineFragmentOrigin"]
 - !private ["Ps9Equatable", "view"]
-- !private ["Ps9Equatable", "viewContext"]
+- ["Ps9Equatable", "viewContext"]
 - ["Ps9Equatable", "viewDidDisappear"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", "viewWillAppear"]
-- !private ["Ps9Equatable", "weak"]
 - ["Ps9Equatable", "white"]
 - !private ["Ps9Equatable", "width"]
 - ["Ps9Equatable", ""]
@@ -1090,12 +1092,12 @@ depends-member:
 - !private ["Ps8Hashable", "CGRect"]
 - !private ["Ps8Hashable", "CGSize"]
 - !private ["Ps8Hashable", "ChatCell"]
-- !private ["Ps8Hashable", "DataManager"]
+- ["Ps8Hashable", "DataManager"]
 - !private ["Ps8Hashable", "DispatchQueue"]
 - !private ["Ps8Hashable", "IndexPath"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "Iterator"]
-- !private ["Ps8Hashable", "NSFetchRequest"]
+- !private ["Ps8Hashable", "Message"]
 - !private ["Ps8Hashable", "NSFetchedResultsController"]
 - !private ["Ps8Hashable", "NSFontAttributeName"]
 - !private ["Ps8Hashable", "NSLayoutConstraint"]
@@ -1154,6 +1156,7 @@ depends-member:
 - !private ["Ps8Hashable", "dequeueReusableCell"]
 - ["Ps8Hashable", "dismissKeyboard"]
 - !private ["Ps8Hashable", "equal"]
+- !private ["Ps8Hashable", "fetchRequest"]
 - ["Ps8Hashable", "fetchResultsController"]
 - ["Ps8Hashable", "fetchResultsController.storage"]
 - ["Ps8Hashable", "font"]
@@ -1174,13 +1177,15 @@ depends-member:
 - !private ["Ps8Hashable", "isSender"]
 - !private ["Ps8Hashable", "layoutIfNeeded"]
 - !private ["Ps8Hashable", "main"]
+- ["Ps8Hashable", "managedContext"]
 - !private ["Ps8Hashable", "messageTextView"]
 - !private ["Ps8Hashable", "name"]
 - !private ["Ps8Hashable", "navigationItem"]
 - !private ["Ps8Hashable", "object"]
+- !private ["Ps8Hashable", "perform"]
 - !private ["Ps8Hashable", "performBatchUpdates"]
 - !private ["Ps8Hashable", "performFetch"]
-- !private ["Ps8Hashable", "persistentContainer"]
+- ["Ps8Hashable", "persistentContainer"]
 - ["Ps8Hashable", "placeholder"]
 - !private ["Ps8Hashable", "plain"]
 - !private ["Ps8Hashable", "predicate"]
@@ -1194,7 +1199,6 @@ depends-member:
 - !private ["Ps8Hashable", "resignFirstResponder"]
 - !private ["Ps8Hashable", "rightBarButtonItem"]
 - ["Ps8Hashable", "save"]
-- !private ["Ps8Hashable", "saveContext"]
 - ["Ps8Hashable", "scrollTo"]
 - ["Ps8Hashable", "scrollToBottom"]
 - !private ["Ps8Hashable", "scrollToItem"]
@@ -1217,11 +1221,10 @@ depends-member:
 - ["Ps8Hashable", "titleLabel"]
 - !private ["Ps8Hashable", "userInfo"]
 - !private ["Ps8Hashable", "view"]
-- !private ["Ps8Hashable", "viewContext"]
+- ["Ps8Hashable", "viewContext"]
 - ["Ps8Hashable", "viewDidDisappear"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", "viewWillAppear"]
-- !private ["Ps8Hashable", "weak"]
 - ["Ps8Hashable", "white"]
 - ["Ps8Hashable", ""]
 - !private ["V10Foundation9IndexPath", "Iterator"]
@@ -1289,6 +1292,7 @@ depends-member:
 - !private ["V10Foundation11Measurement", "Stride"]
 - !private ["V10Foundation11Measurement", "deinit"]
 - ["C17FacebookMessenger7Message", "deinit"]
+- !private ["C17FacebookMessenger7Message", "fetchRequest"]
 - !private ["C17FacebookMessenger7Message", "friend"]
 - !private ["C17FacebookMessenger7Message", "isSender"]
 - !private ["C17FacebookMessenger7Message", "text"]
@@ -1321,10 +1325,10 @@ depends-member:
 - !private ["PSo8NSCoding", "CGRect"]
 - !private ["PSo8NSCoding", "CGSize"]
 - !private ["PSo8NSCoding", "ChatCell"]
-- !private ["PSo8NSCoding", "DataManager"]
+- ["PSo8NSCoding", "DataManager"]
 - !private ["PSo8NSCoding", "DispatchQueue"]
 - !private ["PSo8NSCoding", "IndexPath"]
-- !private ["PSo8NSCoding", "NSFetchRequest"]
+- !private ["PSo8NSCoding", "Message"]
 - !private ["PSo8NSCoding", "NSFetchedResultsController"]
 - !private ["PSo8NSCoding", "NSFontAttributeName"]
 - !private ["PSo8NSCoding", "NSLayoutConstraint"]
@@ -1383,8 +1387,10 @@ depends-member:
 - !private ["PSo8NSCoding", "isEmpty"]
 - !private ["PSo8NSCoding", "isHidden"]
 - !private ["PSo8NSCoding", "layoutIfNeeded"]
+- ["PSo8NSCoding", "managedContext"]
 - !private ["PSo8NSCoding", "messageTextView"]
 - !private ["PSo8NSCoding", "navigationItem"]
+- !private ["PSo8NSCoding", "perform"]
 - !private ["PSo8NSCoding", "performBatchUpdates"]
 - ["PSo8NSCoding", "placeholder"]
 - !private ["PSo8NSCoding", "predicate"]
@@ -1415,7 +1421,6 @@ depends-member:
 - ["PSo8NSCoding", "viewDidDisappear"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", "viewWillAppear"]
-- !private ["PSo8NSCoding", "weak"]
 - ["PSo8NSCoding", "white"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "black"]
@@ -1432,10 +1437,10 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CGRect"]
 - !private ["PSo26NSExtensionRequestHandling", "CGSize"]
 - !private ["PSo26NSExtensionRequestHandling", "ChatCell"]
-- !private ["PSo26NSExtensionRequestHandling", "DataManager"]
+- ["PSo26NSExtensionRequestHandling", "DataManager"]
 - !private ["PSo26NSExtensionRequestHandling", "DispatchQueue"]
 - !private ["PSo26NSExtensionRequestHandling", "IndexPath"]
-- !private ["PSo26NSExtensionRequestHandling", "NSFetchRequest"]
+- !private ["PSo26NSExtensionRequestHandling", "Message"]
 - !private ["PSo26NSExtensionRequestHandling", "NSFetchedResultsController"]
 - !private ["PSo26NSExtensionRequestHandling", "NSFontAttributeName"]
 - !private ["PSo26NSExtensionRequestHandling", "NSLayoutConstraint"]
@@ -1472,6 +1477,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "inputMessageView"]
 - ["PSo26NSExtensionRequestHandling", "inputTextField"]
 - ["PSo26NSExtensionRequestHandling", "insertMessage"]
+- ["PSo26NSExtensionRequestHandling", "managedContext"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "removeObservers"]
@@ -1487,13 +1493,12 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "viewDidDisappear"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
-- !private ["PSo26NSExtensionRequestHandling", "weak"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["CSo14NSFetchRequest", "deinit"]
-- !private ["CSo14NSFetchRequest", "init"]
 - !private ["CSo14NSFetchRequest", "predicate"]
 - !private ["CSo14NSFetchRequest", "sortDescriptors"]
 - ["PSo20NSFetchRequestResult", "deinit"]
+- !private ["PSo20NSFetchRequestResult", "fetchRequest"]
 - !private ["PSo20NSFetchRequestResult", "friend"]
 - !private ["PSo20NSFetchRequestResult", "isSender"]
 - !private ["PSo20NSFetchRequestResult", "name"]
@@ -1502,7 +1507,7 @@ depends-member:
 - !private ["OSC26NSFetchedResultsChangeType", "RawValue"]
 - ["OSC26NSFetchedResultsChangeType", "deinit"]
 - !private ["OSC26NSFetchedResultsChangeType", "insert"]
-- ["CSo26NSFetchedResultsController", "deinit"]
+- !private ["CSo26NSFetchedResultsController", "deinit"]
 - !private ["CSo26NSFetchedResultsController", "delegate"]
 - !private ["CSo26NSFetchedResultsController", "init"]
 - !private ["CSo26NSFetchedResultsController", "object"]
@@ -1512,10 +1517,10 @@ depends-member:
 - !private ["PSo34NSFetchedResultsControllerDelegate", "CGRect"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "CGSize"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "ChatCell"]
-- !private ["PSo34NSFetchedResultsControllerDelegate", "DataManager"]
+- ["PSo34NSFetchedResultsControllerDelegate", "DataManager"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "DispatchQueue"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "IndexPath"]
-- !private ["PSo34NSFetchedResultsControllerDelegate", "NSFetchRequest"]
+- !private ["PSo34NSFetchedResultsControllerDelegate", "Message"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "NSFetchedResultsController"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "NSFontAttributeName"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "NSLayoutConstraint"]
@@ -1550,6 +1555,7 @@ depends-member:
 - !private ["PSo34NSFetchedResultsControllerDelegate", "inputMessageView"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "inputTextField"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "insertMessage"]
+- !private ["PSo34NSFetchedResultsControllerDelegate", "managedContext"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "navigationItem"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "print"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "removeObservers"]
@@ -1560,7 +1566,6 @@ depends-member:
 - !private ["PSo34NSFetchedResultsControllerDelegate", "simulate"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "tabBarController"]
 - !private ["PSo34NSFetchedResultsControllerDelegate", "view"]
-- !private ["PSo34NSFetchedResultsControllerDelegate", "weak"]
 - ["PSo34NSFetchedResultsControllerDelegate", ""]
 - ["PSo27NSFetchedResultsSectionInfo", "deinit"]
 - !private ["PSo27NSFetchedResultsSectionInfo", "numberOfObjects"]
@@ -1571,12 +1576,15 @@ depends-member:
 - !private ["CSo18NSLayoutConstraint", "init"]
 - ["OSC16NSLayoutRelation", "deinit"]
 - !private ["OSC16NSLayoutRelation", "equal"]
+- !private ["PSo9NSLocking", "perform"]
+- !private ["CSo15NSManagedObject", "fetchRequest"]
 - !private ["CSo15NSManagedObject", "friend"]
 - !private ["CSo15NSManagedObject", "isSender"]
 - !private ["CSo15NSManagedObject", "name"]
 - !private ["CSo15NSManagedObject", "profileImageName"]
 - !private ["CSo15NSManagedObject", "text"]
-- !private ["CSo22NSManagedObjectContext", "deinit"]
+- ["CSo22NSManagedObjectContext", "deinit"]
+- !private ["CSo22NSManagedObjectContext", "perform"]
 - !private ["PSo16NSMutableCopying", "boundingRect"]
 - ["PSo16NSMutableCopying", "init"]
 - !private ["PSo16NSMutableCopying", "isEmpty"]
@@ -1585,12 +1593,12 @@ depends-member:
 - !private ["CSo8NSObject", "CGRect"]
 - ["CSo8NSObject", "CGSize"]
 - !private ["CSo8NSObject", "ChatCell"]
-- !private ["CSo8NSObject", "DataManager"]
+- ["CSo8NSObject", "DataManager"]
 - !private ["CSo8NSObject", "DispatchQueue"]
 - ["CSo8NSObject", "Friend"]
 - ["CSo8NSObject", "IndexPath"]
 - ["CSo8NSObject", "Int"]
-- !private ["CSo8NSObject", "Message"]
+- ["CSo8NSObject", "Message"]
 - !private ["CSo8NSObject", "NSFetchRequest"]
 - ["CSo8NSObject", "NSFetchRequestResult"]
 - ["CSo8NSObject", "NSFetchedResultsChangeType"]
@@ -1642,10 +1650,10 @@ depends-member:
 - ["CSo8NSObject", "controllerDidChangeContent"]
 - ["CSo8NSObject", "controllerWillChangeContent"]
 - !private ["CSo8NSObject", "default"]
-- ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dequeueReusableCell"]
 - ["CSo8NSObject", "dismissKeyboard"]
+- !private ["CSo8NSObject", "fetchRequest"]
 - ["CSo8NSObject", "fetchResultsController"]
 - ["CSo8NSObject", "fetchResultsController.storage"]
 - ["CSo8NSObject", "font"]
@@ -1665,13 +1673,15 @@ depends-member:
 - !private ["CSo8NSObject", "isSender"]
 - !private ["CSo8NSObject", "layoutIfNeeded"]
 - !private ["CSo8NSObject", "main"]
+- ["CSo8NSObject", "managedContext"]
 - !private ["CSo8NSObject", "messageTextView"]
 - !private ["CSo8NSObject", "name"]
 - !private ["CSo8NSObject", "navigationItem"]
 - !private ["CSo8NSObject", "object"]
+- !private ["CSo8NSObject", "perform"]
 - !private ["CSo8NSObject", "performBatchUpdates"]
 - !private ["CSo8NSObject", "performFetch"]
-- !private ["CSo8NSObject", "persistentContainer"]
+- ["CSo8NSObject", "persistentContainer"]
 - ["CSo8NSObject", "placeholder"]
 - !private ["CSo8NSObject", "predicate"]
 - !private ["CSo8NSObject", "print"]
@@ -1683,7 +1693,6 @@ depends-member:
 - !private ["CSo8NSObject", "resignFirstResponder"]
 - !private ["CSo8NSObject", "rightBarButtonItem"]
 - ["CSo8NSObject", "save"]
-- !private ["CSo8NSObject", "saveContext"]
 - ["CSo8NSObject", "scrollTo"]
 - ["CSo8NSObject", "scrollToBottom"]
 - !private ["CSo8NSObject", "scrollToItem"]
@@ -1704,20 +1713,19 @@ depends-member:
 - !private ["CSo8NSObject", "title"]
 - ["CSo8NSObject", "titleLabel"]
 - !private ["CSo8NSObject", "view"]
-- !private ["CSo8NSObject", "viewContext"]
+- ["CSo8NSObject", "viewContext"]
 - ["CSo8NSObject", "viewDidDisappear"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewWillAppear"]
-- !private ["CSo8NSObject", "weak"]
 - ["CSo8NSObject", "white"]
 - ["PSo16NSObjectProtocol", "BlockOperation"]
 - !private ["PSo16NSObjectProtocol", "CGRect"]
 - !private ["PSo16NSObjectProtocol", "CGSize"]
 - !private ["PSo16NSObjectProtocol", "ChatCell"]
-- !private ["PSo16NSObjectProtocol", "DataManager"]
+- ["PSo16NSObjectProtocol", "DataManager"]
 - !private ["PSo16NSObjectProtocol", "DispatchQueue"]
 - !private ["PSo16NSObjectProtocol", "IndexPath"]
-- !private ["PSo16NSObjectProtocol", "NSFetchRequest"]
+- !private ["PSo16NSObjectProtocol", "Message"]
 - !private ["PSo16NSObjectProtocol", "NSFetchedResultsController"]
 - !private ["PSo16NSObjectProtocol", "NSFontAttributeName"]
 - !private ["PSo16NSObjectProtocol", "NSLayoutConstraint"]
@@ -1765,6 +1773,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCell"]
 - ["PSo16NSObjectProtocol", "dismissKeyboard"]
+- !private ["PSo16NSObjectProtocol", "fetchRequest"]
 - ["PSo16NSObjectProtocol", "fetchResultsController"]
 - ["PSo16NSObjectProtocol", "fetchResultsController.storage"]
 - ["PSo16NSObjectProtocol", "font"]
@@ -1784,13 +1793,15 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "isSender"]
 - !private ["PSo16NSObjectProtocol", "layoutIfNeeded"]
 - !private ["PSo16NSObjectProtocol", "main"]
+- ["PSo16NSObjectProtocol", "managedContext"]
 - !private ["PSo16NSObjectProtocol", "messageTextView"]
 - !private ["PSo16NSObjectProtocol", "name"]
 - !private ["PSo16NSObjectProtocol", "navigationItem"]
 - !private ["PSo16NSObjectProtocol", "object"]
+- !private ["PSo16NSObjectProtocol", "perform"]
 - !private ["PSo16NSObjectProtocol", "performBatchUpdates"]
 - !private ["PSo16NSObjectProtocol", "performFetch"]
-- !private ["PSo16NSObjectProtocol", "persistentContainer"]
+- ["PSo16NSObjectProtocol", "persistentContainer"]
 - ["PSo16NSObjectProtocol", "placeholder"]
 - !private ["PSo16NSObjectProtocol", "predicate"]
 - !private ["PSo16NSObjectProtocol", "print"]
@@ -1802,7 +1813,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "resignFirstResponder"]
 - !private ["PSo16NSObjectProtocol", "rightBarButtonItem"]
 - ["PSo16NSObjectProtocol", "save"]
-- !private ["PSo16NSObjectProtocol", "saveContext"]
 - ["PSo16NSObjectProtocol", "scrollTo"]
 - ["PSo16NSObjectProtocol", "scrollToBottom"]
 - !private ["PSo16NSObjectProtocol", "scrollToItem"]
@@ -1823,14 +1833,13 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "title"]
 - ["PSo16NSObjectProtocol", "titleLabel"]
 - !private ["PSo16NSObjectProtocol", "view"]
-- !private ["PSo16NSObjectProtocol", "viewContext"]
+- ["PSo16NSObjectProtocol", "viewContext"]
 - ["PSo16NSObjectProtocol", "viewDidDisappear"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "viewWillAppear"]
-- !private ["PSo16NSObjectProtocol", "weak"]
 - ["PSo16NSObjectProtocol", "white"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["CSo21NSPersistentContainer", "viewContext"]
+- ["CSo21NSPersistentContainer", "viewContext"]
 - !private ["CSo24NSPersistentStoreRequest", "predicate"]
 - !private ["CSo24NSPersistentStoreRequest", "sortDescriptors"]
 - !private ["CSo11NSPredicate", "deinit"]
@@ -2061,10 +2070,10 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "CGRect"]
 - !private ["PSo21UIAppearanceContainer", "CGSize"]
 - !private ["PSo21UIAppearanceContainer", "ChatCell"]
-- !private ["PSo21UIAppearanceContainer", "DataManager"]
+- ["PSo21UIAppearanceContainer", "DataManager"]
 - !private ["PSo21UIAppearanceContainer", "DispatchQueue"]
 - !private ["PSo21UIAppearanceContainer", "IndexPath"]
-- !private ["PSo21UIAppearanceContainer", "NSFetchRequest"]
+- !private ["PSo21UIAppearanceContainer", "Message"]
 - !private ["PSo21UIAppearanceContainer", "NSFetchedResultsController"]
 - !private ["PSo21UIAppearanceContainer", "NSFontAttributeName"]
 - !private ["PSo21UIAppearanceContainer", "NSLayoutConstraint"]
@@ -2119,6 +2128,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "insertMessage"]
 - !private ["PSo21UIAppearanceContainer", "isHidden"]
 - !private ["PSo21UIAppearanceContainer", "layoutIfNeeded"]
+- ["PSo21UIAppearanceContainer", "managedContext"]
 - !private ["PSo21UIAppearanceContainer", "messageTextView"]
 - !private ["PSo21UIAppearanceContainer", "navigationItem"]
 - !private ["PSo21UIAppearanceContainer", "performBatchUpdates"]
@@ -2147,10 +2157,8 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "viewDidDisappear"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "viewWillAppear"]
-- !private ["PSo21UIAppearanceContainer", "weak"]
 - ["PSo21UIAppearanceContainer", ""]
-- !private ["PSo21UIApplicationDelegate", "persistentContainer"]
-- !private ["PSo21UIApplicationDelegate", "saveContext"]
+- ["PSo21UIApplicationDelegate", "persistentContainer"]
 - ["CSo15UIBarButtonItem", "deinit"]
 - !private ["CSo15UIBarButtonItem", "init"]
 - ["OSC20UIBarButtonItemStyle", "deinit"]
@@ -2190,12 +2198,12 @@ depends-member:
 - !private ["CSo26UICollectionViewController", "CGRect"]
 - ["CSo26UICollectionViewController", "CGSize"]
 - !private ["CSo26UICollectionViewController", "ChatCell"]
-- !private ["CSo26UICollectionViewController", "DataManager"]
+- ["CSo26UICollectionViewController", "DataManager"]
 - !private ["CSo26UICollectionViewController", "DispatchQueue"]
 - ["CSo26UICollectionViewController", "Friend"]
 - ["CSo26UICollectionViewController", "IndexPath"]
 - ["CSo26UICollectionViewController", "Int"]
-- !private ["CSo26UICollectionViewController", "Message"]
+- ["CSo26UICollectionViewController", "Message"]
 - !private ["CSo26UICollectionViewController", "NSFetchRequest"]
 - ["CSo26UICollectionViewController", "NSFetchRequestResult"]
 - ["CSo26UICollectionViewController", "NSFetchedResultsChangeType"]
@@ -2240,6 +2248,7 @@ depends-member:
 - ["CSo26UICollectionViewController", "inputMessageView"]
 - ["CSo26UICollectionViewController", "inputTextField"]
 - ["CSo26UICollectionViewController", "insertMessage"]
+- ["CSo26UICollectionViewController", "managedContext"]
 - !private ["CSo26UICollectionViewController", "navigationItem"]
 - !private ["CSo26UICollectionViewController", "print"]
 - ["CSo26UICollectionViewController", "removeObservers"]
@@ -2254,16 +2263,15 @@ depends-member:
 - ["CSo26UICollectionViewController", "viewDidDisappear"]
 - ["CSo26UICollectionViewController", "viewDidLoad"]
 - ["CSo26UICollectionViewController", "viewWillAppear"]
-- !private ["CSo26UICollectionViewController", "weak"]
 - ["CSo26UICollectionViewController", ""]
 - ["PSo26UICollectionViewDataSource", "BlockOperation"]
 - !private ["PSo26UICollectionViewDataSource", "CGRect"]
 - !private ["PSo26UICollectionViewDataSource", "CGSize"]
 - !private ["PSo26UICollectionViewDataSource", "ChatCell"]
-- !private ["PSo26UICollectionViewDataSource", "DataManager"]
+- ["PSo26UICollectionViewDataSource", "DataManager"]
 - !private ["PSo26UICollectionViewDataSource", "DispatchQueue"]
 - !private ["PSo26UICollectionViewDataSource", "IndexPath"]
-- !private ["PSo26UICollectionViewDataSource", "NSFetchRequest"]
+- !private ["PSo26UICollectionViewDataSource", "Message"]
 - !private ["PSo26UICollectionViewDataSource", "NSFetchedResultsController"]
 - !private ["PSo26UICollectionViewDataSource", "NSFontAttributeName"]
 - !private ["PSo26UICollectionViewDataSource", "NSLayoutConstraint"]
@@ -2300,6 +2308,7 @@ depends-member:
 - ["PSo26UICollectionViewDataSource", "inputMessageView"]
 - ["PSo26UICollectionViewDataSource", "inputTextField"]
 - ["PSo26UICollectionViewDataSource", "insertMessage"]
+- ["PSo26UICollectionViewDataSource", "managedContext"]
 - !private ["PSo26UICollectionViewDataSource", "navigationItem"]
 - !private ["PSo26UICollectionViewDataSource", "print"]
 - ["PSo26UICollectionViewDataSource", "removeObservers"]
@@ -2314,16 +2323,15 @@ depends-member:
 - ["PSo26UICollectionViewDataSource", "viewDidDisappear"]
 - ["PSo26UICollectionViewDataSource", "viewDidLoad"]
 - ["PSo26UICollectionViewDataSource", "viewWillAppear"]
-- !private ["PSo26UICollectionViewDataSource", "weak"]
 - ["PSo26UICollectionViewDataSource", ""]
 - ["PSo24UICollectionViewDelegate", "BlockOperation"]
 - !private ["PSo24UICollectionViewDelegate", "CGRect"]
 - !private ["PSo24UICollectionViewDelegate", "CGSize"]
 - !private ["PSo24UICollectionViewDelegate", "ChatCell"]
-- !private ["PSo24UICollectionViewDelegate", "DataManager"]
+- ["PSo24UICollectionViewDelegate", "DataManager"]
 - !private ["PSo24UICollectionViewDelegate", "DispatchQueue"]
 - !private ["PSo24UICollectionViewDelegate", "IndexPath"]
-- !private ["PSo24UICollectionViewDelegate", "NSFetchRequest"]
+- !private ["PSo24UICollectionViewDelegate", "Message"]
 - !private ["PSo24UICollectionViewDelegate", "NSFetchedResultsController"]
 - !private ["PSo24UICollectionViewDelegate", "NSFontAttributeName"]
 - !private ["PSo24UICollectionViewDelegate", "NSLayoutConstraint"]
@@ -2360,6 +2368,7 @@ depends-member:
 - ["PSo24UICollectionViewDelegate", "inputMessageView"]
 - ["PSo24UICollectionViewDelegate", "inputTextField"]
 - ["PSo24UICollectionViewDelegate", "insertMessage"]
+- ["PSo24UICollectionViewDelegate", "managedContext"]
 - !private ["PSo24UICollectionViewDelegate", "navigationItem"]
 - !private ["PSo24UICollectionViewDelegate", "print"]
 - ["PSo24UICollectionViewDelegate", "removeObservers"]
@@ -2374,16 +2383,15 @@ depends-member:
 - ["PSo24UICollectionViewDelegate", "viewDidDisappear"]
 - ["PSo24UICollectionViewDelegate", "viewDidLoad"]
 - ["PSo24UICollectionViewDelegate", "viewWillAppear"]
-- !private ["PSo24UICollectionViewDelegate", "weak"]
 - ["PSo24UICollectionViewDelegate", ""]
 - ["PSo34UICollectionViewDelegateFlowLayout", "BlockOperation"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "CGRect"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "CGSize"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "ChatCell"]
-- !private ["PSo34UICollectionViewDelegateFlowLayout", "DataManager"]
+- ["PSo34UICollectionViewDelegateFlowLayout", "DataManager"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "DispatchQueue"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "IndexPath"]
-- !private ["PSo34UICollectionViewDelegateFlowLayout", "NSFetchRequest"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "Message"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "NSFetchedResultsController"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "NSFontAttributeName"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "NSLayoutConstraint"]
@@ -2418,6 +2426,7 @@ depends-member:
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "inputMessageView"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "inputTextField"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "insertMessage"]
+- !private ["PSo34UICollectionViewDelegateFlowLayout", "managedContext"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "navigationItem"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "print"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "removeObservers"]
@@ -2428,7 +2437,6 @@ depends-member:
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "simulate"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "tabBarController"]
 - !private ["PSo34UICollectionViewDelegateFlowLayout", "view"]
-- !private ["PSo34UICollectionViewDelegateFlowLayout", "weak"]
 - ["PSo34UICollectionViewDelegateFlowLayout", ""]
 - ["CSo22UICollectionViewLayout", "deinit"]
 - !private ["VSC30UICollectionViewScrollPosition", "bottom"]
@@ -2441,10 +2449,10 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CGRect"]
 - !private ["PSo18UIContentContainer", "CGSize"]
 - !private ["PSo18UIContentContainer", "ChatCell"]
-- !private ["PSo18UIContentContainer", "DataManager"]
+- ["PSo18UIContentContainer", "DataManager"]
 - !private ["PSo18UIContentContainer", "DispatchQueue"]
 - !private ["PSo18UIContentContainer", "IndexPath"]
-- !private ["PSo18UIContentContainer", "NSFetchRequest"]
+- !private ["PSo18UIContentContainer", "Message"]
 - !private ["PSo18UIContentContainer", "NSFetchedResultsController"]
 - !private ["PSo18UIContentContainer", "NSFontAttributeName"]
 - !private ["PSo18UIContentContainer", "NSLayoutConstraint"]
@@ -2481,6 +2489,7 @@ depends-member:
 - ["PSo18UIContentContainer", "inputMessageView"]
 - ["PSo18UIContentContainer", "inputTextField"]
 - ["PSo18UIContentContainer", "insertMessage"]
+- ["PSo18UIContentContainer", "managedContext"]
 - !private ["PSo18UIContentContainer", "navigationItem"]
 - !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "removeObservers"]
@@ -2496,7 +2505,6 @@ depends-member:
 - ["PSo18UIContentContainer", "viewDidDisappear"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", "viewWillAppear"]
-- !private ["PSo18UIContentContainer", "weak"]
 - ["PSo18UIContentContainer", ""]
 - ["PSo30UIContentSizeCategoryAdjusting", "font"]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "frame"]
@@ -2587,10 +2595,10 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "CGRect"]
 - !private ["PSo18UIFocusEnvironment", "CGSize"]
 - !private ["PSo18UIFocusEnvironment", "ChatCell"]
-- !private ["PSo18UIFocusEnvironment", "DataManager"]
+- ["PSo18UIFocusEnvironment", "DataManager"]
 - !private ["PSo18UIFocusEnvironment", "DispatchQueue"]
 - !private ["PSo18UIFocusEnvironment", "IndexPath"]
-- !private ["PSo18UIFocusEnvironment", "NSFetchRequest"]
+- !private ["PSo18UIFocusEnvironment", "Message"]
 - !private ["PSo18UIFocusEnvironment", "NSFetchedResultsController"]
 - !private ["PSo18UIFocusEnvironment", "NSFontAttributeName"]
 - !private ["PSo18UIFocusEnvironment", "NSLayoutConstraint"]
@@ -2645,6 +2653,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "insertMessage"]
 - !private ["PSo18UIFocusEnvironment", "isHidden"]
 - !private ["PSo18UIFocusEnvironment", "layoutIfNeeded"]
+- ["PSo18UIFocusEnvironment", "managedContext"]
 - !private ["PSo18UIFocusEnvironment", "messageTextView"]
 - !private ["PSo18UIFocusEnvironment", "navigationItem"]
 - !private ["PSo18UIFocusEnvironment", "performBatchUpdates"]
@@ -2673,7 +2682,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "viewDidDisappear"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "viewWillAppear"]
-- !private ["PSo18UIFocusEnvironment", "weak"]
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo11UIFocusItem", "addConstraint"]
 - !private ["PSo11UIFocusItem", "addConstraintWith"]
@@ -2731,12 +2739,12 @@ depends-member:
 - !private ["CSo11UIResponder", "CGRect"]
 - ["CSo11UIResponder", "CGSize"]
 - !private ["CSo11UIResponder", "ChatCell"]
-- !private ["CSo11UIResponder", "DataManager"]
+- ["CSo11UIResponder", "DataManager"]
 - !private ["CSo11UIResponder", "DispatchQueue"]
 - ["CSo11UIResponder", "Friend"]
 - ["CSo11UIResponder", "IndexPath"]
 - ["CSo11UIResponder", "Int"]
-- !private ["CSo11UIResponder", "Message"]
+- ["CSo11UIResponder", "Message"]
 - !private ["CSo11UIResponder", "NSFetchRequest"]
 - ["CSo11UIResponder", "NSFetchRequestResult"]
 - ["CSo11UIResponder", "NSFetchedResultsChangeType"]
@@ -2780,7 +2788,6 @@ depends-member:
 - ["CSo11UIResponder", "controller"]
 - ["CSo11UIResponder", "controllerDidChangeContent"]
 - ["CSo11UIResponder", "controllerWillChangeContent"]
-- ["CSo11UIResponder", "deinit"]
 - !private ["CSo11UIResponder", "dequeueReusableCell"]
 - ["CSo11UIResponder", "dismissKeyboard"]
 - ["CSo11UIResponder", "fetchResultsController"]
@@ -2799,10 +2806,11 @@ depends-member:
 - ["CSo11UIResponder", "insertMessage"]
 - !private ["CSo11UIResponder", "isHidden"]
 - !private ["CSo11UIResponder", "layoutIfNeeded"]
+- ["CSo11UIResponder", "managedContext"]
 - !private ["CSo11UIResponder", "messageTextView"]
 - !private ["CSo11UIResponder", "navigationItem"]
 - !private ["CSo11UIResponder", "performBatchUpdates"]
-- !private ["CSo11UIResponder", "persistentContainer"]
+- ["CSo11UIResponder", "persistentContainer"]
 - ["CSo11UIResponder", "placeholder"]
 - !private ["CSo11UIResponder", "print"]
 - !private ["CSo11UIResponder", "profileImageView"]
@@ -2810,7 +2818,6 @@ depends-member:
 - ["CSo11UIResponder", "removeObservers"]
 - !private ["CSo11UIResponder", "resignFirstResponder"]
 - ["CSo11UIResponder", "save"]
-- !private ["CSo11UIResponder", "saveContext"]
 - ["CSo11UIResponder", "scrollTo"]
 - ["CSo11UIResponder", "scrollToBottom"]
 - !private ["CSo11UIResponder", "scrollToItem"]
@@ -2829,15 +2836,14 @@ depends-member:
 - ["CSo11UIResponder", "viewDidDisappear"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "viewWillAppear"]
-- !private ["CSo11UIResponder", "weak"]
 - ["PSo30UIResponderStandardEditActions", "BlockOperation"]
 - !private ["PSo30UIResponderStandardEditActions", "CGRect"]
 - !private ["PSo30UIResponderStandardEditActions", "CGSize"]
 - !private ["PSo30UIResponderStandardEditActions", "ChatCell"]
-- !private ["PSo30UIResponderStandardEditActions", "DataManager"]
+- ["PSo30UIResponderStandardEditActions", "DataManager"]
 - !private ["PSo30UIResponderStandardEditActions", "DispatchQueue"]
 - !private ["PSo30UIResponderStandardEditActions", "IndexPath"]
-- !private ["PSo30UIResponderStandardEditActions", "NSFetchRequest"]
+- !private ["PSo30UIResponderStandardEditActions", "Message"]
 - !private ["PSo30UIResponderStandardEditActions", "NSFetchedResultsController"]
 - !private ["PSo30UIResponderStandardEditActions", "NSFontAttributeName"]
 - !private ["PSo30UIResponderStandardEditActions", "NSLayoutConstraint"]
@@ -2892,10 +2898,11 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "insertMessage"]
 - !private ["PSo30UIResponderStandardEditActions", "isHidden"]
 - !private ["PSo30UIResponderStandardEditActions", "layoutIfNeeded"]
+- ["PSo30UIResponderStandardEditActions", "managedContext"]
 - !private ["PSo30UIResponderStandardEditActions", "messageTextView"]
 - !private ["PSo30UIResponderStandardEditActions", "navigationItem"]
 - !private ["PSo30UIResponderStandardEditActions", "performBatchUpdates"]
-- !private ["PSo30UIResponderStandardEditActions", "persistentContainer"]
+- ["PSo30UIResponderStandardEditActions", "persistentContainer"]
 - ["PSo30UIResponderStandardEditActions", "placeholder"]
 - !private ["PSo30UIResponderStandardEditActions", "print"]
 - !private ["PSo30UIResponderStandardEditActions", "profileImageView"]
@@ -2903,7 +2910,6 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "removeObservers"]
 - !private ["PSo30UIResponderStandardEditActions", "resignFirstResponder"]
 - ["PSo30UIResponderStandardEditActions", "save"]
-- !private ["PSo30UIResponderStandardEditActions", "saveContext"]
 - ["PSo30UIResponderStandardEditActions", "scrollTo"]
 - ["PSo30UIResponderStandardEditActions", "scrollToBottom"]
 - !private ["PSo30UIResponderStandardEditActions", "scrollToItem"]
@@ -2922,7 +2928,6 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "viewDidDisappear"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", "viewWillAppear"]
-- !private ["PSo30UIResponderStandardEditActions", "weak"]
 - ["PSo30UIResponderStandardEditActions", ""]
 - !private ["CSo12UIScrollView", "alwaysBounceVertical"]
 - !private ["CSo12UIScrollView", "backgroundColor"]
@@ -2938,10 +2943,10 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "CGRect"]
 - !private ["PSo20UIScrollViewDelegate", "CGSize"]
 - !private ["PSo20UIScrollViewDelegate", "ChatCell"]
-- !private ["PSo20UIScrollViewDelegate", "DataManager"]
+- ["PSo20UIScrollViewDelegate", "DataManager"]
 - !private ["PSo20UIScrollViewDelegate", "DispatchQueue"]
 - !private ["PSo20UIScrollViewDelegate", "IndexPath"]
-- !private ["PSo20UIScrollViewDelegate", "NSFetchRequest"]
+- !private ["PSo20UIScrollViewDelegate", "Message"]
 - !private ["PSo20UIScrollViewDelegate", "NSFetchedResultsController"]
 - !private ["PSo20UIScrollViewDelegate", "NSFontAttributeName"]
 - !private ["PSo20UIScrollViewDelegate", "NSLayoutConstraint"]
@@ -2978,6 +2983,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "inputMessageView"]
 - ["PSo20UIScrollViewDelegate", "inputTextField"]
 - ["PSo20UIScrollViewDelegate", "insertMessage"]
+- ["PSo20UIScrollViewDelegate", "managedContext"]
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
 - !private ["PSo20UIScrollViewDelegate", "print"]
 - ["PSo20UIScrollViewDelegate", "removeObservers"]
@@ -2992,16 +2998,15 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "viewDidDisappear"]
 - ["PSo20UIScrollViewDelegate", "viewDidLoad"]
 - ["PSo20UIScrollViewDelegate", "viewWillAppear"]
-- !private ["PSo20UIScrollViewDelegate", "weak"]
 - ["PSo20UIScrollViewDelegate", ""]
 - ["PSo16UIStateRestoring", "BlockOperation"]
 - !private ["PSo16UIStateRestoring", "CGRect"]
 - !private ["PSo16UIStateRestoring", "CGSize"]
 - !private ["PSo16UIStateRestoring", "ChatCell"]
-- !private ["PSo16UIStateRestoring", "DataManager"]
+- ["PSo16UIStateRestoring", "DataManager"]
 - !private ["PSo16UIStateRestoring", "DispatchQueue"]
 - !private ["PSo16UIStateRestoring", "IndexPath"]
-- !private ["PSo16UIStateRestoring", "NSFetchRequest"]
+- !private ["PSo16UIStateRestoring", "Message"]
 - !private ["PSo16UIStateRestoring", "NSFetchedResultsController"]
 - !private ["PSo16UIStateRestoring", "NSFontAttributeName"]
 - !private ["PSo16UIStateRestoring", "NSLayoutConstraint"]
@@ -3038,6 +3043,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "inputMessageView"]
 - ["PSo16UIStateRestoring", "inputTextField"]
 - ["PSo16UIStateRestoring", "insertMessage"]
+- ["PSo16UIStateRestoring", "managedContext"]
 - !private ["PSo16UIStateRestoring", "navigationItem"]
 - !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "removeObservers"]
@@ -3053,7 +3059,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "viewDidDisappear"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "viewWillAppear"]
-- !private ["PSo16UIStateRestoring", "weak"]
 - ["PSo16UIStateRestoring", ""]
 - ["CSo8UITabBar", "deinit"]
 - !private ["CSo8UITabBar", "isHidden"]
@@ -3084,10 +3089,10 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "CGRect"]
 - !private ["PSo18UITraitEnvironment", "CGSize"]
 - !private ["PSo18UITraitEnvironment", "ChatCell"]
-- !private ["PSo18UITraitEnvironment", "DataManager"]
+- ["PSo18UITraitEnvironment", "DataManager"]
 - !private ["PSo18UITraitEnvironment", "DispatchQueue"]
 - !private ["PSo18UITraitEnvironment", "IndexPath"]
-- !private ["PSo18UITraitEnvironment", "NSFetchRequest"]
+- !private ["PSo18UITraitEnvironment", "Message"]
 - !private ["PSo18UITraitEnvironment", "NSFetchedResultsController"]
 - !private ["PSo18UITraitEnvironment", "NSFontAttributeName"]
 - !private ["PSo18UITraitEnvironment", "NSLayoutConstraint"]
@@ -3142,6 +3147,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "insertMessage"]
 - !private ["PSo18UITraitEnvironment", "isHidden"]
 - !private ["PSo18UITraitEnvironment", "layoutIfNeeded"]
+- ["PSo18UITraitEnvironment", "managedContext"]
 - !private ["PSo18UITraitEnvironment", "messageTextView"]
 - !private ["PSo18UITraitEnvironment", "navigationItem"]
 - !private ["PSo18UITraitEnvironment", "performBatchUpdates"]
@@ -3170,7 +3176,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "viewDidDisappear"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", "viewWillAppear"]
-- !private ["PSo18UITraitEnvironment", "weak"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "addConstraint"]
 - !private ["CSo6UIView", "addConstraintWith"]
@@ -3213,12 +3218,12 @@ depends-member:
 - !private ["CSo16UIViewController", "CGRect"]
 - ["CSo16UIViewController", "CGSize"]
 - !private ["CSo16UIViewController", "ChatCell"]
-- !private ["CSo16UIViewController", "DataManager"]
+- ["CSo16UIViewController", "DataManager"]
 - !private ["CSo16UIViewController", "DispatchQueue"]
 - ["CSo16UIViewController", "Friend"]
 - ["CSo16UIViewController", "IndexPath"]
 - ["CSo16UIViewController", "Int"]
-- !private ["CSo16UIViewController", "Message"]
+- ["CSo16UIViewController", "Message"]
 - !private ["CSo16UIViewController", "NSFetchRequest"]
 - ["CSo16UIViewController", "NSFetchRequestResult"]
 - ["CSo16UIViewController", "NSFetchedResultsChangeType"]
@@ -3252,7 +3257,6 @@ depends-member:
 - ["CSo16UIViewController", "controller"]
 - ["CSo16UIViewController", "controllerDidChangeContent"]
 - ["CSo16UIViewController", "controllerWillChangeContent"]
-- ["CSo16UIViewController", "deinit"]
 - ["CSo16UIViewController", "dismissKeyboard"]
 - ["CSo16UIViewController", "fetchResultsController"]
 - ["CSo16UIViewController", "fetchResultsController.storage"]
@@ -3263,6 +3267,7 @@ depends-member:
 - ["CSo16UIViewController", "inputMessageView"]
 - ["CSo16UIViewController", "inputTextField"]
 - ["CSo16UIViewController", "insertMessage"]
+- ["CSo16UIViewController", "managedContext"]
 - !private ["CSo16UIViewController", "navigationItem"]
 - !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "removeObservers"]
@@ -3278,7 +3283,6 @@ depends-member:
 - ["CSo16UIViewController", "viewDidDisappear"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "viewWillAppear"]
-- !private ["CSo16UIViewController", "weak"]
 - !private ["Su", "Stride"]
 - !private ["Su", "_DisallowMixedSignArithmetic"]
 - !private ["Su", "deinit"]
@@ -3383,12 +3387,12 @@ depends-member:
 - !private ["Ps9_Hashable", "CGRect"]
 - !private ["Ps9_Hashable", "CGSize"]
 - !private ["Ps9_Hashable", "ChatCell"]
-- !private ["Ps9_Hashable", "DataManager"]
+- ["Ps9_Hashable", "DataManager"]
 - !private ["Ps9_Hashable", "DispatchQueue"]
 - !private ["Ps9_Hashable", "IndexPath"]
 - !private ["Ps9_Hashable", "IntegerLiteralType"]
 - !private ["Ps9_Hashable", "Iterator"]
-- !private ["Ps9_Hashable", "NSFetchRequest"]
+- !private ["Ps9_Hashable", "Message"]
 - !private ["Ps9_Hashable", "NSFetchedResultsController"]
 - !private ["Ps9_Hashable", "NSFontAttributeName"]
 - !private ["Ps9_Hashable", "NSLayoutConstraint"]
@@ -3447,6 +3451,7 @@ depends-member:
 - !private ["Ps9_Hashable", "dequeueReusableCell"]
 - ["Ps9_Hashable", "dismissKeyboard"]
 - !private ["Ps9_Hashable", "equal"]
+- !private ["Ps9_Hashable", "fetchRequest"]
 - ["Ps9_Hashable", "fetchResultsController"]
 - ["Ps9_Hashable", "fetchResultsController.storage"]
 - ["Ps9_Hashable", "font"]
@@ -3467,13 +3472,15 @@ depends-member:
 - !private ["Ps9_Hashable", "isSender"]
 - !private ["Ps9_Hashable", "layoutIfNeeded"]
 - !private ["Ps9_Hashable", "main"]
+- ["Ps9_Hashable", "managedContext"]
 - !private ["Ps9_Hashable", "messageTextView"]
 - !private ["Ps9_Hashable", "name"]
 - !private ["Ps9_Hashable", "navigationItem"]
 - !private ["Ps9_Hashable", "object"]
+- !private ["Ps9_Hashable", "perform"]
 - !private ["Ps9_Hashable", "performBatchUpdates"]
 - !private ["Ps9_Hashable", "performFetch"]
-- !private ["Ps9_Hashable", "persistentContainer"]
+- ["Ps9_Hashable", "persistentContainer"]
 - ["Ps9_Hashable", "placeholder"]
 - !private ["Ps9_Hashable", "plain"]
 - !private ["Ps9_Hashable", "predicate"]
@@ -3487,7 +3494,6 @@ depends-member:
 - !private ["Ps9_Hashable", "resignFirstResponder"]
 - !private ["Ps9_Hashable", "rightBarButtonItem"]
 - ["Ps9_Hashable", "save"]
-- !private ["Ps9_Hashable", "saveContext"]
 - ["Ps9_Hashable", "scrollTo"]
 - ["Ps9_Hashable", "scrollToBottom"]
 - !private ["Ps9_Hashable", "scrollToItem"]
@@ -3510,11 +3516,10 @@ depends-member:
 - ["Ps9_Hashable", "titleLabel"]
 - !private ["Ps9_Hashable", "userInfo"]
 - !private ["Ps9_Hashable", "view"]
-- !private ["Ps9_Hashable", "viewContext"]
+- ["Ps9_Hashable", "viewContext"]
 - ["Ps9_Hashable", "viewDidDisappear"]
 - ["Ps9_Hashable", "viewDidLoad"]
 - ["Ps9_Hashable", "viewWillAppear"]
-- !private ["Ps9_Hashable", "weak"]
 - ["Ps9_Hashable", "white"]
 - ["Ps9_Hashable", ""]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
@@ -3571,7 +3576,7 @@ depends-member:
 depends-nominal:
 - !private "Ps16AbsoluteValuable"
 - "Ps9AnyObject"
-- !private "C17FacebookMessenger11AppDelegate"
+- "C17FacebookMessenger11AppDelegate"
 - "Sa"
 - !private "C17FacebookMessenger8BaseCell"
 - "Ps23BidirectionalCollection"
@@ -3594,7 +3599,7 @@ depends-nominal:
 - "Ps29CustomPlaygroundQuickLookable"
 - "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
-- !private "C17FacebookMessenger11DataManager"
+- "C17FacebookMessenger11DataManager"
 - !private "V10Foundation4Date"
 - !private "VSC7Decimal"
 - !private "Vs27DefaultBidirectionalIndices"
@@ -3648,18 +3653,19 @@ depends-nominal:
 - !private "CSo14NSFetchRequest"
 - "PSo20NSFetchRequestResult"
 - "OSC26NSFetchedResultsChangeType"
-- "CSo26NSFetchedResultsController"
+- !private "CSo26NSFetchedResultsController"
 - "PSo34NSFetchedResultsControllerDelegate"
 - "PSo27NSFetchedResultsSectionInfo"
 - "OSC17NSLayoutAttribute"
 - "CSo18NSLayoutConstraint"
 - "OSC16NSLayoutRelation"
+- !private "PSo9NSLocking"
 - !private "CSo15NSManagedObject"
-- !private "CSo22NSManagedObjectContext"
+- "CSo22NSManagedObjectContext"
 - "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "CSo21NSPersistentContainer"
+- "CSo21NSPersistentContainer"
 - !private "CSo24NSPersistentStoreRequest"
 - !private "CSo11NSPredicate"
 - "PSo14NSSecureCoding"
@@ -3694,7 +3700,7 @@ depends-nominal:
 - "PSo29UIAccessibilityIdentification"
 - "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
-- !private "PSo21UIApplicationDelegate"
+- "PSo21UIApplicationDelegate"
 - "CSo15UIBarButtonItem"
 - "OSC20UIBarButtonItemStyle"
 - !private "CSo9UIBarItem"
@@ -3788,4 +3794,4 @@ depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "8cf761427369de88a6f54befd5e22ce7"
+interface-hash: "53a59acf288c90ce6f5f7b4b6d7adedf"

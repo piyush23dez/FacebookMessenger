@@ -7,31 +7,31 @@ provides-member:
 - ["C17FacebookMessenger11DataManager", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "NSFetchRequest"
-- !private "Array"
-- "Int"
-- !private "NSManagedObject"
-- !private "=="
-- "AssignmentPrecedence"
-- "CastingPrecedence"
-- "AppDelegate"
-- "Message"
-- "DataManager"
+- "Friend"
 - "NSManagedObjectContext"
 - !private "NSEntityDescription"
-- !private "*"
 - "Double"
-- "UIApplication"
-- !private "NSFetchRequestResult"
-- !private "BooleanLiteralType"
-- !private "print"
+- !private "TernaryPrecedence"
 - !private "Date"
+- "Message"
+- !private "=="
+- !private "NSManagedObject"
+- !private "NSFetchRequestResult"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- !private "Array"
+- !private "StringLiteralType"
 - "String"
-- "Friend"
 - "Bool"
 - !private "-"
-- !private "NSSortDescriptor"
-- !private "StringLiteralType"
+- "AppDelegate"
+- !private "NSFetchRequest"
+- "UIApplication"
+- "DataManager"
+- !private ">"
+- !private "print"
+- !private "*"
+- "BooleanLiteralType"
 depends-member:
 - ["Ps9AnyObject", "DataManager"]
 - !private ["Ps9AnyObject", "Date"]
@@ -39,9 +39,7 @@ depends-member:
 - !private ["Ps9AnyObject", "Message"]
 - !private ["Ps9AnyObject", "NSEntityDescription"]
 - !private ["Ps9AnyObject", "NSFetchRequest"]
-- !private ["Ps9AnyObject", "NSSortDescriptor"]
 - ["Ps9AnyObject", "UIApplication"]
-- !private ["Ps9AnyObject", "count"]
 - !private ["Ps9AnyObject", "createFriend"]
 - !private ["Ps9AnyObject", "createMessage"]
 - !private ["Ps9AnyObject", "date"]
@@ -50,11 +48,13 @@ depends-member:
 - !private ["Ps9AnyObject", "entity"]
 - !private ["Ps9AnyObject", "fetch"]
 - !private ["Ps9AnyObject", "fetchFreinds"]
+- !private ["Ps9AnyObject", "fetchRequest"]
 - !private ["Ps9AnyObject", "friend"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "isSender"]
 - !private ["Ps9AnyObject", "lastMessage"]
 - !private ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "performAndWait"]
 - !private ["Ps9AnyObject", "persistentContainer"]
 - !private ["Ps9AnyObject", "print"]
 - !private ["Ps9AnyObject", "profileImageName"]
@@ -62,7 +62,6 @@ depends-member:
 - !private ["Ps9AnyObject", "saveContext"]
 - !private ["Ps9AnyObject", "setup"]
 - ["Ps9AnyObject", "shared"]
-- !private ["Ps9AnyObject", "sortDescriptors"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "viewContext"]
 - ["Ps9AnyObject", ""]
@@ -74,17 +73,20 @@ depends-member:
 - !private ["Sa", "Iterator"]
 - !private ["Sa", "_Element"]
 - !private ["Sa", "count"]
-- ["Sa", "deinit"]
+- !private ["Sa", "deinit"]
+- !private ["Sa", "init"]
 - !private ["Ps23BidirectionalCollection", "Element"]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
 - !private ["Ps23BidirectionalCollection", "Iterator"]
 - !private ["Ps23BidirectionalCollection", "_Element"]
 - !private ["Ps23BidirectionalCollection", "count"]
+- !private ["Ps23BidirectionalCollection", "init"]
 - !private ["Ps22BidirectionalIndexable", "Element"]
 - !private ["Ps22BidirectionalIndexable", "IndexDistance"]
 - !private ["Ps22BidirectionalIndexable", "Iterator"]
 - !private ["Ps22BidirectionalIndexable", "_Element"]
 - !private ["Ps22BidirectionalIndexable", "count"]
+- !private ["Ps22BidirectionalIndexable", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
 - !private ["Ps7CVarArg", "Element"]
@@ -97,16 +99,17 @@ depends-member:
 - !private ["Ps7CVarArg", "delete"]
 - !private ["Ps7CVarArg", "entity"]
 - !private ["Ps7CVarArg", "fetch"]
+- !private ["Ps7CVarArg", "fetchRequest"]
 - !private ["Ps7CVarArg", "friend"]
 - !private ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "isSender"]
 - !private ["Ps7CVarArg", "lastMessage"]
 - !private ["Ps7CVarArg", "name"]
+- !private ["Ps7CVarArg", "performAndWait"]
 - !private ["Ps7CVarArg", "persistentContainer"]
 - !private ["Ps7CVarArg", "profileImageName"]
 - !private ["Ps7CVarArg", "saveContext"]
 - ["Ps7CVarArg", "shared"]
-- !private ["Ps7CVarArg", "sortDescriptors"]
 - !private ["Ps7CVarArg", "text"]
 - !private ["Ps7CVarArg", "viewContext"]
 - !private ["Ps10Collection", "Element"]
@@ -114,6 +117,7 @@ depends-member:
 - !private ["Ps10Collection", "Iterator"]
 - !private ["Ps10Collection", "_Element"]
 - !private ["Ps10Collection", "count"]
+- !private ["Ps10Collection", "init"]
 - !private ["Ps10Comparable", "addingTimeInterval"]
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "Element"]
@@ -127,17 +131,18 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "delete"]
 - !private ["Ps28CustomDebugStringConvertible", "entity"]
 - !private ["Ps28CustomDebugStringConvertible", "fetch"]
+- !private ["Ps28CustomDebugStringConvertible", "fetchRequest"]
 - !private ["Ps28CustomDebugStringConvertible", "friend"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "isSender"]
 - !private ["Ps28CustomDebugStringConvertible", "lastMessage"]
 - !private ["Ps28CustomDebugStringConvertible", "name"]
+- !private ["Ps28CustomDebugStringConvertible", "performAndWait"]
 - !private ["Ps28CustomDebugStringConvertible", "persistentContainer"]
 - !private ["Ps28CustomDebugStringConvertible", "profileImageName"]
 - !private ["Ps28CustomDebugStringConvertible", "saveContext"]
 - ["Ps28CustomDebugStringConvertible", "shared"]
 - !private ["Ps28CustomDebugStringConvertible", "some"]
-- !private ["Ps28CustomDebugStringConvertible", "sortDescriptors"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps28CustomDebugStringConvertible", "viewContext"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
@@ -164,16 +169,17 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "delete"]
 - !private ["Ps23CustomStringConvertible", "entity"]
 - !private ["Ps23CustomStringConvertible", "fetch"]
+- !private ["Ps23CustomStringConvertible", "fetchRequest"]
 - !private ["Ps23CustomStringConvertible", "friend"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "isSender"]
 - !private ["Ps23CustomStringConvertible", "lastMessage"]
 - !private ["Ps23CustomStringConvertible", "name"]
+- !private ["Ps23CustomStringConvertible", "performAndWait"]
 - !private ["Ps23CustomStringConvertible", "persistentContainer"]
 - !private ["Ps23CustomStringConvertible", "profileImageName"]
 - !private ["Ps23CustomStringConvertible", "saveContext"]
 - ["Ps23CustomStringConvertible", "shared"]
-- !private ["Ps23CustomStringConvertible", "sortDescriptors"]
 - !private ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps23CustomStringConvertible", "viewContext"]
 - ["C17FacebookMessenger11DataManager", "AppDelegate"]
@@ -182,14 +188,12 @@ depends-member:
 - !private ["C17FacebookMessenger11DataManager", "Date"]
 - ["C17FacebookMessenger11DataManager", "Double"]
 - ["C17FacebookMessenger11DataManager", "Friend"]
-- ["C17FacebookMessenger11DataManager", "Int"]
 - ["C17FacebookMessenger11DataManager", "Message"]
 - !private ["C17FacebookMessenger11DataManager", "NSEntityDescription"]
 - !private ["C17FacebookMessenger11DataManager", "NSFetchRequest"]
 - !private ["C17FacebookMessenger11DataManager", "NSFetchRequestResult"]
 - !private ["C17FacebookMessenger11DataManager", "NSManagedObject"]
 - ["C17FacebookMessenger11DataManager", "NSManagedObjectContext"]
-- !private ["C17FacebookMessenger11DataManager", "NSSortDescriptor"]
 - ["C17FacebookMessenger11DataManager", "String"]
 - ["C17FacebookMessenger11DataManager", "UIApplication"]
 - !private ["C17FacebookMessenger11DataManager", "clear"]
@@ -199,9 +203,8 @@ depends-member:
 - ["C17FacebookMessenger11DataManager", "delegate"]
 - !private ["C17FacebookMessenger11DataManager", "fetchFreinds"]
 - ["C17FacebookMessenger11DataManager", "init"]
-- ["C17FacebookMessenger11DataManager", "messageCount"]
 - !private ["C17FacebookMessenger11DataManager", "print"]
-- !private ["C17FacebookMessenger11DataManager", "save"]
+- ["C17FacebookMessenger11DataManager", "save"]
 - !private ["C17FacebookMessenger11DataManager", "setup"]
 - ["C17FacebookMessenger11DataManager", "sharedManager"]
 - !private ["V10Foundation4Date", "addingTimeInterval"]
@@ -210,30 +213,31 @@ depends-member:
 - ["Sd", "deinit"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "addingTimeInterval"]
-- !private ["Ps9Equatable", "count"]
 - !private ["Ps9Equatable", "date"]
 - ["Ps9Equatable", "delegate"]
 - !private ["Ps9Equatable", "delete"]
 - !private ["Ps9Equatable", "entity"]
 - !private ["Ps9Equatable", "fetch"]
+- !private ["Ps9Equatable", "fetchRequest"]
 - !private ["Ps9Equatable", "friend"]
 - !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "isSender"]
 - !private ["Ps9Equatable", "lastMessage"]
 - !private ["Ps9Equatable", "name"]
+- !private ["Ps9Equatable", "performAndWait"]
 - !private ["Ps9Equatable", "persistentContainer"]
 - !private ["Ps9Equatable", "profileImageName"]
 - !private ["Ps9Equatable", "saveContext"]
 - ["Ps9Equatable", "shared"]
-- !private ["Ps9Equatable", "sortDescriptors"]
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "viewContext"]
-- ["Ps5Error", "deinit"]
+- !private ["Ps5Error", "deinit"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
 - !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "count"]
+- !private ["Ps25ExpressibleByArrayLiteral", "init"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps23ExpressibleByNilLiteral", "some"]
@@ -241,28 +245,29 @@ depends-member:
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - ["C17FacebookMessenger6Friend", "deinit"]
+- !private ["C17FacebookMessenger6Friend", "fetchRequest"]
 - !private ["C17FacebookMessenger6Friend", "init"]
 - !private ["C17FacebookMessenger6Friend", "lastMessage"]
 - !private ["C17FacebookMessenger6Friend", "name"]
 - !private ["C17FacebookMessenger6Friend", "profileImageName"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "addingTimeInterval"]
-- !private ["Ps8Hashable", "count"]
 - !private ["Ps8Hashable", "date"]
 - ["Ps8Hashable", "delegate"]
 - !private ["Ps8Hashable", "delete"]
 - !private ["Ps8Hashable", "entity"]
 - !private ["Ps8Hashable", "fetch"]
+- !private ["Ps8Hashable", "fetchRequest"]
 - !private ["Ps8Hashable", "friend"]
 - !private ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "isSender"]
 - !private ["Ps8Hashable", "lastMessage"]
 - !private ["Ps8Hashable", "name"]
+- !private ["Ps8Hashable", "performAndWait"]
 - !private ["Ps8Hashable", "persistentContainer"]
 - !private ["Ps8Hashable", "profileImageName"]
 - !private ["Ps8Hashable", "saveContext"]
 - ["Ps8Hashable", "shared"]
-- !private ["Ps8Hashable", "sortDescriptors"]
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "viewContext"]
 - !private ["Ps9Indexable", "Element"]
@@ -270,13 +275,15 @@ depends-member:
 - !private ["Ps9Indexable", "Iterator"]
 - !private ["Ps9Indexable", "_Element"]
 - !private ["Ps9Indexable", "count"]
+- !private ["Ps9Indexable", "init"]
 - !private ["Ps13IndexableBase", "Element"]
 - !private ["Ps13IndexableBase", "IndexDistance"]
 - !private ["Ps13IndexableBase", "Iterator"]
 - !private ["Ps13IndexableBase", "_Element"]
 - !private ["Ps13IndexableBase", "count"]
+- !private ["Ps13IndexableBase", "init"]
 - !private ["Vs16IndexingIterator", "Element"]
-- ["Si", "deinit"]
+- !private ["Si", "deinit"]
 - !private ["Ps16IteratorProtocol", "Element"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "init"]
@@ -292,28 +299,28 @@ depends-member:
 - !private ["Ps17MutableCollection", "Iterator"]
 - !private ["Ps17MutableCollection", "_Element"]
 - !private ["Ps17MutableCollection", "count"]
+- !private ["Ps17MutableCollection", "init"]
 - !private ["Ps16MutableIndexable", "Element"]
 - !private ["Ps16MutableIndexable", "IndexDistance"]
 - !private ["Ps16MutableIndexable", "Iterator"]
 - !private ["Ps16MutableIndexable", "_Element"]
 - !private ["Ps16MutableIndexable", "count"]
-- !private ["PSo8NSCoding", "count"]
+- !private ["Ps16MutableIndexable", "init"]
 - !private ["PSo8NSCoding", "delete"]
 - !private ["PSo8NSCoding", "entity"]
 - !private ["PSo8NSCoding", "fetch"]
 - !private ["PSo8NSCoding", "init"]
-- !private ["PSo8NSCoding", "sortDescriptors"]
+- !private ["PSo8NSCoding", "performAndWait"]
 - !private ["PSo9NSCopying", "entity"]
 - !private ["PSo9NSCopying", "init"]
-- !private ["PSo9NSCopying", "sortDescriptors"]
 - ["CSo19NSEntityDescription", "deinit"]
 - !private ["CSo19NSEntityDescription", "entity"]
 - !private ["PSo17NSFastEnumeration", "entity"]
-- ["CSo14NSFetchRequest", "deinit"]
+- !private ["CSo14NSFetchRequest", "deinit"]
 - !private ["CSo14NSFetchRequest", "init"]
-- !private ["CSo14NSFetchRequest", "sortDescriptors"]
 - !private ["PSo20NSFetchRequestResult", "date"]
-- ["PSo20NSFetchRequestResult", "deinit"]
+- !private ["PSo20NSFetchRequestResult", "deinit"]
+- !private ["PSo20NSFetchRequestResult", "fetchRequest"]
 - !private ["PSo20NSFetchRequestResult", "friend"]
 - !private ["PSo20NSFetchRequestResult", "init"]
 - !private ["PSo20NSFetchRequestResult", "isSender"]
@@ -321,11 +328,12 @@ depends-member:
 - !private ["PSo20NSFetchRequestResult", "name"]
 - !private ["PSo20NSFetchRequestResult", "profileImageName"]
 - !private ["PSo20NSFetchRequestResult", "text"]
-- !private ["PSo9NSLocking", "count"]
 - !private ["PSo9NSLocking", "delete"]
 - !private ["PSo9NSLocking", "fetch"]
+- !private ["PSo9NSLocking", "performAndWait"]
 - !private ["CSo15NSManagedObject", "date"]
 - !private ["CSo15NSManagedObject", "deinit"]
+- !private ["CSo15NSManagedObject", "fetchRequest"]
 - !private ["CSo15NSManagedObject", "friend"]
 - !private ["CSo15NSManagedObject", "init"]
 - !private ["CSo15NSManagedObject", "isSender"]
@@ -333,52 +341,49 @@ depends-member:
 - !private ["CSo15NSManagedObject", "name"]
 - !private ["CSo15NSManagedObject", "profileImageName"]
 - !private ["CSo15NSManagedObject", "text"]
-- !private ["CSo22NSManagedObjectContext", "count"]
 - ["CSo22NSManagedObjectContext", "deinit"]
 - !private ["CSo22NSManagedObjectContext", "delete"]
 - !private ["CSo22NSManagedObjectContext", "fetch"]
+- !private ["CSo22NSManagedObjectContext", "performAndWait"]
 - !private ["PSo16NSMutableCopying", "init"]
-- !private ["CSo8NSObject", "count"]
 - !private ["CSo8NSObject", "date"]
 - ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "delete"]
 - !private ["CSo8NSObject", "entity"]
 - !private ["CSo8NSObject", "fetch"]
+- !private ["CSo8NSObject", "fetchRequest"]
 - !private ["CSo8NSObject", "friend"]
 - !private ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "isSender"]
 - !private ["CSo8NSObject", "lastMessage"]
 - !private ["CSo8NSObject", "name"]
+- !private ["CSo8NSObject", "performAndWait"]
 - !private ["CSo8NSObject", "persistentContainer"]
 - !private ["CSo8NSObject", "profileImageName"]
 - !private ["CSo8NSObject", "saveContext"]
 - ["CSo8NSObject", "shared"]
-- !private ["CSo8NSObject", "sortDescriptors"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "viewContext"]
-- !private ["PSo16NSObjectProtocol", "count"]
 - !private ["PSo16NSObjectProtocol", "date"]
 - ["PSo16NSObjectProtocol", "delegate"]
 - !private ["PSo16NSObjectProtocol", "delete"]
 - !private ["PSo16NSObjectProtocol", "entity"]
 - !private ["PSo16NSObjectProtocol", "fetch"]
+- !private ["PSo16NSObjectProtocol", "fetchRequest"]
 - !private ["PSo16NSObjectProtocol", "friend"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "isSender"]
 - !private ["PSo16NSObjectProtocol", "lastMessage"]
 - !private ["PSo16NSObjectProtocol", "name"]
+- !private ["PSo16NSObjectProtocol", "performAndWait"]
 - !private ["PSo16NSObjectProtocol", "persistentContainer"]
 - !private ["PSo16NSObjectProtocol", "profileImageName"]
 - !private ["PSo16NSObjectProtocol", "saveContext"]
 - ["PSo16NSObjectProtocol", "shared"]
-- !private ["PSo16NSObjectProtocol", "sortDescriptors"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "viewContext"]
 - !private ["CSo21NSPersistentContainer", "viewContext"]
-- !private ["CSo24NSPersistentStoreRequest", "sortDescriptors"]
 - !private ["PSo14NSSecureCoding", "init"]
-- ["CSo16NSSortDescriptor", "deinit"]
-- !private ["CSo16NSSortDescriptor", "init"]
 - !private ["CSo8NSString", "init"]
 - ["Sq", "deinit"]
 - !private ["Sq", "some"]
@@ -387,21 +392,25 @@ depends-member:
 - !private ["Ps22RandomAccessCollection", "Iterator"]
 - !private ["Ps22RandomAccessCollection", "_Element"]
 - !private ["Ps22RandomAccessCollection", "count"]
+- !private ["Ps22RandomAccessCollection", "init"]
 - !private ["Ps21RandomAccessIndexable", "Element"]
 - !private ["Ps21RandomAccessIndexable", "IndexDistance"]
 - !private ["Ps21RandomAccessIndexable", "Iterator"]
 - !private ["Ps21RandomAccessIndexable", "_Element"]
 - !private ["Ps21RandomAccessIndexable", "count"]
+- !private ["Ps21RandomAccessIndexable", "init"]
 - !private ["Ps26RangeReplaceableCollection", "Element"]
 - !private ["Ps26RangeReplaceableCollection", "IndexDistance"]
 - !private ["Ps26RangeReplaceableCollection", "Iterator"]
 - !private ["Ps26RangeReplaceableCollection", "_Element"]
 - !private ["Ps26RangeReplaceableCollection", "count"]
+- !private ["Ps26RangeReplaceableCollection", "init"]
 - !private ["Ps25RangeReplaceableIndexable", "Element"]
 - !private ["Ps25RangeReplaceableIndexable", "IndexDistance"]
 - !private ["Ps25RangeReplaceableIndexable", "Iterator"]
 - !private ["Ps25RangeReplaceableIndexable", "_Element"]
 - !private ["Ps25RangeReplaceableIndexable", "count"]
+- !private ["Ps25RangeReplaceableIndexable", "init"]
 - !private ["P10Foundation20ReferenceConvertible", "addingTimeInterval"]
 - !private ["P10Foundation20ReferenceConvertible", "init"]
 - !private ["Ps8Sequence", "Element"]
@@ -409,6 +418,7 @@ depends-member:
 - !private ["Ps8Sequence", "Iterator"]
 - !private ["Ps8Sequence", "_Element"]
 - !private ["Ps8Sequence", "count"]
+- !private ["Ps8Sequence", "init"]
 - !private ["Ps10Streamable", "init"]
 - ["SS", "deinit"]
 - !private ["SS", "init"]
@@ -431,11 +441,13 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "Iterator"]
 - !private ["Ps14_ArrayProtocol", "_Element"]
 - !private ["Ps14_ArrayProtocol", "count"]
+- !private ["Ps14_ArrayProtocol", "init"]
 - !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
 - !private ["Ps24_DestructorSafeContainer", "Iterator"]
 - !private ["Ps24_DestructorSafeContainer", "_Element"]
 - !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
@@ -444,22 +456,22 @@ depends-member:
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "addingTimeInterval"]
-- !private ["Ps9_Hashable", "count"]
 - !private ["Ps9_Hashable", "date"]
 - ["Ps9_Hashable", "delegate"]
 - !private ["Ps9_Hashable", "delete"]
 - !private ["Ps9_Hashable", "entity"]
 - !private ["Ps9_Hashable", "fetch"]
+- !private ["Ps9_Hashable", "fetchRequest"]
 - !private ["Ps9_Hashable", "friend"]
 - !private ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "isSender"]
 - !private ["Ps9_Hashable", "lastMessage"]
 - !private ["Ps9_Hashable", "name"]
+- !private ["Ps9_Hashable", "performAndWait"]
 - !private ["Ps9_Hashable", "persistentContainer"]
 - !private ["Ps9_Hashable", "profileImageName"]
 - !private ["Ps9_Hashable", "saveContext"]
 - ["Ps9_Hashable", "shared"]
-- !private ["Ps9_Hashable", "sortDescriptors"]
 - !private ["Ps9_Hashable", "text"]
 - !private ["Ps9_Hashable", "viewContext"]
 - !private ["Ps21_ObjectiveCBridgeable", "Element"]
@@ -473,7 +485,7 @@ depends-member:
 depends-nominal:
 - "Ps9AnyObject"
 - "C17FacebookMessenger11AppDelegate"
-- "Sa"
+- !private "Sa"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
 - "Sb"
@@ -488,7 +500,7 @@ depends-nominal:
 - "V10Foundation4Date"
 - "Sd"
 - "Ps9Equatable"
-- "Ps5Error"
+- !private "Ps5Error"
 - !private "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
 - !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
@@ -501,7 +513,7 @@ depends-nominal:
 - !private "Ps9Indexable"
 - !private "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
-- "Si"
+- !private "Si"
 - !private "Ps16IteratorProtocol"
 - !private "Ps25LosslessStringConvertible"
 - "C17FacebookMessenger7Message"
@@ -512,8 +524,8 @@ depends-nominal:
 - !private "PSo9NSCopying"
 - "CSo19NSEntityDescription"
 - !private "PSo17NSFastEnumeration"
-- "CSo14NSFetchRequest"
-- "PSo20NSFetchRequestResult"
+- !private "CSo14NSFetchRequest"
+- !private "PSo20NSFetchRequestResult"
 - !private "PSo9NSLocking"
 - !private "CSo15NSManagedObject"
 - "CSo22NSManagedObjectContext"
@@ -521,9 +533,7 @@ depends-nominal:
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "CSo21NSPersistentContainer"
-- !private "CSo24NSPersistentStoreRequest"
 - !private "PSo14NSSecureCoding"
-- "CSo16NSSortDescriptor"
 - !private "CSo8NSString"
 - "Sq"
 - !private "Ps22RandomAccessCollection"
@@ -561,4 +571,4 @@ depends-external:
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Users/sharmpi/Downloads/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "22217f566f7bad25227b22174e601c3b"
+interface-hash: "efd8745b570892db99fa6e5962225a66"

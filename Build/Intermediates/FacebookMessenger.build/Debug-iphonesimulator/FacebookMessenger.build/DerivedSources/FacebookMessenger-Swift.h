@@ -165,16 +165,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UIImage * _N
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSBlockOperation;
 @class Friend;
 @class UICollectionViewLayout;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC17FacebookMessenger17ChatLogController")
 @interface ChatLogController : UICollectionViewController
-@property (nonatomic, copy) NSArray<NSBlockOperation *> * _Nonnull blockOperations;
 @property (nonatomic, strong, getter=friend, setter=setFriend:) Friend * _Nullable friend_;
-@property (nonatomic, strong) NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull fetchResultsController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidDisappear:(BOOL)animated;
@@ -238,7 +235,7 @@ SWIFT_CLASS("_TtC17FacebookMessenger6Friend")
 
 SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 @interface FriendsViewController : UICollectionViewController
-@property (nonatomic, strong) NSFetchedResultsController<id <NSFetchRequestResult>> * _Nonnull fetchResultsController;
+@property (nonatomic, strong) NSFetchedResultsController<Friend *> * _Nonnull fetchResultsController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;

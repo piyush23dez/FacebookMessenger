@@ -12,13 +12,14 @@ import CoreData
 class FriendsViewController: UICollectionViewController {
     
     fileprivate let cellId = "cellId"
+    private let managedContext = DataManager.sharedManager.delegate?.persistentContainer.viewContext
     
-    lazy var fetchResultsController: NSFetchedResultsController<NSFetchRequestResult> = {
+    fileprivate lazy var fetchResultsController: NSFetchedResultsController<Friend> = {
      
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Friend")
+        let fetchRequest: NSFetchRequest<Friend> = Friend.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "lastMessage.date", ascending: false)]
-        let context = DataManager.sharedManager.delegate?.persistentContainer.viewContext
-        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context!, sectionNameKeyPath: nil, cacheName: nil)
+        
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedContext!, sectionNameKeyPath: nil, cacheName: nil)
         return frc
     }()
     
@@ -26,11 +27,13 @@ class FriendsViewController: UICollectionViewController {
         
         super.viewDidLoad()
         
-        do {
-            try fetchResultsController.performFetch()
-        }
-        catch let error {
-            print(error)
+        managedContext?.performAndWait {
+            do {
+                try self.fetchResultsController.performFetch()
+            }
+            catch let error {
+                print(error)
+            }
         }
         
         navigationItem.title = "Recent"
@@ -70,9 +73,9 @@ extension FriendsViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let friend = fetchResultsController.object(at: indexPath) as? Friend
+        let friend = fetchResultsController.object(at: indexPath)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? MessageCell
-        cell?.message = friend?.lastMessage
+        cell?.message = friend.lastMessage
         
         return cell!
     }
@@ -84,13 +87,14 @@ extension FriendsViewController {
 }
 
 extension FriendsViewController: UICollectionViewDelegateFlowLayout {
+   
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 100)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let chatlLogViewController = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
-        let friend = fetchResultsController.object(at: indexPath) as? Friend       
+        let friend = fetchResultsController.object(at: indexPath)       
         chatlLogViewController.friend = friend
         navigationController?.pushViewController(chatlLogViewController, animated: true)
     }

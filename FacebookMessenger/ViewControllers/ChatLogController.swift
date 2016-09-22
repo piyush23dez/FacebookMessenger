@@ -13,12 +13,13 @@ class ChatLogController: UICollectionViewController {
     
     //fileprivate access restricts the use of an entity to its own defining source file.
     fileprivate let cellId = "cellId"
-   
+    fileprivate let managedContext = DataManager.sharedManager.delegate!.persistentContainer.viewContext
+
     //private access restricts the use of an entity to the enclosing declaration.
     private var bottomConstraint: NSLayoutConstraint?
-    var blockOperations = [BlockOperation]()
+    fileprivate var blockOperations = [BlockOperation]()
     
-    var friend: Friend? {
+    final var friend: Friend? {
         didSet {
             navigationItem.title = friend?.name
         }
@@ -44,14 +45,13 @@ class ChatLogController: UICollectionViewController {
         return button
     }()
     
-    lazy var fetchResultsController: NSFetchedResultsController<NSFetchRequestResult> = {
+    fileprivate lazy var fetchResultsController: NSFetchedResultsController<Message> = {
         
-        var fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Message")
+        let fetchRequest: NSFetchRequest<Message> = Message.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "date", ascending: true)]
         fetchRequest.predicate = NSPredicate(format: "friend.name = %@", self.friend!.name!)
         
-        let context = DataManager.sharedManager.delegate?.persistentContainer.viewContext
-        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context!, sectionNameKeyPath: nil, cacheName: nil)
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedContext, sectionNameKeyPath: nil, cacheName: nil)
         frc.delegate = self
         return frc
         
@@ -163,9 +163,8 @@ class ChatLogController: UICollectionViewController {
     }
     
     dynamic private func simulate() {
-        let context = DataManager.sharedManager.delegate!.persistentContainer.viewContext
-        DataManager.sharedManager.createMessage(text: "Receiving new mesage from friend", minutesAgo: 2, frind: friend!, context: context)
-        DataManager.sharedManager.createMessage(text: "Another message from friend", minutesAgo: 2, frind: friend!, context: context)
+        DataManager.sharedManager.createMessage(text: "Receiving new mesage from friend", minutesAgo: 2, frind: friend!, context: managedContext)
+        DataManager.sharedManager.createMessage(text: "Another message from friend", minutesAgo: 2, frind: friend!, context: managedContext)
 
         save()
     }
@@ -175,9 +174,8 @@ class ChatLogController: UICollectionViewController {
     }
     
     fileprivate func save() {
-        
-        DispatchQueue.main.async {
-            DataManager.sharedManager.delegate!.saveContext()
+        managedContext.perform {
+            DataManager.sharedManager.save()
         }
     }
     
@@ -234,7 +232,6 @@ extension ChatLogController: NSFetchedResultsControllerDelegate {
 
 extension ChatLogController: UICollectionViewDelegateFlowLayout {
 
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let objects = fetchResultsController.sections?[0].numberOfObjects {
             return objects
@@ -244,11 +241,11 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ChatCell
-        let message = fetchResultsController.object(at: indexPath) as? Message
+        let message = fetchResultsController.object(at: indexPath)
         
-        cell.messageTextView.text = message!.text
+        cell.messageTextView.text = message.text
         
-        if let profileImageName = message!.friend?.profileImageName {
+        if let profileImageName = message.friend?.profileImageName {
             
             cell.profileImageView.image = UIImage(named: profileImageName)
             
@@ -256,9 +253,9 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
             let size = CGSize(width: 250, height: 1000)
             let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
             let attributes = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 18)]
-            let estimatedFrame = NSString(string: message!.text!).boundingRect(with: size, options: options, attributes: attributes, context: nil)
+            let estimatedFrame = NSString(string: message.text!).boundingRect(with: size, options: options, attributes: attributes, context: nil)
            
-            if !message!.isSender {
+            if !message.isSender {
                 cell.messageTextView.frame = CGRect(x: 48+10, y: 0, width: estimatedFrame.width+16, height: estimatedFrame.height + 20)
                
                 cell.bubbleTextView.frame = CGRect(x: 48-10, y: -4, width: estimatedFrame.width+16+8+16, height: estimatedFrame.height + 20 + 6)
@@ -285,9 +282,9 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let message = fetchResultsController.object(at: indexPath) as? Message
+        let message = fetchResultsController.object(at: indexPath)
 
-        if let messageText = message!.text {
+        if let messageText = message.text {
           
             //Calculate estimated frame based on estimated width and height
             let size = CGSize(width: 250, height: 1000)
