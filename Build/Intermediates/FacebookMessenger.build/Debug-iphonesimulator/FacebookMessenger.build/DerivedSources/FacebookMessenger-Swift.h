@@ -235,7 +235,6 @@ SWIFT_CLASS("_TtC17FacebookMessenger6Friend")
 
 SWIFT_CLASS("_TtC17FacebookMessenger21FriendsViewController")
 @interface FriendsViewController : UICollectionViewController
-@property (nonatomic, strong) NSFetchedResultsController<Friend *> * _Nonnull fetchResultsController;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (nonnull instancetype)initWithCollectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;

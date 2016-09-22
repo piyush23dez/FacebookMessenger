@@ -1,12 +1,12 @@
 version: "Apple Swift version 3.0 (swiftlang-800.0.43.6 clang-800.0.38)"
 options: "a906efe58251e7ec2f921000ec667b90"
-build_time: [527879845, 443195000]
+build_time: [527880185, 641952000]
 inputs:
-  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/ViewControllers/ChatLogController.swift": [527878944, 0]
+  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/ViewControllers/ChatLogController.swift": [527880185, 0]
   "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Models/Friend+CoreDataClass.swift": [527792349, 0]
   "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Models/Friend+CoreDataProperties.swift": [527792384, 0]
   "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Models/Message+CoreDataClass.swift": [527700411, 0]
-  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/ViewControllers/FriendsViewController.swift": [527878440, 0]
+  "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/ViewControllers/FriendsViewController.swift": [527879897, 0]
   "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/AppDelegate.swift": [527699730, 0]
   "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Models/Message+CoreDataProperties.swift": [527700444, 0]
   "/Users/sharmpi/Desktop/FacebookMessenger/FacebookMessenger/Cells/MessageCell.swift": [527466837, 0]

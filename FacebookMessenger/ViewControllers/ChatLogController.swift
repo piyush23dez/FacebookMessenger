@@ -101,7 +101,7 @@ class ChatLogController: UICollectionViewController {
         blockOperations.removeAll()
     }
     
-    dynamic private func setupInputView() {
+    private func setupInputView() {
         let topBorderView = UIView()
         topBorderView.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
         
@@ -118,7 +118,7 @@ class ChatLogController: UICollectionViewController {
         inputMessageView.addConstraintWith(format: "V:|[v0(0.5)]", views: topBorderView)
     }
 
-    dynamic private func addKeyboardObservers() {
+    private func addKeyboardObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillShow, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification(_ :)), name: Notification.Name.UIKeyboardWillHide, object: nil)
@@ -149,14 +149,12 @@ class ChatLogController: UICollectionViewController {
         }
     }
     
-    dynamic private func handleSend() {
+   dynamic private func handleSend() {
         
         if inputTextField.text!.isEmpty {
             return
         }
-        
-        let context = DataManager.sharedManager.delegate!.persistentContainer.viewContext
-        DataManager.sharedManager.createMessage(text: inputTextField.text!, minutesAgo: 1, frind: friend!, context: context, isSender: true)
+        DataManager.sharedManager.createMessage(text: inputTextField.text!, minutesAgo: 1, frind: friend!, context: managedContext, isSender: true)
         
         save()
         inputTextField.text = nil
@@ -165,7 +163,6 @@ class ChatLogController: UICollectionViewController {
     dynamic private func simulate() {
         DataManager.sharedManager.createMessage(text: "Receiving new mesage from friend", minutesAgo: 2, frind: friend!, context: managedContext)
         DataManager.sharedManager.createMessage(text: "Another message from friend", minutesAgo: 2, frind: friend!, context: managedContext)
-
         save()
     }
     
