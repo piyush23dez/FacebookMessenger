@@ -59,12 +59,14 @@ class ChatLogController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        do {
-            try fetchResultsController.performFetch()
-        }
-        catch let error {
-            print(error)
+       
+        managedContext.performAndWait {
+            do {
+                try self.fetchResultsController.performFetch()
+            }
+            catch let error {
+                print(error)
+            }
         }
         
         tabBarController?.tabBar.isHidden = true

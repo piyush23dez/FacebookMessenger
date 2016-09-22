@@ -6,73 +6,73 @@ provides-nominal:
 provides-member:
 - ["C17FacebookMessenger17ChatLogController", ""]
 provides-dynamic-lookup:
-- "handleSend"
-- "simulate"
-- "viewDidLoad"
 - "collectionView"
 - "collectionView"
 - "collectionView"
 - "collectionView"
 - "collectionView"
 - "viewDidDisappear"
-- "handleKeyboardNotification"
-- "friend"
-- "viewWillAppear"
 - "controller"
+- "handleKeyboardNotification"
 - "controllerDidChangeContent"
+- "viewDidLoad"
+- "handleSend"
+- "simulate"
+- "viewWillAppear"
+- "friend"
 depends-top-level:
-- "Bool"
-- "UICollectionView"
-- "IndexPath"
-- "Int"
-- !private "ChatCell"
-- "UIColor"
-- !private "print"
-- "DataManager"
-- "NSFetchedResultsChangeType"
-- !private "NSSortDescriptor"
-- !private "-"
-- !private "NotificationCenter"
-- "Array"
-- !private "NSString"
-- "CGSize"
+- !private "+"
+- "NSFetchRequestResult"
 - "UICollectionViewDelegateFlowLayout"
+- !private "CGRect"
+- "UIColor"
+- "DataManager"
+- !private "NSSortDescriptor"
+- !private "UIImage"
+- !private "NSFontAttributeName"
+- !private "DispatchQueue"
 - !private "NSPredicate"
 - "NSFetchedResultsController"
-- !private "DispatchQueue"
-- !private "+"
+- !private "!"
 - "Message"
 - "Friend"
 - "/"
-- !private "CGRect"
-- !private "UIImage"
-- "UIButton"
 - !private "Notification"
-- !private "NSFontAttributeName"
-- "NSFetchedResultsControllerDelegate"
+- "NSFetchedResultsChangeType"
+- "UIButton"
+- !private "print"
+- !private "NSValue"
+- !private "NotificationCenter"
+- "UICollectionViewLayout"
 - !private "TernaryPrecedence"
 - "UICollectionViewController"
 - "BlockOperation"
+- !private "UIKeyboardFrameEndUserInfoKey"
+- !private "NSStringDrawingOptions"
 - !private "NSFetchRequest"
-- !private "!"
+- !private "UIBarButtonItem"
 - !private "=="
 - "AssignmentPrecedence"
+- "UIEdgeInsets"
 - "CastingPrecedence"
-- !private "NSValue"
+- "Array"
 - "UIView"
+- "UICollectionViewCell"
 - "ChatLogController"
 - "StringLiteralType"
+- "NSFetchedResultsControllerDelegate"
+- "IndexPath"
 - "NSLayoutConstraint"
-- !private "UIKeyboardFrameEndUserInfoKey"
-- "UIEdgeInsets"
-- "NSFetchRequestResult"
 - "UIFont"
-- !private "NSStringDrawingOptions"
-- "UICollectionViewLayout"
+- "UICollectionView"
+- !private "ChatCell"
+- "CGSize"
 - !private "Dictionary"
-- !private "UIBarButtonItem"
+- !private "-"
+- !private "NSString"
 - "UITextField"
-- "UICollectionViewCell"
+- "Bool"
+- "Int"
 - !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "Stride"]
@@ -159,6 +159,7 @@ depends-member:
 - !private ["Ps9AnyObject", "navigationItem"]
 - !private ["Ps9AnyObject", "object"]
 - !private ["Ps9AnyObject", "perform"]
+- !private ["Ps9AnyObject", "performAndWait"]
 - !private ["Ps9AnyObject", "performBatchUpdates"]
 - !private ["Ps9AnyObject", "performFetch"]
 - ["Ps9AnyObject", "persistentContainer"]
@@ -391,6 +392,7 @@ depends-member:
 - !private ["Ps7CVarArg", "navigationItem"]
 - !private ["Ps7CVarArg", "object"]
 - !private ["Ps7CVarArg", "perform"]
+- !private ["Ps7CVarArg", "performAndWait"]
 - !private ["Ps7CVarArg", "performBatchUpdates"]
 - !private ["Ps7CVarArg", "performFetch"]
 - ["Ps7CVarArg", "persistentContainer"]
@@ -628,6 +630,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
 - !private ["Ps28CustomDebugStringConvertible", "object"]
 - !private ["Ps28CustomDebugStringConvertible", "perform"]
+- !private ["Ps28CustomDebugStringConvertible", "performAndWait"]
 - !private ["Ps28CustomDebugStringConvertible", "performBatchUpdates"]
 - !private ["Ps28CustomDebugStringConvertible", "performFetch"]
 - ["Ps28CustomDebugStringConvertible", "persistentContainer"]
@@ -803,6 +806,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "navigationItem"]
 - !private ["Ps23CustomStringConvertible", "object"]
 - !private ["Ps23CustomStringConvertible", "perform"]
+- !private ["Ps23CustomStringConvertible", "performAndWait"]
 - !private ["Ps23CustomStringConvertible", "performBatchUpdates"]
 - !private ["Ps23CustomStringConvertible", "performFetch"]
 - ["Ps23CustomStringConvertible", "persistentContainer"]
@@ -984,6 +988,7 @@ depends-member:
 - ["Ps9Equatable", "normal"]
 - !private ["Ps9Equatable", "object"]
 - !private ["Ps9Equatable", "perform"]
+- !private ["Ps9Equatable", "performAndWait"]
 - !private ["Ps9Equatable", "performBatchUpdates"]
 - !private ["Ps9Equatable", "performFetch"]
 - ["Ps9Equatable", "persistentContainer"]
@@ -1033,7 +1038,7 @@ depends-member:
 - ["Ps9Equatable", "white"]
 - !private ["Ps9Equatable", "width"]
 - ["Ps9Equatable", ""]
-- ["Ps5Error", "deinit"]
+- !private ["Ps5Error", "deinit"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Index"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
@@ -1181,6 +1186,7 @@ depends-member:
 - !private ["Ps8Hashable", "navigationItem"]
 - !private ["Ps8Hashable", "object"]
 - !private ["Ps8Hashable", "perform"]
+- !private ["Ps8Hashable", "performAndWait"]
 - !private ["Ps8Hashable", "performBatchUpdates"]
 - !private ["Ps8Hashable", "performFetch"]
 - ["Ps8Hashable", "persistentContainer"]
@@ -1389,6 +1395,7 @@ depends-member:
 - !private ["PSo8NSCoding", "messageTextView"]
 - !private ["PSo8NSCoding", "navigationItem"]
 - !private ["PSo8NSCoding", "perform"]
+- !private ["PSo8NSCoding", "performAndWait"]
 - !private ["PSo8NSCoding", "performBatchUpdates"]
 - ["PSo8NSCoding", "placeholder"]
 - !private ["PSo8NSCoding", "predicate"]
@@ -1575,6 +1582,7 @@ depends-member:
 - ["OSC16NSLayoutRelation", "deinit"]
 - !private ["OSC16NSLayoutRelation", "equal"]
 - !private ["PSo9NSLocking", "perform"]
+- !private ["PSo9NSLocking", "performAndWait"]
 - !private ["CSo15NSManagedObject", "fetchRequest"]
 - !private ["CSo15NSManagedObject", "friend"]
 - !private ["CSo15NSManagedObject", "isSender"]
@@ -1583,6 +1591,7 @@ depends-member:
 - !private ["CSo15NSManagedObject", "text"]
 - ["CSo22NSManagedObjectContext", "deinit"]
 - !private ["CSo22NSManagedObjectContext", "perform"]
+- !private ["CSo22NSManagedObjectContext", "performAndWait"]
 - !private ["PSo16NSMutableCopying", "boundingRect"]
 - ["PSo16NSMutableCopying", "init"]
 - !private ["PSo16NSMutableCopying", "isEmpty"]
@@ -1677,6 +1686,7 @@ depends-member:
 - !private ["CSo8NSObject", "navigationItem"]
 - !private ["CSo8NSObject", "object"]
 - !private ["CSo8NSObject", "perform"]
+- !private ["CSo8NSObject", "performAndWait"]
 - !private ["CSo8NSObject", "performBatchUpdates"]
 - !private ["CSo8NSObject", "performFetch"]
 - ["CSo8NSObject", "persistentContainer"]
@@ -1797,6 +1807,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "navigationItem"]
 - !private ["PSo16NSObjectProtocol", "object"]
 - !private ["PSo16NSObjectProtocol", "perform"]
+- !private ["PSo16NSObjectProtocol", "performAndWait"]
 - !private ["PSo16NSObjectProtocol", "performBatchUpdates"]
 - !private ["PSo16NSObjectProtocol", "performFetch"]
 - ["PSo16NSObjectProtocol", "persistentContainer"]
@@ -3476,6 +3487,7 @@ depends-member:
 - !private ["Ps9_Hashable", "navigationItem"]
 - !private ["Ps9_Hashable", "object"]
 - !private ["Ps9_Hashable", "perform"]
+- !private ["Ps9_Hashable", "performAndWait"]
 - !private ["Ps9_Hashable", "performBatchUpdates"]
 - !private ["Ps9_Hashable", "performFetch"]
 - ["Ps9_Hashable", "persistentContainer"]
@@ -3610,7 +3622,7 @@ depends-nominal:
 - !private "V8Dispatch16DispatchWallTime"
 - !private "Sd"
 - "Ps9Equatable"
-- "Ps5Error"
+- !private "Ps5Error"
 - "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
 - !private "Ps30ExpressibleByDictionaryLiteral"
