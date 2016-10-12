@@ -16,7 +16,7 @@ class ChatLogController: UICollectionViewController {
     fileprivate let managedContext = DataManager.sharedManager.delegate!.persistentContainer.viewContext
 
     //private access restricts the use of an entity to the enclosing declaration.
-    private var bottomConstraint: NSLayoutConstraint?
+    private var inputTextFieldBottomConstraint: NSLayoutConstraint?
     fileprivate var blockOperations = [BlockOperation]()
     
     final var friend: Friend? {
@@ -51,7 +51,7 @@ class ChatLogController: UICollectionViewController {
         fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "date", ascending: true)]
         fetchRequest.predicate = NSPredicate(format: "friend.name = %@", self.friend!.name!)
         
-        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedContext, sectionNameKeyPath: nil, cacheName: nil)
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedContext)
         frc.delegate = self
         return frc
         
@@ -137,14 +137,14 @@ class ChatLogController: UICollectionViewController {
             if let keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
                 
                 let isKeyboardShowing = notification.name.rawValue == Notification.Name.UIKeyboardWillShow.rawValue
-                self.bottomConstraint?.constant = isKeyboardShowing ? -keyboardFrame.height : 0
+                self.inputTextfieldBottomConstraint?.constant = isKeyboardShowing ? -keyboardFrame.height : 0
                
                 //Animate input textfield alongwith keyboard
                 UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut, animations: {
                     self.view.layoutIfNeeded()
                 }, completion: nil)
 
-                self.scrollToBottom()
+                self.scrollCollectionViewToBottom()
             }
         }
     }
@@ -184,7 +184,7 @@ class ChatLogController: UICollectionViewController {
         }
     }
     
-    fileprivate func scrollToBottom() {
+    fileprivate func scrollCollectionViewToBottom() {
         
         let objectsCount = fetchResultsController.sections?[0].numberOfObjects
         
@@ -221,7 +221,7 @@ extension ChatLogController: NSFetchedResultsControllerDelegate {
                 operation.start()
             }
         }, completion: { (finish) in
-            self.scrollToBottom()
+            self.scrollCollectionViewToBottom()
         })
     }
 }
