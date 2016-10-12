@@ -17,9 +17,9 @@ class FriendsViewController: UICollectionViewController {
     fileprivate lazy var fetchResultsController: NSFetchedResultsController<Friend> = {
      
         let fetchRequest: NSFetchRequest<Friend> = Friend.fetchRequest()
-        fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "lastMessage.date", ascending: false)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "lastMessage.date", ascending: false)]
         
-        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedContext!, sectionNameKeyPath: nil, cacheName: nil)
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedContext!)
         return frc
     }()
     
