@@ -144,9 +144,7 @@ class ChatLogController: UICollectionViewController {
                     self.view.layoutIfNeeded()
                 }, completion: nil)
 
-                DispatchQueue.main.async {
-                    self.scrollToBottom()
-                }
+                self.scrollToBottom()
             }
         }
     }
